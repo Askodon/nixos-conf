@@ -13,7 +13,12 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+
+  #ONLY FOR HYPER-V! DELETE THIS IF YOUR USING ON HOME-PC|||
   boot.blacklistedKernelModules = [ "hyperv_fb" ];
+  #|||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -45,15 +50,27 @@
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
+  services.xserver = {
+    enable = true;
+    displayManager.sddm = {
+        enable = true;
+        wayland.enable = true;
+    };
+};
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  # hyprland
+    programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+    };
+
+    
   # Configure keymap in X11
   services.xserver = {
-    layout = "ru";
+    layout = "ru,us";
     xkbVariant = "";
   };
 
@@ -85,16 +102,44 @@
     description = "askodon";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      kdePackages.kate
       betterbird
       vscode
       discord
       pkgs.papirus-icon-theme
+      github-desktop
+      pkgs.podman
+      pkgs.kitty
+      #pkgs.telegram-desktop
+      #pkgs.steam
+      pkgs.flatpak
     ];
+  #fonts
+  };
+  fonts = {
+    packages = with pkgs; [
+      # icon fonts
+      material-design-icons
+
+      # normal fonts
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+      rubik
+      pkgs.jetbrains-mono
+      # code font
+      (nerdfonts.override {fonts = ["SourceCodePro"];})
+    ];
+  #fonts settings
+  fontconfig.defaultFonts = {
+      serif = [ "Noto Serif" "Noto Color Emoji" ];
+      sansSerif = [ "Noto Sans" "Noto Color Emoji" ];
+      monospace = [ "Sauce Code Pro Nerd Font" ];
+      emoji = [ "Noto Color Emoji" ];
+    };
   };
 
-
-
+#add swap file 
+zramSwap.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -115,16 +160,31 @@
   syntaxHighlighting.enable = true;
 };
 
+  programs.zsh.shellAliases = {
+    l = "ls -alh";
+    ll = "ls -l";
+    udal = "ssh askodon@194.113.34.20";
+    boot = "sudo nixos-rebuild boot";
+    upgrade = "sudo nixos-rebuild switch";
+};
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     wget
-     git
-     helix
-     fastfetch
-     zsh
-     pkgs.oh-my-zsh
-     pkgs.zsh-autosuggestions
+    wget
+    git
+    helix
+    fastfetch
+    zsh
+    pkgs.oh-my-zsh
+    pkgs.zsh-autosuggestions
+    pkgs.btop
+    qt5.qtwayland
+    qt6.qmake
+    qt6.qtwayland
+    adwaita-qt
+    adwaita-qt6
+    home-manager
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -140,6 +200,7 @@
   # Enable the OpenSSH daemon.
    services.openssh.enable = true;
 
+  #ufw like?????
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
@@ -152,6 +213,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.05"; #system version
 
 }
