@@ -48,7 +48,8 @@
   #XFCE4 dekstop
   services.xserver.desktopManager.xfce.enable
   services.xserver.displayManager.sddm.enable = true;
-  services.xserver.displayManager.sddm.elegant-sddm; #chek this
+  services.xserver.displayManager.sddm.elegant-sddm; #check this
+  services.picom.enable = true; #picom as WM
   services.flatpak.enable = true; #flatpak to tweaks)
 
   # hyprland
