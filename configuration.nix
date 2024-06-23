@@ -45,11 +45,10 @@
     LC_TIME = "ru_RU.UTF-8";
   };
 
-  #pantheon dekstop
-  services.xserver.desktopManager.pantheon.enable = true;
-  services.xserver.displayManager.lightdm.greeters.pantheon.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;
-  programs.pantheon-tweaks.enable = true;
+  #XFCE4 dekstop
+  services.xserver.desktopManager.xfce.enable
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.sddm.elegant-sddm; #chek this
   services.flatpak.enable = true; #flatpak to tweaks)
 
   # hyprland
