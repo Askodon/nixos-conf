@@ -3,21 +3,18 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    [
+      ./hardware-configuration.nix # Include the results of the hardware scan.
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-
   #ONLY FOR HYPER-V! DELETE THIS IF YOUR USING ON HOME-PC|||
   boot.blacklistedKernelModules = [ "hyperv_fb" ];
-  #|||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos"; #hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -26,10 +23,8 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
   # Set your time zone.
   time.timeZone = "Europe/Samara";
-
   # Select internationalisation properties.
   i18n.defaultLocale = "ru_RU.UTF-8";
 
@@ -44,45 +39,28 @@
     LC_TELEPHONE = "ru_RU.UTF-8";
     LC_TIME = "ru_RU.UTF-8";
   };
-
-  #XFCE4 dekstop
-  services.xserver.desktopManager.xfce.enable
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.displayManager.sddm.elegant-sddm; #check this
-  services.picom.enable = true; #picom as WM
-  services.flatpak.enable = true; #flatpak to tweaks)
-
-  # hyprland
-  #  programs.hyprland = {
-  #  enable = true;
-  #  xwayland.enable = true;
-  #  };
-
-    
-  # Configure keymap in X11
-  services.xserver = {
-    enable = true;
-    layout = "ru,us";
-    xkbVariant = "";
+  
+  services = { #services list
+    xserver.desktopManager.xfce.enable = true; #XFCE4 dekstop
+    xserver.displayManager.sddm.enable = true; #SDDM
+    openssh.enable = true; #openssh
+      xserver = { #layout
+      enable = true;
+      layout = "ru,us";
+      xkbVariant = "";
+    };
+      pipewire = { #pipewire
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
   };
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
 
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -94,14 +72,34 @@
       betterbird
       vscode
       discord
-      pkgs.papirus-icon-theme
+      papirus-icon-theme
       github-desktop
-      pkgs.podman
-      pkgs.kitty
-      #pkgs.telegram-desktop
-      #pkgs.steam
-      pkgs.flatpak
+      podman
+      kitty
+      #telegram-desktop
+      #steam
       cinnamon.nemo-fileroller
+      qogir-theme
+      themechanger
+      pavucontrol
+      xfce.catfish
+      xfce.gigolo
+      xfce.orage
+      xfce.xfburn
+      xfce.xfce4-appfinder
+      xfce.xfce4-clipman-plugin
+      xfce.xfce4-cpugraph-plugin
+      xfce.xfce4-dict
+      xfce.xfce4-fsguard-plugin
+      xfce.xfce4-genmon-plugin
+      xfce.xfce4-netload-plugin
+      xfce.xfce4-panel
+      xfce.xfce4-pulseaudio-plugin
+      xfce.xfce4-systemload-plugin
+      xfce.xfce4-weather-plugin
+      xfce.xfce4-whiskermenu-plugin
+      xfce.xfce4-xkb-plugin
+      xfce.xfdashboard
     ];
     
   #fonts
@@ -177,20 +175,8 @@ zramSwap.enable = true;
     adwaita-qt
     adwaita-qt6
     home-manager
+    go
   ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-   services.openssh.enable = true;
 
   #ufw like?????
   # Open ports in the firewall.
@@ -206,5 +192,5 @@ zramSwap.enable = true;
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; #system version
-
+  nix.settings.experimental-features = [ "nix-command" "flakes" ]; #experimental features
 }
