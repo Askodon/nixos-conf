@@ -78,10 +78,12 @@
       kitty
       #telegram-desktop
       #steam
-      cinnamon.nemo-fileroller
+      gnome.file-roller
       qogir-theme
       themechanger
       pavucontrol
+      tint2
+      gpick
       xfce.catfish
       xfce.gigolo
       xfce.orage
