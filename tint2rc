@@ -84,7 +84,7 @@ panel_layer = top
 panel_monitor = all
 panel_shrink = 0
 autohide = 1
-autohide_show_timeout = 2
+autohide_show_timeout = 1.5
 autohide_hide_timeout = 5.0
 autohide_height = 1.5
 strut_policy = follow_size
@@ -149,7 +149,7 @@ mouse_scroll_down = iconify
 
 #-------------------------------------
 # System tray (notification area)
-systray_padding = 10 0 8
+systray_padding = 0 8 10
 systray_background_id = 2
 systray_sort = right2left
 systray_icon_size = 16
@@ -338,8 +338,8 @@ button_icon = /home/askodon/NixOS.svg
 button_text = 
 button_tooltip = Application Launcher
 button_lclick_command = xfce4-appfinder --collapsed
-button_rclick_command = xfce4-appfinder --collapsed
-button_mclick_command = 
+button_rclick_command = xfce4-session-logout
+button_mclick_command = xfdashboard
 button_uwheel_command = 
 button_dwheel_command = 
 button_font = JetBrainsMono Nerd Font 10
