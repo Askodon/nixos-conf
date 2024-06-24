@@ -42,8 +42,11 @@
   
   services = { #services list
     xserver.desktopManager.xfce.enable = true; #XFCE4 dekstop
-    xserver.displayManager.sddm.enable = true; #SDDM
+    xserver.displayManager.lightdm.enable = true; #lightdm
+    xserver.displayManager.lightdm.greeters.slick.enable = true;
+    xserver.displayManager.lightdm.greeters.slick.theme.name = "qogir-theme";
     openssh.enable = true; #openssh
+    
       xserver = { #layout
       enable = true;
       layout = "ru,us";
