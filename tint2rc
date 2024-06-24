@@ -1,6 +1,4 @@
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
-## Configuration for tint2 panel.
+## author: Aditya Shakya <adi1090x@gmail.com>
 
 #-------------------------------------
 # Backgrounds
@@ -84,7 +82,7 @@ panel_layer = top
 panel_monitor = all
 panel_shrink = 0
 autohide = 1
-autohide_show_timeout = 1.5
+autohide_show_timeout = 1.0
 autohide_hide_timeout = 5.0
 autohide_height = 1.5
 strut_policy = follow_size
