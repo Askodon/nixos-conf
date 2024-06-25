@@ -109,6 +109,7 @@
       kdePackages.ark
       volantes-cursors
       gnome.gnome-keyring
+      gxkb
       xfce.catfish
       xfce.gigolo
       xfce.orage
