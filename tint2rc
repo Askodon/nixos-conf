@@ -70,7 +70,7 @@ border_color_pressed = #000000 0
 #-------------------------------------
 # Panel
 panel_items = PTSEEEEEC
-panel_size = 70% 38
+panel_size = 85% 38
 panel_margin = 0 0
 panel_padding = 4 4 4
 panel_background_id = 1
@@ -81,9 +81,9 @@ panel_position = bottom center horizontal
 panel_layer = top
 panel_monitor = all
 panel_shrink = 0
-autohide = 1
-autohide_show_timeout = 1.0
-autohide_hide_timeout = 5.0
+autohide = 0
+autohide_show_timeout = 0.0
+autohide_hide_timeout = 0.0
 autohide_height = 1.5
 strut_policy = follow_size
 panel_window_name = tint2
