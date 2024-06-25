@@ -28,6 +28,17 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "ru_RU.UTF-8";
 
+  #needs podamn
+  virtualisation.containers.enable = true;
+  virtualisation = {
+    podman = {
+      enable = true;
+      # Create a `docker` alias for podman, to use it as a drop-in replacement
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
+
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "ru_RU.UTF-8";
     LC_IDENTIFICATION = "ru_RU.UTF-8";
@@ -45,6 +56,7 @@
     xserver.displayManager.lightdm.enable = true; #lightdm
     xserver.displayManager.lightdm.greeters.slick.enable = true;
     xserver.displayManager.lightdm.greeters.slick.theme.name = "qogir-theme";
+    xserver.displayManager.lightdm.greeters.slick.cursorTheme.name = "volantes-cursors";
     openssh.enable = true; #openssh
     
       xserver = { #layout
@@ -60,13 +72,18 @@
     };
   };
 
+  i18n.inputMethod = { #ibus engine, on xfce must use mozc engine
+  enabled = "ibus";
+  ibus.engines = with pkgs.ibus-engines; [ /* any engine you want, for example */ mozc ];
+};
+
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  #my sweety home 
   users.users.askodon = {
     isNormalUser = true;
     description = "askodon";
@@ -78,15 +95,18 @@
       papirus-icon-theme
       github-desktop
       podman
-      kitty
+      podman-desktop
+      qpwgraph #for discord 
       #telegram-desktop
       #steam
-      gnome.file-roller
+      #gamescope
+      #gamemode
       qogir-theme
       themechanger
-      pavucontrol
       tint2
       gpick
+      kdePackages.ark
+      volantes-cursors
       xfce.catfish
       xfce.gigolo
       xfce.orage
@@ -98,7 +118,6 @@
       xfce.xfce4-fsguard-plugin
       xfce.xfce4-genmon-plugin
       xfce.xfce4-netload-plugin
-      xfce.xfce4-panel
       xfce.xfce4-pulseaudio-plugin
       xfce.xfce4-systemload-plugin
       xfce.xfce4-weather-plugin
@@ -113,7 +132,6 @@
     packages = with pkgs; [
       # icon fonts
       material-design-icons
-
       # normal fonts
       noto-fonts
       noto-fonts-cjk
@@ -155,12 +173,13 @@ zramSwap.enable = true;
 };
 
   programs.zsh.shellAliases = {
-    l = "ls -alh";
-    ll = "ls -l";
-    udal = "ssh askodon@194.113.34.20";
-    boot = "sudo nixos-rebuild boot";
-    upgrade = "sudo nixos-rebuild switch";
-    trash = "sudo nix-collect-garbage -d";
+    l = "ls -alh"; #help
+    ll = "ls -l"; #help 
+    udal = "ssh askodon@194.113.34.20"; #help
+    boot = "sudo nixos-rebuild boot"; #help
+    upgrade = "sudo nixos-rebuild switch"; #help
+    trash = "sudo nix-collect-garbage -d"; #help
+    help = "cat /etc/nixos/configuration.nix | grep help | less"; #help
 };
 
   # List packages installed in system profile. To search, run:
@@ -168,7 +187,7 @@ zramSwap.enable = true;
   environment.systemPackages = with pkgs; [
     wget
     git
-    helix
+    helix #help | using: "hx", vim-like editor
     fastfetch
     zsh
     pkgs.oh-my-zsh
@@ -181,6 +200,8 @@ zramSwap.enable = true;
     adwaita-qt6
     home-manager
     go
+    yazi # help | using like ranger but better
+    mtr #help | using command like tracert
   ];
 
   #ufw like?????
