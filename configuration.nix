@@ -107,6 +107,7 @@
       gpick
       kdePackages.ark
       volantes-cursors
+      gnome.gnome-keyring
       xfce.catfish
       xfce.gigolo
       xfce.orage
