@@ -58,6 +58,7 @@
     xserver.displayManager.lightdm.greeters.slick.theme.name = "qogir-theme";
     xserver.displayManager.lightdm.greeters.slick.cursorTheme.name = "volantes-cursors";
     openssh.enable = true; #openssh
+    gnome.gnome-keyring.enable = true;
     
       xserver = { #layout
       enable = true;
