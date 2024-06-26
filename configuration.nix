@@ -72,12 +72,7 @@
       pulse.enable = true;
     };
   };
-
-  i18n.inputMethod = { #ibus engine, on xfce must use mozc engine
-  enabled = "ibus";
-  ibus.engines = with pkgs.ibus-engines; [ /* any engine you want, for example */ mozc ];
-};
-
+  
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -110,6 +105,7 @@
       volantes-cursors
       gnome.gnome-keyring
       gxkb
+      #qbittorrent
       xfce.catfish
       xfce.gigolo
       xfce.orage
@@ -123,8 +119,6 @@
       xfce.xfce4-netload-plugin
       xfce.xfce4-pulseaudio-plugin
       xfce.xfce4-systemload-plugin
-      xfce.xfce4-weather-plugin
-      xfce.xfce4-whiskermenu-plugin
       xfce.xfce4-xkb-plugin
       xfce.xfdashboard
     ];
