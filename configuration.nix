@@ -53,6 +53,7 @@
 
   services = { #services list
     xserver.desktopManager.xfce.enable = true; #XFCE4 dekstop
+    xserver.desktopManager.xterm.enable = false;
     xserver.displayManager.sddm.enable = true;
     openssh.enable = true; #openssh
     flatpak.enable = true;
@@ -218,6 +219,7 @@
     xfce.xfce4-systemload-plugin
     xfce.xfce4-xkb-plugin
     xfce.xfdashboard
+    xfce.xfce4-whiskermenu-plugin
   ];
 
   #ufw like?????

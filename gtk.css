@@ -1,10 +1,62 @@
+/* author: https://github.com/ahmadhabibi14/dotfile/tree/main */
 @import 'colors.css';
-.xfce4-panel{
-    border:0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: rgba(27,34,36,0.92);
+
+
+#whiskermenu-button,
+#applicationmenu-button {
+	margin: 3px;
+	border-radius: 3px;
+	color: rgb(40, 42, 51);
+/*  background-color: #dfdfdf; */
 }
-.xfce4-notifyd{
-    background-color: rgba(40, 42, 51, 1);
+
+#whiskermenu-button:hover,
+#applicationmenu-button:hover {
+	background-color: rgb(40, 42, 51);
+}
+
+.xfce4-panel {
+	border-bottom: 1px solid #5178C4;
+}
+
+.xfce4-panel button {
+	border-top: none;
+	border-bottom: none;
+	border-radius: 3px;
+/*	background-color: inherit; */
+	padding: 0 5px;
+	margin: 3px;
+	color: rgb(40, 42, 51);
+}
+
+
+.tasklist {
+	background-color: rgb(40, 42, 51);
+/* #2a2e43; */
+}
+
+.tasklist button {
+	padding: 0 10px;
+}
+
+.tasklist button image {
+	margin-left: -999999px;
+}
+
+.tasklist button:checked {
+/*	background-color: #61afef; */
+	color: #5178C4;
+	border: none;
+}
+
+
+
+
+.xfce4-panel  .genmon_value {
+	border-top: none;
+	border-radius: 3px;
+	background-color: rgb(40, 42, 51); 
+	padding: 0 5px;
+	margin: 3px;
+	color: #5178C4;
 }
