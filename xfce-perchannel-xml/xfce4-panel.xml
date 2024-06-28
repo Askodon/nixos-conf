@@ -45,6 +45,7 @@
     <property name="plugin-21" type="string" value="separator"/>
     <property name="plugin-1" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="аплет networkmanager"/>
         <value type="string" value="gpick"/>
         <value type="string" value="сетевое соединение ethernet «проводное подключение 1» активно"/>
       </property>
@@ -77,6 +78,9 @@
       <property name="button-title" type="string" value=""/>
       <property name="button-single-row" type="bool" value="false"/>
       <property name="menu-width" type="int" value="450"/>
+      <property name="recent" type="array">
+        <value type="string" value="org.gpick.gpick.desktop"/>
+      </property>
     </property>
   </property>
 </channel>
