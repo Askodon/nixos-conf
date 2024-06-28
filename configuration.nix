@@ -50,15 +50,13 @@
     LC_TELEPHONE = "ru_RU.UTF-8";
     LC_TIME = "ru_RU.UTF-8";
   };
-  
+
   services = { #services list
     xserver.desktopManager.xfce.enable = true; #XFCE4 dekstop
-    xserver.displayManager.gnome.gdm.enable = true; #lightdm
-    xserver.displayManager.lightdm.enable = false;
-
+    xserver.displayManager.sddm.enable = true;
     openssh.enable = true; #openssh
+    flatpak.enable = true;
     gnome.gnome-keyring.enable = true;
-    
       xserver = { #layout
       enable = true;
       layout = "ru,us";
@@ -71,7 +69,8 @@
       pulse.enable = true;
     };
   };
-  
+  #flatpak error fix
+  xdg.portal.enable = true;
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -98,13 +97,15 @@
       #gamemode
       qogir-theme
       themechanger
-      tint2
       gpick
       kdePackages.ark
       volantes-cursors
       gnome.gnome-keyring
-      gxkb
+      rofi
+      #protonup-qt
       #qbittorrent
+      xfce.xfce4-panel
+      xfce.xfce4-docklike-plugin
       xfce.catfish
       xfce.gigolo
       xfce.orage
@@ -134,7 +135,6 @@
       noto-fonts-emoji
       rubik
       pkgs.jetbrains-mono
-      
       # code font
       (nerdfonts.override {fonts = ["SourceCodePro"];})
     ];
@@ -147,8 +147,8 @@
     };
   };
 
-#add swap file 
-zramSwap.enable = true;
+  #add swap file 
+  zramSwap.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -199,6 +199,25 @@ zramSwap.enable = true;
     go
     yazi # help | using like ranger but better
     mtr #help | using command like tracert
+    nix-prefetch-github #help: nix-prefetch-github name repo
+    xfce.xfce4-notifyd
+    xfce.xfce4-panel
+    xfce.xfce4-docklike-plugin
+    xfce.catfish
+    xfce.gigolo
+    xfce.orage
+    xfce.xfburn
+    xfce.xfce4-appfinder
+    xfce.xfce4-clipman-plugin
+    xfce.xfce4-cpugraph-plugin
+    xfce.xfce4-dict
+    xfce.xfce4-fsguard-plugin
+    xfce.xfce4-genmon-plugin
+    xfce.xfce4-netload-plugin
+    xfce.xfce4-pulseaudio-plugin
+    xfce.xfce4-systemload-plugin
+    xfce.xfce4-xkb-plugin
+    xfce.xfdashboard
   ];
 
   #ufw like?????
