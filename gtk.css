@@ -29,12 +29,11 @@
 }
 
 #clock-button {
-	border-radius: 999px;
 	margin: 3px;
 	font-weight: bold;
 	font-size: 12px;
 	padding: 0 5px;
-	color: #2AD6C6;
+	color: #dfdfdf;
 	background-color: #32343D;
 }
 

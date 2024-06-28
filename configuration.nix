@@ -201,6 +201,7 @@
     yazi # help | using like ranger but better
     mtr #help | using command like tracert
     nix-prefetch-github #help: nix-prefetch-github name repo
+    flameshot #help
     xfce.xfce4-notifyd
     xfce.xfce4-panel
     xfce.xfce4-docklike-plugin
