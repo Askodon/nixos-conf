@@ -26,7 +26,7 @@
         <value type="int" value="19"/>
       </property>
       <property name="background-style" type="uint" value="0"/>
-      <property name="enter-opacity" type="uint" value="100"/>
+      <property name="enter-opacity" type="uint" value="90"/>
       <property name="leave-opacity" type="uint" value="0"/>
       <property name="autohide-behavior" type="uint" value="1"/>
     </property>
@@ -81,12 +81,12 @@
       <property name="button-single-row" type="bool" value="false"/>
       <property name="menu-width" type="int" value="450"/>
       <property name="recent" type="array">
+        <value type="string" value="panel-preferences.desktop"/>
         <value type="string" value="thunar.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
         <value type="string" value="xfce4-mime-settings.desktop"/>
         <value type="string" value="xfce-session-settings.desktop"/>
         <value type="string" value="xfce-settings-manager.desktop"/>
-        <value type="string" value="panel-preferences.desktop"/>
         <value type="string" value="xfce-workspaces-settings.desktop"/>
         <value type="string" value="code.desktop"/>
         <value type="string" value="firefox.desktop"/>

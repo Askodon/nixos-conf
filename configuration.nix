@@ -54,7 +54,7 @@
   services = { #services list
     xserver.desktopManager.xfce.enable = true; #XFCE4 dekstop
     xserver.desktopManager.xterm.enable = false;
-    xserver.displayManager.sddm.enable = true;
+    xserver.displayManager.lightdm.greeters.gtk.enable = true;
     openssh.enable = true; #openssh
     flatpak.enable = true;
     gnome.gnome-keyring.enable = true;
