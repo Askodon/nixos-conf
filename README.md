@@ -1,5 +1,4 @@
 my nix conf
-![pre](pre.png)
 ```
 git clone https://github.com/Askodon/nixos.git
 cd nixos
@@ -10,3 +9,5 @@ cp /home/askodon/nixos/gtk.css /home/askodon/.config/gtk-3.0/gtk.css
 cp -r rofi /home/askodon/.config
 cp -r xfce-perchannel-xml /home/askodon/.config/xfce4/xfconf/xfce-perchannel-xml/
 ```
+#image
+![pre](pre.png)
