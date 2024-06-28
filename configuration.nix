@@ -53,10 +53,9 @@
   
   services = { #services list
     xserver.desktopManager.xfce.enable = true; #XFCE4 dekstop
-    xserver.displayManager.lightdm.enable = true; #lightdm
-    xserver.displayManager.lightdm.greeters.slick.enable = true;
-    xserver.displayManager.lightdm.greeters.slick.theme.name = "qogir-theme";
-    xserver.displayManager.lightdm.greeters.slick.cursorTheme.name = "volantes-cursors";
+    xserver.displayManager.gnome.gdm.enable = true; #lightdm
+    xserver.displayManager.lightdm.enable = false;
+
     openssh.enable = true; #openssh
     gnome.gnome-keyring.enable = true;
     
@@ -135,6 +134,7 @@
       noto-fonts-emoji
       rubik
       pkgs.jetbrains-mono
+      
       # code font
       (nerdfonts.override {fonts = ["SourceCodePro"];})
     ];

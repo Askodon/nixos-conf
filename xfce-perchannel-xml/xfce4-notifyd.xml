@@ -8,7 +8,12 @@
       <value type="string" value="org.freedesktop.network-manager-applet"/>
       <value type="string" value="org.qbittorrent.qBittorrent"/>
       <value type="string" value="org.xfce.Thunar"/>
+      <value type="string" value="xfce4-settings-helper"/>
       <value type="string" value="Метод ввода"/>
     </property>
+  </property>
+  <property name="plugin" type="empty">
+    <property name="log-icon-size" type="int" value="16"/>
+    <property name="hide-on-read" type="bool" value="true"/>
   </property>
 </channel>

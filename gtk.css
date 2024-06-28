@@ -1,0 +1,10 @@
+@import 'colors.css';
+.xfce4-panel{
+    border:0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgba(27,34,36,0.92);
+}
+.xfce4-notifyd{
+    background-color: rgba(40, 42, 51, 1);
+}
