@@ -5,8 +5,7 @@ cd nixos
 cp configuration.nix /etc/nixos/configuration.nix
 sudo nixos-rebuild switch
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-cp NixOs.svg /home/askodon/NixOs.svg
-cp tint2rc /home/askodon/.config/tint2/tint2rc
-cp rofi /home/askodon/.config
-cp xfce-perchannel-xml /home/askodon/.config/xfce4/xfconf/xfce-perchannel-xml/
+cp /home/askodon/nixos/gtk.css /home/askodon/.config/gtk-3.0/gtk.css
+cp -r rofi /home/askodon/.config
+cp -r xfce-perchannel-xml /home/askodon/.config/xfce4/xfconf/xfce-perchannel-xml/
 ```
