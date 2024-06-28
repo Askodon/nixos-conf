@@ -1,4 +1,5 @@
 my nix conf
+![pre](pre.png)
 ```
 git clone https://github.com/Askodon/nixos.git
 cd nixos
