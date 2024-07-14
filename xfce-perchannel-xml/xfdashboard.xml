@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <channel name="xfdashboard" version="1.0">
-  <property name="theme" type="string" value="xfdashboard-blue"/>
+  <property name="theme" type="string" value="xfdashboard"/>
+  <property name="reset-search-on-resume" type="bool" value="true"/>
+  <property name="allow-subwindows" type="bool" value="true"/>
+  <property name="always-launch-new-instance" type="bool" value="true"/>
+  <property name="enable-animations" type="bool" value="true"/>
   <property name="enable-unmapped-window-workaround" type="bool" value="true"/>
-  <property name="min-notification-timeout" type="uint" value="1000"/>
   <property name="components" type="empty">
+    <property name="applications-view" type="empty">
+      <property name="show-all-apps" type="bool" value="true"/>
+    </property>
     <property name="windows-view" type="empty">
       <property name="scroll-event-changes-workspace" type="bool" value="true"/>
     </property>
+  </property>
+  <property name="min-notification-timeout" type="uint" value="1000"/>
+  <property name="enabled-plugins" type="array">
+    <value type="string" value="hot-corner"/>
+    <value type="string" value="middle-click-window-close"/>
   </property>
 </channel>

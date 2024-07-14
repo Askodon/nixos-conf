@@ -5,7 +5,7 @@
   <property name="actions" type="empty">
     <property name="action-0" type="empty">
       <property name="name" type="string" value="Загрузить на Imgur™"/>
-      <property name="command" type="string" value="/nix/store/vd0m2gw9bb0aqymy0k7iv64lrl0wjkq2-xfce4-screenshooter-1.10.5/libexec/xfce4/screenshooter/scripts/imgur-upload.sh %f %imgur_client_id"/>
+      <property name="command" type="string" value="/nix/store/7b8c4cvigjqsvirvq24qj4zqfbmm2p1n-xfce4-screenshooter-1.10.5/libexec/xfce4/screenshooter/scripts/imgur-upload.sh %f %imgur_client_id"/>
     </property>
     <property name="actions" type="int" value="1"/>
   </property>
