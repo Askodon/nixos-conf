@@ -12,6 +12,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   #ONLY FOR HYPER-V! DELETE THIS IF YOUR USING ON HOME-PC|||
   boot.blacklistedKernelModules = [ "hyperv_fb" ];
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_stable; #test
 
   networking.hostName = "nixos"; #hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -79,7 +80,7 @@
   xdg.portal= {
     xdgOpenUsePortal = true;
     enable = true;
-    #extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    #extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; #failed to build
   };
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;

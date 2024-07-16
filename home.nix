@@ -28,8 +28,8 @@ home = {
     ];
     };
     gtk = {
-  enable = true;
-  theme = {
+  enable = true; 
+  theme = {  
     package = pkgs.qogir-theme;
     name = "Qogir-Dark";
     };

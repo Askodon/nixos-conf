@@ -36,12 +36,16 @@ random-order=true
 slideshow-enabled=true
 
 [desktop/interface]
+cursor-blink=true
 cursor-blink-time=1200
+cursor-size=24
 cursor-theme='volantes_cursors'
 font-name='Roboto 10'
 gtk-theme='Qogir-Dark'
 icon-theme='Papirus-Dark'
+keyboard-layout-prefer-variant-names=false
 keyboard-layout-show-flags=false
+keyboard-layout-use-upper=true
 text-scaling-factor=1.0
 toolkit-accessibility=true
 
@@ -80,7 +84,16 @@ autorun-never=false
 
 [desktop/peripherals/keyboard]
 delay=uint32 500
+repeat=false
 repeat-interval=uint32 30
+
+[desktop/peripherals/mouse]
+double-click=400
+drag-threshold=8
+speed=0.0
+
+[desktop/peripherals/touchpad]
+speed=0.0
 
 [desktop/screensaver]
 layout-group=0

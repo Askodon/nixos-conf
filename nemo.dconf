@@ -5,6 +5,9 @@ font='Roboto 10'
 default-column-order=['name', 'size', 'type', 'date_modified', 'where', 'owner', 'date_modified_with_time', 'group', 'date_created', 'date_accessed', 'detailed_type', 'permissions', 'octal_permissions', 'date_created_with_time', 'mime_type']
 default-visible-columns=['name', 'size', 'type', 'date_modified']
 
+[plugins]
+disabled-actions=['warpinator-send.nemo_action']
+
 [preferences]
 show-computer-icon-toolbar=false
 show-hidden-files=true
