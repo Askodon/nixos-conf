@@ -19,12 +19,7 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-  programs.hyprland = {
-    # Install the packages from nixpkgs
-    enable = true;
-    # Whether to enable XWayland
-    xwayland.enable = true;
-  };
+  
   services = { #services list
     xserver.displayManager.lightdm.enable = true;
     xserver.desktopManager.cinnamon.enable = true; 

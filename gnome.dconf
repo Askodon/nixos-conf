@@ -113,6 +113,10 @@ remember-recent-files=true
 remove-old-temp-files=false
 remove-old-trash-files=false
 
+[desktop/screensaver]
+embedded-keyboard-command='onboard --xid'
+embedded-keyboard-enabled=true
+
 [desktop/search-providers]
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
 

@@ -1,4 +1,8 @@
 [/]
+alttab-switcher-delay=100
+alttab-switcher-show-all-workspaces=true
+alttab-switcher-style='coverflow'
+alttab-switcher-warp-mouse-pointer=true
 desktop-effects-close='fly'
 desktop-effects-map='fly'
 desktop-effects-minimize='fly'
@@ -15,8 +19,21 @@ quit-time-delay=60
 [desktop/a11y/applications]
 screen-reader-enabled=true
 
+[desktop/applications/calculator]
+exec='gnome-calculator'
+
+[desktop/applications/terminal]
+exec='gnome-terminal'
+exec-arg='--'
+
 [desktop/background]
-picture-uri='file:///home/askodon/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8/zusoedkl0qkb1.png'
+picture-uri='file:///home/askodon/wallpaper/everforest-themed-nixos-wallpaper-i-made-which-isnt-literal-v0-ii7dzqcin07b1.png'
+
+[desktop/background/slideshow]
+delay=15
+image-source='directory:///home/askodon/wallpaper'
+random-order=true
+slideshow-enabled=true
 
 [desktop/interface]
 cursor-blink-time=1200
@@ -58,14 +75,24 @@ switch-to-workspace-left=['<Super>Left']
 switch-to-workspace-right=['<Super>Right']
 switch-to-workspace-up=['<Super>Tab', '<Alt>F1']
 
+[desktop/media-handling]
+autorun-never=false
+
 [desktop/peripherals/keyboard]
 delay=uint32 500
 repeat-interval=uint32 30
+
+[desktop/screensaver]
+layout-group=0
+
+[desktop/session]
+idle-delay=uint32 1800
 
 [desktop/sound]
 event-sounds=false
 
 [desktop/wm/preferences]
+min-window-opacity=30
 titlebar-font='Roboto Medium 10'
 
 [gestures]
@@ -86,6 +113,12 @@ tap-3='MEDIA_PLAY_PAUSE::end'
 [launcher]
 check-frequency=300
 memory-limit=2048
+
+[muffin]
+attach-modal-dialogs=true
+draggable-border-width=10
+placement-mode='center'
+unredirect-fullscreen-windows=true
 
 [settings-daemon/peripherals/keyboard]
 numlock-state='off'
