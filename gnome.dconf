@@ -11,7 +11,7 @@ always-show-text-caret=false
 
 [desktop/a11y/applications]
 screen-keyboard-enabled=false
-screen-reader-enabled=true
+screen-reader-enabled=false
 
 [desktop/a11y/keyboard]
 bouncekeys-beep-reject=false
@@ -86,7 +86,7 @@ text-scaling-factor=1.0
 toolbar-detachable=false
 toolbar-icons-size='large'
 toolbar-style='both-horiz'
-toolkit-accessibility=true
+toolkit-accessibility=false
 
 [desktop/notifications]
 application-children=['org-gnome-console']
@@ -176,6 +176,11 @@ sidebar-width=200
 window-height=480
 window-width=1205
 
+[gnome-screenshot]
+delay=0
+include-pointer=false
+last-save-directory='file:///home/askodon/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F'
+
 [libgnomekbd/desktop]
 group-per-window=false
 load-extra-items=false
@@ -193,6 +198,10 @@ initial-size=(890, 550)
 
 [nm-applet]
 disable-connected-notifications=true
+
+[nm-applet/eap/64dea75c-56ed-3643-b62c-3d019f59dfed]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
 
 [portal/filechooser/code]
 last-folder-path='/home/askodon/.config/home-manager'

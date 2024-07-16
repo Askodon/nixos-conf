@@ -27,21 +27,21 @@ home = {
       roboto
     ];
     };
-    gtk = {
-  enable = true; 
-  theme = {  
-    package = pkgs.qogir-theme;
-    name = "Qogir-Dark";
-    };
-  iconTheme = {
-      package = pkgs.papirus-icon-theme;
-      name = "papirus";
-  };
-  cursorTheme = {
-    package = pkgs.volantes-cursors;
-    name = "volantes-cursors";
-  };
-};
+   # gtk = {
+  #enable = true; 
+  #theme = {  
+    #package = pkgs.qogir-theme;
+    #name = "Qogir-Dark";
+   # };
+  #iconTheme = {
+    #  package = pkgs.papirus-icon-theme;
+   #   name = "papirus";
+  #};
+  #cursorTheme = {
+   # package = pkgs.volantes-cursors;
+  #  name = "volantes-cursors";
+ # };
+#};
 
 programs.zsh = {
   enable = true;

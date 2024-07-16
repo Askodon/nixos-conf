@@ -10,14 +10,26 @@ enabled-applets=['panel1:left:1:menu@cinnamon.org:0', 'panel1:center:1:grouped-w
 next-applet-id=16
 panel-edit-mode=false
 panel-zone-symbolic-icon-sizes='[{"panelId": 1, "left": 28, "center": 28, "right": 16}]'
-panels-height=['1:32']
+panels-height=['1:40']
 window-effect-speed=2
 
 [cinnamon-session]
 quit-time-delay=60
 
 [desktop/a11y/applications]
-screen-reader-enabled=true
+screen-reader-enabled=false
+
+[desktop/a11y/keyboard]
+bouncekeys-delay=300
+mousekeys-accel-time=300
+mousekeys-init-delay=300
+mousekeys-max-speed=10
+slowkeys-delay=300
+
+[desktop/a11y/mouse]
+dwell-threshold=10
+dwell-time=1.2
+secondary-click-time=1.2
 
 [desktop/applications/calculator]
 exec='gnome-calculator'
@@ -27,7 +39,7 @@ exec='gnome-terminal'
 exec-arg='--'
 
 [desktop/background]
-picture-uri='file:///home/askodon/wallpaper/zusoedkl0qkb1.png'
+picture-uri='file:///home/askodon/wallpaper/illustration-anime-anime-girls-thigh-highs-Vocaloid-Hatsune-Miku-costume-screenshot-computer-wallpaper-68107.png'
 
 [desktop/background/slideshow]
 delay=15
@@ -47,7 +59,7 @@ keyboard-layout-prefer-variant-names=false
 keyboard-layout-show-flags=false
 keyboard-layout-use-upper=true
 text-scaling-factor=1.0
-toolkit-accessibility=true
+toolkit-accessibility=false
 
 [desktop/keybindings]
 custom-list=['__dummy__', 'custom0', 'custom1']
