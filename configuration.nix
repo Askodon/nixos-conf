@@ -28,6 +28,7 @@
   services = { #services list
     xserver.displayManager.lightdm.enable = true;
     xserver.desktopManager.cinnamon.enable = true; 
+    #xserver.videoDrivers = [ "amdgpu" ]; #amdgpu for home pc
     zerotierone = {
     enable = true;
     joinNetworks = [
