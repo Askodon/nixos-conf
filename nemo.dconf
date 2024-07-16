@@ -1,0 +1,25 @@
+[desktop]
+font='Roboto 10'
+
+[list-view]
+default-column-order=['name', 'size', 'type', 'date_modified', 'where', 'owner', 'date_modified_with_time', 'group', 'date_created', 'date_accessed', 'detailed_type', 'permissions', 'octal_permissions', 'date_created_with_time', 'mime_type']
+default-visible-columns=['name', 'size', 'type', 'date_modified']
+
+[preferences]
+show-computer-icon-toolbar=false
+show-hidden-files=true
+show-home-icon-toolbar=false
+show-new-folder-icon-toolbar=true
+show-open-in-terminal-toolbar=true
+show-reload-icon-toolbar=true
+show-show-thumbnails-toolbar=true
+
+[search]
+search-reverse-sort=false
+search-sort-column='name'
+
+[window-state]
+geometry='793x505+589+312'
+maximized=true
+sidebar-bookmark-breakpoint=7
+start-with-sidebar=true

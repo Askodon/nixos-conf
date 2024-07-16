@@ -1,0 +1,94 @@
+[/]
+desktop-effects-close='fly'
+desktop-effects-map='fly'
+desktop-effects-minimize='fly'
+enabled-applets=['panel1:left:1:menu@cinnamon.org:0', 'panel1:center:1:grouped-window-list@cinnamon.org:2', 'panel1:right:0:systray@cinnamon.org:3', 'panel1:right:6:notifications@cinnamon.org:5', 'panel1:right:4:removable-drives@cinnamon.org:7', 'panel1:right:2:keyboard@cinnamon.org:8', 'panel1:right:8:favorites@cinnamon.org:9', 'panel1:right:5:network@cinnamon.org:10', 'panel1:right:9:sound@cinnamon.org:11', 'panel1:right:7:power@cinnamon.org:12', 'panel1:right:3:calendar@cinnamon.org:13']
+next-applet-id=16
+panel-edit-mode=false
+panel-zone-symbolic-icon-sizes='[{"panelId": 1, "left": 28, "center": 28, "right": 16}]'
+panels-height=['1:32']
+window-effect-speed=2
+
+[cinnamon-session]
+quit-time-delay=60
+
+[desktop/a11y/applications]
+screen-reader-enabled=true
+
+[desktop/background]
+picture-uri='file:///home/askodon/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8/zusoedkl0qkb1.png'
+
+[desktop/interface]
+cursor-blink-time=1200
+cursor-theme='volantes_cursors'
+font-name='Roboto 10'
+gtk-theme='Qogir-Dark'
+icon-theme='Papirus-Dark'
+keyboard-layout-show-flags=false
+text-scaling-factor=1.0
+toolkit-accessibility=true
+
+[desktop/keybindings]
+custom-list=['__dummy__', 'custom0', 'custom1']
+show-desklets=@as []
+
+[desktop/keybindings/custom-keybindings/custom0]
+binding=['<Super>period', '<Super>slash']
+command='/home/askodon/.config/rofi/launchers/type-4/launcher.sh'
+name='rofi'
+
+[desktop/keybindings/custom-keybindings/custom1]
+binding=['<Super>e', '<Super>Cyrillic_u']
+command='nemo'
+name='nemo'
+
+[desktop/keybindings/media-keys]
+area-screenshot=['<Super>s']
+home=['XF86Explorer']
+
+[desktop/keybindings/wm]
+push-tile-left=@as []
+push-tile-right=@as []
+switch-to-workspace-1=['<Super>1']
+switch-to-workspace-2=['<Super>2']
+switch-to-workspace-3=['<Super>3']
+switch-to-workspace-4=['<Super>4']
+switch-to-workspace-down=['<Super>w']
+switch-to-workspace-left=['<Super>Left']
+switch-to-workspace-right=['<Super>Right']
+switch-to-workspace-up=['<Super>Tab', '<Alt>F1']
+
+[desktop/peripherals/keyboard]
+delay=uint32 500
+repeat-interval=uint32 30
+
+[desktop/sound]
+event-sounds=false
+
+[desktop/wm/preferences]
+titlebar-font='Roboto Medium 10'
+
+[gestures]
+swipe-down-2='PUSH_TILE_DOWN::end'
+swipe-down-3='TOGGLE_OVERVIEW::end'
+swipe-down-4='VOLUME_DOWN::end'
+swipe-left-2='PUSH_TILE_LEFT::end'
+swipe-left-3='WORKSPACE_NEXT::end'
+swipe-left-4='WINDOW_WORKSPACE_PREVIOUS::end'
+swipe-right-2='PUSH_TILE_RIGHT::end'
+swipe-right-3='WORKSPACE_PREVIOUS::end'
+swipe-right-4='WINDOW_WORKSPACE_NEXT::end'
+swipe-up-2='PUSH_TILE_UP::end'
+swipe-up-3='TOGGLE_EXPO::end'
+swipe-up-4='VOLUME_UP::end'
+tap-3='MEDIA_PLAY_PAUSE::end'
+
+[launcher]
+check-frequency=300
+memory-limit=2048
+
+[settings-daemon/peripherals/keyboard]
+numlock-state='off'
+
+[theme]
+name='Qogir-Dark'

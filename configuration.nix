@@ -10,9 +10,8 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
   #ONLY FOR HYPER-V! DELETE THIS IF YOUR USING ON HOME-PC|||
-  #boot.blacklistedKernelModules = [ "hyperv_fb" ];
+  boot.blacklistedKernelModules = [ "hyperv_fb" ];
 
   networking.hostName = "nixos"; #hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -20,24 +19,28 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  programs.hyprland = {
+    # Install the packages from nixpkgs
+    enable = true;
+    # Whether to enable XWayland
+    xwayland.enable = true;
+  };
   services = { #services list
-    xserver.desktopManager.xfce.enable = true; #XFCE4 dekstop
+    xserver.displayManager.lightdm.enable = true;
+    xserver.desktopManager.cinnamon.enable = true; 
     zerotierone = {
     enable = true;
     joinNetworks = [
       "af415e486f279d61"
     ];
   };
-    xserver.desktopManager.xterm.enable = false;
-    xserver.displayManager.lightdm.greeters.gtk.enable = true;
-    xserver.videoDrivers = ["amdgpu"];
     openssh.enable = true; #openssh
     flatpak.enable = true;
     gnome.gnome-keyring.enable = true;
-      xserver = { #layout
+      xserver = {
       enable = true;
-      layout = "ru,us";
-      xkbVariant = "";
+      xkb.layout = "ru,us";
+      xkb.variant = "";
     };
       pipewire = { #pipewire
       enable = true;
@@ -59,7 +62,6 @@
   virtualisation = {
     podman = {
       enable = true;
-      # Create a `docker` alias for podman, to use it as a drop-in replacement
       dockerCompat = true;
       defaultNetwork.settings.dns_enabled = true;
     };
@@ -81,7 +83,7 @@
   xdg.portal= {
     xdgOpenUsePortal = true;
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    #extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -94,57 +96,12 @@
     driSupport32Bit = true;
   };
 
-  # services.xserver.libinput.enable = true;
-
   #my sweety home 
   users.users.askodon = {
     isNormalUser = true;
     description = "askodon";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      betterbird
-      vscode
-      papirus-icon-theme
-      github-desktop
-      podman
-      qpwgraph #for discord 
-      telegram-desktop
-      gamemode
-      qogir-theme
-      themechanger
-      gpick
-      volantes-cursors
-      gnome.gnome-keyring
-      rofi
-      transmission-gtk
-      gnome.file-roller
-      lutris
-    ];
-    
-  #fonts
+    extraGroups = [ "networkmanager" "wheel" ];    
   };
-  fonts = {
-    packages = with pkgs; [
-      # icon fonts
-      material-design-icons
-      # normal fonts
-      noto-fonts
-      noto-fonts-cjk
-      noto-fonts-emoji
-      rubik
-      pkgs.jetbrains-mono
-      # code font
-      (nerdfonts.override {fonts = ["SourceCodePro"];})
-    ];
-  #fonts settings
-  fontconfig.defaultFonts = {
-      serif = [ "Noto Serif" "Noto Color Emoji" ];
-      sansSerif = [ "Noto Sans" "Noto Color Emoji" ];
-      monospace = [ "Sauce Code Pro Nerd Font" ];
-      emoji = [ "Noto Color Emoji" ];
-    };
-  };
-
 
   #add swap file 
   swapDevices = [{
@@ -157,26 +114,7 @@
 
   #zsh as default
   users.defaultUserShell = pkgs.zsh;
-
-  #zsh config
-  programs.zsh = {
-  enable = true;
-  enableAutosuggestions = true;
-  ohMyZsh.enable = true;
-  ohMyZsh.plugins = [ "git" ];
-  ohMyZsh.theme = "agnoster";
-  syntaxHighlighting.enable = true;     
-};
-
-  programs.zsh.shellAliases = {
-    l = "ls -alh"; #help
-    ll = "ls -l"; #help 
-    udal = "ssh askodon@194.113.34.20"; #help
-    boot = "sudo nixos-rebuild boot"; #help
-    upgrade = "sudo nixos-rebuild switch"; #help
-    trash = "sudo nix-collect-garbage -d"; #help
-    help = "cat /etc/nixos/configuration.nix | grep help | less"; #help
-};
+  programs.zsh.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -203,24 +141,6 @@
     yazi # help | using like ranger but better
     mtr #help | using command like tracert
     nix-prefetch-github #help: nix-prefetch-github name repo
-    gnome.gnome-screenshot #help
-    xfce.xfce4-notifyd
-    xfce.xfce4-panel
-    xfce.xfce4-docklike-plugin
-    xfce.catfish
-    xfce.gigolo
-    xfce.orage
-    xfce.xfburn
-    xfce.xfce4-clipman-plugin
-    xfce.xfce4-cpugraph-plugin
-    xfce.xfce4-dict
-    xfce.xfce4-fsguard-plugin
-    xfce.xfce4-genmon-plugin
-    xfce.xfce4-netload-plugin
-    xfce.xfce4-pulseaudio-plugin
-    xfce.xfce4-systemload-plugin
-    xfce.xfce4-xkb-plugin
-    xfce.xfce4-whiskermenu-plugin
   ];
 
   #ufw like?????
