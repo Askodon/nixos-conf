@@ -27,7 +27,7 @@ exec='gnome-terminal'
 exec-arg='--'
 
 [desktop/background]
-picture-uri='file:///home/askodon/wallpaper/everforest-themed-nixos-wallpaper-i-made-which-isnt-literal-v0-ii7dzqcin07b1.png'
+picture-uri='file:///home/askodon/wallpaper/zusoedkl0qkb1.png'
 
 [desktop/background/slideshow]
 delay=15
