@@ -15,7 +15,6 @@ home = {
       podman
       qpwgraph
       gamemode
-      themechanger
       gpick
       volantes-cursors
       gnome.gnome-keyring
