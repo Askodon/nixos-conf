@@ -25,6 +25,7 @@ home = {
       vlc
       fira-code
       roboto
+      keepassxc
     ];
     };
    # gtk = {

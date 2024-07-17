@@ -39,7 +39,7 @@ exec='gnome-terminal'
 exec-arg='--'
 
 [desktop/background]
-picture-uri='file:///home/askodon/wallpaper/illustration-anime-anime-girls-thigh-highs-Vocaloid-Hatsune-Miku-costume-screenshot-computer-wallpaper-68107.png'
+picture-uri='file:///home/askodon/wallpaper/zusoedkl0qkb1.png'
 
 [desktop/background/slideshow]
 delay=15
@@ -76,8 +76,10 @@ command='nemo'
 name='nemo'
 
 [desktop/keybindings/media-keys]
-area-screenshot=['<Super>s']
+area-screenshot=['<Super>KP_Next']
+area-screenshot-clip=['<Shift><Super>Cyrillic_yeru']
 home=['XF86Explorer']
+screenshot=['<Super>Cyrillic_yeru', '<Super>s']
 
 [desktop/keybindings/wm]
 push-tile-left=@as []
@@ -96,7 +98,7 @@ autorun-never=false
 
 [desktop/peripherals/keyboard]
 delay=uint32 500
-repeat=false
+repeat=true
 repeat-interval=uint32 30
 
 [desktop/peripherals/mouse]
