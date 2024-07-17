@@ -1,8 +1,9 @@
-my nix conf
+full imperative cinnamon desktop install
 ```
-sudo rm -r nixos
-git clone https://github.com/Askodon/nixos.git
-cd nixos
+
+sudo rm -r nixos-conf
+git clone https://github.com/Askodon/nixos-conf.git
+cd nixos-conf
 sudo cp configuration.nix /etc/nixos/configuration.nix
 sudo nixos-rebuild switch
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
