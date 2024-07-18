@@ -80,9 +80,8 @@
 
   #flatpak error fix
   xdg.portal= {
-    xdgOpenUsePortal = true;
     enable = true;
-    #extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; #failed to build
+    xdgOpenUsePortal = true;
   };
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;

@@ -22,7 +22,8 @@ search-reverse-sort=false
 search-sort-column='name'
 
 [window-state]
-geometry='793x505+589+312'
-maximized=true
+geometry='793x505+563+272'
+maximized=false
 sidebar-bookmark-breakpoint=7
+sidebar-width=293
 start-with-sidebar=true

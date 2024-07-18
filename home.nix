@@ -1,5 +1,4 @@
 { config, pkgs, ... }: {
-
 nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (pkgs.lib.getName pkg) [ #allow unfree
       "vscode"
@@ -16,7 +15,6 @@ home = {
       qpwgraph
       gamemode
       gpick
-      volantes-cursors
       gnome.gnome-keyring
       rofi
       transmission-gtk
@@ -26,23 +24,15 @@ home = {
       fira-code
       roboto
       keepassxc
+      ryujinx
+      vesktop
     ];
-    };
-   # gtk = {
-  #enable = true; 
-  #theme = {  
-    #package = pkgs.qogir-theme;
-    #name = "Qogir-Dark";
-   # };
-  #iconTheme = {
-    #  package = pkgs.papirus-icon-theme;
-   #   name = "papirus";
-  #};
-  #cursorTheme = {
-   # package = pkgs.volantes-cursors;
-  #  name = "volantes-cursors";
- # };
-#};
+  };
+programs.git = {
+  enable = true;
+  userEmail = "askodon@disroot.org";
+  userName = "asko";
+};
 
 programs.zsh = {
   enable = true;
