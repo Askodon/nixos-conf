@@ -1,7 +1,7 @@
 full imperative cinnamon desktop install
 ```
 sudo rm -r /home/askodon/nixos-conf
-git clone https://github.com/Askodon/nixos-conf.git /home/askodon/
+git clone https://github.com/Askodon/nixos-conf.git /home/askodon/nixos-conf
 cd nixos-conf
 chmod +x install.sh
 ./install.sh
