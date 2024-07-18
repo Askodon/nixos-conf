@@ -3,9 +3,7 @@ nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (pkgs.lib.getName pkg) [ #allow unfree
       "vscode"
     ];
-imports = [
-  ./all.nix
-];
+    
 home = {
   username = "askodon";
   homeDirectory = "/home/askodon";
