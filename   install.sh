@@ -1,7 +1,4 @@
 #!/bin/sh
-sudo rm -r /home/askodon/nixos-conf
-git clone https://github.com/Askodon/nixos-conf.git /home/askodon/
-cd nixos-conf
 sudo cp configuration.nix /etc/nixos/configuration.nix
 sudo nixos-rebuild switch
 dconf load / < all.dconf
