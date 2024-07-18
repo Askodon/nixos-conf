@@ -139,6 +139,7 @@
     yazi # help | using like ranger but better
     mtr #help | using command like tracert
     nix-prefetch-github #help: nix-prefetch-github name repo
+    dconf2nix #dconf files to nix 
   ];
 
   #ufw like?????
