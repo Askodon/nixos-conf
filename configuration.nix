@@ -2,19 +2,22 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix # Include the results of the hardware scan.
-    ];
+  imports = [
+    ./hardware-configuration.nix # Include the results of the hardware scan.
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   #ONLY FOR HYPER-V! DELETE THIS IF YOUR USING ON HOME-PC|||
   boot.blacklistedKernelModules = [ "hyperv_fb" ];
-  boot.kernelPackages = pkgs.linuxPackages_xanmod_stable; #test
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_stable; # test
 
-  networking.hostName = "nixos"; #hostname.
+  networking.hostName = "nixos"; # hostname.
+  networking.nameservers = [
+    "1.1.1.1"
+    "8.8.8.8"
+  ]; # dns
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   services.libinput.enable = true;
@@ -22,26 +25,26 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-  
-  services = { #services list
+
+  services = {
+    # services list
     xserver.displayManager.lightdm.enable = true;
-    xserver.desktopManager.cinnamon.enable = true; 
+    xserver.desktopManager.cinnamon.enable = true;
     #xserver.videoDrivers = [ "amdgpu" ]; #amdgpu for home pc
     zerotierone = {
-    enable = true;
-    joinNetworks = [
-      "af415e486f279d61"
-    ];
-  };
-    openssh.enable = true; #openssh
+      enable = true;
+      joinNetworks = [ "af415e486f279d61" ];
+    };
+    openssh.enable = true; # openssh
     flatpak.enable = true;
     gnome.gnome-keyring.enable = true;
-      xserver = {
+    xserver = {
       enable = true;
       xkb.layout = "ru,us";
       xkb.variant = "";
     };
-      pipewire = { #pipewire
+    pipewire = {
+      # pipewire
       enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
@@ -79,7 +82,7 @@
   };
 
   #flatpak error fix
-  xdg.portal= {
+  xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
   };
@@ -88,7 +91,8 @@
   hardware.steam-hardware.enable = true;
   security.rtkit.enable = true;
 
-  hardware.opengl = { #gaming
+  hardware.opengl = {
+    # gaming
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
@@ -98,14 +102,19 @@
   users.users.askodon = {
     isNormalUser = true;
     description = "askodon";
-    extraGroups = [ "networkmanager" "wheel" ];    
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
   };
 
   #add swap file 
-  swapDevices = [{
-    device = "/swapfile";
-    size = 2 * 1024; # 2GB
-  }];
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 2 * 1024; # 2GB
+    }
+  ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -121,40 +130,41 @@
     firefox
     wget
     git
-    helix #help | using: "hx", vim-like editor
+    helix # help | using: "hx", vim-like editor
     fastfetch
     zsh
     oh-my-zsh
     firefox
     zsh-autosuggestions
     btop
-    qt5.qtwayland
-    qt6.qmake
-    qt6.qtwayland
-    adwaita-qt
-    adwaita-qt6
     home-manager
     go
     pavucontrol
     yazi # help | using like ranger but better
-    mtr #help | using command like tracert
-    nix-prefetch-github #help: nix-prefetch-github name repo
-    dconf2nix #dconf files to nix 
+    mtr # help | using command like tracert
   ];
 
-  #ufw like?????
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  #networking.wg-quick.interfaces = {
+  # wg0 = {
+  #  address = [ "10.8.1.4/32" ];
+  # dns = [ "1.1.1.1" "1.0.0.1" ];
+  # privateKey = "lUh+bh0gBuj7MZoGzwK4qzCXL6IyYVAEGYwpJBHyw6o=";
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; #system version
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; #experimental features
+  # peers = [
+  #  {
+  #   publicKey = "{4AQugG8IohbkjWuwqcA8568UIgE8Fq1OftERmElXCmA=}";
+  #  presharedKey = "fgwkBQTW+48V8gXPahxbEWvD/mdVG5/At0rJtAdsUuY=";
+  # allowedIPs = [ "0.0.0.0/0" "::/0" ];
+  #endpoint = "{194.113.34.20}:49118";
+  #persistentKeepalive = 25;
+  #}
+  #];
+  #};
+  #};
+
+  system.stateVersion = "24.05"; # system version
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ]; # experimental features
 }

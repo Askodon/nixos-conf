@@ -348,7 +348,7 @@ group-per-window=false
 load-extra-items=false
 
 [org/gnome/libgnomekbd/keyboard]
-options=['grptgrp:win_space_toggle']
+options=['grptgrp:win_space_toggle', 'grp\tgrp:win_space_toggle']
 
 [org/gnome/nautilus/preferences]
 default-folder-viewer='icon-view'
@@ -427,7 +427,7 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(449, 131)
+window-position=(356, 110)
 window-size=(1022, 749)
 
 [org/nemo/desktop]
