@@ -6,8 +6,8 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 cp -r rofi /home/askodon/.config
 sudo rm -r /home/askodon/.config/home-manager
 mkdir /home/askodon/.config/home-manager
-sudo cp /home/askodon/nixos-conf/home-manager/keyboard.nix /home/askodon/.config/home-manager
-sudo cp /home/askodon/nixos-conf/home-manager/home.nix /home/askodon/.config/home-manager
-sudo cp /home/askodon/nixos-conf/home-manager/all.nix /home/askodon/.config/home-manager
+sudo cp /home/askodon/nixos-conf/keyboard.nix /home/askodon/.config/home-manager
+sudo cp /home/askodon/nixos-conf/home.nix /home/askodon/.config/home-manager
+sudo cp /home/askodon/nixos-conf/all.nix /home/askodon/.config/home-manager
 home-manager switch
 mkdir /home/askodon/wallpaper
