@@ -9,6 +9,5 @@ mkdir /home/askodon/.config/home-manager
 sudo cp /home/askodon/nixos-conf/keyboard.nix /home/askodon/.config/home-manager
 sudo cp /home/askodon/nixos-conf/home.nix /home/askodon/.config/home-manager
 sudo cp /home/askodon/nixos-conf/all.nix /home/askodon/.config/home-manager
-sudo ln -s /home/askodon/.config/home-manager/home.nix /etc/nixos/
 home-manager switch
 mkdir /home/askodon/wallpaper
