@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 {
+  imports = [
+    ./all.nix
+    ./keyboard.nix
+  ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
     builtins.elem (pkgs.lib.getName pkg) [
@@ -35,6 +39,17 @@
       dconf2nix # dconf files to nix
       nixfmt-rfc-style # help format nix code
       nix-init #help auto prefetch and search build
+      go
+      pavucontrol
+      yazi # help | using like ranger but better
+      oh-my-zsh
+      zsh-autosuggestions
+      btop
+      helix # help | using: "hx", vim-like editor
+      lact
+      firefox
+      wget
+      gnome.dconf-editor
     ];
   };
   programs.git = {

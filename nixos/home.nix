@@ -1,0 +1,1 @@
+/home/askodon/.config/home-manager/home.nix

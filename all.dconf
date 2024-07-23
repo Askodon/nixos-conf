@@ -1,3 +1,11 @@
+[ca/desrt/dconf-editor]
+saved-pathbar-path='switch'
+saved-view='/org/gnome/desktop/wm/keybindings/'
+show-warning=false
+window-height=555
+window-is-maximized=false
+window-width=1083
+
 [org/cinnamon]
 alttab-switcher-delay=100
 alttab-switcher-show-all-workspaces=true
@@ -43,13 +51,13 @@ exec='gnome-terminal'
 exec-arg='--'
 
 [org/cinnamon/desktop/background]
-picture-uri='file:///home/askodon/wallpaper/zusoedkl0qkb1.png'
+picture-uri='file:///home/askodon/wallpaper/everforest-themed-nixos-wallpaper-i-made-which-isnt-literal-v0-ii7dzqcin07b1.png'
 
 [org/cinnamon/desktop/background/slideshow]
 delay=15
 image-source='directory:///home/askodon/wallpaper'
 random-order=true
-slideshow-enabled=true
+slideshow-enabled=false
 
 [org/cinnamon/desktop/interface]
 cursor-blink=true
@@ -348,7 +356,7 @@ group-per-window=false
 load-extra-items=false
 
 [org/gnome/libgnomekbd/keyboard]
-options=['grptgrp:win_space_toggle', 'grp\tgrp:win_space_toggle']
+options=['grptgrp:win_space_toggle', 'grptgrp:win_space_toggle', 'grp\tgrp:win_space_toggle']
 
 [org/gnome/nautilus/preferences]
 default-folder-viewer='icon-view'
