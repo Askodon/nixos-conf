@@ -1,15 +1,16 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./all.nix
-    ./keyboard.nix
+    #./all.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
     builtins.elem (pkgs.lib.getName pkg) [
       # allow unfree
       "vscode"
+      "obsidian"
     ];
+  home.sessionVariables.GTK_THEME = "Qogir-Dark";
 
   home = {
     username = "askodon";
@@ -19,13 +20,21 @@
       betterbird
       vscode
       github-desktop
-      podman
-      qpwgraph
-      gamemode
-      gpick
+      podman #container 
+      qpwgraph #sound tree changer
+      cinnamon.pix #photo
+      kdePackages.okular #pdf 
+      gpick #see colour on desktop
+      gnome.file-roller #zip and etc
+      gnome.gnome-terminal #console
       gnome.gnome-keyring
+      gnome.dconf-editor
+      gnome.nautilus
+      gnome.gnome-software
+      amberol #music 
+      gamemode
       rofi
-      transmission-gtk
+      transmission-gtk #torrent
       qogir-theme
       papirus-icon-theme
       vlc
@@ -49,7 +58,8 @@
       lact
       firefox
       wget
-      gnome.dconf-editor
+      obsidian
+      nextcloud-client
     ];
   };
   programs.git = {
