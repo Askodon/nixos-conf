@@ -11,7 +11,7 @@
       "obsidian"
       "davinci-resolve"
     ];
-    
+
   home.sessionVariables.GTK_THEME = "Qogir-Dark";
 
   home = {
@@ -54,18 +54,24 @@
       yazi # help | using like ranger but better
       python312Packages.howdoi #help auto answer
       go
-      pavucontrol
       oh-my-zsh
       zsh-autosuggestions
       btop
+      #system control
+      pavucontrol
       lact
+      corectrl #make seession for games
+      #end
       firefox
       wget
       obsidian
       #video
       obs-studio
+      gpu-screen-recorder-gtk #using only gpu to record
       davinci-resolve
       handbrake
+      tenacity
+      noisetorch #virtual micro without noise sound
       #end
       nextcloud-client
       colorls #better ls
