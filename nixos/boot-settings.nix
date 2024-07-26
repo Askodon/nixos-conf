@@ -2,6 +2,7 @@
 {
   # Bootloader.
   boot = {
+    plymouth.enable = true;
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     blacklistedKernelModules = [ "hyperv_fb" ]; # hyper-v settings

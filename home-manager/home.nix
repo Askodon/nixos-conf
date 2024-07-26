@@ -9,7 +9,9 @@
       # allow unfree
       "vscode"
       "obsidian"
+      "davinci-resolve"
     ];
+    
   home.sessionVariables.GTK_THEME = "Qogir-Dark";
 
   home = {
@@ -48,18 +50,25 @@
       dconf2nix # dconf files to nix
       nixfmt-rfc-style # help format nix code
       nix-init #help auto prefetch and search build
+      helix # help | using: "hx", vim-like editor
+      yazi # help | using like ranger but better
+      python312Packages.howdoi #help auto answer
       go
       pavucontrol
-      yazi # help | using like ranger but better
       oh-my-zsh
       zsh-autosuggestions
       btop
-      helix # help | using: "hx", vim-like editor
       lact
       firefox
       wget
       obsidian
+      #video
+      obs-studio
+      davinci-resolve
+      handbrake
+      #end
       nextcloud-client
+      colorls #better ls
     ];
   };
   programs.git = {
@@ -76,8 +85,9 @@
     oh-my-zsh.plugins = [ "git" ];
     oh-my-zsh.theme = "agnoster";
     shellAliases = {
-      l = "ls -alh"; # help
-      ll = "ls -l"; # help
+      ls = "colorls -A";
+      l = "colorls -alh"; # help
+      ll="colorls -1A"; # help
       udal = "ssh askodon@194.113.34.20"; # help
       boot = "sudo nixos-rebuild boot"; # help
       upgrade = "sudo nixos-rebuild switch; home-manager switch"; # help

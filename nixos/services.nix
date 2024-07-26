@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   services = {
     # services list
@@ -12,7 +12,15 @@
       xkb.layout = "ru,us";
       xkb.variant = "";
       xkb.options = "grp:win_space_toggle";
-      displayManager.lightdm.enable = true;
+      displayManager.lightdm.greeters.slick = {      
+      enable = true;
+      iconTheme.package = pkgs.papirus-icon-theme;
+      iconTheme.name = "Papirus-Dark";
+      #font.package = pkgs.roboto;
+      #font.name = "Roboto Regular";
+      theme.package = pkgs.qogir-theme;
+      theme.name = "Qogir-Dark";
+      };
       desktopManager.cinnamon.enable = true;
       #videoDrivers = [ "amdgpu" ]; #amdgpu for home pc
     };

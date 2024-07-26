@@ -21,11 +21,6 @@
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
-  environment.cinnamon.excludePackages = with pkgs.cinnamon; [ 
-    nemo 
-    nemo-with-extensions
-    ];
-
   # List packages installed in system profile. To search, run:
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
