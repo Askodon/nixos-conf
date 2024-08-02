@@ -2,6 +2,9 @@
 {
   services = {
     # services list
+    #flatpak.remotes = { 
+    #"flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo"; 
+    #};
     libinput.enable = true;
     openssh.enable = true; # openssh
     flatpak.enable = true;

@@ -17,6 +17,7 @@
   hardware.steam-hardware.enable = true;
   security.rtkit.enable = true;
 
+
   #zsh as default
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;

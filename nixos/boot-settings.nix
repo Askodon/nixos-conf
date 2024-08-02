@@ -7,12 +7,9 @@
     loader.efi.canTouchEfiVariables = true;
     blacklistedKernelModules = [ "hyperv_fb" ]; # hyper-v settings
     kernelPackages = pkgs.linuxPackages_xanmod_stable; # test
+    kernel.sysctl."vm.max_map_count" = 2147483642;
   };
-  #swapfile
-  swapDevices = [
-    {
-      device = "/swapfile";
-      size = 2 * 1024; # 2GB
-    }
-  ];
+
+  zramSwap.enable = true;
+  
 }

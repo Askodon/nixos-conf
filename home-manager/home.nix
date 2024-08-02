@@ -19,6 +19,7 @@
     homeDirectory = "/home/askodon";
     stateVersion = "24.05";
     packages = with pkgs; [
+      #desktop
       betterbird
       vscode
       github-desktop
@@ -34,7 +35,6 @@
       gnome.nautilus
       gnome.gnome-software
       amberol #music 
-      gamemode
       rofi
       transmission-gtk #torrent
       qogir-theme
@@ -45,6 +45,13 @@
       keepassxc
       ryujinx
       vesktop
+      firefox
+      obsidian
+      nextcloud-client
+      beekeeper-studio #sql
+      #end
+      
+      #terminal util
       deadnix # help deadnix search dead line of nix code
       nix-prefetch-github # help: nix-prefetch-github name repo
       dconf2nix # dconf files to nix
@@ -57,24 +64,24 @@
       oh-my-zsh
       zsh-autosuggestions
       btop
+      colorls #better ls
+      wget
+      gamemode
+      #end
+
       #system control
       pavucontrol
       lact
       corectrl #make seession for games
       #end
-      firefox
-      wget
-      obsidian
+
       #video
       obs-studio
       gpu-screen-recorder-gtk #using only gpu to record
-      davinci-resolve
       handbrake
       tenacity
       noisetorch #virtual micro without noise sound
       #end
-      nextcloud-client
-      colorls #better ls
     ];
   };
   programs.git = {
@@ -82,6 +89,8 @@
     userEmail = "askodon@disroot.org";
     userName = "asko";
   };
+  
+  programs.gamemode.enable = true;
 
   programs.zsh = {
     enable = true;
