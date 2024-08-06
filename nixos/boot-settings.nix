@@ -11,5 +11,5 @@
   };
 
   zramSwap.enable = true;
-  
+
 }
