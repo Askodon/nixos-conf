@@ -18,6 +18,7 @@
       xkb.layout = "ru,us";
       xkb.variant = "";
       xkb.options = "grp:win_space_toggle";
+      deviceSection = ''Option "TearFree" "true"''; # For amdgpu.
       displayManager.lightdm.greeters.slick = {
         enable = true;
         iconTheme.package = pkgs.papirus-icon-theme;

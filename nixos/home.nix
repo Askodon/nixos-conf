@@ -9,8 +9,6 @@
       # allow unfree
       "vscode"
       "obsidian"
-      "davinci-resolve"
-      "jetbrains-toolbox"
     ];
 
   home.sessionVariables.GTK_THEME = "Qogir-Dark";
@@ -24,7 +22,7 @@
       # desktop
       betterbird
       vscode
-      github-desktop
+      cinnamon-control-center
       podman # container
       qpwgraph # sound tree changer
       pix # photo
@@ -37,6 +35,7 @@
       papirus-icon-theme
       vlc
       fira-code
+      fira-code-nerdfont
       roboto
       keepassxc
       ryujinx
@@ -44,8 +43,7 @@
       firefox
       obsidian
       nextcloud-client
-      beekeeper-studio # sql
-      #jetbrains-toolbox # sql
+      antares
       #
 
       # gnome packages
@@ -60,7 +58,7 @@
 
       #terminal util
       deadnix # help deadnix search dead line of nix code
-      nix-prefetch-github # help: nix-prefetch-github name repo
+      nix-prefetch-github #ci help: nix-prefetch-github name repo
       dconf2nix # dconf files to nix
       nixfmt-rfc-style # help format nix code
       nix-init # help auto prefetch and search build
@@ -76,6 +74,8 @@
       gamemode
       appimage-run
       zellij
+      skim
+      nix-search-cli
       #
 
       #system control
@@ -127,6 +127,7 @@
       squashGit = "git rebase -i --autosquash HEAD~$(gum write)"; # help
       hs = "gum filter < $HISTFILE --height 20"; # help, history with auto paste
       fmtChoice = "nixfmt $(gum choose --no-limit $(ls))"; # help, nixfmt command with choice
+      #nix-choose = "sk --ansi -i -c 'nix-search ""{}""'";
     };
   };
 }
