@@ -2,7 +2,6 @@
 {
   config,
   pkgs,
-  pkgs-stable,
   ...
 }:
 {
@@ -24,12 +23,12 @@
   security.rtkit.enable = true;
 
   #zsh as default
-  users.defaultUserShell = pkgs-stable.zsh;
+  users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
   # List packages installed in system profile. To search, run:
   nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = with pkgs-stable; [
+  environment.systemPackages = with pkgs; [
     git
     fastfetch
     home-manager
