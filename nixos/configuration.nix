@@ -18,6 +18,10 @@
   hardware.steam-hardware.enable = true;
   security.rtkit.enable = true;
 
+  #stylix 
+  stylix.enable = true;
+  stylix.image = /home/askodon/wallpaper/nix.jpg;
+
   #zsh as default
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
