@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Application
+Name=LACT
+GenericName=AMDGPU Control Application
+Exec=/nix/store/mnky5mx985wv0cv2hbrxk7y72rhpwm2n-lact-0.5.5/bin/lact gui
+Icon=org.xfce.settings.default-applications
+Categories=System;
+Keywords=AMD;GPU;Radeon;
+Name[ru]=LACT
+Name[ru_RU]=LACT
+Name[ru_RU.UTF-8]=LACT
+Keywords[ru]=AMD;GPU;Radeon;
+Keywords[ru_RU]=AMD;GPU;Radeon;
+Keywords[ru_RU.UTF-8]=AMD;GPU;Radeon;
+Hidden=false
+NoDisplay=false
+StartupNotify=false
+Terminal=false
+

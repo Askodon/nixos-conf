@@ -1,0 +1,26 @@
+[Desktop Entry]
+Name=PortProton
+Name[ru]=PortProton
+Comment=Установка и запуск Windows игр и программ
+Comment[ru]=Установка и запуск Windows игр и программ
+GenericName=Windows games and program launcher
+GenericName[ru]=Средство установки и запуска Windows игр и программ
+Categories=Game;
+Type=Application
+Exec=flatpak run --branch=stable --arch=x86_64 --command=portproton --file-forwarding ru.linux_gaming.PortProton @@ %F @@
+Icon=hu.kramo.Cartridges
+MimeType=application/x-wine-extension-msp;application/x-msi;application/x-ms-dos-executable;
+StartupNotify=true
+Terminal=false
+Keywords[ru]=wine;windows;game;
+Keywords=wine;windows;game;
+X-Flatpak=ru.linux_gaming.PortProton
+Name[ru_RU]=PortProton
+Name[ru_RU.UTF-8]=PortProton
+Comment[ru_RU]=Установка и запуск Windows игр и программ
+Comment[ru_RU.UTF-8]=Установка и запуск Windows игр и программ
+Keywords[ru_RU]=wine;windows;game;
+Keywords[ru_RU.UTF-8]=wine;windows;game;
+Hidden=false
+NoDisplay=false
+

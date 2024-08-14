@@ -22,23 +22,22 @@
       # desktop
       betterbird
       vscode
-      cinnamon-control-center
       podman # container
       qpwgraph # sound tree changer
-      pix # photo
+      cinnamon.pix # photo
       kdePackages.okular # pdf
       gpick # see colour on desktop
       amberol # music
       rofi
       transmission_4-gtk # torrent
       qogir-theme
-      papirus-icon-theme
+      whitesur-icon-theme
+      tau-hydrogen
       vlc
       fira-code
       fira-code-nerdfont
       roboto
       keepassxc
-      ryujinx
       vesktop
       firefox
       obsidian
@@ -47,15 +46,28 @@
       #
 
       # gnome packages
-      file-roller # zip and etc
-      gnome-terminal # console
-      gnome-keyring
-      dconf-editor
-      nautilus
+      gnome.file-roller # zip and etc
+      gnome.gnome-terminal # console
+      gnome.gnome-keyring
+      gnome.dconf-editor
+      gnome.nautilus
       gnome.gnome-software
-      gnome-screenshot
+      gnome.gnome-screenshot
       #
 
+      #gnome extensions
+      gnome-extension-manager
+      gnomeExtensions.arcmenu
+      gnomeExtensions.dash-to-panel
+      gnomeExtensions.blur-my-shell
+      gnomeExtensions.appindicator
+      gnomeExtensions.coverflow-alt-tab
+      gnomeExtensions.caffeine
+      gnomeExtensions.tiling-assistant
+      gnomeExtensions.clipboard-indicator
+      gnomeExtensions.wallhub
+      #
+      
       #terminal util
       deadnix # help deadnix search dead line of nix code
       nix-prefetch-github #ci help: nix-prefetch-github name repo
@@ -65,6 +77,7 @@
       helix # help | using: "hx", vim-like editor
       yazi # help | using like ranger but better
       python312Packages.howdoi # help auto answer
+      tun2socks
       go
       oh-my-zsh
       zsh-autosuggestions

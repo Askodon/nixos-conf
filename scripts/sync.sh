@@ -7,6 +7,7 @@ gum style \
 SYNC=$(gum choose --limit 1 "cp to home" "cp to git folder" )
 if [ "$SYNC" = "cp to home" ]; then
     sudo cp /home/askodon/nixos-conf/nixos/home.nix /home/askodon/.config/home-manager/home.nix
+    sudo cp /home/askodon/nixos-conf/nixos/alacritty.nix /home/askodon/.config/home-manager/alacritty.nix
 fi
 if [ "$SYNC" = "cp to git folder" ]; then
     sudo cp /home/askodon/.config/home-manager/home.nix /home/askodon/nixos-conf/nixos/home.nix

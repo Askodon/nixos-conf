@@ -1,0 +1,20 @@
+[Desktop Entry]
+Name=GitHub Desktop
+Comment=Simple collaboration from your desktop
+GenericName=GitHub Desktop
+Exec=github-desktop %U
+Icon=appimagekit-github-desktop
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Utility;
+MimeType=x-scheme-handler/x-github-client;x-scheme-handler/x-github-desktop-auth;x-scheme-handler/x-github-desktop-dev-auth;
+Name[ru]=GitHub Desktop
+Name[ru_RU]=GitHub Desktop
+Name[ru_RU.UTF-8]=GitHub Desktop
+Comment[ru]=Simple collaboration from your desktop
+Comment[ru_RU]=Simple collaboration from your desktop
+Comment[ru_RU.UTF-8]=Simple collaboration from your desktop
+Hidden=false
+NoDisplay=false
+Terminal=false
+

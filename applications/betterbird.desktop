@@ -1,0 +1,34 @@
+[Desktop Entry]
+Actions=profile-manager-window;
+Categories=Network;Chat;Email;Feed;GTK;News
+Comment=Read and write e-mails or RSS feeds, or manage tasks on calendars.
+Exec=betterbird --name betterbird %U
+GenericName=Email Client
+Icon=emblem-mail
+Keywords=mail;email;e-mail;messages;rss;calendar;address book;addressbook;chat
+MimeType=message/rfc822;x-scheme-handler/mailto;text/calendar;text/x-vcard
+Name=Betterbird
+StartupNotify=true
+StartupWMClass=betterbird
+Terminal=false
+Type=Application
+Version=1.4
+Name[ru]=Betterbird
+Name[ru_RU]=Betterbird
+Name[ru_RU.UTF-8]=Betterbird
+Comment[ru]=Read and write e-mails or RSS feeds, or manage tasks on calendars.
+Comment[ru_RU]=Read and write e-mails or RSS feeds, or manage tasks on calendars.
+Comment[ru_RU.UTF-8]=Read and write e-mails or RSS feeds, or manage tasks on calendars.
+Keywords[ru]=mail;email;e-mail;messages;rss;calendar;address book;addressbook;chat
+Keywords[ru_RU]=mail;email;e-mail;messages;rss;calendar;address book;addressbook;chat
+Keywords[ru_RU.UTF-8]=mail;email;e-mail;messages;rss;calendar;address book;addressbook;chat
+Hidden=false
+NoDisplay=false
+
+[Desktop Action profile-manager-window]
+Exec=betterbird --ProfileManager
+Name=Profile Manager
+Name[ru]=Profile Manager
+Name[ru_RU]=Profile Manager
+Name[ru_RU.UTF-8]=Profile Manager
+

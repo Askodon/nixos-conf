@@ -14,7 +14,7 @@
     ./virtualisation.nix
     ./locale.nix
     ./users.nix
-    ./zapret.nix
+    #./zapret.nix
   ];
 
   # Enable sound with pipewire.

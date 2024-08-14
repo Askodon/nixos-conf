@@ -10,6 +10,8 @@ sudo rm -r /home/askodon/.config/home-manager
 sudo mkdir /home/askodon/.config/home-manager
 sudo cp /home/askodon/nixos-conf/nixos/home.nix /home/askodon/.config/home-manager
 sudo cp /home/askodon/nixos-conf/nixos/all.nix /home/askodon/.config/home-manager
+sudo cp -r /home/askodon/nixos-conf/applications /home/askodon/.local/share
+sudo cp /home/askodon/nixos-conf/chrome /home/askodon/.mozilla/firefox/dbmi88ob.default
 home-manager switch
 mkdir /home/askodon/wallpaper
 

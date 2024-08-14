@@ -1,0 +1,26 @@
+[Desktop Entry]
+Version=1.0
+Name=Gpick
+Comment=Пипетка для снятия цвета
+Comment[ru]=Пипетка для снятия цвета
+Comment[de]=Farbwerte eines ausgewählten Punktes auf dem Bildschirm erfassen
+GenericName=Color picker
+Exec=gpick %u
+Icon=color-picker
+StartupNotify=true
+MimeType=application/x-gpick-palette;
+Terminal=false
+Type=Application
+Categories=Graphics;GTK;
+Keywords=color picker;colorpick;palette;palette editing;
+Name[ru]=Gpick
+Name[ru_RU]=Gpick
+Name[ru_RU.UTF-8]=Gpick
+Comment[ru_RU]=Пипетка для снятия цвета
+Comment[ru_RU.UTF-8]=Пипетка для снятия цвета
+Keywords[ru]=color picker;colorpick;palette;palette editing;
+Keywords[ru_RU]=color picker;colorpick;palette;palette editing;
+Keywords[ru_RU.UTF-8]=color picker;colorpick;palette;palette editing;
+Hidden=false
+NoDisplay=false
+
