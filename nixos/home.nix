@@ -31,6 +31,7 @@
       rofi
       transmission_4-gtk # torrent
       qogir-theme
+      bibata-cursors
       whitesur-icon-theme
       tau-hydrogen
       vlc
@@ -54,6 +55,7 @@
       gnome.nautilus
       gnome.gnome-software
       gnome.gnome-screenshot
+      gnome-tweaks
       #
 
       #gnome extensions
@@ -68,10 +70,10 @@
       gnomeExtensions.clipboard-indicator
       gnomeExtensions.wallhub
       #
-      
+
       #terminal util
       deadnix # help deadnix search dead line of nix code
-      nix-prefetch-github #ci help: nix-prefetch-github name repo
+      nix-prefetch-github # ci help: nix-prefetch-github name repo
       dconf2nix # dconf files to nix
       nixfmt-rfc-style # help format nix code
       nix-init # help auto prefetch and search build

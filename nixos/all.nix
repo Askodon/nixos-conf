@@ -30,10 +30,24 @@ with lib.hm.gvariant;
       desktop-effects-close = "fly";
       desktop-effects-map = "fly";
       desktop-effects-minimize = "fly";
-      enabled-applets = [ "panel1:center:1:grouped-window-list@cinnamon.org:2" "panel1:right:0:systray@cinnamon.org:3" "panel1:right:7:notifications@cinnamon.org:5" "panel1:right:5:removable-drives@cinnamon.org:7" "panel1:right:2:keyboard@cinnamon.org:8" "panel1:right:9:favorites@cinnamon.org:9" "panel1:right:6:network@cinnamon.org:10" "panel1:right:10:sound@cinnamon.org:11" "panel1:right:8:power@cinnamon.org:12" "panel1:right:3:calendar@cinnamon.org:13" "panel1:left:0:Cinnamenu@json:21" "panel1:right:11:SW++@mohammad-sn:25" "panel1:right:4:weather@mockturtl:34" ];
-      enabled-desklets = [];
+      enabled-applets = [
+        "panel1:center:1:grouped-window-list@cinnamon.org:2"
+        "panel1:right:0:systray@cinnamon.org:3"
+        "panel1:right:7:notifications@cinnamon.org:5"
+        "panel1:right:5:removable-drives@cinnamon.org:7"
+        "panel1:right:2:keyboard@cinnamon.org:8"
+        "panel1:right:9:favorites@cinnamon.org:9"
+        "panel1:right:6:network@cinnamon.org:10"
+        "panel1:right:10:sound@cinnamon.org:11"
+        "panel1:right:8:power@cinnamon.org:12"
+        "panel1:right:3:calendar@cinnamon.org:13"
+        "panel1:left:0:Cinnamenu@json:21"
+        "panel1:right:11:SW++@mohammad-sn:25"
+        "panel1:right:4:weather@mockturtl:34"
+      ];
+      enabled-desklets = [ ];
       enabled-extensions = [ "transparent-panels@germanfr" ];
-      favorite-apps = [];
+      favorite-apps = [ ];
       next-applet-id = 37;
       panel-edit-mode = false;
       panel-zone-icon-sizes = "[{\"panelId\": 1, \"left\": 32, \"center\": 32, \"right\": 32}]";
@@ -107,24 +121,38 @@ with lib.hm.gvariant;
     };
 
     "org/cinnamon/desktop/keybindings" = {
-      custom-list = [ "custom2" "custom1" "custom0" ];
-      show-desklets = [];
+      custom-list = [
+        "custom2"
+        "custom1"
+        "custom0"
+      ];
+      show-desklets = [ ];
     };
 
     "org/cinnamon/desktop/keybindings/custom-keybindings/custom0" = {
-      binding = [ "<Super>period" "<Super>slash" ];
+      binding = [
+        "<Super>period"
+        "<Super>slash"
+      ];
       command = "/home/askodon/nixos-conf/rofi/launchers/qogirColor/launcher.sh";
       name = "rofi";
     };
 
     "org/cinnamon/desktop/keybindings/custom-keybindings/custom1" = {
-      binding = [ "<Super>e" "<Super>Cyrillic_u" ];
+      binding = [
+        "<Super>e"
+        "<Super>Cyrillic_u"
+      ];
       command = "nautilus";
       name = "nautilus";
     };
 
     "org/cinnamon/desktop/keybindings/custom-keybindings/custom2" = {
-      binding = [ "<Super>s" "<Super>Cyrillic_yeru" "Print" ];
+      binding = [
+        "<Super>s"
+        "<Super>Cyrillic_yeru"
+        "Print"
+      ];
       command = "gnome-screenshot -c";
       name = "gnome-screenshot";
     };
@@ -133,12 +161,12 @@ with lib.hm.gvariant;
       area-screenshot = [ "<Super>KP_Next" ];
       area-screenshot-clip = [ "<Shift><Super>Cyrillic_yeru" ];
       home = [ "XF86Explorer" ];
-      screenshot = [];
+      screenshot = [ ];
     };
 
     "org/cinnamon/desktop/keybindings/wm" = {
-      push-tile-left = [];
-      push-tile-right = [];
+      push-tile-left = [ ];
+      push-tile-right = [ ];
       switch-to-workspace-1 = [ "<Super>1" ];
       switch-to-workspace-2 = [ "<Super>2" ];
       switch-to-workspace-3 = [ "<Super>3" ];
@@ -146,7 +174,10 @@ with lib.hm.gvariant;
       switch-to-workspace-down = [ "<Super>w" ];
       switch-to-workspace-left = [ "<Super>Left" ];
       switch-to-workspace-right = [ "<Super>Right" ];
-      switch-to-workspace-up = [ "<Super>Tab" "<Alt>F1" ];
+      switch-to-workspace-up = [
+        "<Super>Tab"
+        "<Alt>F1"
+      ];
     };
 
     "org/cinnamon/desktop/media-handling" = {
@@ -186,7 +217,7 @@ with lib.hm.gvariant;
       min-window-opacity = 30;
       num-workspaces = 2;
       titlebar-font = "Roboto Medium 10";
-      workspace-names = [];
+      workspace-names = [ ];
     };
 
     "org/cinnamon/gestures" = {
@@ -228,7 +259,10 @@ with lib.hm.gvariant;
 
     "org/gnome/Console" = {
       last-window-maximised = false;
-      last-window-size = mkTuple [ 1201 782 ];
+      last-window-size = mkTuple [
+        1201
+        782
+      ];
     };
 
     "org/gnome/Geary" = {
@@ -237,7 +271,11 @@ with lib.hm.gvariant;
 
     "org/gnome/control-center" = {
       last-panel = "network";
-      window-state = mkTuple [ 980 640 false ];
+      window-state = mkTuple [
+        980
+        640
+        false
+      ];
     };
 
     "org/gnome/desktop/a11y" = {
@@ -265,7 +303,11 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/app-folders" = {
-      folder-children = [ "Utilities" "YaST" "Pardus" ];
+      folder-children = [
+        "Utilities"
+        "YaST"
+        "Pardus"
+      ];
     };
 
     "org/gnome/desktop/app-folders/folders/Pardus" = {
@@ -275,7 +317,24 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/app-folders/folders/Utilities" = {
-      apps = [ "gnome-abrt.desktop" "gnome-system-log.desktop" "nm-connection-editor.desktop" "org.gnome.baobab.desktop" "org.gnome.Connections.desktop" "org.gnome.DejaDup.desktop" "org.gnome.Dictionary.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.Evince.desktop" "org.gnome.FileRoller.desktop" "org.gnome.fonts.desktop" "org.gnome.Loupe.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.tweaks.desktop" "org.gnome.Usage.desktop" "vinagre.desktop" ];
+      apps = [
+        "gnome-abrt.desktop"
+        "gnome-system-log.desktop"
+        "nm-connection-editor.desktop"
+        "org.gnome.baobab.desktop"
+        "org.gnome.Connections.desktop"
+        "org.gnome.DejaDup.desktop"
+        "org.gnome.Dictionary.desktop"
+        "org.gnome.DiskUtility.desktop"
+        "org.gnome.Evince.desktop"
+        "org.gnome.FileRoller.desktop"
+        "org.gnome.fonts.desktop"
+        "org.gnome.Loupe.desktop"
+        "org.gnome.seahorse.Application.desktop"
+        "org.gnome.tweaks.desktop"
+        "org.gnome.Usage.desktop"
+        "vinagre.desktop"
+      ];
       categories = [ "X-GNOME-Utilities" ];
       name = "X-GNOME-Utilities.directory";
       translate = true;
@@ -294,7 +353,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/input-sources" = {
       current = mkUint32 0;
       show-all-sources = false;
-      xkb-options = [];
+      xkb-options = [ ];
     };
 
     "org/gnome/desktop/interface" = {
@@ -367,7 +426,11 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/search-providers" = {
-      sort-order = [ "org.gnome.Contacts.desktop" "org.gnome.Documents.desktop" "org.gnome.Nautilus.desktop" ];
+      sort-order = [
+        "org.gnome.Contacts.desktop"
+        "org.gnome.Documents.desktop"
+        "org.gnome.Nautilus.desktop"
+      ];
     };
 
     "org/gnome/desktop/session" = {
@@ -404,7 +467,7 @@ with lib.hm.gvariant;
       titlebar-uses-system-font = false;
       visual-bell = false;
       visual-bell-type = "fullscreen-flash";
-      workspace-names = [];
+      workspace-names = [ ];
     };
 
     "org/gnome/evolution-data-server" = {
@@ -421,7 +484,10 @@ with lib.hm.gvariant;
     "org/gnome/file-roller/file-selector" = {
       show-hidden = false;
       sidebar-size = 300;
-      window-size = mkTuple [ (-1) (-1) ];
+      window-size = mkTuple [
+        (-1)
+        (-1)
+      ];
     };
 
     "org/gnome/file-roller/listing" = {
@@ -450,7 +516,13 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/libgnomekbd/keyboard" = {
-      options = [ "grptgrp:win_space_toggle" "grptgrp:win_space_toggle" "grptgrp:win_space_toggle" "grptgrp:win_space_toggle" "grptgrp:win_space_toggle" ];
+      options = [
+        "grptgrp:win_space_toggle"
+        "grptgrp:win_space_toggle"
+        "grptgrp:win_space_toggle"
+        "grptgrp:win_space_toggle"
+        "grptgrp:win_space_toggle"
+      ];
     };
 
     "org/gnome/nautilus/compression" = {
@@ -466,7 +538,10 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nautilus/window-state" = {
-      initial-size = mkTuple [ 1116 818 ];
+      initial-size = mkTuple [
+        1116
+        818
+      ];
       maximized = false;
     };
 
@@ -484,7 +559,9 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" ];
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+      ];
       home = [ "<Super>backslash" ];
     };
 
@@ -499,7 +576,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/world-clocks" = {
-      locations = [];
+      locations = [ ];
     };
 
     "org/gnome/software" = {
@@ -515,7 +592,24 @@ with lib.hm.gvariant;
       custom-command = "zellij options --disable-mouse-mode";
       font = "Fira Code 12";
       foreground-color = "rgb(234,194,139)";
-      palette = [ "rgb(0,0,0)" "rgb(192,28,40)" "rgb(232,130,152)" "rgb(162,115,76)" "rgb(0,114,255)" "rgb(163,71,186)" "rgb(42,161,179)" "rgb(208,207,204)" "rgb(94,92,100)" "rgb(246,97,81)" "rgb(51,209,122)" "rgb(233,173,12)" "rgb(42,123,222)" "rgb(192,97,203)" "rgb(174,143,235)" "rgb(255,255,255)" ];
+      palette = [
+        "rgb(0,0,0)"
+        "rgb(192,28,40)"
+        "rgb(232,130,152)"
+        "rgb(162,115,76)"
+        "rgb(0,114,255)"
+        "rgb(163,71,186)"
+        "rgb(42,161,179)"
+        "rgb(208,207,204)"
+        "rgb(94,92,100)"
+        "rgb(246,97,81)"
+        "rgb(51,209,122)"
+        "rgb(233,173,12)"
+        "rgb(42,123,222)"
+        "rgb(192,97,203)"
+        "rgb(174,143,235)"
+        "rgb(255,255,255)"
+      ];
       use-custom-command = true;
       use-system-font = false;
       use-theme-colors = false;
@@ -535,12 +629,70 @@ with lib.hm.gvariant;
       sort-order = "ascending";
       type-format = "category";
       view-type = "list";
-      window-size = mkTuple [ 937 354 ];
+      window-size = mkTuple [
+        937
+        354
+      ];
     };
 
     "org/gtk/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 0.0 0.0 0.0 0.0 ]) (mkTuple [ 0.909804 0.509804 0.596078 1.0 ]) (mkTuple [ 0.646667 0.646667 0.646667 1.0 ]) (mkTuple [ 1.0 0.0 4.2705e-2 1.0 ]) (mkTuple [ 3.333e-3 3.333e-3 3.333e-3 1.0 ]) (mkTuple [ 0.230769 0.0 1.0 1.0 ]) (mkTuple [ 0.265641 8.6333e-2 0.863333 1.0 ]) (mkTuple [ 0.265641 8.6333e-2 0.863333 1.0 ]) ];
-      selected-color = mkTuple [ true 0.0 0.0 0.0 0.0 ];
+      custom-colors = [
+        (mkTuple [
+          0.0
+          0.0
+          0.0
+          0.0
+        ])
+        (mkTuple [
+          0.909804
+          0.509804
+          0.596078
+          1.0
+        ])
+        (mkTuple [
+          0.646667
+          0.646667
+          0.646667
+          1.0
+        ])
+        (mkTuple [
+          1.0
+          0.0
+          4.2705e-2
+          1.0
+        ])
+        (mkTuple [
+          3.333e-3
+          3.333e-3
+          3.333e-3
+          1.0
+        ])
+        (mkTuple [
+          0.230769
+          0.0
+          1.0
+          1.0
+        ])
+        (mkTuple [
+          0.265641
+          8.6333e-2
+          0.863333
+          1.0
+        ])
+        (mkTuple [
+          0.265641
+          8.6333e-2
+          0.863333
+          1.0
+        ])
+      ];
+      selected-color = mkTuple [
+        true
+        0.0
+        0.0
+        0.0
+        0.0
+      ];
     };
 
     "org/gtk/settings/file-chooser" = {
@@ -554,8 +706,14 @@ with lib.hm.gvariant;
       sort-directories-first = false;
       sort-order = "ascending";
       type-format = "category";
-      window-position = mkTuple [ 449 150 ];
-      window-size = mkTuple [ 1022 749 ];
+      window-position = mkTuple [
+        449
+        150
+      ];
+      window-size = mkTuple [
+        1022
+        749
+      ];
     };
 
     "org/nemo/desktop" = {
@@ -569,13 +727,34 @@ with lib.hm.gvariant;
     };
 
     "org/nemo/list-view" = {
-      default-column-order = [ "name" "size" "type" "date_modified" "where" "owner" "date_modified_with_time" "group" "date_created" "date_accessed" "detailed_type" "permissions" "octal_permissions" "date_created_with_time" "mime_type" ];
-      default-visible-columns = [ "name" "size" "type" "date_modified" ];
+      default-column-order = [
+        "name"
+        "size"
+        "type"
+        "date_modified"
+        "where"
+        "owner"
+        "date_modified_with_time"
+        "group"
+        "date_created"
+        "date_accessed"
+        "detailed_type"
+        "permissions"
+        "octal_permissions"
+        "date_created_with_time"
+        "mime_type"
+      ];
+      default-visible-columns = [
+        "name"
+        "size"
+        "type"
+        "date_modified"
+      ];
     };
 
     "org/nemo/plugins" = {
       disabled-actions = [ "warpinator-send.nemo_action" ];
-      disabled-extensions = [];
+      disabled-extensions = [ ];
     };
 
     "org/nemo/preferences" = {
@@ -635,7 +814,12 @@ with lib.hm.gvariant;
       fullscreen-sidebar = "hidden";
       fullscreen-thumbnails-visible = false;
       maximized = false;
-      sidebar-sections = [ "GthFileProperties:expanded" "GthFileComment:expanded" "GthFileDetails:expanded" "GthImageHistogram:expanded" ];
+      sidebar-sections = [
+        "GthFileProperties:expanded"
+        "GthFileComment:expanded"
+        "GthFileDetails:expanded"
+        "GthImageHistogram:expanded"
+      ];
       sidebar-visible = true;
       sort-inverse = false;
       sort-type = "file::mtime";
@@ -650,11 +834,57 @@ with lib.hm.gvariant;
     };
 
     "org/x/pix/general" = {
-      active-extensions = [ "23hq" "bookmarks" "burn_disc" "catalogs" "change_date" "comments" "contact_sheet" "convert_format" "desktop_background" "edit_metadata" "exiv2_tools" "file_manager" "find_duplicates" "flicker" "gstreamer_tools" "gstreamer_utils" "image_print" "image_rotation" "importer" "jpeg_utils" "list_tools" "oauth" "photo_importer" "raw_files" "red_eye_removal" "rename_series" "resize_images" "search" "selections" "slideshow" "terminal" "webalbums" ];
+      active-extensions = [
+        "23hq"
+        "bookmarks"
+        "burn_disc"
+        "catalogs"
+        "change_date"
+        "comments"
+        "contact_sheet"
+        "convert_format"
+        "desktop_background"
+        "edit_metadata"
+        "exiv2_tools"
+        "file_manager"
+        "find_duplicates"
+        "flicker"
+        "gstreamer_tools"
+        "gstreamer_utils"
+        "image_print"
+        "image_rotation"
+        "importer"
+        "jpeg_utils"
+        "list_tools"
+        "oauth"
+        "photo_importer"
+        "raw_files"
+        "red_eye_removal"
+        "rename_series"
+        "resize_images"
+        "search"
+        "selections"
+        "slideshow"
+        "terminal"
+        "webalbums"
+      ];
     };
 
     "org/x/player" = {
-      active-plugins = [ "screensaver" "opensubtitles" "media_player_keys" "apple-trailers" "dbusservice" "recent" "movie-properties" "skipto" "vimeo" "chapters" "screenshot" "autoload-subtitles" ];
+      active-plugins = [
+        "screensaver"
+        "opensubtitles"
+        "media_player_keys"
+        "apple-trailers"
+        "dbusservice"
+        "recent"
+        "movie-properties"
+        "skipto"
+        "vimeo"
+        "chapters"
+        "screenshot"
+        "autoload-subtitles"
+      ];
       debug = false;
       subtitle-encoding = "UTF-8";
     };

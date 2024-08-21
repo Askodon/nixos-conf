@@ -3,7 +3,7 @@
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
-    };
+  };
   services = {
     # services list
     #flatpak.remotes = { 
