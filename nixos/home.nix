@@ -55,7 +55,7 @@
       gnome.nautilus
       gnome.gnome-software
       gnome.gnome-screenshot
-      gnome-tweaks
+      gnome.gnome-tweaks
       #
 
       #gnome extensions
