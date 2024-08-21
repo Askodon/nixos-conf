@@ -43,6 +43,7 @@
       obsidian
       nextcloud-client
       antares
+      alacritty
       #
 
       # gnome packages

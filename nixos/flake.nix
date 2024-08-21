@@ -31,15 +31,15 @@
           };
         };
       };
-      homeConfigurations.askodon = home-manager.lib.homeManagerConfiguration {
-        system = "x86_64-linux";
-        modules = [ /home/askodon/.config/home-manager/home.nix ];
-        specialArgs = {
-          pkgs = import nixpkgs {
-            system = "x86_64-linux";
-            config.allowUnfree = true;
-          };
-        };
+      homeConfigurations = {
+            "askodon" = home-manager.lib.homeManagerConfiguration {
+                # Note: I am sure this could be done better with flake-utils or something
+                pkgs = import nixpkgs { system = "x86_64-linux"; };
+
+                modules = [ 
+                  ./home.nix 
+                  ./alacritty.nix
+                ];
       };
     };
 }
