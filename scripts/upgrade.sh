@@ -8,7 +8,7 @@ if [ "$UPGRADE" = "upgrade flake" ]; then
     sudo nixos-rebuild switch --flake /home/askodon/nixos-conf/nixos/
 fi
 if [ "$UPGRADE" = "upgrade home-manager" ]; then
-    home-manager switch
+    home-manager --flake /home/askodon/nixos-conf/nixos switch
 fi
 gum spin --spinner meter --title "finish update" -- sleep 1
 exec zsh
