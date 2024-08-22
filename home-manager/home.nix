@@ -2,7 +2,7 @@
 {
   imports = [
     #./all.nix
-    #./alacritty.nix
+    ./alacritty.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:

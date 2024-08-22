@@ -3,10 +3,6 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      colors.primary = {
-        background = "#171f2b";
-        foreground = "0xd8d8d8";
-      };
       shell = {
         program = "zsh";
         #args = [ "zellij" ];
@@ -16,7 +12,7 @@
         x = 10;
         y = 10;
       };
-      window.opacity = 0.7;
+      window.opacity = 0.9;
       scrolling.history = 1000;
       font = {
         normal = {
