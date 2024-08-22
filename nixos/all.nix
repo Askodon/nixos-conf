@@ -254,10 +254,6 @@ with lib.hm.gvariant;
       last-folder-path = "/home/askodon/wallpaper";
     };
 
-    "org/gnome/portal/filechooser/org/gnome/Settings" = {
-      last-folder-path = "/home/askodon/wallpaper";
-    };
-
     "org/gnome/portal/filechooser/vesktop" = {
       last-folder-path = "/home/askodon/\1048\1079\1086\1073\1088\1072\1078\1077\1085\1080\1103/\1057\1085\1080\1084\1082\1080 \1101\1082\1088\1072\1085\1072";
     };
