@@ -5,6 +5,7 @@ gum style \
         "update type "
 UPGRADE=$(gum choose --limit 1 "upgrade home-manager" "upgrade flake" )
 if [ "$UPGRADE" = "upgrade flake" ]; then
+    sudo cp /etc/nixos/hardware-configuration.nix /home/askodon/nixos-conf/nixos/hardware-configuration.nix
     sudo nixos-rebuild switch --flake /home/askodon/nixos-conf/nixos/
 fi
 if [ "$UPGRADE" = "upgrade home-manager" ]; then
