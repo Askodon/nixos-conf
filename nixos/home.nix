@@ -37,6 +37,7 @@
       vlc
       fira-code
       fira-code-nerdfont
+      nerdfonts
       roboto
       keepassxc
       vesktop
