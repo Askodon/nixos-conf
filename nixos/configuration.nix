@@ -19,8 +19,8 @@
   security.rtkit.enable = true;
 
   #stylix 
-  stylix.enable = true;
-  stylix.image = /home/askodon/wallpaper/nix.jpg;
+  #stylix.enable = true;
+  #stylix.image = /home/askodon/wallpaper/nix.jpg;
 
   #zsh as default
   users.defaultUserShell = pkgs.zsh;
@@ -30,9 +30,7 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     git
-    fastfetch
-    home-manager
-    mtr # help | using command like tracert
+    home-manager 
     gum
   ];
 

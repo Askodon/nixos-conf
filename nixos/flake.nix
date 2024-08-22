@@ -1,15 +1,8 @@
 {
-
   description = "test flake";
 
   inputs = {
-    stylix = {
-      url = "github:danth/stylix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        home-manager.follows = "home-manager";
-      };
-    };
+    #stylix.url = "github:danth/stylix";
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
 
@@ -20,21 +13,21 @@
 
   };
 
-  outputs =
-    {
-      nixpkgs,
-      home-manager,
-      ...
-    }@inputs:
-    {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
-        modules = [ 
-          inputs.stylix.nixosModules.stylix 
-          ./configuration.nix 
-          ./home-manager-module.nix
-          ];
+        modules = [
+          ./configuration.nix
+          #inputs.stylix.nixosModules.stylix
+          inputs.home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.askodon = import ./home.nix;
+            home-manager.backupFileExtension = "backup";
+          }
+        ];
       };
   };
 }

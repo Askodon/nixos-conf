@@ -22,7 +22,10 @@ with lib.hm.gvariant;
 
     "org/gnome/Console" = {
       last-window-maximised = false;
-      last-window-size = mkTuple [ 652 474 ];
+      last-window-size = mkTuple [
+        652
+        474
+      ];
     };
 
     "org/gnome/Extensions" = {
@@ -31,16 +34,27 @@ with lib.hm.gvariant;
 
     "org/gnome/baobab/ui" = {
       is-maximized = false;
-      window-size = mkTuple [ 960 600 ];
+      window-size = mkTuple [
+        960
+        600
+      ];
     };
 
     "org/gnome/control-center" = {
       last-panel = "system";
-      window-state = mkTuple [ 1625 635 true ];
+      window-state = mkTuple [
+        1625
+        635
+        true
+      ];
     };
 
     "org/gnome/desktop/app-folders" = {
-      folder-children = [ "Utilities" "YaST" "Pardus" ];
+      folder-children = [
+        "Utilities"
+        "YaST"
+        "Pardus"
+      ];
     };
 
     "org/gnome/desktop/app-folders/folders/Pardus" = {
@@ -50,7 +64,24 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/app-folders/folders/Utilities" = {
-      apps = [ "gnome-abrt.desktop" "gnome-system-log.desktop" "nm-connection-editor.desktop" "org.gnome.baobab.desktop" "org.gnome.Connections.desktop" "org.gnome.DejaDup.desktop" "org.gnome.Dictionary.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.Evince.desktop" "org.gnome.FileRoller.desktop" "org.gnome.fonts.desktop" "org.gnome.Loupe.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.tweaks.desktop" "org.gnome.Usage.desktop" "vinagre.desktop" ];
+      apps = [
+        "gnome-abrt.desktop"
+        "gnome-system-log.desktop"
+        "nm-connection-editor.desktop"
+        "org.gnome.baobab.desktop"
+        "org.gnome.Connections.desktop"
+        "org.gnome.DejaDup.desktop"
+        "org.gnome.Dictionary.desktop"
+        "org.gnome.DiskUtility.desktop"
+        "org.gnome.Evince.desktop"
+        "org.gnome.FileRoller.desktop"
+        "org.gnome.fonts.desktop"
+        "org.gnome.Loupe.desktop"
+        "org.gnome.seahorse.Application.desktop"
+        "org.gnome.tweaks.desktop"
+        "org.gnome.Usage.desktop"
+        "vinagre.desktop"
+      ];
       categories = [ "X-GNOME-Utilities" ];
       name = "X-GNOME-Utilities.directory";
       translate = true;
@@ -73,7 +104,16 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/input-sources" = {
       show-all-sources = true;
-      sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "ru" ]) ];
+      sources = [
+        (mkTuple [
+          "xkb"
+          "us"
+        ])
+        (mkTuple [
+          "xkb"
+          "ru"
+        ])
+      ];
       xkb-options = [ "grp:win_space_toggle" ];
     };
 
@@ -94,7 +134,17 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "org-gnome-software" "ru-linux-gaming-portproton" "org-gnome-shell-extensions" "vesktop" "org-gnome-extensions" "draw" "firefox" "org-gnome-settings" "org-gnome-nautilus" ];
+      application-children = [
+        "org-gnome-software"
+        "ru-linux-gaming-portproton"
+        "org-gnome-shell-extensions"
+        "vesktop"
+        "org-gnome-extensions"
+        "draw"
+        "firefox"
+        "org-gnome-settings"
+        "org-gnome-nautilus"
+      ];
     };
 
     "org/gnome/desktop/notifications/application/draw" = {
@@ -147,7 +197,11 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/search-providers" = {
-      sort-order = [ "org.gnome.Contacts.desktop" "org.gnome.Documents.desktop" "org.gnome.Nautilus.desktop" ];
+      sort-order = [
+        "org.gnome.Contacts.desktop"
+        "org.gnome.Documents.desktop"
+        "org.gnome.Nautilus.desktop"
+      ];
     };
 
     "org/gnome/desktop/session" = {
@@ -155,19 +209,39 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/wm/keybindings" = {
-      maximize = [];
+      maximize = [ ];
       move-to-monitor-down = [ "<Super><Shift>Down" ];
       move-to-monitor-left = [ "<Super><Shift>Left" ];
       move-to-monitor-right = [ "<Super><Shift>Right" ];
       move-to-monitor-up = [ "<Super><Shift>Up" ];
       move-to-workspace-down = [ "<Control><Shift><Alt>Down" ];
-      move-to-workspace-left = [ "<Super><Shift>Page_Up" "<Super><Shift><Alt>Left" "<Control><Shift><Alt>Left" ];
-      move-to-workspace-right = [ "<Super><Shift>Page_Down" "<Super><Shift><Alt>Right" "<Control><Shift><Alt>Right" ];
+      move-to-workspace-left = [
+        "<Super><Shift>Page_Up"
+        "<Super><Shift><Alt>Left"
+        "<Control><Shift><Alt>Left"
+      ];
+      move-to-workspace-right = [
+        "<Super><Shift>Page_Down"
+        "<Super><Shift><Alt>Right"
+        "<Control><Shift><Alt>Right"
+      ];
       move-to-workspace-up = [ "<Control><Shift><Alt>Up" ];
-      switch-applications = [ "<Super>Tab" "<Alt>Tab" ];
-      switch-applications-backward = [ "<Shift><Super>Tab" "<Shift><Alt>Tab" ];
-      switch-group = [ "<Super>Above_Tab" "<Alt>Above_Tab" ];
-      switch-group-backward = [ "<Shift><Super>Above_Tab" "<Shift><Alt>Above_Tab" ];
+      switch-applications = [
+        "<Super>Tab"
+        "<Alt>Tab"
+      ];
+      switch-applications-backward = [
+        "<Shift><Super>Tab"
+        "<Shift><Alt>Tab"
+      ];
+      switch-group = [
+        "<Super>Above_Tab"
+        "<Alt>Above_Tab"
+      ];
+      switch-group-backward = [
+        "<Shift><Super>Above_Tab"
+        "<Shift><Alt>Above_Tab"
+      ];
       switch-panels = [ "<Control><Alt>Tab" ];
       switch-panels-backward = [ "<Shift><Control><Alt>Tab" ];
       switch-to-workspace-1 = [ "<Super>1" ];
@@ -177,12 +251,17 @@ with lib.hm.gvariant;
       switch-to-workspace-last = [ "<Super>End" ];
       switch-to-workspace-left = [ "<Super>Left" ];
       switch-to-workspace-right = [ "<Super>Right" ];
-      unmaximize = [];
+      unmaximize = [ ];
     };
 
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "appmenu:minimize,maximize,close";
-      workspace-names = [ "Workspace 1" "Workspace 2" "Workspace 3" "Workspace 4" ];
+      workspace-names = [
+        "Workspace 1"
+        "Workspace 2"
+        "Workspace 3"
+        "Workspace 4"
+      ];
     };
 
     "org/gnome/evince/default" = {
@@ -196,7 +275,10 @@ with lib.hm.gvariant;
       sidebar-page = "thumbnails";
       sidebar-size = 144;
       sizing-mode = "automatic";
-      window-ratio = mkTuple [ 1.2699999990424602 0.8469042272379974 ];
+      window-ratio = mkTuple [
+        1.2699999990424602
+        0.8469042272379974
+      ];
     };
 
     "org/gnome/evolution-data-server" = {
@@ -211,7 +293,10 @@ with lib.hm.gvariant;
       bottom-panel-size = 140;
       side-panel-active-page = "GeditWindowDocumentsPanel";
       side-panel-size = 200;
-      size = mkTuple [ 1502 810 ];
+      size = mkTuple [
+        1502
+        810
+      ];
       state = 87168;
     };
 
@@ -231,8 +316,8 @@ with lib.hm.gvariant;
 
     "org/gnome/mutter/keybindings" = {
       cancel-input-capture = [ "<Super><Shift>Escape" ];
-      toggle-tiled-left = [];
-      toggle-tiled-right = [];
+      toggle-tiled-left = [ ];
+      toggle-tiled-right = [ ];
     };
 
     "org/gnome/mutter/wayland/keybindings" = {
@@ -246,7 +331,10 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nautilus/window-state" = {
-      initial-size = mkTuple [ 890 640 ];
+      initial-size = mkTuple [
+        890
+        640
+      ];
       maximized = false;
     };
 
@@ -259,9 +347,15 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" ];
-      logout = [];
-      rotate-video-lock-static = [ "<Super>o" "XF86RotationLockToggle" ];
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+      ];
+      logout = [ ];
+      rotate-video-lock-static = [
+        "<Super>o"
+        "XF86RotationLockToggle"
+      ];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
@@ -277,24 +371,56 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
-      disabled-extensions = [ "dash-to-dock@micxgx.gmail.com" "apps-menu@gnome-shell-extensions.gcampax.github.com" "gTile@vibou" "system-monitor@gnome-shell-extensions.gcampax.github.com" "windowsNavigator@gnome-shell-extensions.gcampax.github.com" "paperwm@paperwm.github.com" ];
-      enabled-extensions = [ "user-theme@gnome-shell-extensions.gcampax.github.com" "dash-to-panel@jderose9.github.com" "blur-my-shell@aunetx" "appindicatorsupport@rgcjonas.gmail.com" "clipboard-indicator@tudmotu.com" "arcmenu@arcmenu.com" "gnome-clipboard@b00f.github.io" "just-perfection-desktop@just-perfection" "CoverflowAltTab@palatis.blogspot.com" "caffeine@patapon.info" "tiling-assistant@leleat-on-github" "weather@eexpss.gmail.com" "wallhub@sakithb.github.io" ];
-      favorite-apps = [ "org.gnome.Nautilus.desktop" "btop.desktop" "io.bassi.Amberol.desktop" "code.desktop" "noisetorch.desktop" "vlc.desktop" "vesktop.desktop" "com.obsproject.Studio.desktop" "firefox.desktop" "fr.handbrake.ghb.desktop" "org.gnome.Software.desktop" ];
+      disabled-extensions = [
+        "dash-to-dock@micxgx.gmail.com"
+        "apps-menu@gnome-shell-extensions.gcampax.github.com"
+        "gTile@vibou"
+        "system-monitor@gnome-shell-extensions.gcampax.github.com"
+        "windowsNavigator@gnome-shell-extensions.gcampax.github.com"
+        "paperwm@paperwm.github.com"
+      ];
+      enabled-extensions = [
+        "user-theme@gnome-shell-extensions.gcampax.github.com"
+        "dash-to-panel@jderose9.github.com"
+        "blur-my-shell@aunetx"
+        "appindicatorsupport@rgcjonas.gmail.com"
+        "clipboard-indicator@tudmotu.com"
+        "arcmenu@arcmenu.com"
+        "gnome-clipboard@b00f.github.io"
+        "just-perfection-desktop@just-perfection"
+        "CoverflowAltTab@palatis.blogspot.com"
+        "caffeine@patapon.info"
+        "tiling-assistant@leleat-on-github"
+        "weather@eexpss.gmail.com"
+        "wallhub@sakithb.github.io"
+      ];
+      favorite-apps = [
+        "org.gnome.Nautilus.desktop"
+        "btop.desktop"
+        "io.bassi.Amberol.desktop"
+        "code.desktop"
+        "noisetorch.desktop"
+        "vlc.desktop"
+        "vesktop.desktop"
+        "com.obsproject.Studio.desktop"
+        "firefox.desktop"
+        "fr.handbrake.ghb.desktop"
+        "org.gnome.Software.desktop"
+      ];
       welcome-dialog-last-shown-version = "46.2";
     };
 
     "org/gnome/shell/extensions/arcmenu" = {
-      application-shortcuts = [ {
-        id = "org.gnome.Settings.desktop";
-      } {
-        id = "org.gnome.tweaks.desktop";
-      } {
-        id = "org.gnome.Terminal.desktop";
-      } {
-        id = "ArcMenu_ActivitiesOverview";
-        name = "Activities Overview";
-        icon = "view-fullscreen-symbolic";
-      } ];
+      application-shortcuts = [
+        { id = "org.gnome.Settings.desktop"; }
+        { id = "org.gnome.tweaks.desktop"; }
+        { id = "org.gnome.Terminal.desktop"; }
+        {
+          id = "ArcMenu_ActivitiesOverview";
+          name = "Activities Overview";
+          icon = "view-fullscreen-symbolic";
+        }
+      ];
       apps-show-extra-details = true;
       arc-menu-icon = 71;
       arcmenu-hotkey = [ "<Super>w" ];
@@ -310,7 +436,10 @@ with lib.hm.gvariant;
       menu-background-color = "rgba(48,48,49,0.98)";
       menu-border-color = "rgb(60,60,60)";
       menu-button-appearance = "Icon";
-      menu-button-border-color = mkTuple [ false "transparent" ];
+      menu-button-border-color = mkTuple [
+        false
+        "transparent"
+      ];
       menu-button-icon = "Menu_Icon";
       menu-foreground-color = "rgb(223,223,223)";
       menu-item-active-bg-color = "rgb(25,98,163)";
@@ -321,23 +450,62 @@ with lib.hm.gvariant;
       menu-separator-color = "rgba(255,255,255,0.1)";
       multi-monitor = true;
       override-menu-theme = false;
-      pinned-apps = [ {
-        id = "firefox.desktop";
-      } {
-        id = "org.gnome.Nautilus.desktop";
-      } {
-        id = "org.gnome.Terminal.desktop";
-      } {
-        id = "gnome-extensions prefs arcmenu@arcmenu.com";
-        name = "ArcMenu Settings";
-        icon = "ArcMenu_ArcMenuIcon";
-      } ];
+      pinned-apps = [
+        { id = "firefox.desktop"; }
+        { id = "org.gnome.Nautilus.desktop"; }
+        { id = "org.gnome.Terminal.desktop"; }
+        {
+          id = "gnome-extensions prefs arcmenu@arcmenu.com";
+          name = "ArcMenu Settings";
+          icon = "ArcMenu_ArcMenuIcon";
+        }
+      ];
       position-in-panel = "Left";
       power-display-style = "In_Line";
-      power-options = [ (mkTuple [ 0 true ]) (mkTuple [ 1 true ]) (mkTuple [ 2 true ]) (mkTuple [ 3 true ]) (mkTuple [ 4 true ]) (mkTuple [ 5 true ]) (mkTuple [ 6 true ]) (mkTuple [ 7 true ]) ];
+      power-options = [
+        (mkTuple [
+          0
+          true
+        ])
+        (mkTuple [
+          1
+          true
+        ])
+        (mkTuple [
+          2
+          true
+        ])
+        (mkTuple [
+          3
+          true
+        ])
+        (mkTuple [
+          4
+          true
+        ])
+        (mkTuple [
+          5
+          true
+        ])
+        (mkTuple [
+          6
+          true
+        ])
+        (mkTuple [
+          7
+          true
+        ])
+      ];
       prefs-visible-page = 0;
-      recently-installed-apps = [ "org.gnome.design.SymbolicPreview.desktop" "org.gnome.Screenshot.desktop" "rofi-theme-selector.desktop" ];
-      search-entry-border-radius = mkTuple [ true 25 ];
+      recently-installed-apps = [
+        "org.gnome.design.SymbolicPreview.desktop"
+        "org.gnome.Screenshot.desktop"
+        "rofi-theme-selector.desktop"
+      ];
+      search-entry-border-radius = mkTuple [
+        true
+        25
+      ];
       searchbar-default-top-location = "Bottom";
       show-bookmarks = true;
       show-category-sub-menus = true;
@@ -415,7 +583,11 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/coverflowalttab" = {
-      switcher-background-color = mkTuple [ 0.3215686274509804 0.5803921568627451 0.8862745098039215 ];
+      switcher-background-color = mkTuple [
+        0.3215686274509804
+        0.5803921568627451
+        0.8862745098039215
+      ];
     };
 
     "org/gnome/shell/extensions/dash-to-panel" = {
@@ -491,7 +663,12 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/paperwm/workspaces" = {
-      list = [ "cd23fe2a-83c1-4c74-85c8-7803dabf1972" "4a69d6ed-be0a-4e12-b7f4-c405302f4e54" "5056e71a-8ec1-48db-9d68-e86d010d5adc" "fa4a22f3-c395-4dba-8d90-4507d7be09ae" ];
+      list = [
+        "cd23fe2a-83c1-4c74-85c8-7803dabf1972"
+        "4a69d6ed-be0a-4e12-b7f4-c405302f4e54"
+        "5056e71a-8ec1-48db-9d68-e86d010d5adc"
+        "fa4a22f3-c395-4dba-8d90-4507d7be09ae"
+      ];
     };
 
     "org/gnome/shell/extensions/paperwm/workspaces/4a69d6ed-be0a-4e12-b7f4-c405302f4e54" = {
@@ -529,17 +706,20 @@ with lib.hm.gvariant;
       screenshot = [ "<Super>s" ];
       shift-overview-down = [ "<Super><Alt>Down" ];
       shift-overview-up = [ "<Super><Alt>Up" ];
-      switch-to-application-1 = [];
-      switch-to-application-2 = [];
-      switch-to-application-3 = [];
-      switch-to-application-4 = [];
+      switch-to-application-1 = [ ];
+      switch-to-application-2 = [ ];
+      switch-to-application-3 = [ ];
+      switch-to-application-4 = [ ];
       toggle-application-view = [ "Super_L|w" ];
-      toggle-message-tray = [ "<Super>v" "<Super>m" ];
-      toggle-quick-settings = [];
+      toggle-message-tray = [
+        "<Super>v"
+        "<Super>m"
+      ];
+      toggle-quick-settings = [ ];
     };
 
     "org/gnome/shell/world-clocks" = {
-      locations = [];
+      locations = [ ];
     };
 
     "org/gnome/software" = {
@@ -549,7 +729,10 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/terminal/legacy/profiles:" = {
-      list = [ "b1dcc9dd-5262-4d8d-a863-c897e6d979b9" "0fe2278c-631d-4430-a3f5-6cc2fb358076" ];
+      list = [
+        "b1dcc9dd-5262-4d8d-a863-c897e6d979b9"
+        "0fe2278c-631d-4430-a3f5-6cc2fb358076"
+      ];
     };
 
     "org/gnome/terminal/legacy/profiles:/:0fe2278c-631d-4430-a3f5-6cc2fb358076" = {
@@ -561,7 +744,24 @@ with lib.hm.gvariant;
       custom-command = "zellij options --disable-mouse-mode";
       font = "Fira Code 12";
       foreground-color = "rgb(208,207,204)";
-      palette = [ "rgb(0,0,0)" "rgb(192,28,40)" "rgb(232,130,152)" "rgb(162,115,76)" "rgb(0,114,255)" "rgb(163,71,186)" "rgb(42,161,179)" "rgb(208,207,204)" "rgb(94,92,100)" "rgb(246,97,81)" "rgb(51,209,122)" "rgb(233,173,12)" "rgb(42,123,222)" "rgb(192,97,203)" "rgb(174,143,235)" "rgb(255,255,255)" ];
+      palette = [
+        "rgb(0,0,0)"
+        "rgb(192,28,40)"
+        "rgb(232,130,152)"
+        "rgb(162,115,76)"
+        "rgb(0,114,255)"
+        "rgb(163,71,186)"
+        "rgb(42,161,179)"
+        "rgb(208,207,204)"
+        "rgb(94,92,100)"
+        "rgb(246,97,81)"
+        "rgb(51,209,122)"
+        "rgb(233,173,12)"
+        "rgb(42,123,222)"
+        "rgb(192,97,203)"
+        "rgb(174,143,235)"
+        "rgb(255,255,255)"
+      ];
       use-custom-command = true;
       use-system-font = false;
       use-theme-colors = false;
@@ -572,8 +772,33 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 0.9333333373069763 0.9333333373069763 0.9333333373069763 1.0 ]) (mkTuple [ 0.10196100175380707 0.37254899740219116 0.7058820128440857 1.0 ]) (mkTuple [ 0.1568630039691925 0.1647060066461563 0.20000000298023224 1.0 ]) ];
-      selected-color = mkTuple [ true 0.9333333373069763 0.9333333373069763 0.9333333373069763 1.0 ];
+      custom-colors = [
+        (mkTuple [
+          0.9333333373069763
+          0.9333333373069763
+          0.9333333373069763
+          1.0
+        ])
+        (mkTuple [
+          0.10196100175380707
+          0.37254899740219116
+          0.7058820128440857
+          1.0
+        ])
+        (mkTuple [
+          0.1568630039691925
+          0.1647060066461563
+          0.20000000298023224
+          1.0
+        ])
+      ];
+      selected-color = mkTuple [
+        true
+        0.9333333373069763
+        0.9333333373069763
+        0.9333333373069763
+        1.0
+      ];
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
@@ -586,12 +811,70 @@ with lib.hm.gvariant;
       sort-order = "ascending";
       type-format = "category";
       view-type = "list";
-      window-size = mkTuple [ 889 361 ];
+      window-size = mkTuple [
+        889
+        361
+      ];
     };
 
     "org/gtk/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 0.682353 0.560784 0.921569 1.0 ]) (mkTuple [ 0.2 0.780392 0.870588 1.0 ]) (mkTuple [ 0.752941 0.380392 0.796078 1.0 ]) (mkTuple [ 0.164706 0.482353 0.870588 1.0 ]) (mkTuple [ 0.164706 0.482353 0.870588 1.0 ]) (mkTuple [ 0.913725 0.678431 4.7059e-2 1.0 ]) (mkTuple [ 0.913725 0.678431 4.7059e-2 1.0 ]) (mkTuple [ 0.2 0.819608 0.478431 1.0 ]) ];
-      selected-color = mkTuple [ true 1.0 1.0 1.0 1.0 ];
+      custom-colors = [
+        (mkTuple [
+          0.682353
+          0.560784
+          0.921569
+          1.0
+        ])
+        (mkTuple [
+          0.2
+          0.780392
+          0.870588
+          1.0
+        ])
+        (mkTuple [
+          0.752941
+          0.380392
+          0.796078
+          1.0
+        ])
+        (mkTuple [
+          0.164706
+          0.482353
+          0.870588
+          1.0
+        ])
+        (mkTuple [
+          0.164706
+          0.482353
+          0.870588
+          1.0
+        ])
+        (mkTuple [
+          0.913725
+          0.678431
+          4.7059e-2
+          1.0
+        ])
+        (mkTuple [
+          0.913725
+          0.678431
+          4.7059e-2
+          1.0
+        ])
+        (mkTuple [
+          0.2
+          0.819608
+          0.478431
+          1.0
+        ])
+      ];
+      selected-color = mkTuple [
+        true
+        1.0
+        1.0
+        1.0
+        1.0
+      ];
     };
 
     "org/gtk/settings/file-chooser" = {
@@ -605,8 +888,14 @@ with lib.hm.gvariant;
       sort-directories-first = false;
       sort-order = "ascending";
       type-format = "category";
-      window-position = mkTuple [ 23 15 ];
-      window-size = mkTuple [ 1203 924 ];
+      window-position = mkTuple [
+        23
+        15
+      ];
+      window-size = mkTuple [
+        1203
+        924
+      ];
     };
 
     "org/x/pix/browser" = {
@@ -615,7 +904,12 @@ with lib.hm.gvariant;
       fullscreen-thumbnails-visible = false;
       maximized = false;
       properties-visible = false;
-      sidebar-sections = [ "GthFileProperties:expanded" "GthFileComment:expanded" "GthFileDetails:expanded" "GthImageHistogram:expanded" ];
+      sidebar-sections = [
+        "GthFileProperties:expanded"
+        "GthFileComment:expanded"
+        "GthFileDetails:expanded"
+        "GthImageHistogram:expanded"
+      ];
       sidebar-visible = true;
       sort-inverse = false;
       sort-type = "file::mtime";
@@ -632,7 +926,40 @@ with lib.hm.gvariant;
     };
 
     "org/x/pix/general" = {
-      active-extensions = [ "23hq" "bookmarks" "burn_disc" "catalogs" "change_date" "comments" "contact_sheet" "convert_format" "desktop_background" "edit_metadata" "exiv2_tools" "file_manager" "find_duplicates" "flicker" "gstreamer_tools" "gstreamer_utils" "image_print" "image_rotation" "importer" "jpeg_utils" "list_tools" "oauth" "photo_importer" "raw_files" "red_eye_removal" "rename_series" "resize_images" "search" "selections" "slideshow" "terminal" "webalbums" ];
+      active-extensions = [
+        "23hq"
+        "bookmarks"
+        "burn_disc"
+        "catalogs"
+        "change_date"
+        "comments"
+        "contact_sheet"
+        "convert_format"
+        "desktop_background"
+        "edit_metadata"
+        "exiv2_tools"
+        "file_manager"
+        "find_duplicates"
+        "flicker"
+        "gstreamer_tools"
+        "gstreamer_utils"
+        "image_print"
+        "image_rotation"
+        "importer"
+        "jpeg_utils"
+        "list_tools"
+        "oauth"
+        "photo_importer"
+        "raw_files"
+        "red_eye_removal"
+        "rename_series"
+        "resize_images"
+        "search"
+        "selections"
+        "slideshow"
+        "terminal"
+        "webalbums"
+      ];
     };
 
   };

@@ -1,8 +1,11 @@
-{ inputs, home-manager, ... }: {
+{ inputs, home-manager, ... }:
+{
 
   # may look a bit different
   home-manager."askodon" = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {
+      inherit inputs;
+    };
     users = {
       "askodon" = import ./home.nix;
       modules = [

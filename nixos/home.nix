@@ -2,6 +2,7 @@
 {
   imports = [
     #./all.nix
+    #./alacritty.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
@@ -33,7 +34,6 @@
       qogir-theme
       bibata-cursors
       whitesur-icon-theme
-      tau-hydrogen
       vlc
       fira-code
       fira-code-nerdfont
@@ -56,6 +56,7 @@
       gnome.gnome-software
       gnome.gnome-screenshot
       gnome.gnome-tweaks
+      evince
       #
 
       #gnome extensions
@@ -92,6 +93,9 @@
       zellij
       skim
       nix-search-cli
+      fastfetch
+      mtr # help | using command like tracert
+      gum
       #
 
       #system control
