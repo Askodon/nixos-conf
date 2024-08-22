@@ -1,7 +1,7 @@
 [![NixOS Unstable](https://img.shields.io/badge/NixOS-24.05-blue.svg?style=flat-square&logo=NixOS&logoColor=white)](https://nixos.org)
 
 > [!IMPORTANT]
-> add this too configuration.nix
+> add this too configuration.nix:
 > nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 Git clone
