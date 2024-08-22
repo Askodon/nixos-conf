@@ -2,7 +2,7 @@
 
 > [!WTF?]
 > add this ti configuration.nix
->nix.settings.experimental-features = [ "nix-command" "flakes" ];
+> nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 Git clone
 ```
