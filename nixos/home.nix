@@ -49,7 +49,6 @@
 
       # gnome packages
       gnome.file-roller # zip and etc
-      gnome.gnome-terminal # console
       gnome.gnome-keyring
       gnome.dconf-editor
       gnome.nautilus
