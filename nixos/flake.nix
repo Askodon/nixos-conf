@@ -32,21 +32,9 @@
         specialArgs = {inherit inputs;};
         modules = [ 
           inputs.stylix.nixosModules.stylix 
-          inputs.home-manager.nixosModules.default
-        #   {
-        #   home-manager.useGlobalPkgs = true;
-        #   home-manager.users.askodon = import ./home.nix;
-        # }
-        home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.backupFileExtension = "backup";
-              home-manager.users.askodon = import ./home.nix;
-            }
-
           ./configuration.nix 
+          ./home-manager-module.nix
           ];
       };
-};
+  };
 }
