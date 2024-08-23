@@ -1,0 +1,13 @@
+[Desktop Entry]
+Categories=PackageManager;Utility
+Exec=appimage-run
+GenericName=AppImage runner
+MimeType=application/vnd.appimage;application/x-iso9660-appimage
+Name=appimage-run
+NoDisplay=false
+Type=Application
+Version=1.4
+Comment=
+Terminal=false
+PrefersNonDefaultGPU=false
+Icon=media-standard-track-progression-amarok

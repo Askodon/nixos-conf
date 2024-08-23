@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=DBeaver
+Exec=/nix/store/jmf1636f29vja7f01m2ww2ychhbs2zq9-dbeaver-bin-24.0.5/opt/dbeaver/dbeaver %u
+NoDisplay=true
+Type=Application
+MimeType=x-scheme-handler/eclipse+command;
