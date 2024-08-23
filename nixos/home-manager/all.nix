@@ -411,16 +411,6 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/arcmenu" = {
-      application-shortcuts = [
-        { id = "org.gnome.Settings.desktop"; }
-        { id = "org.gnome.tweaks.desktop"; }
-        { id = "org.gnome.Terminal.desktop"; }
-        {
-          id = "ArcMenu_ActivitiesOverview";
-          name = "Activities Overview";
-          icon = "view-fullscreen-symbolic";
-        }
-      ];
       apps-show-extra-details = true;
       arc-menu-icon = 71;
       arcmenu-hotkey = [ "<Super>w" ];
@@ -450,16 +440,6 @@ with lib.hm.gvariant;
       menu-separator-color = "rgba(255,255,255,0.1)";
       multi-monitor = true;
       override-menu-theme = false;
-      pinned-apps = [
-        { id = "firefox.desktop"; }
-        { id = "org.gnome.Nautilus.desktop"; }
-        { id = "org.gnome.Terminal.desktop"; }
-        {
-          id = "gnome-extensions prefs arcmenu@arcmenu.com";
-          name = "ArcMenu Settings";
-          icon = "ArcMenu_ArcMenuIcon";
-        }
-      ];
       position-in-panel = "Left";
       power-display-style = "In_Line";
       power-options = [
@@ -592,11 +572,6 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/dash-to-panel" = {
       animate-appicon-hover = true;
-      animate-appicon-hover-animation-extent = {
-        RIPPLE = 4;
-        PLANK = 4;
-        SIMPLE = 1;
-      };
       appicon-margin = 0;
       appicon-padding = 4;
       available-monitors = [ 0 ];
