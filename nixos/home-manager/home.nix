@@ -26,7 +26,6 @@
       podman # container
       qpwgraph # sound tree changer
       cinnamon.pix # photo
-      kdePackages.okular # pdf
       gpick # see colour on desktop
       amberol # music
       rofi
@@ -35,17 +34,12 @@
       bibata-cursors
       whitesur-icon-theme
       vlc
-      fira-code
-      fira-code-nerdfont
-      nerdfonts
-      roboto
       keepassxc
       vesktop
       firefox
       obsidian
       nextcloud-client
       antares
-      alacritty
       #
 
       # gnome packages
@@ -57,6 +51,13 @@
       gnome.gnome-screenshot
       gnome.gnome-tweaks
       evince
+      #
+
+      #fonts
+      fira-code
+      fira-code-nerdfont
+      nerdfonts
+      roboto
       #
 
       #gnome extensions
@@ -129,6 +130,9 @@
     oh-my-zsh.theme = "agnoster";
     sessionVariables = {
       EDITOR = "hx";
+      TERM = "wezterm";
+      TERMINAL = "wezterm";
+      BROWSER = "firefox";
     };
     shellAliases = {
       ls = "ls -A";

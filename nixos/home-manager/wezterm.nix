@@ -12,6 +12,7 @@
   default_prog = { "zsh", "--login", "-c", "zellij options --disable-mouse-mode" },
   window_background_opacity = 0.7,
   color_scheme = 'Blue Matrix',
+  window_close_confirmation = 'NeverPrompt',
   }
   '';
 };

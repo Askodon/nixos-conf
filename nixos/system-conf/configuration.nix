@@ -11,12 +11,14 @@
     ./locale.nix
     ./users.nix
     #./zapret.nix
+    ./nautilus-open-any-term.nix
   ];
 
-  # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   hardware.steam-hardware.enable = true;
   security.rtkit.enable = true;
+
+  services.xserver.excludePackages = [ pkgs.xterm ];
 
   #stylix 
   #stylix.enable = true;
