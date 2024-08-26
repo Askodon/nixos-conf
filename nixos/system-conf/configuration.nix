@@ -12,7 +12,6 @@
     ./users.nix
     #./zapret.nix
     ./nautilus-open-any-term.nix
-    ./flatpak-theme-fix.nix
   ];
 
   hardware.pulseaudio.enable = false;
