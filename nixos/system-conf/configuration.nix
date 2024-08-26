@@ -32,7 +32,7 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     git
-    home-manager 
+    home-manager
     gum
   ];
 
