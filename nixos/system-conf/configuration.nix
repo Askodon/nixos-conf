@@ -12,6 +12,7 @@
     ./users.nix
     #./zapret.nix
     ./nautilus-open-any-term.nix
+    ./flatpak-theme-fix.nix
   ];
 
   hardware.pulseaudio.enable = false;
@@ -34,6 +35,10 @@
     git
     home-manager
     gum
+    adw-gtk3
+    qogir-theme
+    bibata-cursors
+    whitesur-icon-theme
   ];
 
   system.stateVersion = "24.05"; # system version

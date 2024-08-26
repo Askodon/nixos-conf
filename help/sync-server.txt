@@ -1,0 +1,3 @@
+scp -r askodon@:/home/askodon/tools /home/askodon/Загрузки
+scp -r askodon@:/home/askodon/ftb /home/askodon/Загрузки
+ scp -r askodon@:/etc/systemd/system/minecraft.service /home/askodon/Загрузки
