@@ -26,7 +26,7 @@
       podman # container
       qpwgraph # sound tree changer
       cinnamon.pix # photo
-      gpick # see colour on desktop
+      gcolor3 # see colour on desktop
       amberol # music
       rofi
       transmission_4-gtk # torrent
@@ -40,6 +40,7 @@
       obsidian
       nextcloud-client
       antares
+      libreoffice
       #
 
       # gnome packages
@@ -97,6 +98,7 @@
       fastfetch
       mtr # help | using command like tracert
       gum
+      thefuck
       #
 
       #system control
@@ -141,16 +143,21 @@
       less = "gum pager";
       rm = "rm -i";
       udal = "ssh askodon@194.113.34.20"; # help
+      udal2 = "ssh askodon@5.35.84.91";
       boot = "sudo nixos-rebuild boot"; # help
       ed = "/home/askodon/nixos-conf/scripts/editor.sh"; # help choice between editor and files in the current folder
       sync = "/home/askodon/nixos-conf/scripts/sync.sh"; # help cp home config
       upgrade = "/home/askodon/nixos-conf/scripts/upgrade.sh"; # help
-      fullUpgrade = "sudo nix-channel --update; sudo nixos-rebuild switch --flake /home/askodon/nixos-conf/nixos/ ; home-manager switch"; # help
+      fullUpgrade = "sudo nix-channel --update; sudo nixos-rebuild switch --flake /home/askodon/nixos-conf/nixos/"; # help
       trash = "sudo nix-collect-garbage -d"; # help
       help = "cat /home/askodon/.config/home-manager/home.nix | grep help | gum pager"; # help
       squashGit = "git rebase -i --autosquash HEAD~$(gum write)"; # help
       hs = "gum filter < $HISTFILE --height 20"; # help, history with auto paste
       fmtChoice = "nixfmt $(gum choose --no-limit $(ls))"; # help, nixfmt command with choice
+      sudo = "doas";
+      f = "thefuck"; #help
+      x = "exit"; #help
+      c = "clear"; #help
       # nix-choose = "sk --ansi -i -c 'nix-search ""{}""'";
     };
   };
