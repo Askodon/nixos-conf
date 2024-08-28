@@ -1,4 +1,5 @@
 #!/bin/sh
+nix-shell -p git
 cd /etc/nixos
 echo "nix.settings.experimental-features = [ "nix-command" "flakes" ];" >> conf.nix
 nixos-rebuild switch

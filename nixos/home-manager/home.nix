@@ -130,6 +130,9 @@
     oh-my-zsh.enable = true;
     oh-my-zsh.plugins = [ "git" ];
     oh-my-zsh.theme = "agnoster";
+    initExtra = ''
+          eval $(thefuck --alias)
+        '';
     sessionVariables = {
       EDITOR = "hx";
       TERM = "wezterm";
@@ -155,7 +158,7 @@
       hs = "gum filter < $HISTFILE --height 20"; # help, history with auto paste
       fmtChoice = "nixfmt $(gum choose --no-limit $(ls))"; # help, nixfmt command with choice
       sudo = "doas";
-      f = "thefuck"; #help
+      f = "fuck"; #help
       x = "exit"; #help
       c = "clear"; #help
       # nix-choose = "sk --ansi -i -c 'nix-search ""{}""'";

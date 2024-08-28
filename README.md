@@ -4,11 +4,17 @@
 > add this too configuration.nix:
 > nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-Git clone
+First install
 ```
-sudo rm -r /home/askodon/nixos-conf
 git clone https://github.com/Askodon/nixos-conf.git /home/askodon/nixos-conf
-sudo nixos-rebuild switch --flake /home/askodon/nixos-conf/nixos/
+sudo /home/askodon/nixos-conf/new_install.sh
+```
+
+Update
+```
+doas rm -r /home/askodon/nixos-conf
+git clone https://github.com/Askodon/nixos-conf.git /home/askodon/nixos-conf
+doas nixos-rebuild switch --flake /home/askodon/nixos-conf/nixos/
 ```
 #image
 ![pre](/screenshot/pre.png)
