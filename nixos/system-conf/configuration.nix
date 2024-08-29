@@ -42,7 +42,6 @@
     git
     home-manager
     gum
-    adw-gtk3
     qogir-theme
     bibata-cursors
     whitesur-icon-theme

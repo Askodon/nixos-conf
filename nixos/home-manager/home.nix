@@ -88,16 +88,14 @@
       oh-my-zsh
       zsh-autosuggestions
       btop
-      colorls # better ls
       wget
       gamemode
       appimage-run
       zellij
-      skim
-      nix-search-cli
       fastfetch
       mtr # help | using command like tracert
       gum
+      inetutils
       thefuck
       #
 
@@ -158,6 +156,7 @@
       hs = "gum filter < $HISTFILE --height 20"; # help, history with auto paste
       fmtChoice = "nixfmt $(gum choose --no-limit $(ls))"; # help, nixfmt command with choice
       sudo = "doas";
+      try = "nix-shell -p "; #help
       f = "fuck"; #help
       x = "exit"; #help
       c = "clear"; #help
