@@ -1,2 +1,0 @@
-original author:
-https://github.com/vinceliuice/Qogir-theme/tree/master/src/firefox
