@@ -46,6 +46,7 @@
     bibata-cursors
     whitesur-icon-theme
     gnome.gnome-disk-utility
+    xfsprogs
   ];
 
   system.stateVersion = "24.05"; # system version
