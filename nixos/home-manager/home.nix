@@ -37,6 +37,7 @@
       keepassxc
       vesktop
       firefox
+      ungoogled-chromium
       obsidian
       nextcloud-client
       antares
