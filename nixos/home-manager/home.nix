@@ -73,6 +73,7 @@
       gnomeExtensions.tiling-assistant
       gnomeExtensions.clipboard-indicator
       gnomeExtensions.wallhub
+      gnomeExtensions.quick-settings-audio-panel
       #
 
       #terminal util
