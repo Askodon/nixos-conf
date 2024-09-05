@@ -74,6 +74,7 @@
       gnomeExtensions.clipboard-indicator
       gnomeExtensions.wallhub
       gnomeExtensions.quick-settings-audio-panel
+      gnomeExtensions.vertical-workspaces
       #
 
       #terminal util
@@ -131,8 +132,8 @@
     oh-my-zsh.plugins = [ "git" ];
     oh-my-zsh.theme = "agnoster";
     initExtra = ''
-          eval $(thefuck --alias)
-        '';
+      eval $(thefuck --alias)
+    '';
     sessionVariables = {
       EDITOR = "hx";
       TERM = "wezterm";
@@ -158,10 +159,10 @@
       hs = "gum filter < $HISTFILE --height 20"; # help, history with auto paste
       fmtChoice = "nixfmt $(gum choose --no-limit $(ls))"; # help, nixfmt command with choice
       sudo = "doas";
-      try = "nix-shell -p "; #help
-      f = "fuck"; #help
-      x = "exit"; #help
-      c = "clear"; #help
+      try = "nix-shell -p "; # help
+      f = "fuck"; # help
+      x = "exit"; # help
+      c = "clear"; # help
       # nix-choose = "sk --ansi -i -c 'nix-search ""{}""'";
     };
   };

@@ -6,11 +6,15 @@ with lib.hm.gvariant;
 {
   dconf.settings = {
     "ca/desrt/dconf-editor" = {
-      saved-pathbar-path = "/org/gnome/mutter/";
-      saved-view = "/org/gnome/mutter/";
-      window-height = 500;
+      saved-pathbar-path = "/com/github/stunkymonkey/nautilus-open-any-terminal/terminal";
+      saved-view = "/com/github/stunkymonkey/nautilus-open-any-terminal/terminal";
+      window-height = 668;
       window-is-maximized = false;
-      window-width = 626;
+      window-width = 1037;
+    };
+
+    "com/github/stunkymonkey/nautilus-open-any-terminal" = {
+      terminal = "kitty";
     };
 
     "com/mattjakeman/ExtensionManager" = {
@@ -18,6 +22,11 @@ with lib.hm.gvariant;
       is-maximized = false;
       last-used-version = "0.5.1";
       width = 960;
+    };
+
+    "io/bassi/Amberol" = {
+      window-height = 629;
+      window-width = 600;
     };
 
     "org/gnome/Console" = {
@@ -29,7 +38,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/Extensions" = {
-      window-maximized = true;
+      window-maximized = false;
     };
 
     "org/gnome/baobab/ui" = {
@@ -41,7 +50,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "system";
+      last-panel = "keyboard";
       window-state = mkTuple [
         1625
         635
@@ -50,11 +59,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/app-folders" = {
-      folder-children = [
-        "Utilities"
-        "YaST"
-        "Pardus"
-      ];
+      folder-children = [ "Utilities" ];
     };
 
     "org/gnome/desktop/app-folders/folders/Pardus" = {
@@ -93,11 +98,15 @@ with lib.hm.gvariant;
       translate = true;
     };
 
+    "org/gnome/desktop/applications/terminal" = {
+      exec = "wezterm";
+    };
+
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file:////home/askodon/wallpaper/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-4096x2304-1455.jpg";
-      picture-uri-dark = "file:////home/askodon/wallpaper/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-4096x2304-1455.jpg";
+      picture-uri = "file:////home/askodon/wallpaper/mountain-range-5472x3648-18000.jpg";
+      picture-uri-dark = "file:////home/askodon/wallpaper/mountain-range-5472x3648-18000.jpg";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };
@@ -124,7 +133,7 @@ with lib.hm.gvariant;
       enable-hot-corners = false;
       font-name = "Roboto 11";
       gtk-theme = "Qogir-Dark";
-      icon-theme = "WhiteSur";
+      icon-theme = "WhiteSur-dark";
       monospace-font-name = "Fira Code 10 @wght=400";
       toolkit-accessibility = false;
     };
@@ -144,7 +153,17 @@ with lib.hm.gvariant;
         "firefox"
         "org-gnome-settings"
         "org-gnome-nautilus"
+        "com-nextcloud-desktopclient-nextcloud"
+        "betterbird"
       ];
+    };
+
+    "org/gnome/desktop/notifications/application/betterbird" = {
+      application-id = "betterbird.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/com-nextcloud-desktopclient-nextcloud" = {
+      application-id = "com.nextcloud.desktopclient.nextcloud.desktop";
     };
 
     "org/gnome/desktop/notifications/application/draw" = {
@@ -276,13 +295,26 @@ with lib.hm.gvariant;
       sidebar-size = 144;
       sizing-mode = "automatic";
       window-ratio = mkTuple [
-        1.2699999990424602
-        0.8469042272379974
+        1.27
+        0.846904
       ];
     };
 
     "org/gnome/evolution-data-server" = {
       migrated = true;
+    };
+
+    "org/gnome/file-roller/listing" = {
+      list-mode = "as-folder";
+      show-path = false;
+      sort-method = "name";
+      sort-type = "ascending";
+    };
+
+    "org/gnome/file-roller/ui" = {
+      sidebar-width = 200;
+      window-height = 665;
+      window-width = 1291;
     };
 
     "org/gnome/gedit/state/file-chooser" = {
@@ -301,7 +333,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/gnome-screenshot" = {
-      delay = 1;
+      delay = 10;
       include-pointer = false;
       last-save-directory = "file:///home/askodon/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F";
     };
@@ -324,6 +356,10 @@ with lib.hm.gvariant;
       restore-shortcuts = [ "<Super>Escape" ];
     };
 
+    "org/gnome/nautilus/compression" = {
+      default-compression-format = "7z";
+    };
+
     "org/gnome/nautilus/preferences" = {
       default-folder-viewer = "icon-view";
       migrated-gtk-settings = true;
@@ -332,8 +368,8 @@ with lib.hm.gvariant;
 
     "org/gnome/nautilus/window-state" = {
       initial-size = mkTuple [
-        890
-        640
+        1717
+        918
       ];
       maximized = false;
     };
@@ -343,7 +379,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/portal/filechooser/vesktop" = {
-      last-folder-path = "/home/askodon/\1048\1079\1086\1073\1088\1072\1078\1077\1085\1080\1103/\1057\1085\1080\1084\1082\1080 \1101\1082\1088\1072\1085\1072";
+      last-folder-path = "/home/askodon/\1047\1072\1075\1088\1091\1079\1082\1080";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
@@ -360,8 +396,8 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Control><Alt>t";
-      command = "env -u WAYLAND_DISPLAY alacritty -e zsh -c 'zellij options --disable-mouse-mode'";
-      name = "alacritty";
+      command = "/home/askodon/nixos-conf/applications/wezterm.sh";
+      name = "wezterm";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
@@ -371,6 +407,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
+      disable-user-extensions = false;
       disabled-extensions = [
         "dash-to-dock@micxgx.gmail.com"
         "apps-menu@gnome-shell-extensions.gcampax.github.com"
@@ -378,6 +415,8 @@ with lib.hm.gvariant;
         "system-monitor@gnome-shell-extensions.gcampax.github.com"
         "windowsNavigator@gnome-shell-extensions.gcampax.github.com"
         "paperwm@paperwm.github.com"
+        "color-picker@tuberry"
+        "caffeine@patapon.info"
       ];
       enabled-extensions = [
         "user-theme@gnome-shell-extensions.gcampax.github.com"
@@ -389,23 +428,21 @@ with lib.hm.gvariant;
         "gnome-clipboard@b00f.github.io"
         "just-perfection-desktop@just-perfection"
         "CoverflowAltTab@palatis.blogspot.com"
-        "caffeine@patapon.info"
         "tiling-assistant@leleat-on-github"
         "weather@eexpss.gmail.com"
         "wallhub@sakithb.github.io"
+        "quick-settings-audio-panel@rayzeq.github.io"
+        "vertical-workspaces@G-dH.github.com"
       ];
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
         "btop.desktop"
         "io.bassi.Amberol.desktop"
-        "code.desktop"
-        "noisetorch.desktop"
-        "vlc.desktop"
         "vesktop.desktop"
-        "com.obsproject.Studio.desktop"
+        "vlc.desktop"
+        "code.desktop"
+        "chromium-browser.desktop"
         "firefox.desktop"
-        "fr.handbrake.ghb.desktop"
-        "org.gnome.Software.desktop"
       ];
       welcome-dialog-last-shown-version = "46.2";
     };
@@ -415,29 +452,67 @@ with lib.hm.gvariant;
       arc-menu-icon = 71;
       arcmenu-hotkey = [ "<Super>w" ];
       avatar-style = "Square";
+      button-item-icon-size = "Default";
       button-padding = 0;
-      custom-menu-button-icon = "org.buddiesofbudgie.Settings-display-symbolic";
-      custom-menu-button-icon-size = 38.0;
+      category-icon-type = "Symbolic";
+      custom-menu-button-icon = "detach-symbolic";
+      custom-menu-button-icon-size = 36.0;
       dash-to-panel-standalone = false;
       disable-scrollview-fade-effect = false;
-      disable-tooltips = false;
+      disable-tooltips = true;
       distro-icon = 22;
-      enable-horizontal-flip = true;
-      menu-background-color = "rgba(48,48,49,0.98)";
-      menu-border-color = "rgb(60,60,60)";
+      enable-horizontal-flip = false;
+      force-menu-location = "Off";
+      left-panel-width = 175;
+      menu-arrow-rise = mkTuple [
+        false
+        17
+      ];
+      menu-background-color = "rgb(30,37,41)";
+      menu-border-color = "rgb(41,50,55)";
+      menu-border-radius = 18;
+      menu-button-active-fg-color = mkTuple [
+        false
+        "rgb(242,242,242)"
+      ];
       menu-button-appearance = "Icon";
+      menu-button-bg-color = mkTuple [
+        false
+        "rgb(82,119,195)"
+      ];
       menu-button-border-color = mkTuple [
         false
         "transparent"
       ];
-      menu-button-icon = "Menu_Icon";
-      menu-foreground-color = "rgb(223,223,223)";
-      menu-item-active-bg-color = "rgb(25,98,163)";
-      menu-item-active-fg-color = "rgb(255,255,255)";
-      menu-item-hover-bg-color = "rgb(21,83,158)";
-      menu-item-hover-fg-color = "rgb(255,255,255)";
+      menu-button-border-radius = mkTuple [
+        true
+        5
+      ];
+      menu-button-border-width = mkTuple [
+        true
+        0
+      ];
+      menu-button-fg-color = mkTuple [
+        false
+        "rgb(255,255,255)"
+      ];
+      menu-button-hover-bg-color = mkTuple [
+        true
+        "rgb(82,148,226)"
+      ];
+      menu-button-icon = "Custom_Icon";
+      menu-button-position-offset = 2;
+      menu-foreground-color = "rgb(189,230,251)";
+      menu-height = 600;
+      menu-item-active-bg-color = "rgba(189,230,251,0.15)";
+      menu-item-active-fg-color = "rgb(189,230,251)";
+      menu-item-grid-icon-size = "Medium";
+      menu-item-hover-bg-color = "rgba(189,230,251,0.08)";
+      menu-item-hover-fg-color = "rgb(189,230,251)";
       menu-layout = "Redmond";
-      menu-separator-color = "rgba(255,255,255,0.1)";
+      menu-separator-color = "rgba(99,99,98,0.56)";
+      menu-width-adjustment = 0;
+      misc-item-icon-size = "Default";
       multi-monitor = true;
       override-menu-theme = false;
       position-in-panel = "Left";
@@ -479,14 +554,19 @@ with lib.hm.gvariant;
       prefs-visible-page = 0;
       recently-installed-apps = [
         "org.gnome.design.SymbolicPreview.desktop"
-        "org.gnome.Screenshot.desktop"
-        "rofi-theme-selector.desktop"
+        "io.missioncenter.MissionCenter.desktop"
+        "gparted.desktop"
+        "io.github.zen_browser.zen.desktop"
+        "kitty.desktop"
       ];
+      right-panel-width = 200;
+      runner-hotkey = [ "<Super>slash" ];
       search-entry-border-radius = mkTuple [
         true
         25
       ];
-      searchbar-default-top-location = "Bottom";
+      searchbar-default-top-location = "Top";
+      shortcut-icon-type = "Full_Color";
       show-bookmarks = true;
       show-category-sub-menus = true;
       show-external-devices = true;
@@ -506,10 +586,10 @@ with lib.hm.gvariant;
       blur = false;
       blur-on-overview = true;
       brightness = 1.0;
-      dynamic-opacity = false;
-      enable-all = false;
+      dynamic-opacity = true;
+      enable-all = true;
       opacity = 230;
-      sigma = 80;
+      sigma = 51;
       whitelist = [ "org.gnome.Nautilus" ];
     };
 
@@ -559,7 +639,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/caffeine" = {
       countdown-timer = 30;
-      indicator-position-max = 1;
+      indicator-position-max = 2;
     };
 
     "org/gnome/shell/extensions/coverflowalttab" = {
@@ -574,22 +654,33 @@ with lib.hm.gvariant;
       animate-appicon-hover = true;
       appicon-margin = 0;
       appicon-padding = 4;
+      appicon-style = "NORMAL";
       available-monitors = [ 0 ];
-      dot-color-dominant = false;
+      dot-color-2 = "#5294e2";
+      dot-color-3 = "#5294e2";
+      dot-color-4 = "#5294e2";
+      dot-color-dominant = true;
       dot-color-override = false;
       dot-color-unfocused-different = false;
       dot-position = "BOTTOM";
-      dot-size = 4;
-      dot-style-focused = "SQUARES";
-      dot-style-unfocused = "SQUARES";
-      focus-highlight-dominant = false;
+      dot-size = 3;
+      dot-style-focused = "METRO";
+      dot-style-unfocused = "METRO";
+      focus-highlight-color = "#1a5fb4";
+      focus-highlight-dominant = true;
+      group-apps = true;
       hotkeys-overlay-combo = "TEMPORARILY";
+      intellihide = true;
+      intellihide-behaviour = "FOCUSED_WINDOWS";
+      intellihide-hide-from-windows = true;
+      intellihide-only-secondary = false;
+      intellihide-use-pressure = false;
       leftbox-padding = -1;
       panel-anchors = ''
         {"0":"MIDDLE"}
       '';
       panel-element-positions = ''
-        {"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}
+        {"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":false,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}
       '';
       panel-lengths = ''
         {"0":100}
@@ -598,11 +689,19 @@ with lib.hm.gvariant;
         {"0":40}
       '';
       primary-monitor = 0;
-      status-icon-padding = -1;
-      trans-panel-opacity = 0.0;
+      secondarymenu-contains-appmenu = true;
+      secondarymenu-contains-showdetails = true;
+      status-icon-padding = 4;
+      stockgs-keep-dash = false;
+      trans-bg-color = "#282a33";
+      trans-gradient-top-color = "#5294e2";
+      trans-gradient-top-opacity = 5.0e-2;
+      trans-panel-opacity = 0.8;
+      trans-use-custom-bg = true;
+      trans-use-custom-gradient = true;
       trans-use-custom-opacity = true;
-      trans-use-dynamic-opacity = true;
-      tray-padding = -1;
+      trans-use-dynamic-opacity = false;
+      tray-padding = 2;
       window-preview-title-position = "TOP";
     };
 
@@ -626,13 +725,22 @@ with lib.hm.gvariant;
       workspace-wrap-around = true;
     };
 
+    "org/gnome/shell/extensions/libpanel" = {
+      layout = [
+        [
+          "gnome@main"
+          "quick-settings-audio-panel@rayzeq.github.io/main"
+        ]
+      ];
+    };
+
     "org/gnome/shell/extensions/paperwm" = {
       last-used-display-server = "Wayland";
       open-window-position = 0;
       restore-attach-modal-dialogs = "";
       restore-edge-tiling = "";
       restore-keybinds = ''
-        {}
+        {}\n
       '';
       restore-workspaces-only-on-primary = "";
     };
@@ -671,6 +779,18 @@ with lib.hm.gvariant;
       name = "Qogir-Dark";
     };
 
+    "org/gnome/shell/extensions/vertical-workspaces" = {
+      center-app-grid = false;
+      center-dash-to-ws = false;
+      dash-position = 2;
+      search-width-scale = 130;
+      show-app-icon-position = 0;
+      show-bg-in-overview = true;
+      ws-thumbnails-full = false;
+      ws-thumbnails-position = 1;
+      wst-position-adjust = -75;
+    };
+
     "org/gnome/shell/extensions/wallhub" = {
       wallpaper-paths = [ "/home/askodon/wallpaper" ];
       wallpaper-paths-selected = 1;
@@ -698,9 +818,9 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1724213540;
+      check-timestamp = mkInt64 1725509328;
       first-run = false;
-      flatpak-purge-timestamp = mkInt64 1724221724;
+      flatpak-purge-timestamp = mkInt64 1725429740;
     };
 
     "org/gnome/terminal/legacy/profiles:" = {
@@ -749,29 +869,59 @@ with lib.hm.gvariant;
     "org/gtk/gtk4/settings/color-chooser" = {
       custom-colors = [
         (mkTuple [
-          0.9333333373069763
-          0.9333333373069763
-          0.9333333373069763
+          0.32156866788864136
+          0.5803923010826111
+          0.886274516582489
           1.0
         ])
         (mkTuple [
-          0.10196100175380707
-          0.37254899740219116
-          0.7058820128440857
+          0.32156863808631897
+          0.46666666865348816
+          0.7647058963775635
           1.0
         ])
         (mkTuple [
-          0.1568630039691925
-          0.1647060066461563
+          0.32156866788864136
+          0.46666666865348816
+          0.7647058963775635
+          1.0
+        ])
+        (mkTuple [
+          0.9490196108818054
+          0.9490196108818054
+          0.9490196108818054
           0.20000000298023224
+        ])
+        (mkTuple [
+          0.9490196108818054
+          0.9490196108818054
+          0.9490196108818054
+          1.0
+        ])
+        (mkTuple [
+          0.1568627506494522
+          0.16470588743686676
+          0.20000000298023224
+          1.0
+        ])
+        (mkTuple [
+          0.9333333373069763
+          0.9333333373069763
+          0.9333333373069763
+          1.0
+        ])
+        (mkTuple [
+          0.9333329796791077
+          0.9333329796791077
+          0.9333329796791077
           1.0
         ])
       ];
       selected-color = mkTuple [
         true
-        0.9333333373069763
-        0.9333333373069763
-        0.9333333373069763
+        0.32156866788864136
+        0.5803923010826111
+        0.886274516582489
         1.0
       ];
     };
@@ -888,7 +1038,7 @@ with lib.hm.gvariant;
       sidebar-visible = true;
       sort-inverse = false;
       sort-type = "file::mtime";
-      startup-current-file = "file:///home/askodon/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202024-08-19%2013-11-49.png";
+      startup-current-file = "file:///home/askodon/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/pre.png";
       startup-location = "file:///home/askodon/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F";
       statusbar-visible = true;
       viewer-sidebar = "hidden";
