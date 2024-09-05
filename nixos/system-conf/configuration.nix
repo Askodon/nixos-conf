@@ -16,17 +16,19 @@
 
   hardware.pulseaudio.enable = false;
   hardware.steam-hardware.enable = true;
-  security.rtkit.enable = true;
-  security.doas.enable = true;
-  security.sudo.enable = false;
-  # Configure doas
-  security.doas.extraRules = [{
+  security = {
+    rtkit.enable = true;
+    doas.enable = true;
+    sudo.enable = false;
+    # Configure doas
+    doas.extraRules = [{
     users = [ "askodon" ];
     keepEnv = true;
     persist = true;  
   }];
+  };
 
-  services.xserver.excludePackages = [ pkgs.xterm ];
+
 
   #stylix 
   #stylix.enable = true;

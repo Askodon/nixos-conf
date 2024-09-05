@@ -75,6 +75,7 @@
       gnomeExtensions.wallhub
       gnomeExtensions.quick-settings-audio-panel
       gnomeExtensions.vertical-workspaces
+      #lilypad
       #
 
       #terminal util
