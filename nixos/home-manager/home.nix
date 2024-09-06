@@ -159,7 +159,6 @@
       squashGit = "git rebase -i --autosquash HEAD~$(gum write)"; # help
       hs = "gum filter < $HISTFILE --height 20"; # help, history with auto paste
       fmtChoice = "nixfmt $(gum choose --no-limit $(ls))"; # help, nixfmt command with choice
-      sudo = "doas";
       try = "nix-shell -p "; # help
       f = "fuck"; # help
       x = "exit"; # help

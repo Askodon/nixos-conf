@@ -18,14 +18,7 @@
   hardware.steam-hardware.enable = true;
   security = {
     rtkit.enable = true;
-    doas.enable = true;
-    sudo.enable = false;
-    # Configure doas
-    doas.extraRules = [{
-    users = [ "askodon" ];
-    keepEnv = true;
-    persist = true;  
-  }];
+    sudo.enable = true;
   };
 
 

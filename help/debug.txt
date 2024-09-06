@@ -1,0 +1,3 @@
+dconf dump / > all.dconf
+dconf2nix -i ./all.dconf -o ./all.nix 
+delete nautilus open any terminal
