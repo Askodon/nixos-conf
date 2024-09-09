@@ -7,6 +7,7 @@ window-width=1023
 
 [com/mattjakeman/ExtensionManager]
 height=819
+is-maximized=false
 last-used-version='0.5.1'
 width=1067
 
@@ -17,23 +18,50 @@ window-maximized=true
 last-panel='system'
 window-state=(980, 640, false)
 
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'YaST', 'Pardus']
+
+[org/gnome/desktop/app-folders/folders/Pardus]
+categories=['X-Pardus-Apps']
+name='X-Pardus-Apps.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.Loupe.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
 [org/gnome/desktop/background]
 picture-uri='file:////home/askodon/wallpaper/space-2560x1440-d6km59f5eoo3bm9q.jpg'
 picture-uri-dark='file:////home/askodon/wallpaper/space-2560x1440-d6km59f5eoo3bm9q.jpg'
 
 [org/gnome/desktop/input-sources]
+mru-sources=[('xkb', 'ru'), ('xkb', 'us')]
 sources=[('xkb', 'ru'), ('xkb', 'us')]
 xkb-options=['grp:win_space_toggle']
 
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
 cursor-theme='Bibata-Original-Classic'
+enable-animations=true
 enable-hot-corners=false
 font-name='Roboto 11'
 gtk-theme='Qogir-Dark'
 icon-theme='WhiteSur'
 monospace-font-name='FiraCode Nerd Font 10'
 toolkit-accessibility=false
+
+[org/gnome/desktop/notifications]
+application-children=['org-gnome-extensions']
+
+[org/gnome/desktop/notifications/application/org-gnome-extensions]
+application-id='org.gnome.Extensions.desktop'
 
 [org/gnome/desktop/privacy]
 old-files-age=uint32 30
@@ -91,7 +119,8 @@ name='nautilus'
 
 [org/gnome/shell]
 disabled-extensions=@as []
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'dash-to-panel@jderose9.github.com', 'lilypad@shendrew.github.io', 'quick-settings-audio-panel@rayzeq.github.io', 'tiling-assistant@leleat-on-github', 'caffeine@patapon.info', 'CoverflowAltTab@palatis.blogspot.com', 'arcmenu@arcmenu.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'wallhub@sakithb.github.io', 'vertical-workspaces@G-dH.github.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'dash-to-panel@jderose9.github.com', 'lilypad@shendrew.github.io', 'tiling-assistant@leleat-on-github', 'caffeine@patapon.info', 'CoverflowAltTab@palatis.blogspot.com', 'arcmenu@arcmenu.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'wallhub@sakithb.github.io', 'vertical-workspaces@G-dH.github.com', 'quick-settings-avatar@d-go', 'quick-settings-tweaks@qwreey', 'quick-settings-audio-panel@rayzeq.github.io']
+favorite-apps=['org.gnome.Nautilus.desktop']
 welcome-dialog-last-shown-version='46.2'
 
 [org/gnome/shell/extensions/arcmenu]
@@ -106,6 +135,7 @@ enable-horizontal-flip=true
 extra-categories=[(0, true), (1, true), (2, true), (3, true), (4, true)]
 menu-background-color='rgba(48,48,49,0.98)'
 menu-border-color='rgb(60,60,60)'
+menu-button-active-fg-color=(true, 'rgb(58,83,116)')
 menu-button-appearance='Icon'
 menu-button-border-radius=(true, 5)
 menu-button-border-width=(false, 3)
@@ -190,11 +220,13 @@ intellihide-hide-from-windows=true
 leftbox-padding=-1
 leftbox-size=0
 panel-anchors='{"0":"MIDDLE"}'
-panel-element-positions='{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'
+panel-element-positions='{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'
 panel-lengths='{"0":100}'
 panel-sizes='{"0":39}'
 primary-monitor=0
+show-apps-icon-file=''
 status-icon-padding=-1
+trans-gradient-bottom-opacity=0.0
 trans-gradient-top-color='#3a5374'
 trans-gradient-top-opacity=0.10000000000000001
 trans-use-custom-bg=false
@@ -208,14 +240,58 @@ window-preview-title-position='TOP'
 layout=[['gnome@main', 'quick-settings-audio-panel@rayzeq.github.io/main']]
 
 [org/gnome/shell/extensions/lilypad]
-lilypad-order=['StatusNotifierItem', 'appindicator-legacy:Nextcloud:0', 'appindicator-legacy:null:0', 'tiling-assistant', 'appindicator-legacy:Nextcloud:12813']
+lilypad-order=['StatusNotifierItem', 'clipboardIndicator', 'tiling_assistant', 'appindicator-legacy:Nextcloud:0', 'appindicator-legacy:null:0', 'tiling-assistant', 'appindicator-legacy:Nextcloud:12813']
 reorder=true
-rightbox-order=['lilypad', 'keyboard', 'clipboardIndicator']
+rightbox-order=['lilypad', 'keyboard']
 show-icons=false
 
+[org/gnome/shell/extensions/quick-settings-tweaks]
+input-always-show=false
+input-show-selected=true
+list-buttons='[{"name":"SystemItem","title":null,"visible":true},{"name":"OutputStreamSlider","title":null,"visible":false},{"name":"InputStreamSlider","title":null,"visible":false},{"name":"St_BoxLayout","title":null,"visible":true},{"name":"BrightnessItem","title":null,"visible":false},{"name":"NMWiredToggle","title":"Ethernet","visible":true},{"name":"NMWirelessToggle","title":null,"visible":false},{"name":"NMModemToggle","title":null,"visible":false},{"name":"NMBluetoothToggle","title":null,"visible":false},{"name":"NMVpnToggle","title":null,"visible":false},{"name":"BluetoothToggle","title":"Bluetooth","visible":false},{"name":"PowerProfilesToggle","title":"Режим питания","visible":true},{"name":"NightLightToggle","title":"Ночной свет","visible":false},{"name":"DarkModeToggle","title":"Темный стиль","visible":true},{"name":"KeyboardBrightnessToggle","title":"Клавиатура","visible":false},{"name":"RfkillToggle","title":"Авиарежим","visible":false},{"name":"RotationToggle","title":"Автоповорот","visible":false},{"name":"CaffeineToggle","title":"Кофеин","visible":true},{"name":"DndQuickToggle","title":"Не беспокоить","visible":true},{"name":"BackgroundAppsToggle","title":"Нет фоновых приложений","visible":false},{"name":"MediaSection","title":null,"visible":false},{"name":"Notifications","title":null,"visible":false}]'
+output-show-selected=true
+user-removed-buttons=@as []
+volume-mixer-check-description=true
+volume-mixer-enabled=true
+
 [org/gnome/shell/extensions/tiling-assistant]
+activate-layout0=@as []
+activate-layout1=@as []
+activate-layout2=@as []
+activate-layout3=@as []
+active-window-hint=1
 active-window-hint-color='rgb(53,132,228)'
+auto-tile=@as []
+center-window=@as []
+debugging-free-rects=@as []
+debugging-show-tiled-rects=@as []
+default-move-mode=0
+dynamic-keybinding-behavior=0
+import-layout-examples=false
 last-version-installed=48
+restore-window=['<Super>Down']
+search-popup-layout=@as []
+tile-bottom-half=['<Super>KP_2']
+tile-bottom-half-ignore-ta=@as []
+tile-bottomleft-quarter=['<Super>KP_1']
+tile-bottomright-quarter=['<Super>KP_3']
+tile-bottomright-quarter-ignore-ta=@as []
+tile-edit-mode=@as []
+tile-left-half=['<Super>Left', '<Super>KP_4']
+tile-left-half-ignore-ta=@as []
+tile-maximize=['<Super>Up', '<Super>KP_5']
+tile-maximize-horizontally=@as []
+tile-maximize-vertically=@as []
+tile-right-half=['<Super>Right', '<Super>KP_6']
+tile-right-half-ignore-ta=@as []
+tile-top-half=['<Super>KP_8']
+tile-top-half-ignore-ta=@as []
+tile-topleft-quarter=['<Super>KP_7']
+tile-topleft-quarter-ignore-ta=@as []
+tile-topright-quarter=['<Super>KP_9']
+tile-topright-quarter-ignore-ta=@as []
+toggle-always-on-top=@as []
+toggle-tiling-popup=@as []
 
 [org/gnome/shell/extensions/user-theme]
 name='Qogir-Dark'
@@ -237,15 +313,16 @@ switch-to-application-3=@as []
 switch-to-application-4=@as []
 
 [org/gnome/software]
-check-timestamp=int64 1725596776
+check-timestamp=int64 1725866692
 first-run=false
+flatpak-purge-timestamp=int64 1725605107
 
 [org/gnome/tweaks]
 show-extensions-notice=false
 
 [org/gtk/gtk4/settings/color-chooser]
-custom-colors=[(0.94901961088180542, 0.94901961088180542, 0.94901961088180542, 1.0), (0.94901961088180542, 0.94901961088180542, 0.94901961088180542, 0.15000000596046448), (0.22745098173618317, 0.32549020648002625, 0.45490196347236633, 1.0)]
-selected-color=(true, 0.22745098173618317, 0.32549020648002625, 0.45490196347236633, 1.0)
+custom-colors=[(0.94901999999999997, 0.94901999999999997, 0.94901999999999997, 1.0), (0.94901999999999997, 0.94901999999999997, 0.94901999999999997, 0.14999999999999999), (0.22745099999999999, 0.32549, 0.45490199999999997, 1.0)]
+selected-color=(true, 0.22745099999999999, 0.32549, 0.45490199999999997, 1.0)
 
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
@@ -258,3 +335,6 @@ sort-order='ascending'
 type-format='category'
 view-type='list'
 window-size=(919, 603)
+
+[org/x/pix/general]
+active-extensions=['23hq', 'bookmarks', 'burn_disc', 'catalogs', 'change_date', 'comments', 'contact_sheet', 'convert_format', 'desktop_background', 'edit_metadata', 'exiv2_tools', 'file_manager', 'find_duplicates', 'flicker', 'gstreamer_tools', 'gstreamer_utils', 'image_print', 'image_rotation', 'importer', 'jpeg_utils', 'list_tools', 'oauth', 'photo_importer', 'raw_files', 'red_eye_removal', 'rename_series', 'resize_images', 'search', 'selections', 'slideshow', 'terminal', 'webalbums']

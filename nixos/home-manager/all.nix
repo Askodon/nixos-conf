@@ -15,6 +15,7 @@ with lib.hm.gvariant;
 
     "com/mattjakeman/ExtensionManager" = {
       height = 819;
+      is-maximized = false;
       last-used-version = "0.5.1";
       width = 1067;
     };
@@ -28,12 +29,36 @@ with lib.hm.gvariant;
       window-state = mkTuple [ 980 640 false ];
     };
 
+    "org/gnome/desktop/app-folders" = {
+      folder-children = [ "Utilities" "YaST" "Pardus" ];
+    };
+
+    "org/gnome/desktop/app-folders/folders/Pardus" = {
+      categories = [ "X-Pardus-Apps" ];
+      name = "X-Pardus-Apps.directory";
+      translate = true;
+    };
+
+    "org/gnome/desktop/app-folders/folders/Utilities" = {
+      apps = [ "gnome-abrt.desktop" "gnome-system-log.desktop" "nm-connection-editor.desktop" "org.gnome.baobab.desktop" "org.gnome.Connections.desktop" "org.gnome.DejaDup.desktop" "org.gnome.Dictionary.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.Evince.desktop" "org.gnome.FileRoller.desktop" "org.gnome.fonts.desktop" "org.gnome.Loupe.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.tweaks.desktop" "org.gnome.Usage.desktop" "vinagre.desktop" ];
+      categories = [ "X-GNOME-Utilities" ];
+      name = "X-GNOME-Utilities.directory";
+      translate = true;
+    };
+
+    "org/gnome/desktop/app-folders/folders/YaST" = {
+      categories = [ "X-SuSE-YaST" ];
+      name = "suse-yast.directory";
+      translate = true;
+    };
+
     "org/gnome/desktop/background" = {
       picture-uri = "file:////home/askodon/wallpaper/space-2560x1440-d6km59f5eoo3bm9q.jpg";
       picture-uri-dark = "file:////home/askodon/wallpaper/space-2560x1440-d6km59f5eoo3bm9q.jpg";
     };
 
     "org/gnome/desktop/input-sources" = {
+      mru-sources = [ (mkTuple [ "xkb" "ru" ]) (mkTuple [ "xkb" "us" ]) ];
       sources = [ (mkTuple [ "xkb" "ru" ]) (mkTuple [ "xkb" "us" ]) ];
       xkb-options = [ "grp:win_space_toggle" ];
     };
@@ -41,12 +66,21 @@ with lib.hm.gvariant;
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       cursor-theme = "Bibata-Original-Classic";
+      enable-animations = true;
       enable-hot-corners = false;
       font-name = "Roboto 11";
       gtk-theme = "Qogir-Dark";
       icon-theme = "WhiteSur";
       monospace-font-name = "FiraCode Nerd Font 10";
       toolkit-accessibility = false;
+    };
+
+    "org/gnome/desktop/notifications" = {
+      application-children = [ "org-gnome-extensions" ];
+    };
+
+    "org/gnome/desktop/notifications/application/org-gnome-extensions" = {
+      application-id = "org.gnome.Extensions.desktop";
     };
 
     "org/gnome/desktop/privacy" = {
@@ -117,7 +151,8 @@ with lib.hm.gvariant;
 
     "org/gnome/shell" = {
       disabled-extensions = [];
-      enabled-extensions = [ "appindicatorsupport@rgcjonas.gmail.com" "blur-my-shell@aunetx" "clipboard-indicator@tudmotu.com" "dash-to-panel@jderose9.github.com" "lilypad@shendrew.github.io" "quick-settings-audio-panel@rayzeq.github.io" "tiling-assistant@leleat-on-github" "caffeine@patapon.info" "CoverflowAltTab@palatis.blogspot.com" "arcmenu@arcmenu.com" "user-theme@gnome-shell-extensions.gcampax.github.com" "wallhub@sakithb.github.io" "vertical-workspaces@G-dH.github.com" ];
+      enabled-extensions = [ "appindicatorsupport@rgcjonas.gmail.com" "blur-my-shell@aunetx" "clipboard-indicator@tudmotu.com" "dash-to-panel@jderose9.github.com" "lilypad@shendrew.github.io" "tiling-assistant@leleat-on-github" "caffeine@patapon.info" "CoverflowAltTab@palatis.blogspot.com" "arcmenu@arcmenu.com" "user-theme@gnome-shell-extensions.gcampax.github.com" "wallhub@sakithb.github.io" "vertical-workspaces@G-dH.github.com" "quick-settings-avatar@d-go" "quick-settings-tweaks@qwreey" "quick-settings-audio-panel@rayzeq.github.io" ];
+      favorite-apps = [ "org.gnome.Nautilus.desktop" ];
       welcome-dialog-last-shown-version = "46.2";
     };
 
@@ -132,6 +167,7 @@ with lib.hm.gvariant;
       extra-categories = [ (mkTuple [ 0 true ]) (mkTuple [ 1 true ]) (mkTuple [ 2 true ]) (mkTuple [ 3 true ]) (mkTuple [ 4 true ]) ];
       menu-background-color = "rgba(48,48,49,0.98)";
       menu-border-color = "rgb(60,60,60)";
+      menu-button-active-fg-color = mkTuple [ true "rgb(58,83,116)" ];
       menu-button-appearance = "Icon";
       menu-button-border-radius = mkTuple [ true 5 ];
       menu-button-border-width = mkTuple [ false 3 ];
@@ -230,7 +266,7 @@ with lib.hm.gvariant;
         {"0":"MIDDLE"}
       '';
       panel-element-positions = ''
-        {"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}
+        {"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}
       '';
       panel-lengths = ''
         {"0":100}
@@ -239,7 +275,9 @@ with lib.hm.gvariant;
         {"0":39}
       '';
       primary-monitor = 0;
+      show-apps-icon-file = "";
       status-icon-padding = -1;
+      trans-gradient-bottom-opacity = 0.0;
       trans-gradient-top-color = "#3a5374";
       trans-gradient-top-opacity = 0.1;
       trans-use-custom-bg = false;
@@ -255,15 +293,60 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/lilypad" = {
-      lilypad-order = [ "StatusNotifierItem" "appindicator-legacy:Nextcloud:0" "appindicator-legacy:null:0" "tiling-assistant" "appindicator-legacy:Nextcloud:12813" ];
+      lilypad-order = [ "StatusNotifierItem" "clipboardIndicator" "tiling_assistant" "appindicator-legacy:Nextcloud:0" "appindicator-legacy:null:0" "tiling-assistant" "appindicator-legacy:Nextcloud:12813" ];
       reorder = true;
-      rightbox-order = [ "lilypad" "keyboard" "clipboardIndicator" ];
+      rightbox-order = [ "lilypad" "keyboard" ];
       show-icons = false;
     };
 
+    "org/gnome/shell/extensions/quick-settings-tweaks" = {
+      input-always-show = false;
+      input-show-selected = true;
+      list-buttons = "[{\"name\":\"SystemItem\",\"title\":null,\"visible\":true},{\"name\":\"OutputStreamSlider\",\"title\":null,\"visible\":false},{\"name\":\"InputStreamSlider\",\"title\":null,\"visible\":false},{\"name\":\"St_BoxLayout\",\"title\":null,\"visible\":true},{\"name\":\"BrightnessItem\",\"title\":null,\"visible\":false},{\"name\":\"NMWiredToggle\",\"title\":\"Ethernet\",\"visible\":true},{\"name\":\"NMWirelessToggle\",\"title\":null,\"visible\":false},{\"name\":\"NMModemToggle\",\"title\":null,\"visible\":false},{\"name\":\"NMBluetoothToggle\",\"title\":null,\"visible\":false},{\"name\":\"NMVpnToggle\",\"title\":null,\"visible\":false},{\"name\":\"BluetoothToggle\",\"title\":\"Bluetooth\",\"visible\":false},{\"name\":\"PowerProfilesToggle\",\"title\":\"\1056\1077\1078\1080\1084 \1087\1080\1090\1072\1085\1080\1103\",\"visible\":true},{\"name\":\"NightLightToggle\",\"title\":\"\1053\1086\1095\1085\1086\1081 \1089\1074\1077\1090\",\"visible\":false},{\"name\":\"DarkModeToggle\",\"title\":\"\1058\1077\1084\1085\1099\1081 \1089\1090\1080\1083\1100\",\"visible\":true},{\"name\":\"KeyboardBrightnessToggle\",\"title\":\"\1050\1083\1072\1074\1080\1072\1090\1091\1088\1072\",\"visible\":false},{\"name\":\"RfkillToggle\",\"title\":\"\1040\1074\1080\1072\1088\1077\1078\1080\1084\",\"visible\":false},{\"name\":\"RotationToggle\",\"title\":\"\1040\1074\1090\1086\1087\1086\1074\1086\1088\1086\1090\",\"visible\":false},{\"name\":\"CaffeineToggle\",\"title\":\"\1050\1086\1092\1077\1080\1085\",\"visible\":true},{\"name\":\"DndQuickToggle\",\"title\":\"\1053\1077 \1073\1077\1089\1087\1086\1082\1086\1080\1090\1100\",\"visible\":true},{\"name\":\"BackgroundAppsToggle\",\"title\":\"\1053\1077\1090 \1092\1086\1085\1086\1074\1099\1093 \1087\1088\1080\1083\1086\1078\1077\1085\1080\1081\",\"visible\":false},{\"name\":\"MediaSection\",\"title\":null,\"visible\":false},{\"name\":\"Notifications\",\"title\":null,\"visible\":false}]";
+      output-show-selected = true;
+      user-removed-buttons = [];
+      volume-mixer-check-description = true;
+      volume-mixer-enabled = true;
+    };
+
     "org/gnome/shell/extensions/tiling-assistant" = {
+      activate-layout0 = [];
+      activate-layout1 = [];
+      activate-layout2 = [];
+      activate-layout3 = [];
+      active-window-hint = 1;
       active-window-hint-color = "rgb(53,132,228)";
+      auto-tile = [];
+      center-window = [];
+      debugging-free-rects = [];
+      debugging-show-tiled-rects = [];
+      default-move-mode = 0;
+      dynamic-keybinding-behavior = 0;
+      import-layout-examples = false;
       last-version-installed = 48;
+      restore-window = [ "<Super>Down" ];
+      search-popup-layout = [];
+      tile-bottom-half = [ "<Super>KP_2" ];
+      tile-bottom-half-ignore-ta = [];
+      tile-bottomleft-quarter = [ "<Super>KP_1" ];
+      tile-bottomright-quarter = [ "<Super>KP_3" ];
+      tile-bottomright-quarter-ignore-ta = [];
+      tile-edit-mode = [];
+      tile-left-half = [ "<Super>Left" "<Super>KP_4" ];
+      tile-left-half-ignore-ta = [];
+      tile-maximize = [ "<Super>Up" "<Super>KP_5" ];
+      tile-maximize-horizontally = [];
+      tile-maximize-vertically = [];
+      tile-right-half = [ "<Super>Right" "<Super>KP_6" ];
+      tile-right-half-ignore-ta = [];
+      tile-top-half = [ "<Super>KP_8" ];
+      tile-top-half-ignore-ta = [];
+      tile-topleft-quarter = [ "<Super>KP_7" ];
+      tile-topleft-quarter-ignore-ta = [];
+      tile-topright-quarter = [ "<Super>KP_9" ];
+      tile-topright-quarter-ignore-ta = [];
+      toggle-always-on-top = [];
+      toggle-tiling-popup = [];
     };
 
     "org/gnome/shell/extensions/user-theme" = {
@@ -290,8 +373,9 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/software" = {
-      check-timestamp = mkInt64 1725596776;
+      check-timestamp = mkInt64 1725866692;
       first-run = false;
+      flatpak-purge-timestamp = mkInt64 1725605107;
     };
 
     "org/gnome/tweaks" = {
@@ -299,8 +383,8 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 0.9490196108818054 0.9490196108818054 0.9490196108818054 1.0 ]) (mkTuple [ 0.9490196108818054 0.9490196108818054 0.9490196108818054 0.15000000596046448 ]) (mkTuple [ 0.22745098173618317 0.32549020648002625 0.45490196347236633 1.0 ]) ];
-      selected-color = mkTuple [ true 0.22745098173618317 0.32549020648002625 0.45490196347236633 1.0 ];
+      custom-colors = [ (mkTuple [ 0.94902 0.94902 0.94902 1.0 ]) (mkTuple [ 0.94902 0.94902 0.94902 0.15 ]) (mkTuple [ 0.227451 0.32549 0.454902 1.0 ]) ];
+      selected-color = mkTuple [ true 0.227451 0.32549 0.454902 1.0 ];
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
@@ -314,6 +398,10 @@ with lib.hm.gvariant;
       type-format = "category";
       view-type = "list";
       window-size = mkTuple [ 919 603 ];
+    };
+
+    "org/x/pix/general" = {
+      active-extensions = [ "23hq" "bookmarks" "burn_disc" "catalogs" "change_date" "comments" "contact_sheet" "convert_format" "desktop_background" "edit_metadata" "exiv2_tools" "file_manager" "find_duplicates" "flicker" "gstreamer_tools" "gstreamer_utils" "image_print" "image_rotation" "importer" "jpeg_utils" "list_tools" "oauth" "photo_importer" "raw_files" "red_eye_removal" "rename_series" "resize_images" "search" "selections" "slideshow" "terminal" "webalbums" ];
     };
 
   };

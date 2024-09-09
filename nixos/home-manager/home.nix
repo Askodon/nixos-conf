@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    #./all.nix
+    ./all.nix
     ./wezterm.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
@@ -73,8 +73,10 @@
       gnomeExtensions.tiling-assistant
       gnomeExtensions.clipboard-indicator
       gnomeExtensions.wallhub
+      gnomeExtensions.quick-settings-tweaker
       gnomeExtensions.quick-settings-audio-panel
       gnomeExtensions.vertical-workspaces
+      gnomeExtensions.user-avatar-in-quick-settings
       #lilypad
       #
 
