@@ -42,6 +42,7 @@
       nextcloud-client
       antares
       libreoffice
+      kdePackages.okular
       #
 
       # gnome packages
@@ -52,7 +53,6 @@
       gnome.gnome-software
       gnome.gnome-screenshot
       gnome.gnome-tweaks
-      evince
       #
 
       #fonts
