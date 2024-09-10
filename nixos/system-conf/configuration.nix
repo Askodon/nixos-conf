@@ -12,7 +12,6 @@
     ./users.nix
     #./zapret.nix
     ./nautilus-open-any-term.nix
-    ./test.nix
   ];
 
   hardware.pulseaudio.enable = false;
@@ -43,6 +42,7 @@
     whitesur-icon-theme
     gnome.gnome-disk-utility
     xfsprogs
+    nodejs_22
   ];
 
   system.stateVersion = "24.05"; # system version

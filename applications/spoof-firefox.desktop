@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=spoof-firefox
-Comment=test
-Exec=/home/askodon/nixos-conf/applications/spoof-firefox.sh
-Icon=firefox-dev
-Terminal=false
-Type=Application
-Categories=Application;
