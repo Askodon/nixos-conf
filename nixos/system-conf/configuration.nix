@@ -12,6 +12,7 @@
     ./users.nix
     #./zapret.nix
     ./nautilus-open-any-term.nix
+    ./test.nix
   ];
 
   hardware.pulseaudio.enable = false;
