@@ -21,8 +21,6 @@
     sudo.enable = true;
   };
 
-
-
   #stylix 
   #stylix.enable = true;
   #stylix.image = /home/askodon/wallpaper/nix.jpg;
@@ -30,6 +28,8 @@
   #zsh as default
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
+
+  programs.gamemode.enable = true;
 
   # List packages installed in system profile. To search, run:
   nixpkgs.config.allowUnfree = true;
