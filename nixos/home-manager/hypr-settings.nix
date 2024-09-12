@@ -26,6 +26,11 @@
 
       # Monitor
       exec-once = hyprctl setcursor Bibata-Modern-Classic 24
+      
+      #gnome gtk theme
+      exec = gsettings set org.gnome.desktop.interface gtk-theme "Qogir-Dark"
+      exec = gsettings set org.gnome.desktop.interface color-scheme "Qogir-Dark"
+      env = QT_QPA_PLATFORMTHEME,qt6ct
 
       # Input config
       input {
@@ -59,10 +64,10 @@
       $mainMod = SUPER
       bind = $mainMod, G, fullscreen,
 
-
+      bind = $mainMod, Q, killactive
       bind = $mainMod, B, exec, chromium
       bind = $mainMod, F, exec, firefox 
-      bind = $mainMod, Q, exec, kitty
+      bind = $mainMod, T, exec, kitty
       bind = $mainMod, M, exit,
       bind = $mainMod, E, exec, thunar
       bind = $mainMod, V, togglefloating,
@@ -129,6 +134,28 @@
       bindm = $mainMod, mouse:272, movewindow
       bindm = $mainMod, mouse:273, resizewindow
       bindm = ALT, mouse:272, resizewindow
+
+        decoration {
+
+        rounding = 0
+
+        drop_shadow = true
+        shadow_range = 4
+        shadow_render_power = 3
+        col.shadow = rgba(1a1a1aee)
+      }
+
+      animations {
+        enabled = yes
+
+        bezier = ease,0.4,0.02,0.21,1
+
+        animation = windows, 1, 3.5, ease, slide
+        animation = windowsOut, 1, 3.5, ease, slide
+        animation = border, 1, 6, default
+        animation = fade, 1, 3, ease
+        animation = workspaces, 1, 3.5, ease
+    }
     '';
   };
 }

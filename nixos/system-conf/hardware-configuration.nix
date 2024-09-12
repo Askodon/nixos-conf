@@ -16,7 +16,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
-
+  boot.blacklistedKernelModules = [ "hyperv_fb" ]; # hyper-v settings
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/02a0e645-d94f-42ac-ba79-4497e1156c20";
     fsType = "ext4";

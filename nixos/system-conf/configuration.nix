@@ -12,6 +12,7 @@
     ./users.nix
     #./zapret.nix
     ./nautilus-open-any-term.nix
+    ./system-variables.nix
   ];
 
   hardware.pulseaudio.enable = false;
@@ -28,6 +29,7 @@
   #zsh as default
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
+  programs.hyprland.enable = true;
 
   #game settings
   programs.gamemode.enable = true;
@@ -45,6 +47,7 @@
     gnome.gnome-disk-utility
     xfsprogs
     nodejs_22
+    qt6ct
   ];
 
   system.stateVersion = "24.05"; # system version
