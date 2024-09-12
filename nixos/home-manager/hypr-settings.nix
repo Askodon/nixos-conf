@@ -9,6 +9,10 @@
     waybar
     swww
     eww
+    wezterm
+    kitty
+    wofi
+    xfce.thunar
   ];
   
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
@@ -19,15 +23,7 @@
 
     # Monitor
     monitor=DP-1,1920x1080@165,auto,1
-
-    # Fix slow startup
-    exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-    exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP 
-
-    # Autostart
-
     exec-once = hyprctl setcursor Bibata-Modern-Classic 24
-    exec-once = dunst
 
     # Input config
     input {
@@ -57,20 +53,6 @@
         layout = dwindle
     }
 
-    decoration {
-
-        rounding = 10
-        blur = true
-        blur_size = 3
-        blur_passes = 1
-        blur_new_optimizations = true
-
-        drop_shadow = true
-        shadow_range = 4
-        shadow_render_power = 3
-        col.shadow = rgba(1a1a1aee)
-    }
-
     animations {
         enabled = yes
 
@@ -88,40 +70,20 @@
         preserve_split = yes
     }
 
-    master {
-        new_is_master = yes
-    }
-
     gestures {
         workspace_swipe = false
     }
-
-    # Example windowrule v1
-    # windowrule = float, ^(kitty)$
-    # Example windowrule v2
-    # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
-
-    windowrule=float,^(kitty)$
-    windowrule=float,^(pavucontrol)$
-    windowrule=center,^(kitty)$
-    windowrule=float,^(blueman-manager)$
-    windowrule=size 600 500,^(kitty)$
-    windowrule=size 934 525,^(mpv)$
-    windowrule=float,^(mpv)$
-    windowrule=center,^(mpv)$
-    #windowrule=pin,^(firefox)$
 
     $mainMod = SUPER
     bind = $mainMod, G, fullscreen,
 
 
-    #bind = $mainMod, RETURN, exec, cool-retro-term-zsh
-    bind = $mainMod, RETURN, exec, kitty
-    bind = $mainMod, B, exec, opera --no-sandbox
-    bind = $mainMod, L, exec, firefox 
-    bind = $mainMod, Q, killactive,
+    bind = $mainMod, T, exec, wezterm
+    bind = $mainMod, B, exec, chromium
+    bind = $mainMod, F, exec, firefox 
+    bind = $mainMod, Q, exec, kitty
     bind = $mainMod, M, exit,
-    bind = $mainMod, F, exec, nautilus
+    bind = $mainMod, E, exec, thunar
     bind = $mainMod, V, togglefloating,
     bind = $mainMod, w, exec, wofi --show drun
     bind = $mainMod, R, exec, rofiWindow
@@ -188,26 +150,4 @@
     bindm = ALT, mouse:272, resizewindow
         '';
   };
-
-      home.file.".config/hypr/colors".text = ''
-$background = rgba(1d192bee)
-$foreground = rgba(c3dde7ee)
-
-$color0 = rgba(1d192bee)
-$color1 = rgba(465EA7ee)
-$color2 = rgba(5A89B6ee)
-$color3 = rgba(6296CAee)
-$color4 = rgba(73B3D4ee)
-$color5 = rgba(7BC7DDee)
-$color6 = rgba(9CB4E3ee)
-$color7 = rgba(c3dde7ee)
-$color8 = rgba(889aa1ee)
-$color9 = rgba(465EA7ee)
-$color10 = rgba(5A89B6ee)
-$color11 = rgba(6296CAee)
-$color12 = rgba(73B3D4ee)
-$color13 = rgba(7BC7DDee)
-$color14 = rgba(9CB4E3ee)
-$color15 = rgba(c3dde7ee)
-    '';
 }

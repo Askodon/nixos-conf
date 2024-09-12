@@ -3,7 +3,7 @@
   imports = [
     #./all.nix
     ./wezterm.nix
-    ./hypr-init.nix
+    ./hypr-settings.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
