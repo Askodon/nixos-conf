@@ -4,6 +4,7 @@
     #./all.nix
     ./wezterm.nix
     ./hypr-settings.nix
+    ./waybar-settings.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:

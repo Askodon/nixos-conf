@@ -22,15 +22,11 @@
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
   wayland.windowManager.hyprland = {
     enable = true;
+    xwayland.enable = true;
     extraConfig = ''
 
       # Monitor
       exec-once = hyprctl setcursor Bibata-Modern-Classic 24
-      
-      #gnome gtk theme
-      exec = gsettings set org.gnome.desktop.interface gtk-theme "Qogir-Dark"
-      exec = gsettings set org.gnome.desktop.interface color-scheme "Qogir-Dark"
-      env = QT_QPA_PLATFORMTHEME,qt6ct
 
       # Input config
       input {
