@@ -5,6 +5,7 @@
     ./wezterm.nix
     ./hypr-settings.nix
     ./waybar-settings.nix
+    ./theming.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
@@ -12,9 +13,7 @@
       # allow unfree
       "vscode"
       "obsidian"
-    ];
-
-  home.sessionVariables.GTK_THEME = "Qogir-Dark";
+    ]
 
   home = {
     username = "askodon";
@@ -29,7 +28,6 @@
       cinnamon.pix # photo
       gcolor3 # see colour on desktop
       amberol # music
-      rofi
       transmission_4-gtk # torrent
       qogir-theme
       bibata-cursors
@@ -47,13 +45,7 @@
       #
 
       # gnome packages
-      gnome.file-roller # zip and etc
-      gnome.gnome-keyring
       gnome.dconf-editor
-      gnome.nautilus
-      gnome.gnome-software
-      gnome.gnome-screenshot
-      gnome.gnome-tweaks
       #
 
       #fonts
@@ -61,24 +53,6 @@
       fira-code-nerdfont
       nerdfonts
       roboto
-      #
-
-      #gnome extensions
-      gnome-extension-manager
-      gnomeExtensions.arcmenu
-      gnomeExtensions.dash-to-panel
-      gnomeExtensions.blur-my-shell
-      gnomeExtensions.appindicator
-      gnomeExtensions.coverflow-alt-tab
-      gnomeExtensions.caffeine
-      gnomeExtensions.tiling-assistant
-      gnomeExtensions.clipboard-indicator
-      gnomeExtensions.wallhub
-      gnomeExtensions.quick-settings-tweaker
-      gnomeExtensions.quick-settings-audio-panel
-      gnomeExtensions.vertical-workspaces
-      gnomeExtensions.user-avatar-in-quick-settings
-      #lilypad
       #
 
       #terminal util
@@ -166,6 +140,7 @@
       squashGit = "git rebase -i --autosquash HEAD~$(gum write)"; # help
       hs = "gum filter < $HISTFILE --height 20"; # help, history with auto paste
       fmtChoice = "nixfmt $(gum choose --no-limit $(ls))"; # help, nixfmt command with choice
+      wallpaper = "/home/askodon/nixos-conf/scripts/swww.sh"; #helpz
       try = "nix-shell -p "; # help
       f = "fuck"; # help
       x = "exit"; # help

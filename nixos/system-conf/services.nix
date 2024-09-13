@@ -3,6 +3,7 @@
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
   };
   services = {
     # services list
@@ -22,9 +23,8 @@
       xkb.variant = "";
       xkb.options = "grp:win_space_toggle";
       deviceSection = ''Option "TearFree" "true"''; # For amdgpu.
-      desktopManager.gnome.enable = true;
-      displayManager.gdm.wayland = true;
       #videoDrivers = [ "amdgpu" ]; #amdgpu for home pc
+      displayManager.lightdm.greeters.gtk.enable = true;
     };
     pipewire = {
       enable = true;

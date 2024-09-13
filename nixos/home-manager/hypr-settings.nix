@@ -14,7 +14,6 @@
     swww
     eww
     kitty
-    wofi
     xfce.thunar
     hyprpicker
     wl-clipboard-rs
@@ -31,6 +30,10 @@
 
       #waybar start
       exec-once = waybar
+
+      #windowrule
+      windowrule = float, pwvucontrol 
+
 
       # Input config
       input {
@@ -50,7 +53,8 @@
           gaps_in = 5
           gaps_out = 20
           border_size = 2
-          col.active_border = rgba(005294e2) rgba(00282a33) 60deg
+          col.active_border = rgba(00ff99ee) rgba(325da8fc) 45deg
+          
           col.inactive_border = rgba(282a33aa)
 
           layout = dwindle
@@ -63,7 +67,6 @@
 
       $mainMod = SUPER
       bind = $mainMod, G, fullscreen,
-
       bind = $mainMod, Q, killactive
       bind = $mainMod, B, exec, chromium
       bind = $mainMod, C, exec, hyprpicker -a
@@ -72,7 +75,7 @@
       bind = $mainMod, M, exit,
       bind = $mainMod, E, exec, thunar
       bind = $mainMod, V, togglefloating,
-      bind = $mainMod, w, exec, wofi --show drun
+      bind = $mainMod, w, exec, /home/askodon/nixos-conf/scripts/rofi/launcher.sh
       bind = $mainMod, R, exec, rofiWindow
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, J, togglesplit, # dwindle

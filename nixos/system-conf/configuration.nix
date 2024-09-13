@@ -48,6 +48,7 @@
     xfsprogs
     nodejs_22
     qt6ct
+    rofi-wayland
   ];
 
   system.stateVersion = "24.05"; # system version
