@@ -6,7 +6,6 @@
     ./hypr-settings.nix
     ./waybar-settings.nix
     ./theming.nix
-    ./wlogout.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
@@ -44,6 +43,12 @@
       libreoffice
       kdePackages.okular
       #
+
+      #xfce packages
+      xfce.thunar
+      xfce.thunar-volman
+      xfce.thunar-archive-plugin
+      xfce.thunar-media-tags-plugin
 
       # gnome packages
       gnome.dconf-editor

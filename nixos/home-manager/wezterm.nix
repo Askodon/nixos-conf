@@ -3,10 +3,9 @@
   programs.wezterm = {
     enable = true;
     enableZshIntegration = true;
-    enableBashIntegration = true;
     extraConfig = ''
       return {
-      enable_wayland = true,
+      enable_wayland = false,
       font = wezterm.font("Fira Code"),
       font_size = 11.0,
       hide_tab_bar_if_only_one_tab = true,

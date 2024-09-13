@@ -13,12 +13,11 @@
   home.packages = with pkgs; [
     swww
     eww
-    kitty
-    xfce.thunar
     hyprpicker
     hyprlock
     wl-clipboard-rs
     dunst
+    wleave
   ];
 
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
@@ -84,7 +83,7 @@
       bind = $mainMod, B, exec, chromium
       bind = $mainMod, C, exec, hyprpicker -a
       bind = $mainMod, F, exec, firefox 
-      bind = $mainMod, T, exec, kitty
+      bind = $mainMod, T, exec, wezterm
       bind = $mainMod, X, exec, wlogout
       bind = $mainMod, M, exit,
       bind = $mainMod, E, exec, thunar
