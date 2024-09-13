@@ -16,9 +16,9 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
-  virtualisation.vmware.guest.enable = true;
+  #virtualisation.vmware.guest.enable = true;
   #boot.blacklistedKernelModules = [ "hyperv_fb" ]; # hyper-v settings
-  services.xserver.videoDrivers = [ "vmware" ];
+  #services.xserver.videoDrivers = [ "vmware" ];
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/02a0e645-d94f-42ac-ba79-4497e1156c20";
     fsType = "ext4";

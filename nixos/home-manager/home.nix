@@ -26,7 +26,6 @@
       betterbird
       vscode
       podman # container
-      qpwgraph # sound tree changer
       cinnamon.pix # photo
       gcolor3 # see colour on desktop
       amberol # music

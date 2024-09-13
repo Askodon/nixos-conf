@@ -11,12 +11,13 @@
   ];
 
   home.packages = with pkgs; [
-    waybar
     swww
     eww
     kitty
     wofi
     xfce.thunar
+    hyprpicker
+    wl-clipboard-rs
   ];
 
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
@@ -28,12 +29,15 @@
       # Monitor
       exec-once = hyprctl setcursor Bibata-Modern-Classic 24
 
+      #waybar start
+      exec-once = waybar
+
       # Input config
       input {
           kb_layout = us, ru
           kb_variant =
           kb_model =
-          kb_options =
+          kb_options = grp:win_space_toggle 
           kb_rules =
 
           follow_mouse = 1
@@ -46,8 +50,8 @@
           gaps_in = 5
           gaps_out = 20
           border_size = 2
-          col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
-          col.inactive_border = rgba(595959aa)
+          col.active_border = rgba(005294e2) rgba(00282a33) 60deg
+          col.inactive_border = rgba(282a33aa)
 
           layout = dwindle
       }
@@ -62,6 +66,7 @@
 
       bind = $mainMod, Q, killactive
       bind = $mainMod, B, exec, chromium
+      bind = $mainMod, C, exec, hyprpicker -a
       bind = $mainMod, F, exec, firefox 
       bind = $mainMod, T, exec, kitty
       bind = $mainMod, M, exit,
