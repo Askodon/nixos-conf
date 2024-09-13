@@ -6,6 +6,7 @@
     ./hypr-settings.nix
     ./waybar-settings.nix
     ./theming.nix
+    ./wlogout.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
@@ -13,7 +14,7 @@
       # allow unfree
       "vscode"
       "obsidian"
-    ]
+    ];
 
   home = {
     username = "askodon";

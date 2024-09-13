@@ -14,6 +14,8 @@
       XDG_SESSION_DESKTOP = "Hyprland";
       XDG_SESSION_TYPE = "wayland";
       QT_QPA_PLATFORMTHEME = "qt6ct";
+      HYPRCURSOR_THEME = "Bibata-Modern-Classic";
+      HYPRCURSOR_SIZE = "24";
     };
   };
 }

@@ -16,7 +16,9 @@
     kitty
     xfce.thunar
     hyprpicker
+    hyprlock
     wl-clipboard-rs
+    dunst
   ];
 
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
@@ -24,15 +26,26 @@
     enable = true;
     xwayland.enable = true;
     extraConfig = ''
-
       # Monitor
       exec-once = hyprctl setcursor Bibata-Modern-Classic 24
 
       #waybar start
       exec-once = waybar
 
+      #dunst notifier
+      exec-once = dunst
+
+      #hyprctl
+      exec-once = hyprctl setcursor Bibata-Modern-Classic
+
       #windowrule
       windowrule = float, pwvucontrol 
+
+      #debug
+      debug {
+        disable_logs = false
+        enable_stdout_logs = true
+      }
 
 
       # Input config
@@ -50,8 +63,8 @@
 
       general {
 
-          gaps_in = 5
-          gaps_out = 20
+          gaps_in = 1
+          gaps_out = 1
           border_size = 2
           col.active_border = rgba(00ff99ee) rgba(325da8fc) 45deg
           
@@ -72,6 +85,7 @@
       bind = $mainMod, C, exec, hyprpicker -a
       bind = $mainMod, F, exec, firefox 
       bind = $mainMod, T, exec, kitty
+      bind = $mainMod, X, exec, wlogout
       bind = $mainMod, M, exit,
       bind = $mainMod, E, exec, thunar
       bind = $mainMod, V, togglefloating,
