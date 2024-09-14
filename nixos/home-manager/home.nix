@@ -5,7 +5,7 @@
     ./wezterm.nix
     ./hypr-settings.nix
     ./waybar-settings.nix
-    ./theming.nix
+    #./theming.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:

@@ -26,9 +26,10 @@
       xkb.variant = "";
       xkb.options = "grp:win_space_toggle";
       deviceSection = ''Option "TearFree" "true"''; # For amdgpu.
-      #videoDrivers = [ "amdgpu" ]; #amdgpu for home pc
-      displayManager.lightdm.greeters.gtk.enable = true;
-    };
+      videoDrivers = [ "amdgpu" ]; #amdgpu for home pc
+      displayManager.gdm.enable = true;
+      desktopManager.gnome.enable = true;
+          };
     pipewire = {
       enable = true;
       alsa.enable = true;
