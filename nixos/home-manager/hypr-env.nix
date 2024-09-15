@@ -12,9 +12,14 @@
       XDG_CURRENT_DESKTOP = "Hyprland";
       XDG_SESSION_DESKTOP = "Hyprland";
       XDG_SESSION_TYPE = "wayland";
+      QT_QPA_PLATFORM = "wayland"; 
       QT_QPA_PLATFORMTHEME = "qt6ct";
-      HYPRCURSOR_THEME = "Bibata-Modern-Classic";
-      HYPRCURSOR_SIZE = "24";
+      QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+      QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+      MOZ_ENABLE_WAYLAND = "1";
+      XCURSOR_SIZE = "24";
+      XCURSOR_THEME = "Bibata-Original-Classic";
+      GTK_THEME = "Qogir-Dark";
     };
   };
 }

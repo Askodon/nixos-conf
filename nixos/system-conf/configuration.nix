@@ -43,9 +43,6 @@
     git
     home-manager
     gum
-    qogir-theme
-    bibata-cursors
-    whitesur-icon-theme
     gnome.gnome-disk-utility
     xfsprogs
     nodejs_22

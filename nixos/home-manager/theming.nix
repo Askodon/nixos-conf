@@ -1,13 +1,13 @@
-{ pkgs, ...}:
+{ pkgs,  ... }:
 {
   home.pointerCursor = {
     package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
-    size = 40;
+    name = "Bibata-Original-Classic";
+    size = 24;
     gtk.enable = true;
   };
   # gtk = {
-  #   enable = true;
+  # enable = true;
   #   font = {
   #     package = pkgs.roboto;
   #     name = "Roboto Regular";

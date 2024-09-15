@@ -18,6 +18,10 @@
     wl-clipboard-rs
     dunst
     wleave
+    nwg-look
+    hyprcursor
+    hyprshot
+    glib
   ];
 
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
@@ -26,8 +30,11 @@
     xwayland.enable = true;
     systemd.enable = true;
     extraConfig = ''
-      # Monitor
-      exec-once = hyprctl setcursor Bibata-Modern-Classic 24
+
+      #monitor
+      monitor=,preferred,auto,1
+
+      exec-once = hyprctl setcursor Bibata-Original-Classic 24
 
       #waybar start
       exec-once = waybar
@@ -35,8 +42,12 @@
       #dunst notifier
       exec-once = dunst
 
-      #hyprctl
-      exec-once = hyprctl setcursor Bibata-Modern-Classic
+      #systemd
+      exec-once = dbus-update-activation-environment --systemd --all
+
+      #cursor
+      exec-once = hyprctl setcursor Bibata-Original-Classic
+      exec-once = gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Original-Classic"
 
       #windowrule
       windowrule = float, pwvucontrol 
@@ -79,6 +90,7 @@
       }
 
       $mainMod = SUPER
+      bind = $mainMod, P, exec, hyprshot -m window --clipboard-only
       bind = $mainMod, G, fullscreen,
       bind = $mainMod, Q, killactive
       bind = $mainMod, B, exec, chromium
@@ -90,8 +102,6 @@
       bind = $mainMod, E, exec, thunar
       bind = $mainMod, V, togglefloating,
       bind = $mainMod, w, exec, /home/askodon/nixos-conf/scripts/rofi/launcher.sh
-      bind = $mainMod, R, exec, rofiWindow
-      bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, J, togglesplit, # dwindle
 
       # Switch Keyboard Layouts
@@ -131,6 +141,13 @@
       bind = $mainMod, 8, workspace, 8
       bind = $mainMod, 9, workspace, 9
       bind = $mainMod, 0, workspace, 10
+
+      # Move focus with mainMod + arrow keys
+      bind = $mainMod SHIFT, left, swapwindow, l
+      bind = $mainMod SHIFT, right, swapwindow, r
+      bind = $mainMod SHIFT, up, swapwindow, u
+      bind = $mainMod SHIFT, down, swapwindow, d
+
 
       # Move active window to a workspace with mainMod + SHIFT + [0-9]
       bind = $mainMod SHIFT, 1, movetoworkspace, 1
