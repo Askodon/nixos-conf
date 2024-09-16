@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=WezTerm-Wayland
-Comment=Test the terminal running a command inside it
-Exec=/home/askodon/nixos-conf/applications/wezterm.sh
-Icon=xterm-color
-Terminal=false
-Type=Application
-Categories=Application;

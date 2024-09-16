@@ -1,8 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Version=1.0
-Type=Application
-NoDisplay=true
-Exec=/etc/profiles/per-user/askodon/bin/betterbird %u
-Name=Betterbird
-Comment=Особое определение для Betterbird

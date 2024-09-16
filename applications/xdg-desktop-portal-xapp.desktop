@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Portal
-Icon=applications-system-symbolic
-Exec=/nix/store/6gr8xv9kcdnxk0rpccm290cnjs2z4hdw-xdg-desktop-portal-xapp-1.0.8/libexec/xdg-desktop-portal-xapp
-NoDisplay=false

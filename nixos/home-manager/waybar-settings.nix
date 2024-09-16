@@ -16,10 +16,11 @@
         "height": 41,
         "modules-left": [
             "custom/os_button",
-            "hyprland/workspaces",
-            "wlr/taskbar"
+            "hyprland/workspaces"
         ],
-        "modules-center": [],
+        "modules-center": [
+        "wlr/taskbar"
+        ],
         "modules-right": [
             "cpu",
             "temperature",
@@ -45,7 +46,7 @@
         },
         "custom/os_button": {
             "format": "",
-            "on-click": "wofi --show drun",
+            "on-click": "/home/askodon/nixos-conf/scripts/powermenu/powermenu.sh",
             "tooltip": false
         },
         "cpu": {
@@ -77,12 +78,10 @@
             "tooltip-format": "RAM - {used:0.1f}GiB used"
         },
         "wlr/taskbar": {
-            "format": "{icon} {title:.17}",
+            "format": "{icon}",
             "icon-size": 28,
-            "spacing": 3,
             "on-click-middle": "close",
             "tooltip-format": "{title}",
-            "ignore-list": [],
             "on-click": "activate"
         },
         "tray": {
@@ -259,12 +258,12 @@
     }
 
     #taskbar button {
-    	min-width: 130px;
+    	min-width: 30px;
     	border-bottom: 3px solid rgba(255, 255, 255, 0.3);
     	margin-left: 2px;
     	margin-right: 2px;
-      padding-left: 8px;
-      padding-right: 8px;
+      padding-left: 2px;
+      padding-right: 2px;
       color: white;
     	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
