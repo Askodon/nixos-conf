@@ -11,7 +11,6 @@
     ./locale.nix
     ./users.nix
     ./system-variables.nix
-    ./daemon.nix
   ];
 
   hardware.pulseaudio.enable = false;
@@ -47,6 +46,7 @@
     nodejs_22
     qt6ct
     rofi-wayland
+    lxqt.lxqt-policykit
   ];
 
   system.stateVersion = "24.05"; # system version
