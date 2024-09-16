@@ -5,7 +5,7 @@
     enableZshIntegration = true;
     extraConfig = ''
       return {
-      enable_wayland = false,
+      enable_wayland = true,
       font = wezterm.font("Fira Code"),
       font_size = 11.0,
       hide_tab_bar_if_only_one_tab = true,

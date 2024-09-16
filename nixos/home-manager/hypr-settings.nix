@@ -24,6 +24,7 @@
     hyprshot
     glib
     pavucontrol
+    kdePackages.qtwayland
     gnome.gnome-terminal
     xorg.libxcb
     gnome.nautilus
