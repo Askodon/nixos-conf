@@ -54,6 +54,7 @@
 
       #systemd
       exec-once = dbus-update-activation-environment --systemd --all
+      exec-once= systemctl --user start polkit-gnome-authentication-agent-1
 
       #cursor
       exec-once = hyprctl setcursor Bibata-Original-Classic
