@@ -64,9 +64,9 @@ mainbox {
 inputbar {
     enabled:                     true;
     spacing:                     0px;
-    padding:                     100px 40px;
+    padding:                     150px 40px;
     background-color:            transparent;
-    background-image:            url("~/.config/rofi/images/e.jpg", width);
+    background-image:            url("/home/askodon/nixos-conf/images/powermenu.jpg", width);
     children:                    [ "textbox-prompt-colon", "dummy","prompt"];
 }
 
@@ -75,16 +75,16 @@ dummy {
 }
 
 textbox-prompt-colon {
-    enabled:                     true;
+    enabled:                     false;
     expand:                      false;
-    str:                         " System";
+    str:                         "   System";
     padding:                     12px;
     border-radius:               5px;
     background-color:            @urgent;
     text-color:                  @background;
 }
 prompt {
-    enabled:                     true;
+    enabled:                     false;
     padding:                     12px;
     border-radius:               5px;
     background-color:            @active;
@@ -120,7 +120,7 @@ element {
     cursor:                      pointer;
 }
 element-text {
-    font:                        "feather bold 32";
+    font:                        "Roboto 32";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;

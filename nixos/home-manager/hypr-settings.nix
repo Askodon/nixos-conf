@@ -26,6 +26,8 @@
     gnome.gnome-terminal
     xorg.libxcb
     cinnamon.nemo-with-extensions
+    font-awesome
+    cinnamon.nemo-fileroller
   ];
 
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
