@@ -27,7 +27,7 @@
     kdePackages.qtwayland
     gnome.gnome-terminal
     xorg.libxcb
-    gnome.nautilus
+    cinnamon.nemo-with-extensions
   ];
 
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
@@ -109,7 +109,7 @@
       bind = $mainMod, F, exec, firefox 
       bind = $mainMod, T, exec, wezterm
       bind = $mainMod, M, exec, /home/askodon/nixos-conf/scripts/powermenu/powermenu.sh
-      bind = $mainMod, E, exec, nautilus
+      bind = $mainMod, E, exec, nemo
       bind = $mainMod, V, togglefloating,
       bind = $mainMod, w, exec, /home/askodon/nixos-conf/scripts/rofi/launcher.sh
       bind = $mainMod, J, togglesplit, # dwindle
