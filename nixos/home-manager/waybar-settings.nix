@@ -2,7 +2,6 @@
 {
   home.packages = with pkgs; [
     waybar
-    pwvucontrol
   ];
   programs.waybar = {
   enable = true;
@@ -166,7 +165,7 @@
                 " "
             ]
         },
-        "on-click": "pwvucontrol"
+        "on-click": "pavucontrol"
     }
 }
   '';

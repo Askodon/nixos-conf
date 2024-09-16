@@ -12,8 +12,7 @@
     # services list
     #flatpak.remotes = { 
     #"flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo"; 
-    #};
-    xserver.excludePackages = [ pkgs.xterm ];
+    #};    
     libinput.enable = true;
     openssh.enable = true; # openssh
     flatpak.enable = true;
@@ -28,6 +27,7 @@
       deviceSection = ''Option "TearFree" "true"''; # For amdgpu.
       videoDrivers = [ "amdgpu" ]; #amdgpu for home pc
       displayManager.gdm.enable = true;
+      displayManager.gdm.wayland = true;
           };
     pipewire = {
       enable = true;

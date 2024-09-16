@@ -19,9 +19,14 @@
     dunst
     wleave
     nwg-look
+    nwg-displays
     hyprcursor
     hyprshot
     glib
+    pavucontrol
+    gnome.gnome-terminal
+    xorg.libxcb
+    gnome.nautilus
   ];
 
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
@@ -32,7 +37,8 @@
     extraConfig = ''
 
       #monitor
-      monitor=,preferred,auto,1
+      monitor=, 1920x1080, auto, 1
+      exec-once = /home/askodon/nixos-conf/scripts/swww.sh
 
       exec-once = hyprctl setcursor Bibata-Original-Classic 24
 
@@ -42,6 +48,9 @@
       #dunst notifier
       exec-once = dunst
 
+      #env
+      env = QT_QPA_PLATFORMTHEME,qt6ct
+
       #systemd
       exec-once = dbus-update-activation-environment --systemd --all
 
@@ -50,7 +59,8 @@
       exec-once = gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Original-Classic"
 
       #windowrule
-      windowrule = float, pwvucontrol 
+      windowrule = float,^(pavucontrol)$
+      windowrule = move 100%-w-42,^(pavucontrol)$
 
       #debug
       debug {
@@ -97,15 +107,11 @@
       bind = $mainMod, C, exec, hyprpicker -a
       bind = $mainMod, F, exec, firefox 
       bind = $mainMod, T, exec, wezterm
-      bind = $mainMod, X, exec, wlogout
-      bind = $mainMod, M, exit,
-      bind = $mainMod, E, exec, thunar
+      bind = $mainMod, M, exec, /home/askodon/nixos-conf/scripts/powermenu/powermenu.sh
+      bind = $mainMod, E, exec, nautilus
       bind = $mainMod, V, togglefloating,
       bind = $mainMod, w, exec, /home/askodon/nixos-conf/scripts/rofi/launcher.sh
       bind = $mainMod, J, togglesplit, # dwindle
-
-      # Switch Keyboard Layouts
-      bind = $mainMod, SPACE, exec, hyprctl switchxkblayout teclado-gamer-husky-blizzard next
 
       bind = , Print, exec, grim -g "$(slurp)" - | wl-copy
       bind = SHIFT, Print, exec, grim -g "$(slurp)"

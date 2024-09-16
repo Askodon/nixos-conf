@@ -10,8 +10,6 @@
     ./virtualisation.nix
     ./locale.nix
     ./users.nix
-    #./zapret.nix
-    ./nautilus-open-any-term.nix
     ./system-variables.nix
   ];
 

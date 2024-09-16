@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    #./all.nix
+    ./all.nix
     ./wezterm.nix
     ./hypr-settings.nix
     ./waybar-settings.nix
@@ -43,13 +43,7 @@
       libreoffice
       kdePackages.okular
       #
-
-      #xfce packages
-      xfce.thunar
-      xfce.thunar-volman
-      xfce.thunar-archive-plugin
-      xfce.thunar-media-tags-plugin
-
+      
       # gnome packages
       gnome.dconf-editor
       #
@@ -84,12 +78,7 @@
       gum
       inetutils
       thefuck
-      #
-
-      #system control
-      pavucontrol
-      lact
-      corectrl # make seession for games
+      gh
       #
 
       #video and audio
@@ -97,7 +86,6 @@
       gpu-screen-recorder-gtk # using only gpu to record
       handbrake
       tenacity
-      noisetorch # virtual micro without noise sound
       #
 
     ];
