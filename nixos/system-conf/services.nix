@@ -16,9 +16,7 @@
     libinput.enable = true;
     openssh.enable = true; # openssh
     flatpak.enable = true;
-    cinnamon.apps.enable = false;
     gnome.gnome-keyring.enable = true;
-    gnome.core-utilities.enable = false;
     xserver = {
       enable = true;
       xkb.layout = "ru,us";
