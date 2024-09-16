@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./dconf-settings
+    ./dconf-settings.nix
     ./wezterm.nix
     ./hypr-settings.nix
     ./waybar-settings.nix
@@ -43,7 +43,7 @@
       libreoffice
       kdePackages.okular
       #
-      
+
       # gnome packages
       gnome.dconf-editor
       #
@@ -134,7 +134,7 @@
       squashGit = "git rebase -i --autosquash HEAD~$(gum write)"; # help
       hs = "gum filter < $HISTFILE --height 20"; # help, history with auto paste
       fmtChoice = "nixfmt $(gum choose --no-limit $(ls))"; # help, nixfmt command with choice
-      wallpaper = "/home/askodon/nixos-conf/scripts/swww.sh"; #helpz
+      wallpaper = "/home/askodon/nixos-conf/scripts/swww.sh"; # helpz
       try = "nix-shell -p "; # help
       f = "fuck"; # help
       x = "exit"; # help

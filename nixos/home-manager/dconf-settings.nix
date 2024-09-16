@@ -59,13 +59,41 @@ with lib.hm.gvariant;
       sort-directories-first = false;
       sort-order = "ascending";
       type-format = "category";
-      window-position = mkTuple [ 0 0 ];
-      window-size = mkTuple [ 721 927 ];
+      window-position = mkTuple [
+        0
+        0
+      ];
+      window-size = mkTuple [
+        721
+        927
+      ];
     };
 
     "org/nemo/list-view" = {
-      default-column-order = [ "name" "size" "type" "date_modified" "where" "owner" "date_modified_with_time" "group" "date_created" "date_accessed" "detailed_type" "permissions" "octal_permissions" "date_created_with_time" "mime_type" ];
-      default-visible-columns = [ "name" "size" "type" "date_modified" "where" ];
+      default-column-order = [
+        "name"
+        "size"
+        "type"
+        "date_modified"
+        "where"
+        "owner"
+        "date_modified_with_time"
+        "group"
+        "date_created"
+        "date_accessed"
+        "detailed_type"
+        "permissions"
+        "octal_permissions"
+        "date_created_with_time"
+        "mime_type"
+      ];
+      default-visible-columns = [
+        "name"
+        "size"
+        "type"
+        "date_modified"
+        "where"
+      ];
     };
 
     "org/nemo/preferences" = {

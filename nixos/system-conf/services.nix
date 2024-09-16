@@ -3,10 +3,10 @@
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
-    extraPortals = lib.mkForce [ 
-      pkgs.xdg-desktop-portal-hyprland 
+    extraPortals = lib.mkForce [
+      pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gtk
-      ];
+    ];
   };
   services = {
     # services list
@@ -23,10 +23,10 @@
       xkb.variant = "";
       xkb.options = "grp:win_space_toggle";
       deviceSection = ''Option "TearFree" "true"''; # For amdgpu.
-      videoDrivers = [ "amdgpu" ]; #amdgpu for home pc
+      videoDrivers = [ "amdgpu" ]; # amdgpu for home pc
       displayManager.gdm.enable = true;
       displayManager.gdm.wayland = true;
-          };
+    };
     pipewire = {
       enable = true;
       alsa.enable = true;
