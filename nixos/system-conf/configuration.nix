@@ -11,6 +11,7 @@
     ./locale.nix
     ./users.nix
     ./system-variables.nix
+    ./daemon.nix
   ];
 
   hardware.pulseaudio.enable = false;
