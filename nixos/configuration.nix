@@ -2,15 +2,15 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./hardware-configuration.nix # Include the results of the hardware scan.
-    ./network-settings.nix
-    ./boot-settings.nix
-    ./game-settings.nix
-    ./services.nix
-    ./virtualisation.nix
-    ./locale.nix
-    ./users.nix
-    ./system-variables.nix
+    ./hardware-configuration.nix
+    ./modules/boot-settings.nix
+    ./modules/game-settings.nix
+    ./modules/locale.nix
+    ./modules/network-settings.nix
+    ./modules/services.nix
+    ./modules/system-variables.nix
+    ./modules/users.nix
+    ./modules/virtualisation.nix
   ];
 
   hardware.pulseaudio.enable = false;
