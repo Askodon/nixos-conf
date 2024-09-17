@@ -25,7 +25,6 @@
     kdePackages.qtwayland
     xorg.libxcb
     cinnamon.nemo-with-extensions
-    font-awesome
     cinnamon.nemo-fileroller
   ];
 

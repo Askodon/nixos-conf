@@ -24,9 +24,7 @@
       # desktop
       betterbird
       vscode
-      podman # container
       cinnamon.pix # photo
-      gcolor3 # see colour on desktop
       amberol # music
       transmission_4-gtk # torrent
       qogir-theme
@@ -60,11 +58,8 @@
       nix-prefetch-github # ci help: nix-prefetch-github name repo
       dconf2nix # dconf files to nix
       nixfmt-rfc-style # help format nix code
-      nix-init # help auto prefetch and search build
       helix # help | using: "hx", vim-like editor
       yazi # help | using like ranger but better
-      python312Packages.howdoi # help auto answer
-      tun2socks
       go
       oh-my-zsh
       zsh-autosuggestions
