@@ -15,4 +15,4 @@
 
 /* Import color-scheme from `colors` directory */
 
-@import "/home/askodon/nixos-conf/scripts/rofi/onedark.rasi"
+@import "/home/askodon/nixos-conf/home/scripts/rofi/onedark.rasi"

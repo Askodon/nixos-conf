@@ -17,4 +17,4 @@ git clone https://github.com/Askodon/nixos-conf.git /home/askodon/nixos-conf
 sudo nixos-rebuild switch --flake /home/askodon/nixos-conf/nixos/
 ```
 #image
-![rice](./images/hypr-rice.png)
+![rice](./home/images/hypr-rice.png)
