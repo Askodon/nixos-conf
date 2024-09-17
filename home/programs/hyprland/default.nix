@@ -41,7 +41,7 @@
         monitor=, 1920x1080, auto, 1
 
         #autostart
-        exec-once = /home/askodon/nixos-conf/scripts/swww.sh
+        exec-once = /home/askodon/nixos-conf/home/scripts/swww.sh
         exec-once = hyprctl setcursor Bibata-Original-Classic 24
         exec-once = waybar
         exec-once = nextcloud
@@ -110,10 +110,10 @@
         bind = $mainMod, C, exec, hyprpicker -a
         bind = $mainMod, F, exec, firefox 
         bind = $mainMod, T, exec, foot
-        bind = $mainMod, M, exec, /home/askodon/nixos-conf/scripts/powermenu/powermenu.sh
+        bind = $mainMod, M, exec, /home/askodon/nixos-conf/home/scripts/powermenu/powermenu.sh
         bind = $mainMod, E, exec, nemo
         bind = $mainMod, V, togglefloating,
-        bind = $mainMod, w, exec, /home/askodon/nixos-conf/scripts/rofi/launcher.sh
+        bind = $mainMod, w, exec, /home/askodon/nixos-conf/home/scripts/rofi/launcher.sh
         bind = $mainMod, J, togglesplit, # dwindle
 
         bind = , Print, exec, grim -g "$(slurp)" - | wl-copy

@@ -46,7 +46,7 @@
         },
         "custom/os_button": {
             "format": "",
-            "on-click": "/home/askodon/nixos-conf/scripts/powermenu/powermenu.sh",
+            "on-click": "/home/askodon/nixos-conf/home/scripts/powermenu/powermenu.sh",
             "tooltip": false
         },
         "cpu": {
