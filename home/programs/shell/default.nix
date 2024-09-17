@@ -1,4 +1,7 @@
 {
+  imports = [
+    ./zellij.nix
+  ];
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
