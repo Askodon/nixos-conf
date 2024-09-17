@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+  imports = [ ./dconf-settings.nix ];
   home.pointerCursor = {
     package = pkgs.bibata-cursors;
     name = "Bibata-Original-Classic";

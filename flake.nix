@@ -18,7 +18,7 @@
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
         modules = [
-          ./system-conf/configuration.nix
+          ./nixos/configuration.nix
           #inputs.stylix.nixosModules.stylix
           inputs.home-manager.nixosModules.home-manager
           {

@@ -4,8 +4,7 @@
     ./programs/gtk/default.nix
     ./programs/hyprland/default.nix
     ./programs/shell/default.nix
-    ./programs/shell/foot.nix
-    ./programs/shell/zellij.nix
+    ./programs/foot/default.nix
     ./programs/waybar/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
