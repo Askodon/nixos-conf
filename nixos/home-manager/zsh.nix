@@ -12,13 +12,18 @@
       export NODE_PATH=~/.npm-packages/lib/node_modules
       export PATH=$PATH:~/.spoofdpi/bin
       alias spoof-chromium="chromium --proxy-server="http://127.0.0.1:8080"& spoofdpi"
+        if [[ -z "$ZELLIJ" ]]; then
+      if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+          zellij attach -c
+      else
+          zellij
+      fi
+
+      if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+          exit
+      fi
+  fi
     '';
-    sessionVariables = {
-      EDITOR = "hx";
-      TERM = "wezterm";
-      TERMINAL = "wezterm";
-      BROWSER = "firefox";
-    };
     shellAliases = {
       ls = "ls -A";
       l = "ls -alh"; # help

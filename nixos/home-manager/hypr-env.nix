@@ -5,7 +5,7 @@
     sessionVariables = {
       EDITOR = "hx";
       BROWSER = "firefox";
-      TERMINAL = "wezterm";
+      TERMINAL = "foot";
       __GL_VRR_ALLOWED = "0";
       #WLR_NO_HARDWARE_CURSORS = "1";
       WLR_RENDERER = "vulkan";

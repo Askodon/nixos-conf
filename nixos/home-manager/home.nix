@@ -7,6 +7,7 @@
     ./theming.nix
     ./foot.nix
     ./zsh.nix
+    ./zellij.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
@@ -73,7 +74,6 @@
       wget
       gamemode
       appimage-run
-      zellij
       fastfetch
       mtr # help | using command like tracert
       gum
