@@ -24,13 +24,12 @@
       # desktop
       betterbird
       vscode
-      cinnamon.pix # photo
-      amberol # music
+      mate.eom # photo
       transmission_4-gtk # torrent
       qogir-theme
       bibata-cursors
       whitesur-icon-theme
-      vlc
+      mpv
       keepassxc
       vesktop
       firefox
@@ -66,13 +65,11 @@
       btop
       wget
       gamemode
-      appimage-run
       fastfetch
       mtr # help | using command like tracert
       gum
       inetutils
       thefuck
-      gh
       #
 
       #video and audio
