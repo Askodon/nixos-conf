@@ -1,13 +1,12 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./dconf-settings.nix
-    ./hypr-settings.nix
-    ./waybar-settings.nix
-    ./theming.nix
-    ./foot.nix
-    ./zsh.nix
-    ./zellij.nix
+    ./programs/gtk/default.nix
+    ./programs/hyprland/default.nix
+    ./programs/shell/default.nix
+    ./programs/shell/foot.nix
+    ./programs/shell/zellij.nix
+    ./programs/waybar/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
