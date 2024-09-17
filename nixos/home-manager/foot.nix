@@ -5,7 +5,6 @@
       main = {
         term = "xterm-256color";
         font = "Fira Code:size=11";
-        dpi-aware = "yes";
   };
 
   mouse = {

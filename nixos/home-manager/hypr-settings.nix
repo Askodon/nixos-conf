@@ -43,7 +43,7 @@
         exec-once = /home/askodon/nixos-conf/scripts/swww.sh
         exec-once = hyprctl setcursor Bibata-Original-Classic 24
         exec-once = waybar
-        exec-once nextcloud
+        exec-once = nextcloud
         exec-once = swaync
 
         #env
@@ -105,7 +105,7 @@
         bind = $mainMod, B, exec, chromium
         bind = $mainMod, C, exec, hyprpicker -a
         bind = $mainMod, F, exec, firefox 
-        bind = $mainMod, T, exec, wezterm
+        bind = $mainMod, T, exec, foot
         bind = $mainMod, M, exec, /home/askodon/nixos-conf/scripts/powermenu/powermenu.sh
         bind = $mainMod, E, exec, nemo
         bind = $mainMod, V, togglefloating,
