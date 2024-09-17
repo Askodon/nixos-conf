@@ -14,7 +14,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "Roboto 10";
+    font:                        "FREE REGULAR 10";
     background:     #32343D;
     background-alt: #282A33;
     foreground:     #FFFFFFFF;

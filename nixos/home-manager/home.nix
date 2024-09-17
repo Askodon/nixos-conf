@@ -2,10 +2,10 @@
 {
   imports = [
     ./dconf-settings.nix
-    ./wezterm.nix
     ./hypr-settings.nix
     ./waybar-settings.nix
     ./theming.nix
+    ./foot.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:

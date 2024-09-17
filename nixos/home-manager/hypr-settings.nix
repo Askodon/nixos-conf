@@ -14,7 +14,7 @@
     hyprpicker
     hyprlock
     wl-clipboard-rs
-    dunst
+    swaynotificationcenter
     wleave
     nwg-look
     nwg-displays
@@ -23,7 +23,6 @@
     glib
     pavucontrol
     kdePackages.qtwayland
-    gnome.gnome-terminal
     xorg.libxcb
     cinnamon.nemo-with-extensions
     font-awesome
@@ -39,15 +38,13 @@
 
         #monitor
         monitor=, 1920x1080, auto, 1
+
+        #autostart
         exec-once = /home/askodon/nixos-conf/scripts/swww.sh
-
         exec-once = hyprctl setcursor Bibata-Original-Classic 24
-
-        #waybar start
         exec-once = waybar
-
-        #dunst notifier
-        exec-once = dunst
+        exec-once nextcloud
+        exec-once = swaync
 
         #env
         env = QT_QPA_PLATFORMTHEME,qt6ct
