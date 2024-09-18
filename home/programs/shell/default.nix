@@ -1,6 +1,7 @@
 {
   imports = [
     ./zellij.nix
+    ./git.nix
   ];
   programs.zsh = {
     enable = true;
