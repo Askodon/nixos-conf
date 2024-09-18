@@ -24,6 +24,7 @@
     pavucontrol
     kdePackages.qtwayland
     xorg.libxcb
+    lxqt.lxqt-policykitl
     cinnamon.nemo-with-extensions
     cinnamon.nemo-fileroller
   ];
