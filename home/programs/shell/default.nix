@@ -2,6 +2,7 @@
   imports = [
     ./zellij.nix
     ./git.nix
+    ./btop.nix
   ];
   programs.zsh = {
     enable = true;
@@ -20,7 +21,7 @@
       if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
           zellij attach -c
       else
-          zellij options --theme "qogir"
+          zellij options --theme "qogir" --disable-mouse-mode
       fi
 
       if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
