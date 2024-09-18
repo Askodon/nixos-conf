@@ -62,7 +62,6 @@
       go
       oh-my-zsh
       zsh-autosuggestions
-      btop
       wget
       gamemode
       fastfetch

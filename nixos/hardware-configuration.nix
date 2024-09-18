@@ -10,7 +10,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
-
+  virtualisation.vmware.guest.enable = true;
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/2405d72b-02c0-438d-9a0b-5f62c3011497";
       fsType = "ext4";
