@@ -7,14 +7,13 @@
 First install
 ```
 git clone https://github.com/Askodon/nixos-conf.git /home/askodon/nixos-conf
-sudo /home/askodon/nixos-conf/new_install.sh
+sudo /home/askodon/nixos-conf/home/scripts/new_install.sh
 ```
 
 Update
 ```
-sudo rm -r /home/askodon/nixos-conf
-git clone https://github.com/Askodon/nixos-conf.git /home/askodon/nixos-conf
-sudo nixos-rebuild switch --flake /home/askodon/nixos-conf/nixos/
+git reset --hard origin/branch-name
+upgrade
 ```
 #image
 ![rice](./home/images/hypr-rice.png)
