@@ -18,7 +18,7 @@
 ├── nixos 💻      # Nixos base configuration
 └──── modules ⚙️   #user settings, services and etc
 ```
-#Tools
+##Tools
 
 | Tool               | Programs
 | ------------------ | ------------------
