@@ -15,7 +15,6 @@
     swww
     eww
     hyprpicker
-    hyprlock
     wl-clipboard-rs
     swaynotificationcenter
     wleave

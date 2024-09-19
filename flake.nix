@@ -2,7 +2,6 @@
   description = "test flake";
 
   inputs = {
-    stylix.url = "github:danth/stylix/release-24.05";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
     
 
@@ -19,7 +18,6 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./nixos/configuration.nix
-          inputs.stylix.nixosModules.stylix
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

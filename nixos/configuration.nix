@@ -1,5 +1,5 @@
 #conf
-{ config, pkgs, stylix, ... }:
+{ config, pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -18,13 +18,9 @@
   security = {
     rtkit.enable = true;
     sudo.enable = true;
-    pam.services.gtklock = {};    ./hyprlock.nix
+    pam.services.gtklock = {};
     pam.services.gdm.enableGnomeKeyring = true;
   };
-
-  #stylix 
-  stylix.enable = true;
-  stylix.image = "/home/askodon/nixos-conf/home/images/lock.jpg";
 
   #zsh as default
   users.defaultUserShell = pkgs.zsh;
