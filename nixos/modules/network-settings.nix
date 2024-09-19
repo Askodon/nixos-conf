@@ -1,8 +1,4 @@
 {
-  services.zerotierone = {
-    enable = true;
-    joinNetworks = [ "af415e486f279d61" ];
-  };
   networking.hostName = "nixos"; # hostname
   networking.networkmanager.enable = true; # network manager
   networking.nameservers = [
