@@ -6,7 +6,11 @@
 }:
 
 {
-  imports = [ ./hypr-env.nix ];
+  imports = [ 
+    ./hypr-env.nix 
+    ./hypridle.nix
+    ./hyprlock.nix
+    ];
 
   home.packages = with pkgs; [
     swww

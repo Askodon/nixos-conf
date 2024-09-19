@@ -31,8 +31,8 @@ no='no'
 # Rofi CMD
 rofi_cmd() {
 	rofi -dmenu \
-		-p " $USER@$host" \
-		-mesg " Last Login: $lastlogin |  Uptime: $uptime" \
+		-p "$USER@$host" \
+		-mesg "$lastlogin" \
 		-theme ${dir}/${theme}.rasi
 }
 
