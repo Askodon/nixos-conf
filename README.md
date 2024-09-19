@@ -1,4 +1,6 @@
 [![NixOS Unstable](https://img.shields.io/badge/NixOS-24.05-blue.svg?style=flat-square&logo=NixOS&logoColor=white)](https://nixos.org)
+[![Linux](https://img.shields.io/badge/Linux-%23.svg?logo=linux&color=FCC624&logoColor=black)](https://www.linux.org/)
+[![Repo Size](https://img.shields.io/github/repo-size/sukhmancs/nixos-configs?label=Repo%20Size)]()
 
 ## Image
 ![rice](./home/images/hypr-rice.png)
@@ -7,13 +9,13 @@
 ## Structure
 ```plaintext
 .
-├── home          # Common home-manager configuration for all hosts.
-├──── help        # Help info
+├── home 🏠       # Common home-manager configuration for all hosts.
+├──── help 📚     # Help info
 ├──── images 🎨   # All scrennshots, icons and etc
 ├──── programs 🔧 # Programs settings on nix
-├──── scripts     # Sh files
+├──── scripts 🚀  # Sh files
 ├── nixos 💻      # Nixos base configuration
-└──── modules ⚙️
+└──── modules ⚙️   #user settings, services and etc
 ```
 #Tools
 
