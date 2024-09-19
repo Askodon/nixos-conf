@@ -191,7 +191,7 @@
     	box-shadow: none;
       border: none;
       border-radius: 0;
-    	font-family: "Roboto Regular";
+    	font-family: "RobotoMono Nerd Font Regular";
       font-weight: 600;
       font-size: 12.7px;
     	
@@ -206,7 +206,7 @@
 
     tooltip {
       background: @bg_main_tooltip;
-      border-radius: 5px;
+      border-radius: 0px;
       border-width: 1px;
       border-style: solid;
       border-color: @border_main;
@@ -216,7 +216,7 @@
     }
 
     #custom-os_button {
-    	font-family: "JetBrainsMono Nerd Font";
+    	font-family: "RobotoMono Nerd Font Regular";
       font-size: 24px;
     	padding-left: 12px;
     	padding-right: 20px;
@@ -323,7 +323,7 @@
     }
 
     #pulseaudio {
-    	font-family: "JetBrainsMono Nerd Font";
+    	font-family: "RobotoMono Nerd Font Regular";
     	padding-left: 3px;
       padding-right: 3px;
     	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);

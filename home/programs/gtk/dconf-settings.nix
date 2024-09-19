@@ -26,7 +26,7 @@ with lib.hm.gvariant;
       enable-hot-corners = false;
       font-antialiasing = "grayscale";
       font-hinting = "slight";
-      font-name = "Roboto 11";
+      font-name = "RobotoMono Nerd Font Regular 11";
       font-rgba-order = "rgb";
       gtk-theme = "Qogir-Dark";
       icon-theme = "WhiteSur-dark";
