@@ -1,5 +1,5 @@
 #conf
-{ config, pkgs, ... }:
+{ config, pkgs, stylix, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -23,8 +23,8 @@
   };
 
   #stylix 
-  #stylix.enable = true;
-  #stylix.image = /home/askodon/wallpaper/nix.jpg;
+  stylix.enable = true;
+  stylix.image = "/home/askodon/nixos-conf/home/images/lock.jpg";
 
   #zsh as default
   users.defaultUserShell = pkgs.zsh;
