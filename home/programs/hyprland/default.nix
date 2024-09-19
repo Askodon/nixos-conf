@@ -37,6 +37,7 @@
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
+    systemd.variables = [ "--all" ];
     plugins = [ pkgs.hyprlandPlugins.hyprexpo ];
     extraConfig = ''
 
@@ -54,7 +55,6 @@
         env = QT_QPA_PLATFORMTHEME,qt6ct
 
         #systemd
-        exec-once = dbus-update-activation-environment --systemd --all
         exec-once = lxqt-policykit-agent
 
         #cursor
