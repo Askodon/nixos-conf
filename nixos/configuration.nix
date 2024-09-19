@@ -18,7 +18,7 @@
   security = {
     rtkit.enable = true;
     sudo.enable = true;
-    pam.services.hyprlock = { };
+    pam.services.gtklock = {};    ./hyprlock.nix
     pam.services.gdm.enableGnomeKeyring = true;
   };
 

@@ -9,7 +9,6 @@
   imports = [ 
     ./hypr-env.nix 
     ./hypridle.nix
-    ./hyprlock.nix
     ];
 
   home.packages = with pkgs; [
@@ -31,6 +30,7 @@
     lxqt.lxqt-policykit
     cinnamon.nemo-with-extensions
     cinnamon.nemo-fileroller
+    gtklock
   ];
 
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
