@@ -1,9 +1,10 @@
 [![NixOS Unstable](https://img.shields.io/badge/NixOS-24.05-blue.svg?style=flat-square&logo=NixOS&logoColor=white)](https://nixos.org)
 
-#image
+## Image
 ![rice](./home/images/hypr-rice.png)
 
 
+## Structure
 ```plaintext
 .
 ├── home          # Common home-manager configuration for all hosts.
@@ -14,7 +15,7 @@
 ├── nixos 💻      # Nixos base configuration
 └──── modules ⚙️
 ```
-Tools list:
+#Tools
 
 | Tool               | Programs
 | ------------------ | ------------------
@@ -25,6 +26,8 @@ Tools list:
 | 🎨 GTK Theme       | Qogir-Dark     
 | 🖥️ Terminal        | Foot              
 | 🔔 Notifications   | Swaynotificationcenter   
+
+##Install
 
 > [!IMPORTANT]
 > add this too configuration.nix:
