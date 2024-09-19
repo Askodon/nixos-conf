@@ -14,7 +14,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "roboto 10";
+    font:                        "RobotoMono Nerd Font Regular 10";
     background:     #32343D;
     background-alt: #282A33;
     foreground:     #FFFFFFFF;
@@ -120,7 +120,7 @@ element {
     cursor:                      pointer;
 }
 element-text {
-    font:                        "Roboto 15";
+    font:                        "RobotoMono Nerd Font Regular 15";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;

@@ -50,6 +50,7 @@
       fira-code-nerdfont
       nerdfonts
       roboto
+      font-awesome
       #
 
       #terminal util
