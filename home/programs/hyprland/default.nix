@@ -16,7 +16,6 @@
     eww
     hyprpicker
     wl-clipboard-rs
-    swaynotificationcenter
     wleave
     nwg-look
     nwg-displays
