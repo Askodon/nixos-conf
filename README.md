@@ -25,8 +25,8 @@
 | **Window Manager**          | Hyprland                                                                                                            |
 | **Terminal Emulator**       | Zellij + foot                                                                                                       |
 | **Bar**                     | Waybar                                                                                                              |
-| **Application Launcher**    | rofi-wayland + fuzzel                                                                                               |
-| **Notification Daemon**     | swaynotificationcenter                                                                                              |
+| **Application Launcher**    | fuzzel                                                                                                              |
+| **Notification Daemon**     | dunst                                                                                                               |
 | **Display Manager**         | GDM                                                                                                                 |
 | **Color Scheme**            | qogir                                                                                                               |
 | **network management tool** | NetworkManager                                                                                                      |
