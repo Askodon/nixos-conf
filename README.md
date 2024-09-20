@@ -25,7 +25,7 @@
 | **Window Manager**          | Hyprland                                                                                                            |
 | **Terminal Emulator**       | Zellij + foot                                                                                                       |
 | **Bar**                     | Waybar                                                                                                              |
-| **Application Launcher**    | rofi-wayland                                                                                                        |
+| **Application Launcher**    | rofi-wayland + fuzzel                                                                                               |
 | **Notification Daemon**     | swaynotificationcenter                                                                                              |
 | **Display Manager**         | GDM                                                                                                                 |
 | **Color Scheme**            | qogir                                                                                                               |
@@ -70,6 +70,5 @@ upgrade
  -[sukhmancs](https://github.com/sukhmancs/nixos-configs/blob/main/README.md)
 - Style
  -[qogir-theme](https://github.com/vinceliuice/Qogir-theme)
- -[rofi-theme](https://github.com/adi1090x/rofi)
  -[waybar](https://github.com/TheFrankyDoll/win10-style-waybar)
 

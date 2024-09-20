@@ -41,7 +41,6 @@
     xfsprogs
     nodejs_22
     qt6ct
-    rofi-wayland
     lxqt.lxqt-policykit
   ];
 
