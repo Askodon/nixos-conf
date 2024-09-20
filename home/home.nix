@@ -6,6 +6,7 @@
     ./programs/shell/default.nix
     ./programs/foot/default.nix
     ./programs/waybar/default.nix
+    ./programs/fuzzel/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
