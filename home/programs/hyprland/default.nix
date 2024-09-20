@@ -30,7 +30,6 @@
     cinnamon.nemo-fileroller
     gtklock
     networkmanagerapplet
-    copyq
   ];
 
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
@@ -53,7 +52,6 @@
         exec-once = dunst
         exec-once = nm-applet --indicator
         exec-once = nextcloud --background 
-        exec-once = copyq --start-server
 
         #env
         env = QT_QPA_PLATFORMTHEME,qt6ct
@@ -116,7 +114,6 @@
         bind = $mainMod, Q, killactive
         bind = $mainMod, B, exec, chromium
         bind = $mainMod SHIFT, C, exec, hyprpicker -a
-        bind = $mainMod, C, exec, copyq menu
         bind = $mainMod, F, exec, firefox 
         bind = $mainMod, T, exec, foot
         bind = $mainMod, M, exec, /home/askodon/nixos-conf/home/scripts/powermenu.sh
