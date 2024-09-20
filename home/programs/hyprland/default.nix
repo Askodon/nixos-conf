@@ -116,7 +116,7 @@
         bind = $mainMod, C, exec, hyprpicker -a
         bind = $mainMod, F, exec, firefox 
         bind = $mainMod, T, exec, foot
-        bind = $mainMod, M, exec, /home/askodon/nixos-conf/home/scripts/powermenu/powermenu.sh
+        bind = $mainMod, M, exec, /home/askodon/nixos-conf/home/scripts/powermenu.sh
         bind = $mainMod, E, exec, nemo
         bind = $mainMod, V, togglefloating,
         bind = $mainMod, w, exec, fuzzel -w 40 -y 40 -f "Roboto"-12 --line-height=20 -t ffffffff 
