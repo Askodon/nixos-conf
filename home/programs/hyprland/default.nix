@@ -49,7 +49,7 @@
         exec-once = hyprctl setcursor Bibata-Original-Classic 24
         exec-once = waybar
         exec-once = nextcloud
-        exec-once = swaync
+        exec-once = dunst
         exec-once = nm-applet --indicator
         exec-once = nextcloud --background 
 
