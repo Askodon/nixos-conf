@@ -28,7 +28,6 @@
             "disk",
             "tray",
             "pulseaudio",
-            "network",
             "battery",
             "hyprland/language",
             "clock"
@@ -330,11 +329,6 @@
     }
     #pulseaudio:hover {
      	background: @bg_hover;
-    }
-
-    #network {
-    	padding-left: 3px;
-      padding-right: 3px;
     }
 
     #language {

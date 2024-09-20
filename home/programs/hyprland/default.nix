@@ -30,6 +30,7 @@
     cinnamon.nemo-with-extensions
     cinnamon.nemo-fileroller
     gtklock
+    networkmanagerapplet
   ];
 
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
@@ -50,6 +51,8 @@
         exec-once = waybar
         exec-once = nextcloud
         exec-once = swaync
+        exec-once = nm-applet --indicator
+        exec-once = nextcloud --background 
 
         #env
         env = QT_QPA_PLATFORMTHEME,qt6ct
