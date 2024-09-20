@@ -14,6 +14,7 @@
     #"flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo"; 
     #};    
     libinput.enable = true;
+    avahi.enable = false;
     openssh.enable = true; # openssh
     flatpak.enable = true;
     gnome.gnome-keyring.enable = true;
