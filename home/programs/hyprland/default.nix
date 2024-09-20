@@ -30,6 +30,7 @@
     cinnamon.nemo-fileroller
     gtklock
     networkmanagerapplet
+    clipse
   ];
 
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
@@ -52,6 +53,7 @@
         exec-once = dunst
         exec-once = nm-applet --indicator
         exec-once = nextcloud --background 
+        exec-once = clipse -listen
 
         #env
         env = QT_QPA_PLATFORMTHEME,qt6ct
@@ -66,7 +68,7 @@
         #windowrule
         windowrule = float,^(pavucontrol)$
         windowrule = move 100%-w-42,^(pavucontrol)$
-        windowrule = float,^(copyq)$
+        windowrulev2 = float,class:^(foot.*)$,title:^(.*CLIPSE.*)$
 
         #debug
         debug {
@@ -114,16 +116,14 @@
         bind = $mainMod, Q, killactive
         bind = $mainMod, B, exec, chromium
         bind = $mainMod SHIFT, C, exec, hyprpicker -a
+        bind = $mainMod, C, exec, foot -T CLIPSE -H clipse 
         bind = $mainMod, F, exec, firefox 
         bind = $mainMod, T, exec, foot
         bind = $mainMod, M, exec, /home/askodon/nixos-conf/home/scripts/powermenu.sh
         bind = $mainMod, E, exec, nemo
         bind = $mainMod, V, togglefloating,
-        bind = $mainMod, w, exec, fuzzel -w 40 -y 40 -f "Roboto"-12 --line-height=20 -t ffffffff 
+        bind = $mainMod, w, exec, fuzzel -T foot --icon-theme WhiteSur-dark -w 40 -y 40 -f "Roboto"-12 --line-height=20 -t ffffffff 
         bind = $mainMod, J, togglesplit, # dwindle
-
-        bind = , Print, exec, grim -g "$(slurp)" - | wl-copy
-        bind = SHIFT, Print, exec, grim -g "$(slurp)"
 
         # Functional keybinds
         bind =,XF86AudioMicMute,exec,pamixer --default-source -t
