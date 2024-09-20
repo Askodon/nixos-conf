@@ -18,19 +18,29 @@
 ├── nixos 💻      # Nixos base configuration
 └──── modules ⚙️   #user settings, services and etc
 ```
-##Tools
+## Tools
 
-| Tool               | Programs
-| ------------------ | ------------------
-| 🪟 Window Manager  | Hyprland          
-| 🖥️ lock            | Gtklock          
-| 📊 Bar             | waybar             
-| 🚀 Launcher        | Rofi-wayland      
-| 🎨 GTK Theme       | Qogir-Dark     
-| 🖥️ Terminal        | Foot              
-| 🔔 Notifications   | Swaynotificationcenter   
+|                             | NixOS(Wayland)                                                                                                      |
+| --------------------------- | :------------------------------------------------------------------------------------------------------------------ |
+| **Window Manager**          | [Hyprland][Hyprland]                                                                                                |
+| **Terminal Emulator**       | [Zellij][Zellij] + [foot][foot]                                                                                     |
+| **Bar**                     | [Waybar][Waybar]                                                                                                    |
+| **Application Launcher**    | [rofi-wayland][rofi-wayland]                                                                                        |
+| **Notification Daemon**     | [swaynotificationcenter][swaynotificationcenter]                                                                    |
+| **Display Manager**         | [GDM][GDM]                                                                                                          |
+| **Color Scheme**            | [qogir][qogir]                                                                                                      |
+| **network management tool** | [NetworkManager][NetworkManager]                                                                                    |
+| **System resource monitor** | [Btop][Btop]                                                                                                        |
+| **File Manager**            | [Yazi][Yazi] + [nemo][nemo]                                                                                         |
+| **Shell**                   | [Nushell][Nushell]                                                                                                  |
+| **Media Player**            | [mpv][mpv]                                                                                                          |
+| **Text Editor**             | [vscode][vscode]                                                                                                    |
+| **Fonts**                   | [Nerd fonts][Nerd fonts] + [Roboto][Roboto]                                                                         |
+| **Image Viewer**            | [eom][eom]                                                                                                          |
+| **Screenshot Software**     | [hyprshot][hyprshot]                                                                                                |
+| **Screen Recording**        | [OBS][OBS]                                                                                                          |  
 
-##Install
+## Install
 
 > [!IMPORTANT]
 > add this too configuration.nix:
@@ -48,3 +58,18 @@ sudo rm -r /home/askodon/nixos-conf
 git clone https://github.com/Askodon/nixos-conf.git /home/askodon/nixos-conf
 upgrade
 ```
+
+## Todo
+
+    - [ ] **eww** - write widgets, ...
+    - [ ] **refactor** - remove dead code, use "let in" in code, ...
+
+## References
+- Dots
+ -[ryan4yin](https://github.com/ryan4yin/nix-config)
+ -[sukhmancs](https://github.com/sukhmancs/nixos-configs/blob/main/README.md)
+- Style
+ -[qogir-theme](https://github.com/vinceliuice/Qogir-theme)
+ -[rofi-theme](https://github.com/adi1090x/rofi)
+ -[waybar](https://github.com/TheFrankyDoll/win10-style-waybar)
+
