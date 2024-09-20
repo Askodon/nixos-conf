@@ -22,23 +22,23 @@
 
 |                             | NixOS(Wayland)                                                                                                      |
 | --------------------------- | :------------------------------------------------------------------------------------------------------------------ |
-| **Window Manager**          | [Hyprland][Hyprland]                                                                                                |
-| **Terminal Emulator**       | [Zellij][Zellij] + [foot][foot]                                                                                     |
-| **Bar**                     | [Waybar][Waybar]                                                                                                    |
-| **Application Launcher**    | [rofi-wayland][rofi-wayland]                                                                                        |
-| **Notification Daemon**     | [swaynotificationcenter][swaynotificationcenter]                                                                    |
-| **Display Manager**         | [GDM][GDM]                                                                                                          |
-| **Color Scheme**            | [qogir][qogir]                                                                                                      |
-| **network management tool** | [NetworkManager][NetworkManager]                                                                                    |
-| **System resource monitor** | [Btop][Btop]                                                                                                        |
-| **File Manager**            | [Yazi][Yazi] + [nemo][nemo]                                                                                         |
-| **Shell**                   | [Nushell][Nushell]                                                                                                  |
-| **Media Player**            | [mpv][mpv]                                                                                                          |
-| **Text Editor**             | [vscode][vscode]                                                                                                    |
-| **Fonts**                   | [Nerd fonts][Nerd fonts] + [Roboto][Roboto]                                                                         |
-| **Image Viewer**            | [eom][eom]                                                                                                          |
-| **Screenshot Software**     | [hyprshot][hyprshot]                                                                                                |
-| **Screen Recording**        | [OBS][OBS]                                                                                                          |  
+| **Window Manager**          | Hyprland                                                                                                            |
+| **Terminal Emulator**       | Zellij + foot                                                                                                       |
+| **Bar**                     | Waybar                                                                                                              |
+| **Application Launcher**    | rofi-wayland                                                                                                        |
+| **Notification Daemon**     | swaynotificationcenter                                                                                              |
+| **Display Manager**         | GDM                                                                                                                 |
+| **Color Scheme**            | qogir                                                                                                               |
+| **network management tool** | NetworkManager                                                                                                      |
+| **System resource monitor** | Btop                                                                                                                |
+| **File Manager**            | Yazi + nemo                                                                                                         |
+| **Shell**                   | zsh                                                                                                                 |
+| **Media Player**            | mpv                                                                                                                 |
+| **Text Editor**             | vscode                                                                                                              |
+| **Fonts**                   | Nerd fonts + Roboto                                                                                                 |
+| **Image Viewer**            | eom                                                                                                                 |
+| **Screenshot Software**     | hyprshot                                                                                                            |
+| **Screen Recording**        | OBS                                                                                                                 |   
 
 ## Install
 
@@ -61,8 +61,8 @@ upgrade
 
 ## Todo
 
-    - [ ] **eww** - write widgets, ...
-    - [ ] **refactor** - remove dead code, use "let in" in code, ...
+- [ ] **eww** - write widgets, ...
+- [ ] **refactor** - remove dead code, use "let in" in code, ...
 
 ## References
 - Dots
