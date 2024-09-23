@@ -23,21 +23,21 @@
 |                             | NixOS(Wayland)                                                                                                      |
 | --------------------------- | :------------------------------------------------------------------------------------------------------------------ |
 | **Window Manager**          | Hyprland                                                                                                            |
-| **Terminal Emulator**       | Zellij + foot                                                                                                       |
+| **Terminal Emulator**       | Zellij + Foot                                                                                                       |
 | **Bar**                     | Waybar                                                                                                              |
-| **Application Launcher**    | fuzzel                                                                                                              |
-| **Notification Daemon**     | dunst                                                                                                               |
+| **Application Launcher**    | Fuzzel                                                                                                              |
+| **Notification Daemon**     | Dunst                                                                                                               |
 | **Display Manager**         | GDM                                                                                                                 |
-| **Color Scheme**            | qogir                                                                                                               |
+| **Color Scheme**            | Qogir + Onedark                                                                                                     |
 | **network management tool** | NetworkManager                                                                                                      |
 | **System resource monitor** | Btop                                                                                                                |
-| **File Manager**            | Yazi + nemo                                                                                                         |
-| **Shell**                   | zsh                                                                                                                 |
-| **Media Player**            | mpv                                                                                                                 |
+| **File Manager**            | Yazi + Nemo                                                                                                         |
+| **Shell**                   | Zsh                                                                                                                 |
+| **Media Player**            | Mpv                                                                                                                 |
 | **Text Editor**             | vscode                                                                                                              |
 | **Fonts**                   | Nerd fonts + Roboto                                                                                                 |
-| **Image Viewer**            | eom                                                                                                                 |
-| **Screenshot Software**     | hyprshot                                                                                                            |
+| **Image Viewer**            | Eom                                                                                                                 |
+| **Screenshot Software**     | Hyprshot                                                                                                            |
 | **Screen Recording**        | OBS                                                                                                                 |   
 
 ## Install
@@ -61,14 +61,19 @@ upgrade
 
 ## Todo
 
-- [ ] **eww** - write widgets, ...
-- [ ] **refactor** - remove dead code, use "let in" in code, ...
+- [ ] **Widgets with eww or ags** - write widgets, ...
+- [ ] **Refactor** - remove dead code, use "let in" in code, ...
+- [ ] **Editor** - vscode reproducible(or neovim)
+- [ ] **Fix white theme** - fix gtk settings on nix(failure read-only fs)
+- [ ] **Better ui using only one theme** - qogir colors, terminal onedark colors, dunst icons, fuzzel refactor.
+- [ ] **Firefox** - fully reproducible ui and extensions.
+- [ ] **Add hosts modules** - write system config for laptop, vms and main pc.  
 
 ## References
 - Dots
- -[ryan4yin](https://github.com/ryan4yin/nix-config)
- -[sukhmancs](https://github.com/sukhmancs/nixos-configs/blob/main/README.md)
+ - [ryan4yin](https://github.com/ryan4yin/nix-config)
+ - [sukhmancs](https://github.com/sukhmancs/nixos-configs/blob/main/README.md)
 - Style
- -[qogir-theme](https://github.com/vinceliuice/Qogir-theme)
- -[waybar](https://github.com/TheFrankyDoll/win10-style-waybar)
+ - [qogir-theme](https://github.com/vinceliuice/Qogir-theme)
+ - [waybar](https://github.com/TheFrankyDoll/win10-style-waybar)
 
