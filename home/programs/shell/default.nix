@@ -13,8 +13,6 @@
     oh-my-zsh.theme = "agnoster";
     initExtra = ''
       eval $(thefuck --alias)
-      export PATH=~/.npm-packages/bin:$PATH 
-      export NODE_PATH=~/.npm-packages/lib/node_modules
       export PATH=$PATH:~/.spoofdpi/bin
       alias spoof-chromium="chromium --proxy-server="http://127.0.0.1:8080"& spoofdpi"
         if [[ -z "$ZELLIJ" ]]; then
