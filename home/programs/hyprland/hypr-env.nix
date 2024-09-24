@@ -1,9 +1,7 @@
-{ config, pkgs, ... }:
-
 {
   home = {
     sessionVariables = {
-      EDITOR = "hx";
+      EDITOR = "nvim";
       BROWSER = "firefox";
       TERMINAL = "foot";
       __GL_VRR_ALLOWED = "0";

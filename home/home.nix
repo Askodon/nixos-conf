@@ -61,7 +61,6 @@
       nix-prefetch-github # ci help: nix-prefetch-github name repo
       dconf2nix # dconf files to nix
       nixfmt-rfc-style # help format nix code
-      helix # help | using: "hx", vim-like editor
       yazi # help | using like ranger but better
       go
       oh-my-zsh
