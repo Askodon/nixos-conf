@@ -19,7 +19,7 @@
   security = {
     rtkit.enable = true;
     sudo.enable = true;
-    pam.services.gtklock = {};
+    pam.services.gtklock = { };
     pam.services.gdm.enableGnomeKeyring = true;
   };
 
