@@ -1,9 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [ waybar ];
-  imports = [ 
-    ./waybar-style.nix
-  ];
+  imports = [ ./waybar-style.nix ];
   programs.waybar = {
     enable = true;
   };

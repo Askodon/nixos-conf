@@ -12,20 +12,20 @@
     oh-my-zsh.plugins = [ "git" ];
     oh-my-zsh.theme = "agnoster";
     initExtra = ''
-      eval $(thefuck --alias)
-      export PATH=$PATH:~/.spoofdpi/bin
-      alias spoof-chromium="chromium --proxy-server="http://127.0.0.1:8080"& spoofdpi"
-        if [[ -z "$ZELLIJ" ]]; then
-      if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-          zellij attach -c
-      else
-          zellij options --theme "qogir" --disable-mouse-mode
-      fi
+          eval $(thefuck --alias)
+          export PATH=$PATH:~/.spoofdpi/bin
+          alias spoof-chromium="chromium --proxy-server="http://127.0.0.1:8080"& spoofdpi"
+            if [[ -z "$ZELLIJ" ]]; then
+          if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+              zellij attach -c
+          else
+              zellij options --theme "qogir" --disable-mouse-mode
+          fi
 
-      if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-          exit
+          if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+              exit
+          fi
       fi
-  fi
     '';
     shellAliases = {
       ls = "ls -A";
