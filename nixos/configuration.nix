@@ -39,7 +39,6 @@
     gum
     gnome.gnome-disk-utility
     xfsprogs
-    nodejs_22
     qt6ct
     lxqt.lxqt-policykit
   ];
