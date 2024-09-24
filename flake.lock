@@ -37,10 +37,31 @@
         "type": "github"
       }
     },
+    "nvchad4nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1725104814,
+        "narHash": "sha256-yRenTxLIr9b8s2vJvfhE9fn/Hh1QIqonrClK5wc6ArI=",
+        "owner": "MOIS3Y",
+        "repo": "nvchad4nix",
+        "rev": "bf1b3696cb50bfed95c23fc95fd64723139d8871",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MOIS3Y",
+        "repo": "nvchad4nix",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nvchad4nix": "nvchad4nix"
       }
     }
   },

@@ -11,6 +11,7 @@
     ./modules/system-variables.nix
     ./modules/users.nix
     ./modules/virtualisation.nix
+    ./modules/overlays.nix
   ];
 
   hardware.pulseaudio.enable = false;
