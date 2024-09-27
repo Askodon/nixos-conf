@@ -116,7 +116,7 @@
         bind = $mainMod, M, exec, /home/askodon/nixos-conf/home/scripts/powermenu.sh
         bind = $mainMod, E, exec, nemo
         bind = $mainMod, V, togglefloating,
-        bind = $mainMod, w, exec, fuzzel -T foot --icon-theme WhiteSur-dark -w 40 -y 40 -f "Roboto"-12 --line-height=20 -t ffffffff 
+        bind = $mainMod, w, exec, /home/askodon/nixos-conf/home/scripts/app_selecter.sh
         bind = $mainMod, J, togglesplit, # dwindle
 
         # Functional keybinds

@@ -54,8 +54,8 @@ sudo /home/askodon/nixos-conf/home/scripts/new_install.sh
 
 Update
 ```
-sudo rm -r /home/askodon/nixos-conf
-git clone https://github.com/Askodon/nixos-conf.git /home/askodon/nixos-conf
+git reset --hard
+git pull
 upgrade
 ```
 
