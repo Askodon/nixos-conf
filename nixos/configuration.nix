@@ -14,8 +14,18 @@
     ./modules/overlays.nix
   ];
 
+  #system version
+  system.stateVersion = "24.05"; # system version
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ]; # experimental features
+
+  #hardware settings
   hardware.pulseaudio.enable = false;
   hardware.steam-hardware.enable = true;
+
+  #security settings
   security = {
     rtkit.enable = true;
     sudo.enable = true;
@@ -38,15 +48,8 @@
     git
     home-manager
     gum
-    gnome.gnome-disk-utility
     xfsprogs
     qt6ct
     lxqt.lxqt-policykit
   ];
-
-  system.stateVersion = "24.05"; # system version
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ]; # experimental features
 }
