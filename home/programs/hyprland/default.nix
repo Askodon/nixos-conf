@@ -14,7 +14,6 @@
     wleave
     nwg-look
     nwg-displays
-    hyprcursor
     hyprshot
     glib
     pavucontrol
@@ -42,6 +41,7 @@
 
         #autostart
         exec-once = /home/askodon/nixos-conf/home/scripts/swww.sh
+        exec-once = /home/askodon/nixos-conf/home/scripts/break_time.sh
         exec-once = hyprctl setcursor Bibata-Original-Classic 24
         exec-once = waybar
         exec-once = nextcloud
@@ -57,8 +57,7 @@
         exec-once = lxqt-policykit-agent
 
         #cursor
-        exec-once = hyprctl setcursor Bibata-Original-Classic
-        exec-once = gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Original-Classic"
+        exec-once = hyprctl setcursor Bibata-Original-Classic 24
 
         #windowrule
         windowrule = float,^(pavucontrol)$
