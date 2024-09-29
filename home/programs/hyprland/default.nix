@@ -25,6 +25,7 @@
     gtklock
     networkmanagerapplet
     clipse
+    libnotify
   ];
 
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];

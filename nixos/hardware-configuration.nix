@@ -4,22 +4,29 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports = [ ];
+  imports =
+    [ (modulesPath + "/installer/scan/not-detected.nix")
+    ];
 
-  boot.initrd.availableKernelModules = [ "ata_piix" "mptspi" "uhci_hcd" "ehci_pci" "ahci" "sd_mod" "sr_mod" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "sd_mod" ];
+  boot.initrd.kernelModules = [ "amdgpu" ];
+  boot.kernelModules = [ "amdgpu" ];
   boot.extraModulePackages = [ ];
-  virtualisation.vmware.guest.enable = true;
+
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/2405d72b-02c0-438d-9a0b-5f62c3011497";
+    { device = "/dev/disk/by-uuid/a338c142-d383-4567-a906-29c47bf7f5a9";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/3D42-C109";
+    { device = "/dev/disk/by-uuid/7715-EA31";
       fsType = "vfat";
-      options = [ "fmask=0077" "dmask=0077" ];
+      options = [ "fmask=0022" "dmask=0022" ];
+    };
+
+  fileSystems."/home/askodon/mnt" =
+    { device = "/dev/disk/by-uuid/11455f09-c52b-44c9-8048-53a5b53dcaae";
+      fsType = "xfs";
     };
 
   swapDevices = [ ];
@@ -29,7 +36,9 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.ens33.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp8s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.zt44xhtvio.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  #hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
