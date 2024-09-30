@@ -9,6 +9,7 @@
     ./programs/fuzzel/default.nix
     ./programs/dunst/default.nix
     ./programs/nvchad/default.nix
+    ./programs/ags/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:

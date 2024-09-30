@@ -112,11 +112,11 @@
         bind = $mainMod, C, exec, /home/askodon/nixos-conf/home/scripts/clipboard.sh
         bind = $mainMod, F, exec, firefox 
         bind = $mainMod, T, exec, foot
-        bind = $mainMod, Z, exec, ags -t applauncher
-        bind = $mainMod, M, exec, /home/askodon/nixos-conf/home/scripts/powermenu.sh
+        # bind = $mainMod, Z, exec, fuzzel -d
+        bind = $mainMod, M, exec, /home/askodon/nixos-conf/home/scripts/main_menu.sh
         bind = $mainMod, E, exec, nemo
         bind = $mainMod, V, togglefloating,
-        bind = $mainMod, w, exec, /home/askodon/nixos-conf/home/scripts/app_selecter.sh
+        bind = $mainMod, w, exec, ags -t applauncher
         bind = $mainMod, J, togglesplit, # dwindle
 
 
