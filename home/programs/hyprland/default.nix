@@ -8,7 +8,6 @@
 
   home.packages = with pkgs; [
     swww
-    eww
     hyprpicker
     wl-clipboard
     wleave
@@ -113,6 +112,7 @@
         bind = $mainMod, C, exec, /home/askodon/nixos-conf/home/scripts/clipboard.sh
         bind = $mainMod, F, exec, firefox 
         bind = $mainMod, T, exec, foot
+        bind = $mainMod, Z, exec, ags -t applauncher
         bind = $mainMod, M, exec, /home/askodon/nixos-conf/home/scripts/powermenu.sh
         bind = $mainMod, E, exec, nemo
         bind = $mainMod, V, togglefloating,
