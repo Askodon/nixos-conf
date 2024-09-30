@@ -10,6 +10,18 @@
             bind "Ctrl b" { SwitchToMode "Tmux"; }
           }
       }
+          tmux clear-defaults=true {
+        bind "Ctrl f" { Write 2; SwitchToMode "Normal"; }
+        bind "Esc" { SwitchToMode "Normal"; }
+        bind "g" { SwitchToMode "Locked"; }
+        bind "p" { SwitchToMode "Pane"; }
+        bind "t" { SwitchToMode "Tab"; }
+        bind "n" { SwitchToMode "Resize"; }
+        bind "h" { SwitchToMode "Move"; }
+        bind "s" { SwitchToMode "Scroll"; }
+        bind "o" { SwitchToMode "Session"; }
+        bind "q" { Quit; }
+    }
 
         themes {
       	  qogir {
