@@ -28,10 +28,11 @@
       fi
     '';
     shellAliases = {
-      ls = "ls -A";
-      l = "ls -alh"; # help
-      ll = "ls -1A"; # help
       less = "gum pager";
+      ls = "eza";
+      cat = "bat";
+      grep = "rg";
+      find = "fd";
       rm = "rm -i";
       udal = "ssh askodon@194.113.34.20"; # help
       udal2 = "ssh askodon@5.35.84.91";

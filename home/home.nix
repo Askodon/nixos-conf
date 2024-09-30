@@ -56,7 +56,7 @@
       font-awesome
       #
 
-      #terminal util
+      # terminal util
       deadnix # help deadnix search dead line of nix code
       nix-prefetch-github # ci help: nix-prefetch-github name repo
       dconf2nix # dconf files to nix
@@ -72,9 +72,14 @@
       gum
       inetutils
       thefuck
+      eza # help | better ls
+      bat # help | better cat
+      ripgrep # help | better grep 
+      fd # help | better find
+      ncdu # help | better du
       #
 
-      #video and audio
+      # video and audio
       obs-studio
       gpu-screen-recorder-gtk # using only gpu to record
       handbrake
