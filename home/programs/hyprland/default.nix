@@ -10,7 +10,7 @@
     swww
     eww
     hyprpicker
-    wl-clipboard-rs
+    wl-clipboard
     wleave
     nwg-look
     nwg-displays
@@ -24,7 +24,7 @@
     cinnamon.nemo-fileroller
     gtklock
     networkmanagerapplet
-    clipse
+    clipman
     libnotify
   ];
 
@@ -49,7 +49,7 @@
         exec-once = dunst
         exec-once = nm-applet --indicator
         exec-once = nextcloud --background 
-        exec-once = clipse -listen
+        exec-once = wl-paste -t text --watch clipman store --no-persist
 
         #env
         env = QT_QPA_PLATFORMTHEME,qt6ct
@@ -63,7 +63,6 @@
         #windowrule
         windowrule = float,^(pavucontrol)$
         windowrule = move 100%-w-42,^(pavucontrol)$
-        windowrulev2 = float,class:^(foot.*)$,title:^(.*CLIPSE.*)$
 
         #debug
         debug {
@@ -111,7 +110,7 @@
         bind = $mainMod, Q, killactive
         bind = $mainMod, B, exec, chromium
         bind = $mainMod SHIFT, C, exec, hyprpicker -a
-        bind = $mainMod, C, exec, foot -T CLIPSE -H clipse 
+        bind = $mainMod, C, exec, /home/askodon/nixos-conf/home/scripts/clipboard.sh
         bind = $mainMod, F, exec, firefox 
         bind = $mainMod, T, exec, foot
         bind = $mainMod, M, exec, /home/askodon/nixos-conf/home/scripts/powermenu.sh
@@ -119,6 +118,7 @@
         bind = $mainMod, V, togglefloating,
         bind = $mainMod, w, exec, /home/askodon/nixos-conf/home/scripts/app_selecter.sh
         bind = $mainMod, J, togglesplit, # dwindle
+
 
         # Functional keybinds
         bind =,XF86AudioMicMute,exec,pamixer --default-source -t
