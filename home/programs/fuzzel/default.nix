@@ -12,7 +12,7 @@
         dpi-aware = "no";
       };
       colors = {
-        background = "282c34fa";
+        background = "32343dfa";
         border = "4d84c4fa";
         selection = "4d84c4fa";
         text = "fffffffa";
