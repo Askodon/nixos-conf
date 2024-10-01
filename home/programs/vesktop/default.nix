@@ -5,6 +5,6 @@
     vesktop
     ];
   home.file = {
-    "/home/askodon/.config/vesktop/themes/onedark.css".source = ./themes/onedark.css;
+    "/home/askodon/.config/vesktop/themes/qogir.css".source = ./themes/qogir.css;
   };
 }
