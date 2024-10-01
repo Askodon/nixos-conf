@@ -12,6 +12,7 @@
     ./modules/users.nix
     ./modules/virtualisation.nix
     ./modules/overlays.nix
+    ./modules/flatpak.nix
   ];
 
   #system version
