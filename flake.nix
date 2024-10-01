@@ -12,6 +12,7 @@
       url = "github:MOIS3Y/nvchad4nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    Hyprspace.url = "github:KZDKM/Hyprspace";
 
   };
 
