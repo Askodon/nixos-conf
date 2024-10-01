@@ -33,10 +33,7 @@
     xwayland.enable = true;
     systemd.enable = true;
     systemd.variables = [ "--all" ];
-    plugins = [ 
-      pkgs.hyprlandPlugins.hyprexpo
-      inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
-      ];
+    plugins = [ pkgs.hyprlandPlugins.hyprexpo ];
     extraConfig = ''
 
         #monitor
