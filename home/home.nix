@@ -10,6 +10,7 @@
     ./programs/dunst/default.nix
     ./programs/nvchad/default.nix
     ./programs/ags/default.nix
+    ./programs/vesktop/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
@@ -35,7 +36,6 @@
       whitesur-icon-theme
       mpv
       keepassxc
-      vesktop
       firefox
       ungoogled-chromium
       obsidian
