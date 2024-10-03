@@ -29,7 +29,7 @@ with lib.hm.gvariant;
       font-name = "RobotoMono Nerd Font Regular 11";
       font-rgba-order = "rgb";
       gtk-theme = "Qogir-Dark";
-      icon-theme = "WhiteSur-dark";
+      icon-theme = "Tela-circle-dark";
       monospace-font-name = "FiraCode Nerd Font 10";
       text-scaling-factor = 1.0;
       toolbar-icons-size = "large";
