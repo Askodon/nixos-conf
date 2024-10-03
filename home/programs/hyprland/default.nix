@@ -61,7 +61,7 @@
 
         #windowrule
         windowrule = float,^(pavucontrol)$
-        windowrule = move 100%-w-42,^(pavucontrol)$
+        windowrulev2 = opacity 0.95, class:^([Ff]oot)
 
         #debug
         debug {

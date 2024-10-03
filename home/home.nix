@@ -32,8 +32,8 @@
       mate.eom # photo
       transmission_4-gtk # torrent
       qogir-theme
+      tela-circle-icon-theme
       bibata-cursors
-      whitesur-icon-theme
       mpv
       keepassxc
       firefox
