@@ -4,6 +4,27 @@
     ./git.nix
     ./btop.nix
   ];
+  home.packages = with pkgs; [
+      deadnix # help deadnix search dead line of nix code
+      nix-prefetch-github # ci help: nix-prefetch-github name repo
+      dconf2nix # dconf files to nix
+      nixfmt-rfc-style # help format nix code
+      yazi # help | using like ranger but better
+      go
+      oh-my-zsh
+      zsh-autosuggestions
+      wget
+      fastfetch
+      mtr # help | using command like tracert
+      gum
+      inetutils
+      thefuck
+      eza # help | better ls
+      bat # help | better cat
+      ripgrep # help | better grep 
+      fd # help | better find
+      ncdu # help | better du
+  ];
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
