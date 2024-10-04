@@ -25,7 +25,10 @@
       ripgrep # help | better grep 
       fd # help | better find
       ncdu # help | better du
+      gh # help | github cli
+      gitui # help | lazygit alternative
   ];
+  
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
@@ -67,7 +70,8 @@
       squashGit = "git rebase -i --autosquash HEAD~$(gum write)"; # help
       hs = "gum filter < $HISTFILE --height 20"; # help, history with auto paste
       fmtChoice = "nixfmt $(gum choose --no-limit $(ls))"; # help, nixfmt command with choice
-      wallpaper = "/home/askodon/nixos-conf/home/scripts/swww.sh"; # helpz
+      wallpaper = "/home/askodon/nixos-conf/home/scripts/swww.sh"; # help
+      github = "/home/askodon/nixos-conf/home/scripts/github.sh"; #help | login if logout and open gitui
       try = "nix-shell -p "; # help
       f = "fuck"; # help
       x = "exit"; # help
