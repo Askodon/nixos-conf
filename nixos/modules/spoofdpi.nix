@@ -1,27 +1,16 @@
-{
-  lib,
-  fetchFromGitHub,
-  buildGoModule,
-  ...
-}:
+{ pkgs ? import <nixpkgs> { system = builtins.currentSystem; } }:
 
-buildGoModule rec {
+pkgs.buildGoModule rec {
   pname = "SpoofDPI";
   version = "0.12.0";
 
-  src = fetchFromGitHub {
-    owner = "xvzc";
-    repo = "SpoofDPI";
-    rev = "v${version}";
-    hash = "sha256-m4fhFhZLuWT1diDlDTmTsNrckKTjhEZbhciv44FZcro=";
+  src = pkgs.fetchFromGitHub {                                                                 
+    owner = "xvzc";                                                                      
+    repo = "SpoofDPI";                                                                   
+    rev = "a2993ac68d87a0525a93bc23984d21e341214199";                                    
+    hash = "sha256-+r3NosJejJu9M64kDnD05Gc6eYfaVdIdod/R2KMISKI=";                        
   };
-
   vendorHash = "sha256-47Gt5SI6VXq4+1T0LxFvQoYNk+JqTt3DonDXLfmFBzw=";
 
-  meta = {
-    homepage = "https://github.com/xvzc/SpoofDPI";
-    description = "Simple and fast anti-censorship tool written in Go";
-    license = lib.licenses.asl20;
-    maintainers = with lib.maintainers; [ s0me1newithhand7s ];
-  };
 }
+
