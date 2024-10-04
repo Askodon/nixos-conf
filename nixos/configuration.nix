@@ -13,7 +13,6 @@
     ./modules/virtualisation.nix
     ./modules/overlays.nix
     ./modules/flatpak.nix
-    ./modules/spoofdpi.nix
   ];
 
   #system version
