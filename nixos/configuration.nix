@@ -13,6 +13,7 @@
     ./modules/virtualisation.nix
     ./modules/overlays.nix
     ./modules/flatpak.nix
+    ./modules/spoofdpi.nix
   ];
 
   #system version
@@ -40,8 +41,11 @@
   programs.hyprland.enable = true;
 
   #game settings
-  programs.gamemode.enable = true;
-  programs.noisetorch.enable = true;
+  programs = {
+    gamescope.enable = true;
+    gamemode.enable = true;
+    noisetorch.enable = true;
+  };
 
   # List packages installed in system profile. To search, run:
   nixpkgs.config.allowUnfree = true;

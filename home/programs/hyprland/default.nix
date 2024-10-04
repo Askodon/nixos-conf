@@ -107,7 +107,6 @@
         bind = $mainMod, P, exec, /home/askodon/nixos-conf/home/scripts/hyprshot.sh
         bind = $mainMod, G, fullscreen,
         bind = $mainMod, Q, killactive
-        bind = $mainMod, B, exec, chromium
         bind = $mainMod SHIFT, C, exec, hyprpicker -a
         bind = $mainMod, C, exec, /home/askodon/nixos-conf/home/scripts/clipboard.sh
         bind = $mainMod, F, exec, firefox 

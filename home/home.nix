@@ -18,6 +18,7 @@
       # allow unfree
       "vscode"
       "obsidian"
+      "vivaldi"
     ];
 
   home = {
@@ -37,7 +38,7 @@
       mpv
       keepassxc
       firefox
-      ungoogled-chromium
+      vivaldi
       obsidian
       nextcloud-client
       antares
@@ -67,7 +68,6 @@
       oh-my-zsh
       zsh-autosuggestions
       wget
-      gamemode
       fastfetch
       mtr # help | using command like tracert
       gum
@@ -82,7 +82,6 @@
 
       # video and audio
       obs-studio
-      gpu-screen-recorder-gtk # using only gpu to record
       handbrake
       tenacity
       #
