@@ -13,5 +13,8 @@ if echo "$output" | grep -q "You are not logged into any GitHub hosts. To log in
     gh auth login
 else
     # Если сообщение не найдено, выводим результат команды
+    gh auth setup-git 
+    git config --global user.name "Askodon"
+    git config --global user.email "askodon@disroot.org"
     gitui
 fi

@@ -2,7 +2,6 @@
 {
   imports = [
     ./zellij.nix
-    ./git.nix
     ./btop.nix
   ];
   home.packages = with pkgs; [
@@ -25,6 +24,7 @@
       ripgrep # help | better grep 
       fd # help | better find
       ncdu # help | better du
+      git
       gh # help | github cli
       gitui # help | lazygit alternative
   ];
