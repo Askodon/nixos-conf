@@ -14,7 +14,7 @@
     initExtra = ''
           eval $(thefuck --alias)
           export PATH=$PATH:~/.spoofdpi/bin
-          alias spoof-chromium="chromium --proxy-server="http://127.0.0.1:8080"& spoofdpi"
+          alias vivaldi="vivaldi --proxy-server="http://127.0.0.1:8080""
             if [[ -z "$ZELLIJ" ]]; then
           if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
               zellij attach -c
