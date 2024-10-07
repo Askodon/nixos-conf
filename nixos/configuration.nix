@@ -47,7 +47,6 @@
     home-manager
     gum
     xfsprogs
-    qt6ct
     lxqt.lxqt-policykit
   ];
 }
