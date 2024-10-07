@@ -32,9 +32,6 @@
       vscode
       mate.eom # photo
       transmission_4-gtk # torrent
-      qogir-theme
-      tela-circle-icon-theme
-      bibata-cursors
       mpv
       keepassxc
       firefox

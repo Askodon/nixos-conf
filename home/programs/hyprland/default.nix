@@ -70,7 +70,18 @@
         exec-once = hyprctl setcursor Bibata-Original-Classic 24
 
         #windowrule
+        #pavucontrol
         windowrule = float,^(pavucontrol)$
+        windowrule = size 374 498 ,^(pavucontrol)$
+        windowrule = move 1544 531,^(pavucontrol)$
+        #nm-settings
+        windowrule = float,^(nm-connection-editor)$
+        windowrule = move 1413 533  , title:^(Сетевые соединения) 
+        windowrule = size 502 497 , title:^(Сетевые соединения)
+        #nemo
+        windowrulev2 = float, title:^(Открытие файлов)
+        windowrulev2 = float, title:^(Свойства)
+        #foot
         windowrulev2 = opacity 0.95, class:^([Ff]oot)
 
         #debug
@@ -187,7 +198,6 @@
         # Move/resize windows with mainMod + LMB/RMB and dragging
         bindm = $mainMod, mouse:272, movewindow
         bindm = $mainMod, mouse:273, resizewindow
-        bindm = ALT, mouse:272, resizewindow
 
           decoration {
 
