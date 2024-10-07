@@ -55,6 +55,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.askodon = import ./home/home.nix;
+              backupFileExtension = "hm-backup";
             };
           }
         ];
