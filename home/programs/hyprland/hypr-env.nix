@@ -19,6 +19,7 @@
       QT_STYLE_OVERRIDE = "kvantum";
       XCURSOR_THEME = "Bibata-Original-Classic";
       GTK_THEME = "Qogir-Dark";
+      NIXOS_OZONE_WL = "1";
     };
   };
 }
