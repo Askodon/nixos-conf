@@ -24,7 +24,6 @@
 
   #hardware settings
   hardware.pulseaudio.enable = false;
-  hardware.steam-hardware.enable = true;
 
   #security settings
   security = {
@@ -34,17 +33,12 @@
     pam.services.gdm.enableGnomeKeyring = true;
   };
 
+  #hyprwm
+  programs.hyprland.enable = true;
+
   #zsh as default
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
-  programs.hyprland.enable = true;
-
-  #game settings
-  programs = {
-    gamescope.enable = true;
-    gamemode.enable = true;
-    noisetorch.enable = true;
-  };
 
   # List packages installed in system profile. To search, run:
   nixpkgs.config.allowUnfree = true;
