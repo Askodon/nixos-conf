@@ -5,30 +5,30 @@
     ./btop.nix
   ];
   home.packages = with pkgs; [
-      deadnix # help deadnix search dead line of nix code
-      nix-prefetch-github # ci help: nix-prefetch-github name repo
-      dconf2nix # dconf files to nix
-      nixfmt-rfc-style # help format nix code
-      yazi # help | using like ranger but better
-      go
-      oh-my-zsh
-      zsh-autosuggestions
-      wget
-      fastfetch
-      mtr # help | using command like tracert
-      gum
-      inetutils
-      thefuck
-      eza # help | better ls
-      bat # help | better cat
-      ripgrep # help | better grep 
-      fd # help | better find
-      ncdu # help | better du
-      git
-      gh # help | github cli
-      gitui # help | lazygit alternative
+    deadnix # help deadnix search dead line of nix code
+    nix-prefetch-github # ci help: nix-prefetch-github name repo
+    dconf2nix # dconf files to nix
+    nixfmt-rfc-style # help format nix code
+    yazi # help | using like ranger but better
+    go
+    oh-my-zsh
+    zsh-autosuggestions
+    wget
+    fastfetch
+    mtr # help | using command like tracert
+    gum
+    inetutils
+    thefuck
+    eza # help | better ls
+    bat # help | better cat
+    ripgrep # help | better grep
+    fd # help | better find
+    ncdu # help | better du
+    git
+    gh # help | github cli
+    gitui # help | lazygit alternative
   ];
-  
+
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
@@ -64,14 +64,14 @@
       boot = "sudo nixos-rebuild boot"; # help
       ed = "/home/askodon/nixos-conf/home/scripts/editor.sh"; # help choice between editor and files in the current folder
       upgrade = "/home/askodon/nixos-conf/home/scripts/upgrade.sh"; # help
-      fullUpgrade = "sudo nix-channel --update; sudo nixos-rebuild switch --flake /home/askodon/nixos-conf"; # help
+      fullUpgrade = "sudo nix-channel --update; /home/askodon/nixos-conf/home/scripts/upgrade.sh"; # help
       trash = "sudo nix-collect-garbage -d"; # help
       help = "cat /home/askodon/nixos-conf/home/programs/shell/default.nix | grep help | gum pager"; # help
       squashGit = "git rebase -i --autosquash HEAD~$(gum write)"; # help
       hs = "gum filter < $HISTFILE --height 20"; # help, history with auto paste
       fmtChoice = "nixfmt $(gum choose --no-limit $(ls))"; # help, nixfmt command with choice
       wallpaper = "/home/askodon/nixos-conf/home/scripts/swww.sh"; # help
-      github = "/home/askodon/nixos-conf/home/scripts/github.sh"; #help | login if logout and open gitui
+      github = "/home/askodon/nixos-conf/home/scripts/github.sh"; # help | login if logout and open gitui
       try = "nix-shell -p "; # help
       f = "fuck"; # help
       x = "exit"; # help
