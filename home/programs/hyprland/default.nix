@@ -22,6 +22,7 @@
     glib
     pavucontrol
     kdePackages.qtwayland
+    libsForQt5.qtstyleplugin-kvantum
     xorg.libxcb
     lxqt.lxqt-policykit
     cinnamon.nemo-with-extensions
@@ -56,11 +57,14 @@
         exec-once = nextcloud --background 
         exec-once = wl-paste -t text --watch clipman store --no-persist
 
-        #env
-        env = QT_QPA_PLATFORMTHEME,qt6ct
-
-        #systemd
+        #kit for keyring works
         exec-once = lxqt-policykit-agent
+
+        #themes
+        exec = gsettings set org.gnome.desktop.interface gtk-theme "Qogir-Dark"   # for GTK3 apps
+        exec = gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"   # for GTK4 apps
+        env = QT_QPA_PLATFORMTHEME,qt5ct
+        env = NIXOS_OZONE_WL,1
 
         #cursor
         exec-once = hyprctl setcursor Bibata-Original-Classic 24
