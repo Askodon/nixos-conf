@@ -11,6 +11,7 @@
     ./programs/nvchad/default.nix
     ./programs/ags/default.nix
     ./programs/vesktop/default.nix
+    ./programs/firefox/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
@@ -34,7 +35,6 @@
       transmission_4-gtk # torrent
       mpv
       keepassxc
-      firefox
       vivaldi
       obsidian
       nextcloud-client
