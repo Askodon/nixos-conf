@@ -72,10 +72,12 @@
         #windowrule
         #pavucontrol
         windowrule = float,^(pavucontrol)$
+        windowrule = pin,^(pavucontrol)$
         windowrule = size 374 498 ,^(pavucontrol)$
         windowrule = move 1544 531,^(pavucontrol)$
         #nm-settings
         windowrule = float,^(nm-connection-editor)$
+        windowrule = pin, title:^(Сетевые соединения)
         windowrule = move 1413 533  , title:^(Сетевые соединения) 
         windowrule = size 502 497 , title:^(Сетевые соединения)
         #nemo
