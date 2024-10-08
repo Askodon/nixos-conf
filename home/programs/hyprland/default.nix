@@ -157,10 +157,16 @@
         bind = SUPER,Tab,bringactivetotop,
 
         # Move focus with mainMod + arrow keys
-        bind = $mainMod, left, movefocus, l
-        bind = $mainMod, right, movefocus, r
-        bind = $mainMod, up, movefocus, u
-        bind = $mainMod, down, movefocus, d
+        bind = $mainMod, h, movefocus, l
+        bind = $mainMod, l, movefocus, r
+        bind = $mainMod, k, movefocus, u
+        bind = $mainMod, j, movefocus, d
+
+        # Move focus with mainMod + arrow keys
+        bind = $mainMod SHIFT, h, swapwindow, l
+        bind = $mainMod SHIFT, l, swapwindow, r
+        bind = $mainMod SHIFT, k, swapwindow, u
+        bind = $mainMod SHIFT, j, swapwindow, d
 
         # Switch workspaces with mainMod + [0-9]
         bind = $mainMod, 1, workspace, 1
@@ -173,13 +179,6 @@
         bind = $mainMod, 8, workspace, 8
         bind = $mainMod, 9, workspace, 9
         bind = $mainMod, 0, workspace, 10
-
-        # Move focus with mainMod + arrow keys
-        bind = $mainMod SHIFT, left, swapwindow, l
-        bind = $mainMod SHIFT, right, swapwindow, r
-        bind = $mainMod SHIFT, up, swapwindow, u
-        bind = $mainMod SHIFT, down, swapwindow, d
-
 
         # Move active window to a workspace with mainMod + SHIFT + [0-9]
         bind = $mainMod SHIFT, 1, movetoworkspacesilent, 1
