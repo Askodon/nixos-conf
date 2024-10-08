@@ -1,6 +1,9 @@
+{ pkgs, ... }:
 {
   programs.firefox = {
     enable = true;
-    nativeMessagingHosts.tridactyl = true;
+    #nativeMessagingHosts.packages = [ pkgs.tridactyl-native ];
+    #nativeMessagingHosts.tridactyl = true;
+    
   };
 }
