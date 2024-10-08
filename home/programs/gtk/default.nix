@@ -16,10 +16,10 @@
     gtk.enable = true;
   };
   gtk = {
-  enable = true;
+    enable = true;
     iconTheme = {
       package = pkgs.tela-circle-icon-theme;
-      name  = "Tela-circle-dark";
+      name = "Tela-circle-dark";
     };
     theme = {
       package = pkgs.qogir-theme;
@@ -31,11 +31,11 @@
     platformTheme.name = "qtct";
     style.name = "kvantum";
   };
-    xdg.configFile."Kvantum/kvantum.kvconfig".source = (pkgs.formats.ini {}).generate "kvantum.kvconfig" {
-      General.theme = "Qogir-dark";
-    };
+  xdg.configFile."Kvantum/kvantum.kvconfig".source =
+    (pkgs.formats.ini { }).generate "kvantum.kvconfig"
+      { General.theme = "Qogir-dark"; };
 
-    xdg.configFile."qt5ct/qt5ct.conf".source = (pkgs.formats.ini {}).generate "kvantum.kvconfig" {
-      Appearance.icon_theme = "Tela-circle-dark";
-    };
+  xdg.configFile."qt5ct/qt5ct.conf".source = (pkgs.formats.ini { }).generate "kvantum.kvconfig" {
+    Appearance.icon_theme = "Tela-circle-dark";
+  };
 }

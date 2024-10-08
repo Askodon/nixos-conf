@@ -18,6 +18,17 @@
     avahi.enable = false;
     openssh.enable = true; # openssh
     flatpak.enable = true;
+    kmscon = {
+      # better tty
+      enable = true;
+      fonts = [
+        {
+          name = "FiraCode Nerd Font";
+          package = pkgs.fira-code-nerdfont;
+        }
+      ];
+
+    };
     gnome.gnome-keyring.enable = true;
     xserver = {
       enable = true;
