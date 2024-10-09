@@ -10,13 +10,13 @@
 ## Structure
 ```plaintext
 .
-├── home 🏠       # Common home-manager configuration for all hosts.
-├──── help 📚     # Help info
-├──── images 🎨   # All scrennshots, icons and etc
-├──── programs 🔧 # Programs settings on nix
-├──── scripts 🚀  # Sh files
-├── nixos 💻      # Nixos base configuration
-└──── modules ⚙️   #user settings, services and etc
+├── home 🏠           # Common home-manager configuration for all hosts.
+│   ├── help 📚       # Help info
+│   ├── images 🎨     # All scrennshots, icons and etc
+│   ├── programs 🔧   # Programs settings on nix
+│   └── scripts 🚀    # Sh files
+├── nixos 💻          # Nixos base configuration
+└──── modules ⚙️      #user settings, services and etc
 ```
 ## Tools
 
@@ -25,7 +25,7 @@
 | **Window Manager**          | Hyprland                                                                                                            |
 | **Terminal Emulator**       | Zellij + Foot                                                                                                       |
 | **Bar**                     | Waybar                                                                                                              |
-| **Application Launcher**    | Fuzzel                                                                                                              |
+| **Application Launcher**    | Fuzzel + Ags                                                                                                        |
 | **Notification Daemon**     | Dunst                                                                                                               |
 | **Display Manager**         | GDM                                                                                                                 |
 | **Color Scheme**            | Qogir + Onedark                                                                                                     |
@@ -34,8 +34,8 @@
 | **File Manager**            | Yazi + Nemo                                                                                                         |
 | **Shell**                   | Zsh                                                                                                                 |
 | **Media Player**            | Mpv                                                                                                                 |
-| **Text Editor**             | vscode                                                                                                              |
-| **Fonts**                   | Nerd fonts + Roboto                                                                                                 |
+| **Text Editor**             | Vscode + nvchad                                                                                                     |
+| **Fonts**                   | Nerd fonts + Roboto + Fira Code                                                                                     |
 | **Image Viewer**            | Eom                                                                                                                 |
 | **Screenshot Software**     | Hyprshot                                                                                                            |
 | **Screen Recording**        | OBS                                                                                                                 |   
@@ -64,17 +64,17 @@ upgrade
 
 - [ ] **Widgets with eww or ags** - write widgets, ...
 - [ ] **Refactor** - remove dead code, use "let in" in code, ...
-- [ ] **Editor** - vscode reproducible(or neovim)
-- [ ] **Fix white theme** - fix gtk settings on nix(failure read-only fs)
+- [x] **Editor** - vscode reproducible(or neovim)
+- [x] **Fix white theme** - fix gtk settings on nix(failure read-only fs)
 - [ ] **Better ui using only one theme** - qogir colors, terminal onedark colors, dunst icons, fuzzel refactor.
 - [ ] **Firefox** - fully reproducible ui and extensions.
 - [ ] **Add hosts modules** - write system config for laptop, vms and main pc.  
 
 ## References
 - Dots
- - [ryan4yin](https://github.com/ryan4yin/nix-config)
- - [sukhmancs](https://github.com/sukhmancs/nixos-configs/blob/main/README.md)
+  - [ryan4yin](https://github.com/ryan4yin/nix-config)
+  - [sukhmancs](https://github.com/sukhmancs/nixos-configs/blob/main/README.md)
 - Style
- - [qogir-theme](https://github.com/vinceliuice/Qogir-theme)
- - [waybar](https://github.com/TheFrankyDoll/win10-style-waybar)
+  - [qogir-theme](https://github.com/vinceliuice/Qogir-theme)
+  - [waybar](https://github.com/TheFrankyDoll/win10-style-waybar)
 
