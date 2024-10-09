@@ -1,4 +1,7 @@
-#!/usr/bin/env bash
+#!/bin/sh
+
+while true 
+do
 
 DIR=~/wallpaper
 
@@ -14,3 +17,6 @@ swww query || swww init
 echo Setting ${DIR}/${RANDOMPICS}
 
 swww img ${DIR}/${RANDOMPICS} --transition-fps 30 --transition-type any --transition-duration 3
+
+sleep 900
+done
