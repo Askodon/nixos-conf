@@ -8,7 +8,7 @@
       main = {
         terminal = "${pkgs.foot}/bin/foot";
         layer = "overlay";
-        font = "RobotoMono Nerd Font Regular:weight=Regular:size=11";
+        font = "RobotoMono Nerd Font Regular:weight=Regular:size=12.7";
         dpi-aware = "no";
       };
       colors = {
