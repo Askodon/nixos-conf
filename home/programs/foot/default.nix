@@ -4,7 +4,7 @@
     settings = {
       main = {
         term = "xterm-256color";
-        font = "Fira Code:size=11";
+        font = "FiraCode Nerd Font:size=11";
       };
       mouse = {
         hide-when-typing = "yes";

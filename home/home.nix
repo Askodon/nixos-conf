@@ -49,10 +49,7 @@
       #
 
       #fonts
-      fira-code
-      fira-code-nerdfont
-      nerdfonts
-      roboto
+      (pkgs.nerdfonts.override { fonts = [ "FiraCode" "RobotoMono" ]; })
       font-awesome
       #
 

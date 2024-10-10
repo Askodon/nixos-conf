@@ -24,7 +24,7 @@
       fonts = [
         {
           name = "FiraCode Nerd Font";
-          package = pkgs.fira-code-nerdfont;
+          package = (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; });
         }
       ];
 
