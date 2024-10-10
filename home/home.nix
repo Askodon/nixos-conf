@@ -12,6 +12,7 @@
     ./programs/ags/default.nix
     ./programs/vesktop/default.nix
     ./programs/firefox/default.nix
+    ./programs/xdg/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
