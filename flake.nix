@@ -70,7 +70,7 @@
               inherit extraSpecialArgs;
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.askodon = import ./home/home.nix;
+              users.askodon = import ./home/artemis/home.nix;
               backupFileExtension = "hm-backup";
             };
           }
