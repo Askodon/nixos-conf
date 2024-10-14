@@ -45,7 +45,7 @@
     in
     {
       nixosConfigurations.nixos = lib.nixosSystem {
-        modules = [
+        artemis = modules = [
           #inherit specialArgs;          
           ./nixos/configuration.nix
           home-manager.nixosModules.home-manager
@@ -55,6 +55,20 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.askodon = import ./home/home.nix;
+              backupFileExtension = "hm-backup";
+            };
+          }
+        ];
+        ares = modules = [
+          #inherit specialArgs;          
+          ./nixos/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              inherit extraSpecialArgs;
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.askodon = import ./home/tsumoron/home.nix;
               backupFileExtension = "hm-backup";
             };
           }
