@@ -1,16 +1,9 @@
+{ pkgs, ... }:
 {
-  services = {
-    xserver = {
-      enable = true;
-      windowManager.awesome = {
-        enable = true;
-        luaModules = with pkgs.luaPackages; [
-          luarocks # is the package manager for Lua modules
-          luadbi-mysql # Database abstraction layer
-        ];
-      };
-    };
-  };
+  xsession.windowManager.awesome.enable = true;
+  home.packages = with pkgs; [ 
+      luarocks # is the package manager for Lua modules
+  ];
   home.file = {
     "/home/askodon/.config/awesome".source = ./rc.lua;
   };
