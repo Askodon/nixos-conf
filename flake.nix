@@ -44,8 +44,24 @@
       };
     in
     {
-      nixosConfigurations.nixos = lib.nixosSystem {
-        artemis = modules = [
+      nixosConfigurations.artemis = lib.nixosSystem {
+        modules = [
+          #inherit specialArgs;          
+          ./nixos/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              inherit extraSpecialArgs;
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.askodon = import ./home/artemis/home.nix;
+              backupFileExtension = "hm-backup";
+            };
+          }
+        ];
+      };
+      nixosConfigurations.ares = lib.nixosSystem {
+        modules = [
           #inherit specialArgs;          
           ./nixos/configuration.nix
           home-manager.nixosModules.home-manager
@@ -55,20 +71,6 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.askodon = import ./home/home.nix;
-              backupFileExtension = "hm-backup";
-            };
-          }
-        ];
-        ares = modules = [
-          #inherit specialArgs;          
-          ./nixos/configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              inherit extraSpecialArgs;
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.askodon = import ./home/tsumoron/home.nix;
               backupFileExtension = "hm-backup";
             };
           }
