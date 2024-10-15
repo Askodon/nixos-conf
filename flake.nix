@@ -63,7 +63,7 @@
       nixosConfigurations.ares = lib.nixosSystem {
         modules = [
           #inherit specialArgs;          
-          ./nixos/configuration.nix
+          ./nixos/ares.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
