@@ -2,9 +2,10 @@
 {
   xsession.windowManager.awesome.enable = true;
   home.packages = with pkgs; [ 
-      luarocks # is the package manager for Lua modules
+    st
+    rofi
   ];
   home.file = {
-    "/home/askodon/.config/awesome".source = ./rc.lua;
+    ".config/awesome/rc.lua".source = ./rc.lua;
   };
 }

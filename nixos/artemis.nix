@@ -34,9 +34,6 @@
     pam.services.gdm.enableGnomeKeyring = true;
   };
 
-  #hyprwm
-  programs.hyprland.enable = true;
-
   #zsh as default
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
@@ -49,5 +46,7 @@
     gum
     xfsprogs
     lxqt.lxqt-policykit
+    zellij
+    lua
   ];
 }

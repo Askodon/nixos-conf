@@ -34,9 +34,8 @@
       xkb.layout = "ru,us";
       xkb.variant = "";
       xkb.options = "grp:win_space_toggle";
-      deviceSection = ''Option "TearFree" "true"''; # For amdgpu.
-      videoDrivers = [ "amdgpu" ]; # amdgpu for home pc
-      displayManager.gdm.enable = true;
+      #deviceSection = ''Option "TearFree" "true"''; # For amdgpu.
+      #videoDrivers = [ "amdgpu" ]; # amdgpu for home pc
     };
     pipewire = {
       enable = true;
