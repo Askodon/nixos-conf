@@ -4,7 +4,6 @@
     enable = true;
     xdgOpenUsePortal = true;
     extraPortals = lib.mkForce [
-      pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gtk
     ];
   };

@@ -47,7 +47,7 @@
       nixosConfigurations.artemis = lib.nixosSystem {
         modules = [
           #inherit specialArgs;          
-          ./nixos/configuration.nix
+          ./nixos/artemis.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
