@@ -13,6 +13,7 @@
     ./modules/virtualisation.nix
     ./modules/overlays.nix
     ./modules/flatpak.nix
+    ./modules/hyprland.nix
   ];
 
   #system version

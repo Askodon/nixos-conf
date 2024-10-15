@@ -33,11 +33,9 @@
     pam.services.gdm.enableGnomeKeyring = true;
   };
 
-  #hyprwm
-  programs.hyprland.enable = true;
-
   #zsh as default
   users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
 
   # List packages installed in system profile. To search, run:
   nixpkgs.config.allowUnfree = true;
@@ -47,5 +45,6 @@
     gum
     xfsprogs
     lxqt.lxqt-policykit
+    zellij
   ];
 }
