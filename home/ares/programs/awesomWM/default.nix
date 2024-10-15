@@ -6,6 +6,7 @@
     rofi
   ];
   home.file = {
-    ".config/awesome/rc.lua".source = ./rc.lua;
+    ".config/awesome/".source = ./lua/;
+    recursive = true;
   };
 }

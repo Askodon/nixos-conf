@@ -33,6 +33,7 @@
       antares
       libreoffice
       kdePackages.okular
+      firefox
       #
 
       # gnome packages
