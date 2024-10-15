@@ -27,6 +27,7 @@
     git
     gh # help | github cli
     gitui # help | lazygit alternative
+    luaformatter
   ];
 
   programs.zsh = {

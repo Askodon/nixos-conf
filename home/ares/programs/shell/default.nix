@@ -1,5 +1,8 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./zellij.nix
+  ];
   home.packages = with pkgs; [
     deadnix # help deadnix search dead line of nix code
     nix-prefetch-github # ci help: nix-prefetch-github name repo
@@ -23,6 +26,8 @@
     git
     gh # help | github cli
     gitui # help | lazygit alternative
+    luaformatter
+    lua
   ];
 
   programs.zsh = {
