@@ -3,6 +3,7 @@
   imports = [
     ./programs/awesomWM/default.nix
     ./programs/shell
+    ./programs/nvchad/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
