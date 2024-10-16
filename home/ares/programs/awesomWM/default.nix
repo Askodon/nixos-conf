@@ -9,8 +9,12 @@
   home.packages = with pkgs; [ 
     st
     rofi
+    cinnamon.nemo-with-extensions
+    brightnessctl
+    maim
+    picom
   ];
   home.file = {
-    ".config/awesome/lua.rc".source = "./lua/rc.lua";
+    ".config/awesome/rc.lua".source = ./lua/rc.lua;
   };
 }
