@@ -17,7 +17,7 @@ local _M = {
   modkey = "Mod4",
 
   -- user defined wallpaper
-  wallpaper = nil,
+  wallpaper = "/home/askodon/wallpaper/od_sound.png",
   --wallpaper = home .. "/Pictures/your-wallpaper-here.jpg",
 }
 

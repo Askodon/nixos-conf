@@ -1,9 +1,9 @@
 {
     home.file = {
-    ".config/awesome/binding/bindtotags.rc".source = "./bindtotags.lua";
-    ".config/awesome/binding/clientbuttons.rc".source = "./clientbuttons.lua";
-    ".config/awesome/binding/clientkeys.rc".source = "./clientkeys.lua";
-    ".config/awesome/binding/globalbuttons.rc".source = "./globalbuttons.lua";
-    ".config/awesome/binding/globalkeys.rc".source = "./globalkeys.lua";
+    ".config/awesome/binding/bindtotags.lua".source = ./bindtotags.lua;
+    ".config/awesome/binding/clientbuttons.lua".source = ./clientbuttons.lua;
+    ".config/awesome/binding/clientkeys.lua".source = ./clientkeys.lua;
+    ".config/awesome/binding/globalbuttons.lua".source = ./globalbuttons.lua;
+    ".config/awesome/binding/globalkeys.lua".source = ./globalkeys.lua;
   };
 }
