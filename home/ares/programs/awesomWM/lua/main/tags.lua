@@ -5,10 +5,8 @@ local _M = {}
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
--- utsin to names workspaces
-
 function _M.get ()
-  tags = {}
+  local tags = {}
 
   awful.screen.connect_for_each_screen(function(s)
     -- Each screen has its own tag table.
@@ -20,9 +18,6 @@ function _M.get ()
   return tags
 end
 
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
-return setmetatable(
-  {}, 
-  { __call = function(_, ...) return _M.get(...) end }
-)
+return setmetatable({}, { __call = function(_, ...) return _M.get(...) end })
