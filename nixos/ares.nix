@@ -13,6 +13,7 @@
     ./modules/overlays.nix
     ./modules/flatpak.nix
     ./modules/awesome.nix
+    ./modules/system-packages.nix
   ];
 
   #system version
@@ -34,15 +35,4 @@
   #zsh as default
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
-
-  # List packages installed in system profile. To search, run:
-  nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = with pkgs; [
-    git
-    home-manager
-    gum
-    xfsprogs
-    lxqt.lxqt-policykit
-    zellij
-  ];
 }
