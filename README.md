@@ -12,33 +12,46 @@
 .
 ├── home 🏠           # Common home-manager configuration for all hosts.
 │   ├── help 📚       # Help info
-│   ├── images 🎨     # All scrennshots, icons and etc
+│   ├── images 🎨     # All screenshots, icons and etc
+│   ├── artemis 🎮    # Main PC
+│   ├── ares 🚧       # Test playground VM
 │   ├── programs 🔧   # Programs settings on nix
 │   └── scripts 🚀    # Sh files
 ├── nixos 💻          # Nixos base configuration
 └──── modules ⚙️      #user settings, services and etc
 ```
+
+## Host
+
+Following hosts are available:
+
+| Host         | Type    |
+| ------------ | ------- |
+| `artemis`    | main pc |
+| `ares`       | test vm |
+
+
 ## Tools
 
-|                             | NixOS(Wayland)                                                                                                      |
-| --------------------------- | :------------------------------------------------------------------------------------------------------------------ |
-| **Window Manager**          | Hyprland                                                                                                            |
-| **Terminal Emulator**       | Zellij + Foot                                                                                                       |
-| **Bar**                     | Waybar                                                                                                              |
-| **Application Launcher**    | Fuzzel + Ags                                                                                                        |
-| **Notification Daemon**     | Dunst                                                                                                               |
-| **Display Manager**         | GDM                                                                                                                 |
-| **Color Scheme**            | Qogir + Onedark                                                                                                     |
-| **network management tool** | NetworkManager                                                                                                      |
-| **System resource monitor** | Btop                                                                                                                |
-| **File Manager**            | Yazi + Nemo                                                                                                         |
-| **Shell**                   | Zsh                                                                                                                 |
-| **Media Player**            | Mpv                                                                                                                 |
-| **Text Editor**             | Vscode + nvchad                                                                                                     |
-| **Fonts**                   | Nerd fonts + Roboto + Fira Code                                                                                     |
-| **Image Viewer**            | Eom                                                                                                                 |
-| **Screenshot Software**     | Hyprshot                                                                                                            |
-| **Screen Recording**        | OBS                                                                                                                 |   
+|                             | Artemis(Wayland)                   | Ares(Xorg)                                                                      |
+| --------------------------- | :----------------------------------|---------------------------------------------------------------------------------|
+| **Window Manager**          | Hyprland                           | Awesome                                                                         |
+| **Terminal Emulator**       | Zellij + Foot                      | Zellij + St                                                                     |
+| **Bar**                     | Waybar                             |                                                                                 |
+| **Application Launcher**    | Fuzzel + Ags                       | Rofi                                                                            |
+| **Notification Daemon**     | Dunst                              |                                                                                 |
+| **Display Manager**         | GDM                                | GDM                                                                             |
+| **Color Scheme**            | Qogir + Onedark                    |                                                                                 |
+| **network management tool** | NetworkManager                     |                                                                                 |
+| **System resource monitor** | Btop                               | Btop                                                                            |
+| **File Manager**            | Yazi + Nemo                        | Yazi + Nemo                                                                     |
+| **Shell**                   | Zsh                                | Zsh                                                                             |
+| **Media Player**            | Mpv                                |                                                                                 |
+| **Text Editor**             | Vscode + Nvchad                    | Vscode + Nvchad                                                                 |
+| **Fonts**                   | Nerd fonts + Roboto + Fira Code    |                                                                                 |
+| **Image Viewer**            | Eom                                |                                                                                 |
+| **Screenshot Software**     | Hyprshot                           |                                                                                 |
+| **Screen Recording**        | OBS                                | OBS                                                                             |   
 
 ## Install
 
