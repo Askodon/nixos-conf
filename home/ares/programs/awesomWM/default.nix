@@ -13,6 +13,7 @@
     brightnessctl
     maim
     picom
+    xorg.xev
   ];
   home.file = {
     ".config/awesome/rc.lua".source = ./lua/rc.lua;

@@ -8,7 +8,6 @@
 {
   imports = [
     ./hypr-env.nix
-    ./hypridle.nix
   ];
 
   home.packages = with pkgs; [
