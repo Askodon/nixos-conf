@@ -1,9 +1,10 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./programs/awesomWM/default.nix
+    ./programs/awesomeWM/default.nix
     ./programs/shell
     ./programs/nvchad/default.nix
+    ./programs/gtk-qt-theme/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
