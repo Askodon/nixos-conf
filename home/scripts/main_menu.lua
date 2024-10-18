@@ -11,8 +11,9 @@ end
 
 local selection = get_selection()
 
+-- если нажал esc то програма выключается с кодом завершения
 if selection == nil then
-    os.exit(0) -- если нажал esc то програма выключается с кодом завершения
+    os.exit(0) 
 end
 
 if selection:find("Power Menu") then

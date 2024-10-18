@@ -59,16 +59,10 @@ Following hosts are available:
 > add this too configuration.nix:
 > nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-First install
+First install:
 
 ```
-nix-shell -p git
-```
-
-Clone this repo & enter it:
-
-```
-git clone https://github.com/Askodon/nixos-conf.git /home/askodon/nixos-conf
+nix-shell -p git --run 'git clone https://github.com/Askodon/nixos-conf.git /home/askodon/nixos-conf'
 sudo /home/askodon/nixos-conf/home/scripts/new_install.sh
 ```
 
