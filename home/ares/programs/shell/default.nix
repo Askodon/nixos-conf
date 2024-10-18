@@ -6,8 +6,8 @@
   home.packages = with pkgs; [
     deadnix # help deadnix search dead line of nix code
     nix-prefetch-github # ci help: nix-prefetch-github name repo
-    dconf2nix # dconf files to nix
-    nixfmt-rfc-style # help format nix code
+    dconf2nix # sdconf files to nix
+    nixfmt-rfc-stayle # help format nix code
     yazi # help | using like ranger but better
     go
     oh-my-zsh
@@ -26,8 +26,6 @@
     git
     gh # help | github cli
     gitui # help | lazygit alternative
-    luaformatter
-    lua
   ];
 
   programs.zsh = {
@@ -63,7 +61,7 @@
       udal = "ssh askodon@194.113.34.20"; # help
       udal2 = "ssh askodon@5.35.84.91";
       boot = "sudo nixos-rebuild boot"; # help
-      ed = "/home/askodon/nixos-conf/home/scripts/editor.sh"; # help choice between editor and files in the current folder
+      ed = "/home/askodon/nixos-conf/home/scripts/ed_command.lua"; # help choice between editor and files in the current folder
       upgrade = "/home/askodon/nixos-conf/home/scripts/upgrade.sh"; # help
       fullUpgrade = "sudo nix-channel --update; /home/askodon/nixos-conf/home/scripts/upgrade.sh"; # help
       trash = "sudo nix-collect-garbage -d"; # help

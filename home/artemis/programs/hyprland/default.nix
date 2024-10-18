@@ -26,7 +26,6 @@
     lxqt.lxqt-policykit
     cinnamon.nemo-with-extensions
     cinnamon.nemo-fileroller
-    gtklock
     networkmanagerapplet
     clipman
     libnotify
@@ -131,15 +130,15 @@
 
         $mainMod = SUPER
         bind = $mainMod, tab, hyprexpo:expo, toggle
-        bind = $mainMod, P, exec, /home/askodon/nixos-conf/home/scripts/hyprshot.sh
+        bind = $mainMod, P, exec, /home/askodon/nixos-conf/home/scripts/screenshot.lua
         bind = $mainMod, G, fullscreen,
         bind = $mainMod, Q, killactive
         bind = $mainMod SHIFT, C, exec, hyprpicker -a
-        bind = $mainMod, C, exec, /home/askodon/nixos-conf/home/scripts/clipboard.sh
+        bind = $mainMod, C, exec, /home/askodon/nixos-conf/home/scripts/clipboard.lua
         bind = $mainMod, F, exec, firefox 
         bind = $mainMod, T, exec, foot
         # bind = $mainMod, Z, exec, fuzzel -d
-        bind = $mainMod, M, exec, /home/askodon/nixos-conf/home/scripts/main_menu.sh
+        bind = $mainMod, M, exec, /home/askodon/nixos-conf/home/scripts/main_menu.lua
         bind = $mainMod, E, exec, nemo
         bind = $mainMod, V, togglefloating,
         bind = $mainMod, w, exec, ags -t applauncher
