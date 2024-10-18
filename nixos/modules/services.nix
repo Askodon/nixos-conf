@@ -31,7 +31,7 @@
     gnome.gnome-keyring.enable = true;
     xserver = {
       enable = true;
-      xkb.layout = "ru,us";
+      xkb.layout = "us,ru";
       xkb.variant = "";
       xkb.options = "grp:win_space_toggle";
       #deviceSection = ''Option "TearFree" "true"''; # For amdgpu.

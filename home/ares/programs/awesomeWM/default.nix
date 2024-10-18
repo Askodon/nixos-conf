@@ -14,6 +14,7 @@
     maim
     picom
     xorg.xev
+    xorg.xrandr
   ];
   home.file = {
     ".config/awesome/rc.lua".source = ./lua/rc.lua;

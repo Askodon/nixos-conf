@@ -12,6 +12,8 @@ local terminal = RC.vars.terminal
 
 local _M = {}
 
+
+
 -- reading
 -- https://awesomewm.org/wiki/Global_Keybindings
 

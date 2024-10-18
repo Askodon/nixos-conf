@@ -7,7 +7,7 @@
     deadnix # help deadnix search dead line of nix code
     nix-prefetch-github # ci help: nix-prefetch-github name repo
     dconf2nix # sdconf files to nix
-    nixfmt-rfc-stayle # help format nix code
+    nixfmt-rfc-style # help format nix code
     yazi # help | using like ranger but better
     go
     oh-my-zsh

@@ -48,6 +48,9 @@ RC.layouts = main.layouts()
 -- Tags
 RC.tags = main.tags()
 
+-- Screen
+awful.screen.set_auto_dpi_enabled( true )
+
 -- Menu
 RC.mainmenu = awful.menu({ items = main.menu() }) -- in globalkeys
 RC.launcher = awful.widget.launcher(
