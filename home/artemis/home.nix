@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./programs/gtk/default.nix
     ./programs/hyprland/default.nix
     ./programs/shell/default.nix
     ./programs/foot/default.nix
@@ -13,6 +12,7 @@
     ./programs/vesktop/default.nix
     ./programs/firefox/default.nix
     ./programs/xdg/default.nix
+    ./programs/gtk-qt-theme/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
