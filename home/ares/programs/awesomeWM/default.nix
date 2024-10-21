@@ -15,8 +15,10 @@
     picom
     xorg.xev
     xorg.xrandr
+    arandr
   ];
   home.file = {
     ".config/awesome/rc.lua".source = ./lua/rc.lua;
+    ".config/awesome/autorun.sh".source = ./autorun.sh;
   };
 }
