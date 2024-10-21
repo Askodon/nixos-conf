@@ -38,6 +38,6 @@
       [General]
       theme=Qogir-dark
     '';
-    "Kvantum/Qogir-dark".source = "${HOME}/nixos-conf/home/kwantum-theme/Qogir-dark";
+    "Kvantum/Qogir-dark".source = ./Qogir-dark;
   };
 }
