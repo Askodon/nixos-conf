@@ -5,8 +5,6 @@
     qogir-theme
     tela-circle-icon-theme
     bibata-cursors
-    qt5ct
-    libsForQt5.qtstyleplugin-kvantum
   ];
 
   imports = [ ./dconf-settings.nix ];

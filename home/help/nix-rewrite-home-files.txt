@@ -1,1 +1,2 @@
 home.file.".config/waybar/config.jsonc".text = '''';
+test (callPackage /etc/nixos/gui/terminals/rio/default.nix { })

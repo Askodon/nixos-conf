@@ -37,20 +37,20 @@ Following hosts are available:
 | --------------------------- | :----------------------------------|---------------------------------------------------------------------------------|
 | **Window Manager**          | Hyprland                           | Awesome                                                                         |
 | **Terminal Emulator**       | Zellij + Foot                      | Zellij + St                                                                     |
-| **Bar**                     | Waybar                             |                                                                                 |
+| **Bar**                     | Waybar                             | Awesome                                                                         |
 | **Application Launcher**    | Fuzzel + Ags                       | Rofi                                                                            |
-| **Notification Daemon**     | Dunst                              |                                                                                 |
+| **Notification Daemon**     | Dunst                              | Awesome                                                                         |
 | **Display Manager**         | GDM                                | GDM                                                                             |
-| **Color Scheme**            | Qogir + Onedark                    |                                                                                 |
+| **Color Scheme**            | Qogir + Onedark                    | Qogir + Onedark                                                                 |
 | **network management tool** | NetworkManager                     |                                                                                 |
 | **System resource monitor** | Btop                               | Btop                                                                            |
 | **File Manager**            | Yazi + Nemo                        | Yazi + Nemo                                                                     |
 | **Shell**                   | Zsh                                | Zsh                                                                             |
-| **Media Player**            | Mpv                                |                                                                                 |
+| **Media Player**            | Mpv                                | Mpv                                                                             |
 | **Text Editor**             | Vscode + Nvchad                    | Vscode + Nvchad                                                                 |
 | **Fonts**                   | Nerd fonts + Roboto + Fira Code    |                                                                                 |
-| **Image Viewer**            | Eom                                |                                                                                 |
-| **Screenshot Software**     | Hyprshot                           |                                                                                 |
+| **Image Viewer**            | Eom                                | Eom                                                                             |
+| **Screenshot Software**     | Hyprshot                           | Flameshot                                                                       |
 | **Screen Recording**        | OBS                                | OBS                                                                             |   
 
 ## Install

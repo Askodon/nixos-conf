@@ -2,6 +2,7 @@
 {
   imports = [
     ./zellij.nix
+    ./btop.nix
   ];
   home.packages = with pkgs; [
     deadnix # help deadnix search dead line of nix code

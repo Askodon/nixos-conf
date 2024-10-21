@@ -10,5 +10,7 @@
     zellij
     luaformatter
     lua
+    qt5ct
+    libsForQt5.qtstyleplugin-kvantum
   ];
 }

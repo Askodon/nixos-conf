@@ -16,7 +16,6 @@
       QT_QPA_PLATFORM = "wayland;xcb";
       MOZ_ENABLE_WAYLAND = "1";
       XCURSOR_SIZE = "24";
-      QT_STYLE_OVERRIDE = "kvantum";
       XCURSOR_THEME = "Bibata-Original-Classic";
       GTK_THEME = "Qogir-Dark";
       NIXOS_OZONE_WL = "1";
