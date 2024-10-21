@@ -9,10 +9,10 @@
   home.packages = with pkgs; [ 
     st
     rofi
+    flameshot
     cinnamon.nemo-with-extensions
     brightnessctl
     maim
-    picom
     xorg.xev
     xorg.xrandr
     arandr

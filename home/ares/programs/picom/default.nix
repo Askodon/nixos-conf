@@ -1,6 +1,9 @@
+{ pkgs, ... }:
 {
-  services.picom.enable = true;
-    home.file = {
+  home.packages = with pkgs; [ 
+    picom 
+    ];
+  home.file = {
     ".config/picom.conf".source = ./picom.conf;
   };
 }

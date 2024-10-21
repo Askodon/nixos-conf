@@ -6,6 +6,7 @@
     tela-circle-icon-theme
     bibata-cursors
     qt5ct
+    libsForQt5.qtstyleplugin-kvantum
   ];
 
   imports = [ ./dconf-settings.nix ];
@@ -31,11 +32,12 @@
     platformTheme.name = "qtct";
     style.name = "kvantum";
   };
-  xdg.configFile."Kvantum/kvantum.kvconfig".source =
-    (pkgs.formats.ini { }).generate "kvantum.kvconfig"
-      { General.theme = "Qogir-dark"; };
-
-  xdg.configFile."qt5ct/qt5ct.conf".source = (pkgs.formats.ini { }).generate "kvantum.kvconfig" {
-    Appearance.icon_theme = "Tela-circle-dark";
+  
+  xdg.configFile = {
+    "Kvantum/kvantum.kvconfig".text = ''
+      [General]
+      theme=Qogir-dark
+    '';
+    "Kvantum/Qogir-dark".source = "${HOME}/nixos-conf/home/kwantum-theme/Qogir-dark";
   };
 }

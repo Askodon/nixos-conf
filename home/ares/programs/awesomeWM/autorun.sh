@@ -14,6 +14,7 @@ run() {
 #run "ibus-daemon" -drxR &
 #run "caffeine" &
 #run "feh" --randomize --recursive --bg-fill ~/Pictures/Wallpapers/ &
-#run "picom" -b &
+run "picom" -b &
+run "flameshot" &
 #run "cbatticon" -n &
 # run "" &
