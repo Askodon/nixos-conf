@@ -36,6 +36,7 @@
       libreoffice
       kdePackages.okular
       firefox
+      love # for make gui apps
       #
 
       # gnome packages
