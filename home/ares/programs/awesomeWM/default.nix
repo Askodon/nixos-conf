@@ -10,6 +10,9 @@
     xorg.xrandr
     arandr
     skippy-xd
+    xclip
+    clipmenu 
+    dmenu
   ];
   home.file = {
     ".config/awesome/rc.lua".source = ./lua/rc.lua;

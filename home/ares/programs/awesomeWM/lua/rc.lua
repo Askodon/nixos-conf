@@ -90,6 +90,7 @@ myawesomemenu = {
    { "Log out", function() awesome.quit() end },
    { "Poweroff", function() awful.util.spawn("systemctl poweroff") end },
    { "Reboot", function() awful.util.spawn("systemctl reboot") end },
+   { "Clipmenu", function() awful.spawn.with_shell("echo -e 'Option 1\nOption 2\nOption 3' | clipmenu -nb '#282c34' -nf '#ffffff' -sb '#61afef' -sf '#282c34' -fn 'RobotoMono Nerd Font Regular-10'") end},
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
@@ -283,6 +284,8 @@ globalkeys = gears.table.join(
     -- Standard program
     awful.key({ modkey,           }, "t", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
+    awful.key({ modkey,           }, "c", function () awful.spawn.with_shell("echo -e 'Option 1\nOption 2\nOption 3' | clipmenu -nb '#282c34' -nf '#ffffff' -sb '#61afef' -sf '#282c34' -fn 'RobotoMono Nerd Font Regular-10'") end,
+              {description = "open a clipboard history", group = "launcher"}),
     awful.key({ modkey,           }, "e", function () awful.spawn("nemo") end,
               {description = "open a nemo", group = "launcher"}),
     awful.key({ modkey,           }, "Tab", function () awful.spawn.with_shell("$(kill $(pidof skippy-xd) ; skippy-xd)") end,
