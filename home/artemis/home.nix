@@ -32,7 +32,9 @@
       # desktop
       betterbird
       vscode
-      mate.eom # photo
+      mate.eom # Photo
+      mate.atril # Pdf
+      mate.engrampa # Archive manager
       transmission_4-gtk # torrent
       mpv
       keepassxc
@@ -41,7 +43,6 @@
       nextcloud-client
       antares
       libreoffice
-      kdePackages.okular
       #
 
       # gnome packages

@@ -22,11 +22,13 @@
     stateVersion = "24.05";
     enableNixpkgsReleaseCheck = false;
     packages = with pkgs; [
-      # desktop
+      # Desktop
       betterbird
       vscode
-      mate.eom # photo
-      transmission_4-gtk # torrent
+      mate.eom # Photo
+      mate.atril # Pdf
+      mate.engrampa # Archive manager
+      transmission_4-gtk # Torrent
       mpv
       keepassxc
       vivaldi
@@ -34,12 +36,11 @@
       nextcloud-client
       antares
       libreoffice
-      kdePackages.okular
       firefox
-      love # for make gui apps
+      love # For make gui apps
       #
 
-      # gnome packages
+      # Gnome packages
       gnome.dconf-editor
       #
 

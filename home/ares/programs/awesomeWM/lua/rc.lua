@@ -47,9 +47,6 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_configuration_dir() .. "qogir.lua")
 
--- Wallpaper set
-beautiful.wallpaper = "/home/askodon/wallpaper/od_sound.png"
-
 -- This is used later as the default terminal and editor to run.
 terminal = "st"
 editor = os.getenv("EDITOR") or "nano"
@@ -94,7 +91,8 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
+                                    { "open terminal", terminal },
+                                    { "firefox", function() awful.spawn("firefox") end }
                                   }
                         })
 
@@ -253,7 +251,7 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
+    awful.key({ modkey,           }, "p", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
@@ -279,6 +277,8 @@ globalkeys = gears.table.join(
     -- Standard program
     awful.key({ modkey,           }, "t", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
+    awful.key({ modkey,           }, "e", function () awful.spawn("nemo") end,
+              {description = "open a nemo", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -328,7 +328,7 @@ globalkeys = gears.table.join(
               end,
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
+    awful.key({ modkey }, "w", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"})
 )
 
@@ -497,7 +497,7 @@ awful.rules.rules = {
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
+    --   { rule = { class = "Firefox" },
     --   properties = { screen = 1, tag = "2" } },
 }
 -- }}}
@@ -559,6 +559,8 @@ end)
 
 -- Autostart
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
+
+
 
 -- Enable sloppy focus, so that focus follows mouse.
 client.connect_signal("mouse::enter", function(c)
