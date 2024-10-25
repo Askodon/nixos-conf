@@ -281,6 +281,8 @@ globalkeys = gears.table.join(
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey,           }, "e", function () awful.spawn("nemo") end,
               {description = "open a nemo", group = "launcher"}),
+    awful.key({ modkey,           }, "Tab", function () awful.spawn("/home/askodon/test/skipp-xd.sh") end,
+              {description = "open a window overview manager", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -560,7 +562,7 @@ client.connect_signal("request::titlebars", function(c)
 end)
 
 -- Autostart
-awful.spawn.with_shell("~/.config/awesome/autorun.sh")
+awful.spawn.with_shell("~/.config/awesome/autostart.lua")
 
 
 

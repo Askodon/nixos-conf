@@ -9,10 +9,11 @@
     xorg.xev
     xorg.xrandr
     arandr
+    skippy-xd
   ];
   home.file = {
     ".config/awesome/rc.lua".source = ./lua/rc.lua;
     ".config/awesome/qogir.lua".source = ./lua/qogir.lua;
-    ".config/awesome/autorun.sh".source = ./autorun.sh;
+    ".config/awesome/autostart.lua".source = ./lua/autostart.lua;
   };
 }
