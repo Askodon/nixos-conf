@@ -195,7 +195,19 @@ awful.screen.connect_for_each_screen(function(s)
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = tasklist_buttons
+        buttons = tasklist_buttons,
+        widget_template = {
+            {
+                {
+                    id = 'text_role',
+                    widget = wibox.widget.textbox,
+                },
+                margins = 5,
+                widget = wibox.container.margin,
+            },
+            id = 'background_role',
+            widget = wibox.container.background,
+        },
     }
 
     -- Create the wibox
@@ -267,21 +279,13 @@ globalkeys = gears.table.join(
               {description = "focus the previous screen", group = "screen"}),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
-    awful.key({ modkey,           }, "Tab",
-        function ()
-            awful.client.focus.history.previous()
-            if client.focus then
-                client.focus:raise()
-            end
-        end,
-        {description = "go back", group = "client"}),
 
     -- Standard program
     awful.key({ modkey,           }, "t", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey,           }, "e", function () awful.spawn("nemo") end,
               {description = "open a nemo", group = "launcher"}),
-    awful.key({ modkey,           }, "Tab", function () awful.spawn("/home/askodon/test/skipp-xd.sh") end,
+    awful.key({ modkey,           }, "Tab", function () awful.spawn.with_shell("$(kill $(pidof skippy-xd) ; skippy-xd)") end,
               {description = "open a window overview manager", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
@@ -300,7 +304,7 @@ globalkeys = gears.table.join(
               {description = "increase the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
+    awful.key({ modkey, "Control" }, "space", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
@@ -562,7 +566,7 @@ client.connect_signal("request::titlebars", function(c)
 end)
 
 -- Autostart
-awful.spawn.with_shell("~/.config/awesome/autostart.lua")
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")
 
 
 
