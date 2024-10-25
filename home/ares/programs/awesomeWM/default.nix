@@ -2,7 +2,6 @@
 {
   xsession.windowManager.awesome.enable = true;
   home.packages = with pkgs; [ 
-    st
     flameshot
     cinnamon.nemo-with-extensions
     brightnessctl

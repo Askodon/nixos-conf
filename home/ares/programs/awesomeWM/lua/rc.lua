@@ -48,7 +48,7 @@ end
 beautiful.init(gears.filesystem.get_configuration_dir() .. "qogir.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "st"
+terminal = "kitty"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -83,11 +83,13 @@ awful.layout.layouts = {
 -- {{{ Menu
 -- Create a launcher widget and a main menu
 myawesomemenu = {
-   { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-   { "manual", terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
-   { "restart", awesome.restart },
-   { "quit", function() awesome.quit() end },
+   { "Hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
+   { "Manual", terminal .. " -e man awesome" },
+   { "Edit config", editor_cmd .. " " .. awesome.conffile },
+   { "Restart awesome", awesome.restart },
+   { "Log out", function() awesome.quit() end },
+   { "Poweroff", function() awful.util.spawn("systemctl poweroff") end },
+   { "Reboot", function() awful.util.spawn("systemctl reboot") end },
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },

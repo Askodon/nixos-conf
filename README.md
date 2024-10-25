@@ -4,7 +4,8 @@
 
 
 ## Image
-![rice](./home/images/hypr-rice.png)
+![hypr-rice](./home/images/hypr-rice.png)
+![awesome-rice](./home/images/awesome-rice.png)
 
 
 ## Structure
@@ -36,9 +37,9 @@ Following hosts are available:
 |                             | Artemis(Wayland)                   | Ares(Xorg)                                                                      |
 | --------------------------- | :----------------------------------|---------------------------------------------------------------------------------|
 | **Window Manager**          | Hyprland                           | Awesome                                                                         |
-| **Terminal Emulator**       | Zellij + Foot                      | Zellij + St                                                                     |
+| **Terminal Emulator**       | Zellij + Foot                      | Zellij + Kitty                                                                  |
 | **Bar**                     | Waybar                             | Awesome                                                                         |
-| **Application Launcher**    | Fuzzel + Ags                       | Rofi                                                                            |
+| **Application Launcher**    | Fuzzel + Ags                       | Awesome                                                                         |
 | **Notification Daemon**     | Dunst                              | Awesome                                                                         |
 | **Display Manager**         | GDM                                | GDM                                                                             |
 | **Color Scheme**            | Qogir + Onedark                    | Qogir + Onedark                                                                 |
@@ -48,7 +49,7 @@ Following hosts are available:
 | **Shell**                   | Zsh                                | Zsh                                                                             |
 | **Media Player**            | Mpv                                | Mpv                                                                             |
 | **Text Editor**             | Vscode + Nvchad                    | Vscode + Nvchad                                                                 |
-| **Fonts**                   | Nerd fonts + Roboto + Fira Code    |                                                                                 |
+| **Fonts**                   | Roboto + Fira Code                 | Roboto + Fira Code                                                              |
 | **Image Viewer**            | Eom                                | Eom                                                                             |
 | **Screenshot Software**     | Hyprshot                           | Flameshot                                                                       |
 | **Screen Recording**        | OBS                                | OBS                                                                             |   
