@@ -1,6 +1,5 @@
 {
   networking = { 
-  hostName = "nixos"; # hostname
   networkmanager.enable = true; # network manager
   nameservers = [
     "1.1.1.1"

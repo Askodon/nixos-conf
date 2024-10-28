@@ -16,23 +16,26 @@
     ./modules/system-packages.nix
   ];
 
-  #system version
+  # system version
   system.stateVersion = "24.05"; # system version
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ]; # experimental features
 
-  #hardware settings
+  # hostname in network
+  networking.hostName = "ares"; # hostname
+
+  # hardware settings
   hardware.pulseaudio.enable = false;
 
-  #security settings
+  # security settings
   security = {
     rtkit.enable = true;
     sudo.enable = true;
   };
 
-  #zsh as default
+  # zsh as default
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 }
