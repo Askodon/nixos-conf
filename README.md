@@ -39,11 +39,11 @@ Following hosts are available:
 | **Window Manager**          | Hyprland                           | Awesome                                                                         |
 | **Terminal Emulator**       | Zellij + Foot                      | Zellij + Kitty                                                                  |
 | **Bar**                     | Waybar                             | Awesome                                                                         |
-| **Application Launcher**    | Fuzzel + Ags                       | Awesome                                                                         |
+| **Application Launcher**    | Fuzzel + Ags                       | Awesome + Dmenu                                                                 |
 | **Notification Daemon**     | Dunst                              | Awesome                                                                         |
 | **Display Manager**         | GDM                                | GDM                                                                             |
 | **Color Scheme**            | Qogir + Onedark                    | Qogir + Onedark                                                                 |
-| **network management tool** | NetworkManager                     |                                                                                 |
+| **network management tool** | Nm-applet                          | Nm-applet                                                                       |
 | **System resource monitor** | Btop                               | Btop                                                                            |
 | **File Manager**            | Yazi + Nemo                        | Yazi + Nemo                                                                     |
 | **Shell**                   | Zsh                                | Zsh                                                                             |
@@ -55,10 +55,6 @@ Following hosts are available:
 | **Screen Recording**        | OBS                                | OBS                                                                             |   
 
 ## Install
-
-> [!IMPORTANT]
-> add this too configuration.nix:
-> nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 First install:
 

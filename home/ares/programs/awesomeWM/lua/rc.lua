@@ -85,7 +85,6 @@ awful.layout.layouts = {
 myawesomemenu = {
    { "Hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
    { "Manual", terminal .. " -e man awesome" },
-   { "Edit config", editor_cmd .. " " .. awesome.conffile },
    { "Restart awesome", awesome.restart },
    { "Log out", function() awesome.quit() end },
    { "Poweroff", function() awful.util.spawn("systemctl poweroff") end },
@@ -93,9 +92,10 @@ myawesomemenu = {
    { "Clipmenu", function() awful.spawn.with_shell("echo -e 'Option 1\nOption 2\nOption 3' | clipmenu -nb '#282c34' -nf '#ffffff' -sb '#61afef' -sf '#282c34' -fn 'RobotoMono Nerd Font Regular-10'") end},
 }
 
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal },
-                                    { "firefox", function() awful.spawn("firefox") end }
+mymainmenu = awful.menu({ items = { { "Main menu", myawesomemenu },
+                                    { "Application launcher", function() menubar.show() end },
+                                    { "Open terminal", terminal },
+                                    { "Firefox", function() awful.spawn("firefox") end }
                                   }
                         })
 
@@ -288,6 +288,8 @@ globalkeys = gears.table.join(
               {description = "open a clipboard history", group = "launcher"}),
     awful.key({ modkey,           }, "e", function () awful.spawn("nemo") end,
               {description = "open a nemo", group = "launcher"}),
+    awful.key({ modkey,           }, "f", function () awful.spawn("firefox") end,
+              {description = "open a firefox", group = "launcher"}),
     awful.key({ modkey,           }, "Tab", function () awful.spawn.with_shell("$(kill $(pidof skippy-xd) ; skippy-xd)") end,
               {description = "open a window overview manager", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
@@ -344,7 +346,7 @@ globalkeys = gears.table.join(
 )
 
 clientkeys = gears.table.join(
-    awful.key({ modkey,           }, "f",
+    awful.key({ modkey,           }, ":",
         function (c)
             c.fullscreen = not c.fullscreen
             c:raise()

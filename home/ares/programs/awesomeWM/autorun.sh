@@ -9,3 +9,5 @@ run() {
 run "picom" -b &
 run "flameshot" &
 run "clipmenud" &
+run "nm-applet" &
+run "nextcloud" &

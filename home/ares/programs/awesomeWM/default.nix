@@ -13,6 +13,7 @@
     xclip
     clipmenu 
     dmenu
+    networkmanagerapplet
   ];
   home.file = {
     ".config/awesome/rc.lua".source = ./lua/rc.lua;
