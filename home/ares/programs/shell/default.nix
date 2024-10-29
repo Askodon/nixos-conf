@@ -6,8 +6,7 @@
   ];
   home.packages = with pkgs; [
     deadnix # help deadnix search dead line of nix code
-    nix-prefetch-github # ci help: nix-prefetch-github name repo
-    dconf2nix # sdconf files to nix
+    dconf2nix # dconf files to nix
     nixfmt-rfc-style # help format nix code
     yazi # help | using like ranger but better
     go
@@ -70,7 +69,6 @@
       squashGit = "git rebase -i --autosquash HEAD~$(gum write)"; # help
       hs = "gum filter < $HISTFILE --height 20"; # help, history with auto paste
       fmtChoice = "nixfmt $(gum choose --no-limit $(ls))"; # help, nixfmt command with choice
-      wallpaper = "/home/askodon/nixos-conf/home/scripts/swww.sh"; # help
       github = "/home/askodon/nixos-conf/home/scripts/github.sh"; # help | login if logout and open gitui
       try = "nix-shell -p "; # help
       f = "fuck"; # help

@@ -4,9 +4,7 @@
     enable = true;
     xdgOpenUsePortal = true;
     config.common.default = "*"; # https://www.reddit.com/r/NixOS/comments/184hbt6/changes_to_xdgportals/
-    extraPortals = lib.mkForce [
-      pkgs.xdg-desktop-portal-gtk
-    ];
+    extraPortals = lib.mkForce [ pkgs.xdg-desktop-portal-gtk ];
   };
   services = {
     # services list

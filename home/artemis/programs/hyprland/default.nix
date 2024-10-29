@@ -1,14 +1,7 @@
-{
-  config,
-  pkgs,
-  inputs,
-  ...
-}:
+{ pkgs, ... }:
 
 {
-  imports = [
-    ./hypr-env.nix
-  ];
+  imports = [ ./hypr-env.nix ];
 
   home.packages = with pkgs; [
     swww

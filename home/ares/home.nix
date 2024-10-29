@@ -12,7 +12,6 @@
     pkg:
     builtins.elem (pkgs.lib.getName pkg) [
       # allow unfree
-      "vscode"
       "obsidian"
       "vivaldi"
     ];
@@ -25,7 +24,6 @@
     packages = with pkgs; [
       # Desktop
       betterbird
-      vscode
       mate.eom # Photo
       mate.atril # Pdf
       mate.engrampa # Archive manager
@@ -46,14 +44,17 @@
       #
 
       #fonts
-      (pkgs.nerdfonts.override { fonts = [ "FiraCode" "RobotoMono" ]; })
+      (pkgs.nerdfonts.override {
+        fonts = [
+          "FiraCode"
+          "RobotoMono"
+        ];
+      })
       font-awesome
       #
 
       # video and audio
       obs-studio
-      handbrake
-      tenacity
       #
 
     ];

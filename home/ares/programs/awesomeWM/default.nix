@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   xsession.windowManager.awesome.enable = true;
-  home.packages = with pkgs; [ 
+  home.packages = with pkgs; [
     flameshot
     cinnamon.nemo-with-extensions
     brightnessctl
@@ -11,7 +11,7 @@
     arandr
     skippy-xd
     xclip
-    clipmenu 
+    clipmenu
     dmenu
     networkmanagerapplet
   ];

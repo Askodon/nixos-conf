@@ -4,6 +4,6 @@
     enable = true;
     #nativeMessagingHosts.packages = [ pkgs.tridactyl-native ];
     #nativeMessagingHosts.tridactyl = true;
-    
+
   };
 }

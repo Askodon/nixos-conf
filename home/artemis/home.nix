@@ -50,7 +50,12 @@
       #
 
       #fonts
-      (pkgs.nerdfonts.override { fonts = [ "FiraCode" "RobotoMono" ]; })
+      (pkgs.nerdfonts.override {
+        fonts = [
+          "FiraCode"
+          "RobotoMono"
+        ];
+      })
       font-awesome
       #
 

@@ -30,7 +30,7 @@
     platformTheme.name = "qtct";
     style.name = "kvantum";
   };
-  
+
   xdg.configFile = {
     "Kvantum/kvantum.kvconfig".text = ''
       [General]

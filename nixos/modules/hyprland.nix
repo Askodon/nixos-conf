@@ -1,9 +1,7 @@
 { pkgs, lib, ... }:
 {
   xdg.portal = {
-    extraPortals = lib.mkForce [
-      pkgs.xdg-desktop-portal-hyprland
-    ];
+    extraPortals = lib.mkForce [ pkgs.xdg-desktop-portal-hyprland ];
   };
   #hyprwm
   programs.hyprland.enable = true;

@@ -1,5 +1,5 @@
 {
-    xdg.mimeApps.defaultApplications = {
-    "video/mp4" = ["mpv"];
+  xdg.mimeApps.defaultApplications = {
+    "video/mp4" = [ "mpv" ];
   };
 }
