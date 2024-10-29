@@ -16,5 +16,6 @@ else
     gh auth setup-git 
     git config --global user.name "Askodon"
     git config --global user.email "askodon@disroot.org"
+    git config --global core.editor "nvim"
     gitui
 fi

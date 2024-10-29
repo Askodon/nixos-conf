@@ -6,11 +6,12 @@
 {
   imports = [ ];
 
-  boot.initrd.availableKernelModules = [ "ata_piix" "mptspi" "uhci_hcd" "ehci_pci" "ahci" "sd_mod" "sr_mod" ];
+  boot.initrd.availableKernelModules = [ "sd_mod" ];
   boot.initrd.kernelModules = [ ];
+  boot.blacklistedKernelModules = [ "hyperv_fb" ];
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
-  virtualisation.vmware.guest.enable = true;
+
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/2405d72b-02c0-438d-9a0b-5f62c3011497";
       fsType = "ext4";
@@ -29,7 +30,9 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.ens33.useDHCP = lib.mkDefault true;
+  # networking.interfaces.eth0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.tailscale0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  virtualisation.hypervGuest.enable = true;
 }

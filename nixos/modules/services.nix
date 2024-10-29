@@ -12,7 +12,6 @@
     #"flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo"; 
     #};    
     libinput.enable = true;
-    tailscale.enable = true;
     avahi.enable = false;
     openssh.enable = true; # openssh
     flatpak.enable = true;

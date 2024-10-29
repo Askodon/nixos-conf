@@ -41,14 +41,14 @@ Following hosts are available:
 | **Bar**                     | Waybar                             | Awesome                                                                         |
 | **Application Launcher**    | Fuzzel + Ags                       | Awesome + Dmenu                                                                 |
 | **Notification Daemon**     | Dunst                              | Awesome                                                                         |
-| **Display Manager**         | GDM                                | GDM                                                                             |
+| **Display Manager**         | GDM                                | Lightdm-gtk                                                                     |
 | **Color Scheme**            | Qogir + Onedark                    | Qogir + Onedark                                                                 |
 | **network management tool** | Nm-applet                          | Nm-applet                                                                       |
 | **System resource monitor** | Btop                               | Btop                                                                            |
 | **File Manager**            | Yazi + Nemo                        | Yazi + Nemo                                                                     |
 | **Shell**                   | Zsh                                | Zsh                                                                             |
 | **Media Player**            | Mpv                                | Mpv                                                                             |
-| **Text Editor**             | Vscode + Nvchad                    | Vscode + Nvchad                                                                 |
+| **Text Editor**             | Vscode + Nvchad                    | Nvchad                                                                          |
 | **Fonts**                   | Roboto + Fira Code                 | Roboto + Fira Code                                                              |
 | **Image Viewer**            | Eom                                | Eom                                                                             |
 | **Screenshot Software**     | Hyprshot                           | Flameshot                                                                       |
