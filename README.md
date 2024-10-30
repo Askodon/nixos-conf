@@ -19,7 +19,7 @@
 │   ├── programs 🔧   # Programs settings on nix
 │   └── scripts 🚀    # Sh files
 ├── nixos 💻          # Nixos base configuration
-└──── modules ⚙️      #user settings, services and etc
+└──── modules ⚙️      # User settings, services and etc
 ```
 
 ## Host
@@ -77,9 +77,9 @@ upgrade
 - [ ] **Refactor** - remove dead code, use "let in" in code, ...
 - [x] **Editor** - vscode reproducible(or neovim)
 - [x] **Fix white theme** - fix gtk settings on nix(failure read-only fs)
-- [ ] **Better ui using only one theme** - qogir colors, terminal onedark colors, dunst icons, fuzzel refactor.
+- [x] **Better ui using only one theme** - qogir colors, terminal onedark colors, dunst icons, fuzzel refactor.
 - [ ] **Firefox** - fully reproducible ui and extensions.
-- [ ] **Add hosts modules** - write system config for laptop, vms and main pc.  
+- [x] **Add hosts modules** - write system config for laptop, vms and main pc.  
 
 ## References
 - Dots
