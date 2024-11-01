@@ -1,0 +1,2 @@
+to build use = nix-build -E 'with import <nixpkgs> {}; callPackage ./amneziawg-go.nix {}'
+to export = nix-env -i /nix/store/derivation/package
