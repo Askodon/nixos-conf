@@ -45,7 +45,11 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_configuration_dir() .. "qogir.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "theming/qogir.lua")
+
+-- Autostart
+local autostart_path = awful.util.get_configuration_dir() .. "misc/autostart.lua"
+dofile(autostart_path)
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
@@ -82,18 +86,25 @@ awful.layout.layouts = {
 
 -- {{{ Menu
 -- Create a launcher widget and a main menu
-myawesomemenu = {
+my_awesome_menu = {
    { "Hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
    { "Manual", terminal .. " -e man awesome" },
    { "Restart awesome", awesome.restart },
    { "Log out", function() awesome.quit() end },
    { "Poweroff", function() awful.util.spawn("systemctl poweroff") end },
-   { "Reboot", function() awful.util.spawn("systemctl reboot") end },
+   { "Reboot", function() awful.util.spawn("systemctl reboot") end }, }
+
+tools_menu = {
    { "Clipmenu", function() awful.spawn.with_shell("echo -e 'Option 1\nOption 2\nOption 3' | clipmenu -nb '#282c34' -nf '#ffffff' -sb '#61afef' -sf '#282c34' -fn 'RobotoMono Nerd Font Regular-10'") end},
+   { "Color picker", function() awful.spawn("gpick") end, },
+   { "Application launcher", function() menubar.show() end },
+   { "Screenshot", function() awful.spawn.with_shell("flameshot gui") end, }
+
 }
 
-mymainmenu = awful.menu({ items = { { "Main menu", myawesomemenu },
-                                    { "Application launcher", function() menubar.show() end },
+
+mymainmenu = awful.menu({ items = { { "Main menu", my_awesome_menu },
+                                    { "Tools", tools_menu },
                                     { "Open terminal", terminal },
                                     { "Firefox", function() awful.spawn("firefox") end }
                                   }
@@ -290,8 +301,8 @@ globalkeys = gears.table.join(
               {description = "open a nemo", group = "launcher"}),
     awful.key({ modkey,           }, "f", function () awful.spawn("firefox") end,
               {description = "open a firefox", group = "launcher"}),
-    awful.key({ modkey,           }, "Tab", function () awful.spawn.with_shell("$(kill $(pidof skippy-xd) ; skippy-xd)") end,
-              {description = "open a window overview manager", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "c", function () awful.spawn("gpick") end,
+              {description = "open a color picker", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -569,10 +580,6 @@ client.connect_signal("request::titlebars", function(c)
         layout = wibox.layout.align.horizontal
     }
 end)
-
--- Autostart
-awful.spawn.with_shell("~/.config/awesome/autorun.sh")
-
 
 
 -- Enable sloppy focus, so that focus follows mouse.

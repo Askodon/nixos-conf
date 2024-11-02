@@ -11,3 +11,4 @@ run "flameshot" &
 run "clipmenud" &
 run "nm-applet" &
 run "nextcloud" &
+run "/home/askodon/nixos-conf/home/scripts/autorun.sh" &

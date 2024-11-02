@@ -2,14 +2,14 @@
 {
   xsession.windowManager.awesome.enable = true;
   home.packages = with pkgs; [
-    flameshot
-    cinnamon.nemo-with-extensions
+    flameshot # Screenshot tool
+    cinnamon.nemo-with-extensions 
     brightnessctl
-    maim
     xorg.xev
     xorg.xrandr
     arandr
-    skippy-xd
+    gpick
+    libnotify
     xclip
     clipmenu
     dmenu
@@ -17,7 +17,7 @@
   ];
   home.file = {
     ".config/awesome/rc.lua".source = ./lua/rc.lua;
-    ".config/awesome/qogir.lua".source = ./lua/qogir.lua;
-    ".config/awesome/autorun.sh".source = ./autorun.sh;
+    ".config/awesome/theming/qogir.lua".source = ./lua/theming/qogir.lua;
+    ".config/awesome/misc/autorun.lua".source = ./misc/autostart.lua;
   };
 }
