@@ -13,11 +13,12 @@
     xclip
     clipmenu
     dmenu
+    pasystray
     networkmanagerapplet
   ];
   home.file = {
     ".config/awesome/rc.lua".source = ./lua/rc.lua;
     ".config/awesome/theming/qogir.lua".source = ./lua/theming/qogir.lua;
-    ".config/awesome/misc/autorun.lua".source = ./misc/autostart.lua;
+    ".config/awesome/misc/autostart.lua".source = ./lua/misc/autostart.lua;
   };
 }
