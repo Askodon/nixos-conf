@@ -13,6 +13,7 @@
     xclip
     clipmenu
     dmenu
+    nitrogen # Change wallpaper
     pasystray
     networkmanagerapplet
   ];
@@ -20,5 +21,6 @@
     ".config/awesome/rc.lua".source = ./lua/rc.lua;
     ".config/awesome/theming/qogir.lua".source = ./lua/theming/qogir.lua;
     ".config/awesome/misc/autostart.lua".source = ./lua/misc/autostart.lua;
+    ".config/awesome/misc/test.lua".source = ./lua/misc/test.lua;
   };
 }

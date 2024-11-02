@@ -14,6 +14,7 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local test = require("misc.test")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -65,19 +66,10 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    awful.layout.suit.tile.left,
-    awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
-    awful.layout.suit.fair.horizontal,
-    awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
+    awful.layout.suit.floating,
     awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier,
-    awful.layout.suit.corner.nw,
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
@@ -98,7 +90,8 @@ tools_menu = {
    { "Clipmenu", function() awful.spawn.with_shell("echo -e 'Option 1\nOption 2\nOption 3' | clipmenu -nb '#282c34' -nf '#ffffff' -sb '#61afef' -sf '#282c34' -fn 'RobotoMono Nerd Font Regular-10'") end},
    { "Color picker", function() awful.spawn("gpick") end, },
    { "Application launcher", function() menubar.show() end },
-   { "Screenshot", function() awful.spawn.with_shell("flameshot gui") end, }
+   { "Screenshot", function() awful.spawn.with_shell("flameshot gui") end, },
+   { "Wallpaper Changer", function() awful.spawn.with_shell("nitrogen /home/askodon/wallpaper") end, }
 
 }
 
@@ -580,7 +573,6 @@ client.connect_signal("request::titlebars", function(c)
         layout = wibox.layout.align.horizontal
     }
 end)
-
 
 -- Enable sloppy focus, so that focus follows mouse.
 client.connect_signal("mouse::enter", function(c)

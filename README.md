@@ -15,7 +15,7 @@
 │   ├── help 📚       # Help info
 │   ├── images 🎨     # All screenshots, icons and etc
 │   ├── artemis 🎮    # Main PC
-│   ├── ares 🚧       # Test playground VM
+│   ├── ares 🚧       # Work PC
 │   ├── programs 🔧   # Programs settings on nix
 │   └── scripts 🚀    # Sh files
 ├── nixos 💻          # Nixos base configuration
@@ -26,10 +26,10 @@
 
 Following hosts are available:
 
-| Host         | Type    |
-| ------------ | ------- |
-| `artemis`    | main pc |
-| `ares`       | test vm |
+| Host         | Type     | 
+| ------------ | -------  |
+| `artemis`    | main pc  |
+| `ares`       | for work |
 
 
 ## Tools
@@ -80,6 +80,7 @@ upgrade
 - [x] **Better ui using only one theme** - qogir colors, terminal onedark colors, dunst icons, fuzzel refactor.
 - [ ] **Firefox** - fully reproducible ui and extensions.
 - [x] **Add hosts modules** - write system config for laptop, vms and main pc.  
+- [ ] **Make Appolo host** - server on nix.
 
 ## References
 - Dots
