@@ -14,7 +14,7 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
-local test = require("misc.test")
+local focus_window = require("misc.focus_window")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -91,6 +91,7 @@ tools_menu = {
    { "Color picker", function() awful.spawn("gpick") end, },
    { "Application launcher", function() menubar.show() end },
    { "Screenshot", function() awful.spawn.with_shell("flameshot gui") end, },
+   { "Window switcher", function() focus_window.switch_to_window() end },
    { "Wallpaper Changer", function() awful.spawn.with_shell("nitrogen /home/askodon/wallpaper") end, }
 
 }
@@ -276,6 +277,8 @@ globalkeys = gears.table.join(
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),
+    awful.key({ modkey, }, "Tab", function() focus_window.switch_to_window() end,
+              {description = "Window switcher", group = "client"}), 
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "client"}),
     awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end,
