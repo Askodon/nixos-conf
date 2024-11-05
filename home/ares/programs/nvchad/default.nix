@@ -1,9 +1,9 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, config, ... }:
 {
   imports = [ inputs.nvchad4nix.homeManagerModule ];
-  programs.nvchad.enable = true;
-  home.packages = with pkgs; [
-    cargo
-    unzip
-  ];
-}
+  programs.nvchad = {  
+    enable = true;
+    hm-activation = true;
+    backup = true;
+    };
+  }

@@ -3,7 +3,7 @@
     sessionVariables = {
       EDITOR = "nvim";
       BROWSER = "firefox";
-      TERMINAL = "st";
+      TERMINAL = "kitty";
       QT_QPA_PLATFORMTHEME = "qt5ct";
       QT_STYLE_OVERRIDE = "kvantum";
       XDG_CURRENT_DESKTOP = "awesome";

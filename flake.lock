@@ -260,23 +260,41 @@
         "type": "github"
       }
     },
+    "nvchad-starter": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1728129783,
+        "narHash": "sha256-SVpep7lVX0isYsUtscvgA7Ga3YXt/2jwQQCYkYadjiM=",
+        "owner": "NvChad",
+        "repo": "starter",
+        "rev": "d0c602f5f155d4d1261609219e9b8a61e936d681",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NvChad",
+        "ref": "main",
+        "repo": "starter",
+        "type": "github"
+      }
+    },
     "nvchad4nix": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
-        ]
+        ],
+        "nvchad-starter": "nvchad-starter"
       },
       "locked": {
-        "lastModified": 1725104814,
-        "narHash": "sha256-yRenTxLIr9b8s2vJvfhE9fn/Hh1QIqonrClK5wc6ArI=",
-        "owner": "MOIS3Y",
-        "repo": "nvchad4nix",
-        "rev": "bf1b3696cb50bfed95c23fc95fd64723139d8871",
+        "lastModified": 1730782222,
+        "narHash": "sha256-81X0sVnao2/LswiQt+W3unOWkDWZIJjzcBNzA6quQew=",
+        "owner": "nix-community",
+        "repo": "nix4nvchad",
+        "rev": "7b02bf0df00a3a9a3d660e7e7bb9dd381d959f49",
         "type": "github"
       },
       "original": {
-        "owner": "MOIS3Y",
-        "repo": "nvchad4nix",
+        "owner": "nix-community",
+        "repo": "nix4nvchad",
         "type": "github"
       }
     },

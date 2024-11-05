@@ -14,6 +14,7 @@
     ./modules/flatpak.nix
     ./modules/awesome.nix
     ./modules/system-packages.nix
+    ./modules/unstable.nix
   ];
 
   # system version
