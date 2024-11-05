@@ -3,10 +3,10 @@
   imports = [
     ./programs/awesomeWM/default.nix
     ./programs/shell
-    ./programs/nvchad/default.nix
     ./programs/gtk-qt-theme/default.nix
     ./programs/picom/default.nix
     ./programs/kitty/default.nix
+    ./programs/nvchad/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:

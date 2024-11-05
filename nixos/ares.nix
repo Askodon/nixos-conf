@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{  config, inputs, pkgs, pkgsUnstable, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -14,30 +14,48 @@
     ./modules/flatpak.nix
     ./modules/awesome.nix
     ./modules/system-packages.nix
-    ./modules/unstable.nix
   ];
+  _module.args.pkgsUnstable = import inputs.nixpkgs-unstable {
+    inherit (pkgs.stdenv.hostPlatform) system;
+    inherit (config.nixpkgs) config;
+  };
 
-  # system version
-  system.stateVersion = "24.05"; # system version
+  # System version
+  system.stateVersion = "24.05"; # System version
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
-  ]; # experimental features
+  ]; # Experimental features
 
-  # hostname in network
+  # Unstable pkgs
+  environment.systemPackages = [
+    #pkgsUnstable.neovim
+    pkgs.nvchad
+  ];
+  
+  # Nvchad overlay
+  nixpkgs = { 
+    overlays = [
+      (final: prev: {
+        nvchad = inputs.nvchad4nix.packages."${pkgs.system}".nvchad;
+      })
+    ];
+  };
+
+  # Hostname in network
   networking.hostName = "ares"; # hostname
 
-  # hardware settings
+  # Hardware settings
   hardware.pulseaudio.enable = false;
 
-  # security settings
+  # Security settings
   security = {
     rtkit.enable = true;
     sudo.enable = true;
     polkit.enable = true;
   };
 
-  # zsh as default
+  # Zsh as default
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 }
