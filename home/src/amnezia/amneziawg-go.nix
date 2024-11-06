@@ -1,4 +1,10 @@
-{ lib, buildGoModule, fetchFromGitHub, stdenv, nix-update-script }:
+{
+  lib,
+  buildGoModule,
+  fetchFromGitHub,
+  stdenv,
+  nix-update-script,
+}:
 
 buildGoModule rec {
   pname = "amneziawg-go";
@@ -37,4 +43,3 @@ buildGoModule rec {
     mainProgram = "amneziawg-go";
   };
 }
-

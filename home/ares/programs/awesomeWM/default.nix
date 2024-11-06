@@ -3,7 +3,7 @@
   xsession.windowManager.awesome.enable = true;
   home.packages = with pkgs; [
     flameshot # Screenshot tool
-    cinnamon.nemo-with-extensions 
+    cinnamon.nemo-with-extensions
     brightnessctl
     xorg.xev
     xorg.xrandr

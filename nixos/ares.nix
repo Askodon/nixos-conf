@@ -1,4 +1,10 @@
-{  config, inputs, pkgs, pkgsUnstable, ... }:
+{
+  config,
+  inputs,
+  pkgs,
+  pkgsUnstable,
+  ...
+}:
 {
   imports = [
     ./hardware-configuration.nix
@@ -20,8 +26,7 @@
     inherit (config.nixpkgs) config;
   };
 
-
-  system.stateVersion = "24.05"; 
+  system.stateVersion = "24.05";
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -32,18 +37,14 @@
     #pkgsUnstable.neovim
     pkgs.nvchad
   ];
-  
+
   # Nvchad overlay
-  nixpkgs = { 
-    overlays = [
-      (final: prev: {
-        nvchad = inputs.nvchad4nix.packages."${pkgs.system}".nvchad;
-      })
-    ];
+  nixpkgs = {
+    overlays = [ (final: prev: { nvchad = inputs.nvchad4nix.packages."${pkgs.system}".nvchad; }) ];
   };
 
   # Hostname in network
-  networking.hostName = "ares"; 
+  networking.hostName = "ares";
 
   # Hardware settings
   hardware.pulseaudio.enable = false;

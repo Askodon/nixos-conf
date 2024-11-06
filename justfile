@@ -16,13 +16,21 @@ switch-apollo:
   nh os switch -H apollo .
   exec zsh
 
+switch-athena:
+  sudo cp /etc/nixos/hardware-configuration.nix /home/askodon/nixos-conf/nixos/hardware-configuration.nix
+  nh os switch -H athena .
+  exec zsh
+
 update-flake:
   nix flake update
+
+remove-trash:
+  nh clean all
 
 new-install:
  cd /etc/nixos
  sudo cp /etc/nixos/hardware-configuration.nix /home/askodon/nixos-conf/nixos/hardware-configuration.nix
- sudo sudo rm -r /boot/*
- NIX_CONFIG="experimental-features=nix-command flakes"; sudo nixos-rebuild switch --flake /home/askodon/nixos-conf .#apollo
+ su -c 'sudo rm -r /boot/*'
+ NIX_CONFIG="experimental-features=nix-command flakes"; sudo nixos-rebuild switch --flake.#apollo
  mkdir /home/askodon/wallpaper
 

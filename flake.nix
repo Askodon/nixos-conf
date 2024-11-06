@@ -61,8 +61,9 @@
           }
         ];
       };
+
       nixosConfigurations.ares = lib.nixosSystem {
-        inherit specialArgs;          
+        inherit specialArgs;
         modules = [
           ./nixos/ares.nix
           home-manager.nixosModules.home-manager
@@ -77,8 +78,26 @@
           }
         ];
       };
+
+      nixosConfigurations.athena = lib.nixosSystem {
+        inherit specialArgs;
+        modules = [
+          ./nixos/athena.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              inherit extraSpecialArgs;
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.askodon = import ./home/athena/home.nix;
+              backupFileExtension = "hm-backup";
+            };
+          }
+        ];
+      };
+
       nixosConfigurations.apollo = lib.nixosSystem {
-        inherit specialArgs;          
+        inherit specialArgs;
         modules = [ ./nixos/apollo.nix ];
       };
     };

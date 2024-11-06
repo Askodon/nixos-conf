@@ -8,8 +8,7 @@
     ./modules/users.nix
   ];
 
-  
-  system.stateVersion = "24.05"; 
+  system.stateVersion = "24.05";
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -23,7 +22,7 @@
     rtkit.enable = true;
     sudo.enable = true;
   };
-  
+
   # System packages
   environment.systemPackages = with pkgs; [
     # unstable.nvim
@@ -36,7 +35,7 @@
     just
     nh
   ];
-  
+
   # Services
   services.openssh.enable = true;
 
