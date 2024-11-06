@@ -14,5 +14,7 @@
     luarocks
     qt5ct
     libsForQt5.qtstyleplugin-kvantum
+    just
+    nh
   ];
 }

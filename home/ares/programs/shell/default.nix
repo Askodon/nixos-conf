@@ -58,14 +58,8 @@
       grep = "rg";
       find = "fd";
       rm = "rm -i";
-      udal = "ssh askodon@194.113.34.20"; # help
-      udal2 = "ssh askodon@5.35.84.91";
       boot = "sudo nixos-rebuild boot"; # help
       ed = "/home/askodon/nixos-conf/home/scripts/ed_command.lua"; # help choice between editor and files in the current folder
-      upgrade = "/home/askodon/nixos-conf/home/scripts/upgrade.sh"; # help
-      fullUpgrade = "sudo nix-channel --update; /home/askodon/nixos-conf/home/scripts/upgrade.sh"; # help
-      trash = "sudo nix-collect-garbage -d"; # help
-      help = "cat /home/askodon/nixos-conf/home/programs/shell/default.nix | grep help | gum pager"; # help
       squashGit = "git rebase -i --autosquash HEAD~$(gum write)"; # help
       hs = "gum filter < $HISTFILE --height 20"; # help, history with auto paste
       fmtChoice = "nixfmt $(gum choose --no-limit $(ls))"; # help, nixfmt command with choice
