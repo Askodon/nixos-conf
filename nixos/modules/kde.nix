@@ -1,6 +1,7 @@
+{ pkgs, ... }:
 {
 services.xserver.enable = true;
-service.xserver.displayManager = {
+services.xserver.displayManager = {
         lightdm.greeters.gtk.enable = true;
         lightdm.greeters.gtk = {
           theme = {
@@ -16,6 +17,8 @@ service.xserver.displayManager = {
             name = "Bibata-Original-Classic";
             size = 24;
           };
+        };
+};
 services.desktopManager.plasma6.enable = true;
 services.displayManager.defaultSession = "plasma";
 }

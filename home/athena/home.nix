@@ -6,6 +6,7 @@
     ./programs/firefox/default.nix
     ./programs/xdg/default.nix
     ./programs/gtk-qt-theme/default.nix
+    ./programs/kde-settings.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
