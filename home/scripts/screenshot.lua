@@ -9,13 +9,13 @@ end
 
 local function select_option(prompt, options)
     local command = "printf \"" .. options .. "\" | fuzzel -w 40 -y 40 -f \"Roboto\"-12 --line-height=20 --dmenu -l 7 -p \"" .. prompt .. "\""
-    return run_command(command):gsub("%s+", "") -- Удаляем пробелы
+    return run_command(command):gsub("%s+", "") -- Clean stdout
 end
 
 local type_options = "1 - Only Clipboard\n2 - Open File\n3 - Normal"
 local type_selection = select_option("Clipboard and other: ", type_options)
 
-print("Выбранный тип: " .. type_selection) -- Отладочное сообщение
+print("Выбранный тип: " .. type_selection) -- Debug info about type
 
 if type_selection == "" then
     os.exit(1)
@@ -24,7 +24,6 @@ end
 local screenshot_options = "1 - Fullscreen\n2 - Window\n3 - Region"
 local screenshot_selection = select_option("Screenshot type: ", screenshot_options)
 
-print("Выбранный тип скриншота: " .. screenshot_selection) -- Отладочное сообщение
 
 local key = nil
 if type_selection:find("OnlyClipboard") then
@@ -35,9 +34,8 @@ elseif type_selection:find("Normal") then
     key = "-o /home/askodon/Скриншоты"
 end
 
--- Проверяем, была ли установлена переменная key
 if key == nil then
-    print("Ошибка: неверный выбор типа.")
+    print("Error: type is nil.")
     os.exit(1)
 end
 
@@ -48,7 +46,7 @@ elseif screenshot_selection:find("Window") then
 elseif screenshot_selection:find("Region") then
     os.execute("hyprshot -m region " .. key)
 else
-    print("Ошибка: неверный выбор типа скриншота.")
+    print("Error: type is nil.")
     os.exit(1)
 end
 

@@ -14,7 +14,7 @@
     loader.efi = {
       efiSysMountPoint = "/boot";
     };
-    #kernelPackages = pkgs.linuxPackages_xanmod_stable; # test
+    # For games
     kernel.sysctl."vm.max_map_count" = 2147483642;
   };
 

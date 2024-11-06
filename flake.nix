@@ -63,7 +63,7 @@
       };
       nixosConfigurations.ares = lib.nixosSystem {
         inherit specialArgs;          
-	modules = [
+        modules = [
           ./nixos/ares.nix
           home-manager.nixosModules.home-manager
           {
@@ -76,6 +76,10 @@
             };
           }
         ];
+      };
+      nixosConfigurations.apollo = lib.nixosSystem {
+        inherit specialArgs;          
+        modules = [ ./nixos/apollo.nix ];
       };
     };
 }

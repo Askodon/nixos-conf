@@ -60,7 +60,8 @@ First install:
 
 ```
 nix-shell -p git --run 'git clone https://github.com/Askodon/nixos-conf.git /home/askodon/nixos-conf'
-sudo /home/askodon/nixos-conf/home/scripts/new_install.sh
+cd nixos-conf 
+nix-shell -p just -- run 'just new-install'
 ```
 
 Update

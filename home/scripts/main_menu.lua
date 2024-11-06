@@ -1,17 +1,16 @@
 #!/usr/bin/env lua
 
--- Функция для выполнения команды и получения вывода
 function get_selection()
     local handle = io.popen("printf '1 - Power Menu\n2 - Screenshot Menu\n3 - App selecter\n4 - Clipboard History\n5 - Color Picker' | fuzzel -w 40 -y 40 -f 'Roboto'-12 --line-height=20 --dmenu -l 7 -p 'Type: '")
-    local selection = handle:read("*a")  -- Чтение всего вывода
+    local selection = handle:read("*a")
     handle:close()
-    return selection:match("^(.-)\n")  -- Убираем лишние символы
+    return selection:match("^(.-)\n") -- Clean stdout
 
 end
 
 local selection = get_selection()
 
--- если нажал esc то програма выключается с кодом завершения
+-- Stop if esc
 if selection == nil then
     os.exit(0) 
 end

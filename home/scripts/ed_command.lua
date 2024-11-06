@@ -7,19 +7,16 @@ local function run_command(command)
     return result
 end
 
--- Выбор редактора
 local editor_options = "nvim\ncode\nnano"
 local editor_command = "echo -e \"" .. editor_options .. "\" | gum choose --limit 1"
-local editor = run_command(editor_command):gsub("%s+", "") -- Удаляем пробелы
+local editor = run_command(editor_command):gsub("%s+", "") -- Remove spaces
 
 if editor == "" then
-    print("Ошибка: редактор не выбран.")
+    print("Error: editor is not confirm.")
     os.exit(1)
 end
 
--- Получение ввода от пользователя
 local input = run_command("gum filter")
 
--- Открытие редактора с введенным текстом
 os.execute(editor .. " " .. input)
 

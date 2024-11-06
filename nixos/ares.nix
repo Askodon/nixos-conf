@@ -20,8 +20,8 @@
     inherit (config.nixpkgs) config;
   };
 
-  # System version
-  system.stateVersion = "24.05"; # System version
+
+  system.stateVersion = "24.05"; 
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -43,7 +43,7 @@
   };
 
   # Hostname in network
-  networking.hostName = "ares"; # hostname
+  networking.hostName = "ares"; 
 
   # Hardware settings
   hardware.pulseaudio.enable = false;
