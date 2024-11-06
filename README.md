@@ -30,6 +30,8 @@ Following hosts are available:
 | ------------ | -------  |
 | `artemis`    | main pc  |
 | `ares`       | for work |
+| `apollo`     | for test |
+
 
 
 ## Tools
@@ -61,7 +63,7 @@ First install:
 ```
 nix-shell -p git --run 'git clone https://github.com/Askodon/nixos-conf.git /home/askodon/nixos-conf'
 cd nixos-conf 
-nix-shell -p just -- run 'just new-install'
+nix-shell -p just --run 'just new-install'
 ```
 
 Update
@@ -81,7 +83,7 @@ upgrade
 - [x] **Better ui using only one theme** - qogir colors, terminal onedark colors, dunst icons, fuzzel refactor.
 - [ ] **Firefox** - fully reproducible ui and extensions.
 - [x] **Add hosts modules** - write system config for laptop, vms and main pc.  
-- [ ] **Make Appolo host** - server on nix.
+- [x] **Make Appolo host** - server on nix.
 
 ## References
 - Dots

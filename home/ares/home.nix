@@ -23,7 +23,7 @@
     enableNixpkgsReleaseCheck = false;
     packages = with pkgs; [
       # Desktop
-      betterbird
+      #betterbird
       mate.eom # Photo
       mate.atril # Pdf
       mate.engrampa # Archive manager
