@@ -6,6 +6,9 @@ switch-ares:
   nh os switch -H ares .
   exec zsh
 
+hm-info:
+  journalctl -e --unit home-manager-askodon.service
+
 switch-artemis:
   sudo cp /etc/nixos/hardware-configuration.nix /home/askodon/nixos-conf/nixos/hardware-configuration.nix
   nh os switch -H artemis .

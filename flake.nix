@@ -55,7 +55,7 @@
               inherit extraSpecialArgs;
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.askodon = import ./home/artemis/home.nix;
+              users.askodon = import ./home/artemis.nix;
               backupFileExtension = "hm-backup";
             };
           }
@@ -72,7 +72,7 @@
               inherit extraSpecialArgs;
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.askodon = import ./home/ares/home.nix;
+              users.askodon = import ./home/ares.nix;
               backupFileExtension = "hm-backup";
             };
           }
@@ -89,7 +89,7 @@
               inherit extraSpecialArgs;
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.askodon = import ./home/athena/home.nix;
+              users.askodon = import ./home/athena.nix;
               backupFileExtension = "hm-backup";
             };
           }
