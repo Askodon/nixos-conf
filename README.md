@@ -14,8 +14,6 @@
 ├── home 🏠           # Common home-manager configuration for all hosts.
 │   ├── help 📚       # Help info
 │   ├── images 🎨     # All screenshots, icons and etc
-│   ├── artemis 🎮    # Main PC
-│   ├── ares 🚧       # Work PC
 │   ├── programs 🔧   # Programs settings on nix
 │   └── scripts 🚀    # Sh files
 ├── nixos 💻          # Nixos base configuration
@@ -31,6 +29,7 @@ Following hosts are available:
 | `artemis`    | main pc  |
 | `ares`       | for work |
 | `apollo`     | for test |
+| `athena`     | for kde  |
 
 
 

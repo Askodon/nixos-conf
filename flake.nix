@@ -18,12 +18,7 @@
       submodules = true;
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
-  };
+ };
 
   outputs =
     {
@@ -95,7 +90,7 @@
               inherit extraSpecialArgs;
               useGlobalPkgs = true;
               useUserPackages = true;
-              sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+              #sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
               users.askodon = import ./home/athena.nix;
               backupFileExtension = "hm-backup";
             };
