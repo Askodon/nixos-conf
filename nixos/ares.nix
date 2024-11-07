@@ -35,13 +35,7 @@
   # Unstable pkgs
   environment.systemPackages = [
     #pkgsUnstable.neovim
-    pkgs.nvchad
   ];
-
-  # Nvchad overlay
-  nixpkgs = {
-    overlays = [ (final: prev: { nvchad = inputs.nvchad4nix.packages."${pkgs.system}".nvchad; }) ];
-  };
 
   # Hostname in network
   networking.hostName = "ares";
