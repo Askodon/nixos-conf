@@ -3,7 +3,7 @@
   imports = [
     ./hardware-configuration.nix
     ./modules/boot-settings.nix
-    ./modules/game-settings.nix
+    #./modules/game-settings.nix
     ./modules/locale.nix
     ./modules/network-settings.nix
     ./modules/services.nix

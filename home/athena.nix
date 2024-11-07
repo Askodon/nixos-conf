@@ -4,8 +4,9 @@
     ./programs/shell/default.nix
     ./programs/nvchad/default.nix
     ./programs/firefox/default.nix
-    ./programs/gtk-qt-theme/default.nix
-    #./programs/kde-settings/default.nix
+    ./programs/kitty/default.nix
+    #./programs/gtk-qt-theme/default.nix
+    ./programs/kde-settings/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:

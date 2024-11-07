@@ -7,6 +7,7 @@
     ./programs/picom/default.nix
     ./programs/kitty/default.nix
     ./programs/nvchad/default.nix
+    ./programs/firefox/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
@@ -35,7 +36,6 @@
       nextcloud-client
       antares
       libreoffice
-      firefox
       love # For make gui apps
       #
 
