@@ -26,13 +26,9 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
-    # unstable.nvim
     git
     zellij
     gum
-    luaformatter
-    lua
-    luarocks
     just
     nh
   ];

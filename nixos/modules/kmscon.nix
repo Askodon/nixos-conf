@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-kmscon = {
+services.kmscon = {
 # better tty
   enable = true;
   fonts = [
