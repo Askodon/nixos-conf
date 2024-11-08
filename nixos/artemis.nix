@@ -1,5 +1,5 @@
 #conf
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix

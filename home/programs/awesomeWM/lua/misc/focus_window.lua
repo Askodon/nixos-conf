@@ -21,7 +21,7 @@ function M.switch_to_window()
     local window_string = table.concat(window_list, "\n")
 
     -- Get window
-    awful.spawn.easy_async_with_shell("echo '" .. window_string .. "' | dmenu -nb '#282c34' -nf '#ffffff' -sb '#61afef' -sf '#282c34' -fn 'RobotoMono Nerd Font Regular-10' -i -p 'Choose window:'", function(selected)
+    awful.spawn.easy_async_with_shell("echo '" .. window_string .. "'dmenu -nb '#282c34' -nf '#ffffff' -sb '#61afef' -sf '#282c34' -fn 'RobotoMono Nerd Font Regular-10' -i -p 'Choose window:'", function(selected)
         if selected and selected ~= "" then
             local selected_name = selected:match("^(.*) %(") -- Window name
             for _, c in ipairs(client.get()) do

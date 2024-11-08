@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   time.timeZone = "Europe/Samara";
   i18n.defaultLocale = "ru_RU.UTF-8";

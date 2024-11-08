@@ -51,8 +51,6 @@
 
       # video and audio
       obs-studio
-      handbrake
-      tenacity
       #
 
     ];
