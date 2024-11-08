@@ -3,7 +3,7 @@
     target = ".config/zellij/config.kdl";
     text = ''
           bind "Alt g" { SwitchToMode "locked"; }
-
+          default_shell "nu"
           keybinds {
             normal clear-defaults=true {
               bind "Ctrl b" { SwitchToMode "Tmux"; }

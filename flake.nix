@@ -26,7 +26,6 @@
       nixpkgs,
       home-manager,
       hyprland,
-      plasma-manager,
       ...
     }@inputs:
     let

@@ -15,6 +15,7 @@
     ./modules/flatpak.nix
     ./modules/hyprland.nix
     ./modules/system-packages.nix
+    ./modules/kmscon.nix
   ];
 
   # system version
@@ -37,7 +38,6 @@
     pam.services.gdm.enableGnomeKeyring = true;
   };
 
-  # zsh as default
-  users.defaultUserShell = pkgs.zsh;
-  programs.zsh.enable = true;
+  # nu as default
+  users.defaultUserShell = pkgs.nushell;
 }

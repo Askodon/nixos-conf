@@ -14,6 +14,7 @@
     ./modules/flatpak.nix
     ./modules/system-packages.nix
     ./modules/kde.nix
+    ./modules/kmscon.nix
   ];
 
   # system version
@@ -35,7 +36,6 @@
     sudo.enable = true;
   };
 
-  # zsh as default
-  users.defaultUserShell = pkgs.zsh;
-  programs.zsh.enable = true;
+  # nu as default
+  users.defaultUserShell = pkgs.nushell;
 }

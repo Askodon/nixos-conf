@@ -47,7 +47,7 @@ Following hosts are available:
 | **network management tool** | Nm-applet                          | Nm-applet                                                                       |
 | **System resource monitor** | Btop                               | Btop                                                                            |
 | **File Manager**            | Yazi + Nemo                        | Yazi + Nemo                                                                     |
-| **Shell**                   | Zsh                                | Zsh                                                                             |
+| **Shell**                   | Nushell                            | Nushell                                                                         |
 | **Media Player**            | Mpv                                | Mpv                                                                             |
 | **Text Editor**             | Vscode + Nvchad                    | Nvchad                                                                          |
 | **Fonts**                   | Roboto + Fira Code                 | Roboto + Fira Code                                                              |

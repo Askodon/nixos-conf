@@ -6,6 +6,7 @@
     ./modules/locale.nix
     ./modules/network-settings.nix
     ./modules/users.nix
+    ./modules/kmscon.nix
   ];
 
   system.stateVersion = "24.05";
@@ -39,7 +40,6 @@
   # Services
   services.openssh.enable = true;
 
-  # zsh as default
-  users.defaultUserShell = pkgs.zsh;
-  programs.zsh.enable = true;
+  # nu as default
+  users.defaultUserShell = pkgs.nushell;
 }

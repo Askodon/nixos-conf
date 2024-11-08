@@ -87,7 +87,7 @@ my_awesome_menu = {
    { "Reboot", function() awful.util.spawn("systemctl reboot") end }, }
 
 tools_menu = {
-   { "Clipmenu", function() awful.spawn.with_shell("echo -e 'Option 1\nOption 2\nOption 3' | clipmenu -nb '#282c34' -nf '#ffffff' -sb '#61afef' -sf '#282c34' -fn 'RobotoMono Nerd Font Regular-10'") end},
+   { "Clipmenu", function() awful.spawn.with_shell("clipmenu -nb '#282c34' -nf '#ffffff' -sb '#61afef' -sf '#282c34' -fn 'RobotoMono Nerd Font Regular-10'") end},
    { "Color picker", function() awful.spawn("gpick") end, },
    { "Application launcher", function() menubar.show() end },
    { "Screenshot", function() awful.spawn.with_shell("flameshot gui") end, },
@@ -291,7 +291,7 @@ globalkeys = gears.table.join(
     -- Standard program
     awful.key({ modkey,           }, "t", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
-    awful.key({ modkey,           }, "c", function () awful.spawn.with_shell("echo -e 'Option 1\nOption 2\nOption 3' | clipmenu -nb '#282c34' -nf '#ffffff' -sb '#61afef' -sf '#282c34' -fn 'RobotoMono Nerd Font Regular-10'") end,
+    awful.key({ modkey,           }, "c", function () awful.spawn.with_shell("clipmenu -nb '#282c34' -nf '#ffffff' -sb '#61afef' -sf '#282c34' -fn 'RobotoMono Nerd Font Regular-10'") end,
               {description = "open a clipboard history", group = "launcher"}),
     awful.key({ modkey,           }, "e", function () awful.spawn("nemo") end,
               {description = "open a nemo", group = "launcher"}),

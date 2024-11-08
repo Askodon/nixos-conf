@@ -20,6 +20,8 @@
     ./modules/flatpak.nix
     ./modules/awesome.nix
     ./modules/system-packages.nix
+    ./modules/kmscon.nix
+    
   ];
   _module.args.pkgsUnstable = import inputs.nixpkgs-unstable {
     inherit (pkgs.stdenv.hostPlatform) system;
@@ -50,7 +52,6 @@
     polkit.enable = true;
   };
 
-  # Zsh as default
-  users.defaultUserShell = pkgs.zsh;
-  programs.zsh.enable = true;
+  # nu as default
+  users.defaultUserShell = pkgs.nushell;
 }
