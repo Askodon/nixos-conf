@@ -6,7 +6,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    # unstable.nvim
     git
     zellij
     home-manager

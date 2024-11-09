@@ -1,5 +1,4 @@
-#conf
-{ pkgs, ... }:
+{ pkgs, inputs, config, pkgsUnstable, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -18,12 +17,23 @@
     ./modules/kmscon.nix
   ];
 
+  # Unstable
+  _module.args.pkgsUnstable = import inputs.nixpkgs-unstable {
+    inherit (pkgs.stdenv.hostPlatform) system;
+    inherit (config.nixpkgs) config;
+  };
+
   # system version
   system.stateVersion = "24.05"; # system version
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ]; # experimental features
+
+  # Unstable pkgs
+  environment.systemPackages = [
+    pkgsUnstable.spoofdpi
+  ];
 
   # hostname
   networking.hostName = "artemis"; # hostname

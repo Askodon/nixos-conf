@@ -29,7 +29,7 @@
     enableNixpkgsReleaseCheck = false;
     packages = with pkgs; [
       # desktop
-      betterbird
+      #betterbird
       vscode
       mate.eom # Photo
       mate.atril # Pdf

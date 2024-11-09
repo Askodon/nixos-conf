@@ -18,12 +18,13 @@
       submodules = true;
       inputs.nixpkgs.follows = "nixpkgs";
     };
- };
+};
 
   outputs =
     {
       nixpkgs,
       home-manager,
+      self,
       hyprland,
       ...
     }@inputs:
@@ -45,8 +46,8 @@
     in
     {
       nixosConfigurations.artemis = lib.nixosSystem {
-        modules = [
-          #inherit specialArgs;          
+        inherit specialArgs;
+        modules = [          
           ./nixos/artemis.nix
           home-manager.nixosModules.home-manager
           {
