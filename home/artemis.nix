@@ -20,6 +20,7 @@
       "vscode"
       "obsidian"
       "vivaldi"
+      "davinci-resolve"
     ];
 
   home = {
@@ -42,6 +43,8 @@
       nextcloud-client
       antares
       libreoffice
+      davinci-resolve 
+      ffmpeg
       #
 
       # gnome packages
