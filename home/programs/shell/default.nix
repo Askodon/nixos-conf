@@ -45,6 +45,9 @@
   programs.nushell = {
     enable = true;
     configFile = { text = ''
+    $env.config = {
+  show_banner: false
+}
     let $config = {
       fil: false
       use_ls_colors: true
