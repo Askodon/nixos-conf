@@ -36,7 +36,7 @@
 
   # Unstable pkgs
   environment.systemPackages = [
-    #pkgsUnstable.neovim
+    #pkgsUnstable.python311Packages.pyinstaller
   ];
 
   # Hostname in network

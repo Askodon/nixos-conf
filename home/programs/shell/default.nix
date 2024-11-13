@@ -66,6 +66,8 @@ def start_zellij [] {
   }
 }
 
+$env.TERM = 'xterm-256color'
+
 # author:
 # https://www.grailbox.com/2023/07/autostart-zellij-in-nushell/
 start_zellij
