@@ -3,7 +3,8 @@
 let
   ehh = import ./ehh.nix { inherit pkgs; };
   ed = import ./ed.nix { inherit pkgs; };
-  clipboard = import ./clipboard.nix { inherit pkgs; };
+  clipboardArtemis = import ./clipboardArtemis.nix { inherit pkgs; };
+  mainMenuArtemis = import ./mainMenuArtemis.nix { inherit pkgs; };
 
   github = import ./github.nix { inherit pkgs; };
 
@@ -11,8 +12,9 @@ in
 
 {
   home.packages = [
+    mainMenuArtemis
     ehh
-    clipboard
+    clipboardArtemis
     ed
     github
   ];

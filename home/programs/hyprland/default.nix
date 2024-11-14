@@ -127,11 +127,11 @@
         bind = $mainMod, G, fullscreen,
         bind = $mainMod, Q, killactive
         bind = $mainMod SHIFT, C, exec, hyprpicker -a
-        bind = $mainMod, C, exec, /home/askodon/nixos-conf/home/scripts/clipboard.lua
+        bind = $mainMod, C, exec, clipboardArtemis 
         bind = $mainMod, F, exec, firefox 
         bind = $mainMod, T, exec, foot
         # bind = $mainMod, Z, exec, fuzzel -d
-        bind = $mainMod, M, exec, /home/askodon/nixos-conf/home/scripts/main_menu.lua
+        bind = $mainMod, M, exec, mainMenuArtemis 
         bind = $mainMod, E, exec, nemo
         bind = $mainMod, V, togglefloating,
         bind = $mainMod, w, exec, ags -t applauncher

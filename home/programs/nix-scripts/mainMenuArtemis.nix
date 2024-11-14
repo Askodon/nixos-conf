@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+pkgs.writeScriptBin "mainMenuArtemis" ''
 #!/usr/bin/env lua
 
 function get_selection()
@@ -22,8 +24,9 @@ elseif selection:find("Screenshot Menu") then
 elseif selection:find("App selecter") then
     os.execute("ags -t applauncher")
 elseif selection:find("Clipboard History") then
-    os.execute("/home/askodon/nixos-conf/home/scripts/clipboard.lua")
+    os.execute("clipboardArtemis")
 elseif selection:find("Color Picker") then
     os.execute("sleep 0,5 ; notify-send $(hyprpicker -a)")
 
 end
+''
