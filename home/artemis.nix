@@ -12,6 +12,7 @@
     ./programs/vesktop/default.nix
     ./programs/firefox/default.nix
     ./programs/gtk-qt-theme/default.nix
+    ./programs/nix-scripts/ehh.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:

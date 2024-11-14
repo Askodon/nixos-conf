@@ -79,7 +79,6 @@ start_zellij
       ncdu = "dua i";
       find = "fd";
       rm = "rm -i";
-      ehh = "/home/askodon/nixos-conf/home/scripts/ehh.lua";
       ed = "/home/askodon/nixos-conf/home/scripts/ed_command.lua"; # help choice between editor and files in the current folder
       squashGit = "git rebase -i --autosquash HEAD~(gum write)"; # help
       fmtChoice = "nixfmt (gum choose --no-limit (ls))";
