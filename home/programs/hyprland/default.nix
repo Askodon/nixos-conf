@@ -39,7 +39,7 @@
 
         #autostart
         exec-once = /home/askodon/nixos-conf/home/scripts/swww.sh
-        exec-once = /home/askodon/nixos-conf/home/scripts/break_time.sh
+        exec-once = breakTime
         exec-once = hyprctl setcursor Bibata-Original-Classic 24
         exec-once = waybar
         exec-once = nextcloud

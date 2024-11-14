@@ -21,7 +21,7 @@ is_running("clipmenud")
 is_running("nm-applet")
 is_running("nextcloud")
 is_running("pasystray")
-is_running("/home/askodon/nixos-conf/home/scripts/break_time.sh")
+is_running("breakTime")
 is_running("nitrogen --restore")
 
 --[[

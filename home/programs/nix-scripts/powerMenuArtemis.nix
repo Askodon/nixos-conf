@@ -1,3 +1,6 @@
+{ pkgs, ... }:
+pkgs.writeScriptBin "powerMenuArtemis" ''
+
 #!/usr/bin/env lua
 
 --  
@@ -27,8 +30,4 @@ elseif selection:find("Shutdown") then
 elseif selection:find("Test") then
     os.execute("fuzzel --dmenu -p test")
 end
-
-
-
-
-
+''
