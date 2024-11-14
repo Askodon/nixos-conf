@@ -4,22 +4,18 @@ default:
 switch-ares:
   sudo cp /etc/nixos/hardware-configuration.nix /home/askodon/nixos-conf/nixos/hardware-configuration.nix
   nh os switch -H ares .
-  exec nu
 
 switch-artemis:
   sudo cp /etc/nixos/hardware-configuration.nix /home/askodon/nixos-conf/nixos/hardware-configuration.nix
   nh os switch -H artemis .
-  exec nu
 
 switch-apollo:
   sudo cp /etc/nixos/hardware-configuration.nix /home/askodon/nixos-conf/nixos/hardware-configuration.nix
   nh os switch -H apollo .
-  exec nu
 
 switch-athena:
   sudo cp /etc/nixos/hardware-configuration.nix /home/askodon/nixos-conf/nixos/hardware-configuration.nix
   nh os switch -H athena .
-  exec nu
 
 update-flake:
   nix flake update
