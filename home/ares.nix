@@ -8,7 +8,7 @@
     ./programs/kitty/default.nix
     ./programs/nvchad/default.nix
     ./programs/firefox/default.nix
-    ./programs/nix-scripts/ehh.nix
+    ./programs/nix-scripts/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:

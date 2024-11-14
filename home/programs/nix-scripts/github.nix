@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+pkgs.writeScriptBin "github" ''
 #!/bin/sh
 
 # Выполняем команду и сохраняем вывод в переменную
@@ -19,3 +21,5 @@ else
     git config --global core.editor "nvim"
     gitui
 fi
+'';
+

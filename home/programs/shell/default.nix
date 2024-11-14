@@ -79,10 +79,8 @@ start_zellij
       ncdu = "dua i";
       find = "fd";
       rm = "rm -i";
-      ed = "/home/askodon/nixos-conf/home/scripts/ed_command.lua"; # help choice between editor and files in the current folder
       squashGit = "git rebase -i --autosquash HEAD~(gum write)"; # help
       fmtChoice = "nixfmt (gum choose --no-limit (ls))";
-      github = "/home/askodon/nixos-conf/home/scripts/github.sh"; # help | login if logout and open gitui
       spoofVivaldi = "sh -c 'spoofdpi & vivaldi --proxy-server='http://127.0.0.1:8080'' ";
       try = "nix-shell -p ";
       f = "fuck";
