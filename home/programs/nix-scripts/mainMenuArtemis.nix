@@ -18,9 +18,9 @@ if selection == nil then
 end
 
 if selection:find("Power Menu") then
-    os.execute("/home/askodon/nixos-conf/home/scripts/powermenu.lua")
+    os.execute("powerMenuArtemis")
 elseif selection:find("Screenshot Menu") then
-    os.execute("/home/askodon/nixos-conf/home/scripts/screenshot.lua")
+    os.execute("screenshotArtemis")
 elseif selection:find("App selecter") then
     os.execute("ags -t applauncher")
 elseif selection:find("Clipboard History") then

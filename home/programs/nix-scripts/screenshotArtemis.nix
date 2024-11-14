@@ -1,3 +1,6 @@
+{ pkgs, ... }:
+pkgs.writeScriptBin "screenshotArtemis" ''
+
 #!/usr/bin/env lua
 
 local function run_command(command)
@@ -49,5 +52,5 @@ else
     print("Error: type is nil.")
     os.exit(1)
 end
-
+''
 

@@ -38,7 +38,6 @@
         monitor=, 1920x1080, auto, 1
 
         #autostart
-        exec-once = /home/askodon/nixos-conf/home/scripts/swww.sh
         exec-once = breakTime
         exec-once = hyprctl setcursor Bibata-Original-Classic 24
         exec-once = waybar
@@ -123,7 +122,7 @@
 
         $mainMod = SUPER
         bind = $mainMod, tab, hyprexpo:expo, toggle
-        bind = $mainMod, P, exec, /home/askodon/nixos-conf/home/scripts/screenshot.lua
+        bind = $mainMod, P, exec, screenshotArtemis 
         bind = $mainMod, G, fullscreen,
         bind = $mainMod, Q, killactive
         bind = $mainMod SHIFT, C, exec, hyprpicker -a
