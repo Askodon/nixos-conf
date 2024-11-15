@@ -3,12 +3,14 @@
   imports = [
     ./zellij.nix
     ./btop.nix
+    ./pueue.nix
   ];
   home.packages = with pkgs; [
     deadnix # help deadnix search dead line of nix code
     dconf2nix # dconf files to nix
     nixfmt-rfc-style # help format nix code
     go
+    pueue
     wget
     fastfetch
     mtr # help | using command like tracert

@@ -11,7 +11,7 @@ function is_running(process_name)
 end
 
 function start(command)
-    awful.spawn.with_shell("sh -c " .. command .. " &")
+    awful.spawn.with_shell(command)
 end
 
 -- Check and start

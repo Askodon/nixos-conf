@@ -11,12 +11,11 @@
     home-manager
     gum
     xfsprogs
+    nq
     lxqt.lxqt-policykit
     luaformatter
     lua
     luarocks
-    qt5ct
-    libsForQt5.qtstyleplugin-kvantum
     just
     nh
     nvchad
