@@ -92,7 +92,7 @@ tools_menu = {
    { "Application launcher", function() menubar.show() end },
    { "Screenshot", function() awful.spawn.with_shell("flameshot gui") end, },
    { "Window switcher", function() focus_window.switch_to_window() end },
-   { "Wallpaper Changer", function() awful.spawn.with_shell("nitrogen /home/askodon/wallpaper") end, }
+   { "Wallpaper Changer", function() awful.spawn.with_shell("nitrogen ~/wallpaper") end, }
 
 }
 

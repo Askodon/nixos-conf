@@ -60,7 +60,7 @@ Following hosts are available:
 First install:
 
 ```
-nix-shell -p git --run 'git clone https://github.com/Askodon/nixos-conf.git /home/askodon/nixos-conf'
+nix-shell -p git --run 'git clone https://github.com/Askodon/nixos-conf.git ~/nixos-conf'
 cd nixos-conf 
 nix-shell -p just --run 'just new-install'
 ```

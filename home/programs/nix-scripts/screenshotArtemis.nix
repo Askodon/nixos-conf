@@ -32,9 +32,9 @@ local key = nil
 if type_selection:find("OnlyClipboard") then
     key = "--clipboard-only"
 elseif type_selection:find("OpenFile") then
-    key = "-o /home/askodon/Скриншоты -- eom"
+    key = "-o ~/Скриншоты -- eom"
 elseif type_selection:find("Normal") then
-    key = "-o /home/askodon/Скриншоты"
+    key = "-o ~/Скриншоты"
 end
 
 if key == nil then
