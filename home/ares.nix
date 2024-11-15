@@ -5,7 +5,7 @@
     ./programs/shell
     ./programs/gtk-qt-theme/default.nix
     ./programs/picom/default.nix
-    ./programs/kitty/default.nix
+    ./programs/alacritty/default.nix
     ./programs/nvchad/default.nix
     ./programs/firefox/default.nix
     ./programs/nix-scripts/default.nix

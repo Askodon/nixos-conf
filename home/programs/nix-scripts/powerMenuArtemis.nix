@@ -1,9 +1,7 @@
 { pkgs, ... }:
 pkgs.writeScriptBin "powerMenuArtemis" ''
-
 #!/usr/bin/env lua
-
---  
+  
 function get_selection()
     local handle = io.popen("printf '1 - Log out\n2 - Reboot\n3 - Reboot to UEFI\n4 - Hard reboot\n5 - Shutdown\n6 - Test' | fuzzel -w 40 -y 40 -f 'Roboto'-12 --line-height=20 --dmenu -l 7 -p 'Power Menu: '")
     local selection = handle:read("*a") 

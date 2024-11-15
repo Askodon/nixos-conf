@@ -38,7 +38,7 @@ Following hosts are available:
 |                             | Artemis(Wayland)                   | Ares(Xorg)                                                                      |
 | --------------------------- | :----------------------------------|---------------------------------------------------------------------------------|
 | **Window Manager**          | Hyprland                           | Awesome                                                                         |
-| **Terminal Emulator**       | Zellij + Foot                      | Zellij + Kitty                                                                  |
+| **Terminal Emulator**       | Zellij + Foot                      | Zellij + Alacritty                                                              |
 | **Bar**                     | Waybar                             | Awesome                                                                         |
 | **Application Launcher**    | Fuzzel + Ags                       | Awesome + Dmenu                                                                 |
 | **Notification Daemon**     | Dunst                              | Awesome                                                                         |
@@ -65,24 +65,12 @@ cd nixos-conf
 nix-shell -p just --run 'just new-install'
 ```
 
-Update
-```
-cd /home/askodon/nixos-conf
-git reset --hard
-git pull
-upgrade
-```
-
 ## Todo
 
 - [ ] **Widgets with eww or ags** - write widgets, ...
-- [ ] **Refactor** - remove dead code, use "let in" in code, ...
-- [x] **Editor** - vscode reproducible(or neovim)
-- [x] **Fix white theme** - fix gtk settings on nix(failure read-only fs)
-- [x] **Better ui using only one theme** - qogir colors, terminal onedark colors, dunst icons, fuzzel refactor.
 - [ ] **Firefox** - fully reproducible ui and extensions.
-- [x] **Add hosts modules** - write system config for laptop, vms and main pc.  
-- [x] **Make Appolo host** - server on nix.
+- [ ] **Add disko.nix** - configuration to partition
+- [ ] **Test tmpfs on root and brtrfs** switch / to tmpfs and /home on btrfs 
 
 ## References
 - Dots

@@ -4,7 +4,7 @@
     ./programs/shell/default.nix
     ./programs/nvchad/default.nix
     ./programs/firefox/default.nix
-    ./programs/kitty/default.nix
+    ./programs/alacritty/default.nix
     #./programs/gtk-qt-theme/default.nix
     ./programs/kde-settings/default.nix
   ];

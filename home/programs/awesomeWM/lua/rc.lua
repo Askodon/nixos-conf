@@ -53,7 +53,7 @@ local autostart_path = awful.util.get_configuration_dir() .. "misc/autostart.lua
 dofile(autostart_path)
 
 -- This is used later as the default terminal and editor to run.
-terminal = "kitty"
+terminal = "alacritty"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
