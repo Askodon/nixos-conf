@@ -1,6 +1,6 @@
 { pkgs, ... }:
 pkgs.writeScriptBin "github" ''
-#!/bin/sh
+#!/usr/bin/env dash
 
 # Выполняем команду и сохраняем вывод в переменную
 output=$(gh auth status 2>&1)  # Перенаправляем ошибки в стандартный вывод

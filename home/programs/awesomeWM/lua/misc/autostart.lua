@@ -11,7 +11,7 @@ function is_running(process_name)
 end
 
 function start(command)
-    awful.spawn.with_shell(command)
+    awful.spawn.with_shell("dash -c " .. command .. " &")
 end
 
 -- Check and start
@@ -22,8 +22,10 @@ is_running("nm-applet")
 is_running("nextcloud")
 is_running("pasystray")
 is_running("breakTime")
-is_running("nitrogen --restore")
 
+
+-- Wallpaper
+awful.spawn.with_shell("nitrogen --restore")
 --[[
 run "picom" -b &
 run "flameshot" &
