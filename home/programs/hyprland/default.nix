@@ -39,6 +39,7 @@
 
         #autostart
         exec-once = breakTime
+        exec-once = swww-daemon
         exec-once = hyprctl setcursor Bibata-Original-Classic 24
         exec-once = waybar
         exec-once = nextcloud
