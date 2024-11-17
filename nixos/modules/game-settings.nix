@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   boot.kernelPackages = pkgs.linuxPackages_xanmod_stable; # test
-
   programs = {
     gamescope.enable = true;
     gamemode.enable = true;

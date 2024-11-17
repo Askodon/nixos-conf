@@ -1,4 +1,4 @@
-{ pkgs, inputs, config, pkgsUnstable, ... }:
+{ pkgs, inputs, config, pkgsUnstable, lib, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -33,6 +33,8 @@
   # Unstable pkgs
   environment.systemPackages = [
     pkgsUnstable.spoofdpi
+    pkgsUnstable.amneziawg-go
+    pkgs.qpwgraph
   ];
 
   # hostname
