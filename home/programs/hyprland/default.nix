@@ -17,8 +17,8 @@
     libsForQt5.qtstyleplugin-kvantum
     xorg.libxcb
     lxqt.lxqt-policykit
-    cinnamon.nemo-with-extensions
-    cinnamon.nemo-fileroller
+    nemo-with-extensions
+    nemo-fileroller
     networkmanagerapplet
     clipman
     libnotify

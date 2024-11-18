@@ -3,7 +3,7 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      import = [
+      general.import = [
           "${pkgs.alacritty-theme}/one_dark.toml"
       ];
       font.normal = {

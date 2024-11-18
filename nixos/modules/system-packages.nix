@@ -7,7 +7,7 @@
 
   environment.systemPackages = with pkgs; [
     git
-    gnome.gnome-disk-utility
+    gnome-disk-utility
     zellij
     home-manager
     gum

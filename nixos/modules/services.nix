@@ -15,6 +15,7 @@
     avahi.enable = false;
     openssh.enable = true; # openssh
     flatpak.enable = true;
+    resolved.enable = true;
     kmscon = {
       # better tty
       enable = true;

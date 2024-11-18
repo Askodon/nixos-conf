@@ -49,7 +49,7 @@
       #
 
       # gnome packages
-      gnome.dconf-editor
+      dconf-editor
       #
 
       #fonts

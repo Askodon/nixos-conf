@@ -24,16 +24,19 @@
   };
 
   # system version
-  system.stateVersion = "24.05"; # system version
+  system.stateVersion = "24.11"; # system version
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ]; # experimental features
 
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_stable; # test
+
   # Unstable pkgs
   environment.systemPackages = [
-    pkgsUnstable.spoofdpi
-    pkgsUnstable.amneziawg-go
+    pkgs.linuxKernel.packages.linux_xanmod_stable.amneziawg
+    pkgs.spoofdpi
+    pkgs.amneziawg-go
     pkgs.qpwgraph
   ];
 

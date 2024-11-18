@@ -28,7 +28,7 @@
     inherit (config.nixpkgs) config;
   };
 
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -37,7 +37,9 @@
   # Unstable pkgs
   environment.systemPackages = [
     #pkgsUnstable.python311Packages.pyinstaller
+    pkgs.amneziawg-go
   ];
+
 
   # Hostname in network
   networking.hostName = "ares";

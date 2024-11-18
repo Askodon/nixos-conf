@@ -20,7 +20,7 @@
   home = {
     username = "askodon";
     homeDirectory = "/home/askodon";
-    stateVersion = "24.05";
+    stateVersion = "24.11";
     enableNixpkgsReleaseCheck = false;
     packages = with pkgs; [
       # desktop
@@ -36,7 +36,7 @@
       #
 
       # gnome packages
-      gnome.dconf-editor
+      dconf-editor
       #
 
       #fonts

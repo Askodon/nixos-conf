@@ -1,6 +1,7 @@
 { pkgs, ... }:
 pkgs.writeScriptBin "ehh" ''
   #!/usr/bin/env lua
+  -- https://patorjk.com/software/taag/#p=display&f=Big&t=Ehh%20Menu
   print([[ 
     ______ _     _       __  __
    |  ____| |   | |     |  \/  |                 
