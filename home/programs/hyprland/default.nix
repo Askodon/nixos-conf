@@ -31,7 +31,6 @@
     #package = inputs.hyprland.packages.${pkgs.system}.hyprland; # add this, after fix libinput 1.26.0 
     systemd.enable = true;
     systemd.variables = [ "--all" ];
-    plugins = [ pkgs.hyprlandPlugins.hyprexpo ];
     extraConfig = ''
 
         #monitor
@@ -122,7 +121,6 @@
         }
 
         $mainMod = SUPER
-        bind = $mainMod, tab, hyprexpo:expo, toggle
         bind = $mainMod, P, exec, screenshotArtemis 
         bind = $mainMod, G, fullscreen,
         bind = $mainMod, Q, killactive
@@ -197,13 +195,7 @@
         bindm = $mainMod, mouse:273, resizewindow
 
           decoration {
-
           rounding = 0
-
-          drop_shadow = true
-          shadow_range = 4
-          shadow_render_power = 3
-          col.shadow = rgba(1a1a1aee)
         }
 
         animations {

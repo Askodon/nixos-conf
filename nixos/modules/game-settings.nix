@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-  boot.kernelPackages = pkgs.linuxPackages_xanmod_stable; # test
   programs = {
     gamescope.enable = true;
     gamemode.enable = true;
@@ -16,13 +15,5 @@
 
   hardware = {
     steam-hardware.enable = true;
-    opengl = {
-      enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
-      extraPackages = with pkgs; [
-      rocmPackages.clr.icd
-    ];
-    };
   };
 }
