@@ -28,7 +28,8 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    #package = inputs.hyprland.packages.${pkgs.system}.hyprland; # add this, after fix libinput 1.26.0 
+    #package = inputs.hyprland.packages.${pkgs.system}.hyprland; # add this, after fix libinput 1.26.0
+    plugins = with pkgs.hyprlandPlugins; [ hyprspace ];
     systemd.enable = true;
     systemd.variables = [ "--all" ];
     extraConfig = ''

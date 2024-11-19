@@ -4,6 +4,7 @@
     text = ''
           bind "Alt g" { SwitchToMode "locked"; }
           default_shell "nu"
+          pane_frames false
           keybinds {
             normal clear-defaults=true {
               bind "Ctrl b" { SwitchToMode "Tmux"; }

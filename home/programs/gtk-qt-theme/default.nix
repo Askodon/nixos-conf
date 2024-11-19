@@ -7,6 +7,8 @@
     bibata-cursors
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
+    glib
+    gsettings-desktop-schemas
   ];
 
   imports = [ ./dconf-settings.nix ];
