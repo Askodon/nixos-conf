@@ -8,14 +8,13 @@ let
   powerMenuArtemis = import ./powerMenuArtemis.nix { inherit pkgs; };
   screenshotArtemis = import ./screenshotArtemis.nix { inherit pkgs; };
   breakTime = import ./breakTime.nix { inherit pkgs; };
-  awg-gui = import ./awg-gui.nix { inherit pkgs; };
   github = import ./github.nix { inherit pkgs; };
 
 in
 
 {
   home.packages = [
-    awg-gui
+    # Scripts 
     screenshotArtemis
     powerMenuArtemis
     breakTime
