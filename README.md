@@ -24,7 +24,7 @@
 
 Following hosts are available:
 
-| Host         | Type     | 
+| Host         | Type     |
 | ------------ | -------  |
 | `artemis`    | main pc  |
 | `ares`       | for work |
@@ -49,11 +49,11 @@ Following hosts are available:
 | **File Manager**            | Yazi + Nemo                        | Yazi + Nemo                                                                     |
 | **Shell**                   | Nushell                            | Nushell                                                                         |
 | **Media Player**            | Mpv                                | Mpv                                                                             |
-| **Text Editor**             | Vscode + Nvchad                    | Nvchad                                                                          |
+| **Text Editor**             | Vscode + Nvchad                    | Zed + Nvchad                                                                    |
 | **Fonts**                   | Roboto + Fira Code                 | Roboto + Fira Code                                                              |
 | **Image Viewer**            | Eom                                | Eom                                                                             |
 | **Screenshot Software**     | Hyprshot                           | Flameshot                                                                       |
-| **Screen Recording**        | OBS                                | OBS                                                                             |   
+| **Screen Recording**        | OBS                                | OBS                                                                             |
 
 ## Install
 
@@ -61,7 +61,7 @@ First install:
 
 ```
 nix-shell -p git --run 'git clone https://github.com/Askodon/nixos-conf.git ~/nixos-conf'
-cd nixos-conf 
+cd nixos-conf
 nix-shell -p just --run 'just new-install'
 ```
 
@@ -70,7 +70,7 @@ nix-shell -p just --run 'just new-install'
 - [ ] **Widgets with eww or ags** - write widgets, ...
 - [ ] **Firefox** - fully reproducible ui and extensions.
 - [ ] **Add disko.nix** - configuration to partition
-- [ ] **Test tmpfs on root and brtrfs** switch / to tmpfs and /home on btrfs 
+- [ ] **Test tmpfs on root and brtrfs** switch / to tmpfs and /home on btrfs
 
 ## References
 - Dots
@@ -79,4 +79,3 @@ nix-shell -p just --run 'just new-install'
 - Style
   - [qogir-theme](https://github.com/vinceliuice/Qogir-theme)
   - [waybar](https://github.com/TheFrankyDoll/win10-style-waybar)
-

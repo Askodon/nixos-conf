@@ -18,7 +18,7 @@ end
 local type_options = "1 - Only Clipboard\n2 - Open File\n3 - Normal"
 local type_selection = select_option("Clipboard and other: ", type_options)
 
-print("Выбранный тип: " .. type_selection) -- Debug info about type
+print("Type: " .. type_selection) -- Debug info about type
 
 if type_selection == "" then
     os.exit(1)

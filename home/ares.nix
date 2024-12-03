@@ -37,7 +37,8 @@
       nextcloud-client
       antares
       libreoffice
-      love # For make gui apps
+      appimage-run
+      zed-editor
       #
 
       # Gnome packages
