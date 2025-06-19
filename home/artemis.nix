@@ -44,7 +44,7 @@
       nextcloud-client
       antares
       libreoffice
-      davinci-resolve 
+      davinci-resolve
       ffmpeg
       #
 

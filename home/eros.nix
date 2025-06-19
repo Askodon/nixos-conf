@@ -1,11 +1,10 @@
-# home.nix
-
 { config, pkgs, ... }:
-
 {
-
+  imports = [
+    ./programs/shell/default.nix
+  ];
   home.stateVersion = "25.05"; # Please read the comment before changing.
-  home.packages = [
+  home.packages = with pkgs; [
 
   ];
 

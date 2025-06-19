@@ -1,5 +1,5 @@
 {
-  #my sweety home 
+  #my sweety home
   users.users.askodon = {
     isNormalUser = true;
     description = "askodon";

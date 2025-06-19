@@ -45,35 +45,36 @@
 
   programs.nushell = {
     enable = true;
-    configFile = { text = ''
-    $env.config = {
-  show_banner: false
-}
-    let $config = {
-      fil: false
-      use_ls_colors: true
-    }
-def start_zellij [] {
-  if 'ZELLIJ' not-in ($env | columns) {
-    if 'ZELLIJ_AUTO_ATTACH' in ($env | columns) and $env.ZELLIJ_AUTO_ATTACH == 'true' {
-      zellij attach -c
-    } else {
-      zellij options --theme "qogir" --disable-mouse-mode
-    }
+    configFile = {
+      text = ''
+            $env.config = {
+          show_banner: false
+        }
+            let $config = {
+              fil: false
+              use_ls_colors: true
+            }
+        def start_zellij [] {
+          if 'ZELLIJ' not-in ($env | columns) {
+            if 'ZELLIJ_AUTO_ATTACH' in ($env | columns) and $env.ZELLIJ_AUTO_ATTACH == 'true' {
+              zellij attach -c
+            } else {
+              zellij options --theme "qogir" --disable-mouse-mode
+            }
 
-    if 'ZELLIJ_AUTO_EXIT' in ($env | columns) and $env.ZELLIJ_AUTO_EXIT == 'true' {
-      exit
-    }
-  }
-}
+            if 'ZELLIJ_AUTO_EXIT' in ($env | columns) and $env.ZELLIJ_AUTO_EXIT == 'true' {
+              exit
+            }
+          }
+        }
 
-$env.TERM = 'xterm-256color'
+        $env.TERM = 'xterm-256color'
 
-# author:
-# https://www.grailbox.com/2023/07/autostart-zellij-in-nushell/
-start_zellij
-  '';
-};
+        # author:
+        # https://www.grailbox.com/2023/07/autostart-zellij-in-nushell/
+        start_zellij
+      '';
+    };
     shellAliases = {
       less = "gum pager";
       grep = "rg";

@@ -1,7 +1,13 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 {
   nixpkgs.config.allowUnfree = true;
-  nixpkgs = { # Nvchad overlays
+  nixpkgs = {
+    # Nvchad overlays
     overlays = [ (final: prev: { nvchad = inputs.nvchad4nix.packages."${pkgs.system}".nvchad; }) ];
   };
 

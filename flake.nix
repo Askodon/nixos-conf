@@ -2,10 +2,15 @@
   description = "Nixos-conf flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    #nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nix-darwin = {
+      url = "github:lnl7/nix-darwin/nix-darwin-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nvchad4nix = {
@@ -18,14 +23,16 @@
       submodules = true;
       inputs.nixpkgs.follows = "nixpkgs";
     };
-};
+  };
 
   outputs =
     {
       nixpkgs,
+      nixpkgs-unstable,
       home-manager,
       self,
       hyprland,
+      nix-darwin,
       ...
     }@inputs:
     let
@@ -45,61 +52,81 @@
       };
     in
     {
-      nixosConfigurations.artemis = lib.nixosSystem {
-        inherit specialArgs;
-        modules = [          
-          ./nixos/artemis.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              inherit extraSpecialArgs;
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.askodon = import ./home/artemis.nix;
-              backupFileExtension = "hm-backup";
-            };
-          }
-        ];
+      nixosConfigurations = {
+        artemis = lib.nixosSystem {
+          inherit specialArgs;
+          modules = [
+            ./nixos/artemis.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                inherit extraSpecialArgs;
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.askodon = import ./home/artemis.nix;
+                backupFileExtension = "hm-backup";
+              };
+            }
+          ];
+        };
+
+        ares = lib.nixosSystem {
+          inherit specialArgs;
+          modules = [
+            ./nixos/ares.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                inherit extraSpecialArgs;
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.askodon = import ./home/ares.nix;
+                backupFileExtension = "hm-backup";
+              };
+            }
+          ];
+        };
+
+        athena = lib.nixosSystem {
+          inherit specialArgs;
+          modules = [
+            ./nixos/athena.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                inherit extraSpecialArgs;
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                #sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+                users.askodon = import ./home/athena.nix;
+                backupFileExtension = "hm-backup";
+              };
+            }
+          ];
+        };
+
+        apollo = lib.nixosSystem {
+          inherit specialArgs;
+          modules = [ ./nixos/apollo.nix ];
+        };
       };
 
-      nixosConfigurations.ares = lib.nixosSystem {
-        inherit specialArgs;
-        modules = [
-          ./nixos/ares.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              inherit extraSpecialArgs;
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.askodon = import ./home/ares.nix;
-              backupFileExtension = "hm-backup";
-            };
-          }
-        ];
-      };
-
-      nixosConfigurations.athena = lib.nixosSystem {
-        inherit specialArgs;
-        modules = [
-          ./nixos/athena.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              inherit extraSpecialArgs;
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              #sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
-              users.askodon = import ./home/athena.nix;
-              backupFileExtension = "hm-backup";
-            };
-          }
-        ];
-      };
-
-      nixosConfigurations.apollo = lib.nixosSystem {
-        inherit specialArgs;
-        modules = [ ./nixos/apollo.nix ];
+      darwinConfigurations = {
+        eros = nix-darwin.lib.darwinSystem {
+          system = "aarch64-darwin";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./nixos/eros.nix
+            home-manager.darwinModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.askodon = import ./home/eros.nix;
+              };
+            }
+          ];
+        };
       };
     };
 }

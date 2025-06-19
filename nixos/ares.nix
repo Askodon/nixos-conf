@@ -21,7 +21,7 @@
     ./modules/awesome.nix
     ./modules/system-packages.nix
     ./modules/kmscon.nix
-    
+
   ];
   _module.args.pkgsUnstable = import inputs.nixpkgs-unstable {
     inherit (pkgs.stdenv.hostPlatform) system;
@@ -39,7 +39,6 @@
     #pkgsUnstable.python311Packages.pyinstaller
     pkgs.amneziawg-go
   ];
-
 
   # Hostname in network
   networking.hostName = "ares";

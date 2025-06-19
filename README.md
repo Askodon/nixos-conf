@@ -30,6 +30,7 @@ Following hosts are available:
 | `ares`       | for work |
 | `apollo`     | for test |
 | `athena`     | for kde  |
+| `eros`       | macos    |
 
 
 
@@ -64,6 +65,13 @@ nix-shell -p git --run 'git clone https://github.com/Askodon/nixos-conf.git ~/ni
 cd nixos-conf
 nix-shell -p just --run 'just new-install'
 ```
+
+macos:
+```
+install determinate nix
+sudo nix run nix-darwin/nix-darwin-25.05#darwin-rebuild -- --flake .#eros switch
+```
+
 
 ## Todo
 

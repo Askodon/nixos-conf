@@ -17,6 +17,9 @@ switch-athena:
   sudo cp /etc/nixos/hardware-configuration.nix ~/nixos-conf/nixos/hardware-configuration.nix
   nh os switch -H athena .
 
+switch-eros:
+  nh darwin switch -H eros .
+
 update-flake:
   nix flake update
 

@@ -1,4 +1,11 @@
-{ pkgs, inputs, config, pkgsUnstable, lib, ... }:
+{
+  pkgs,
+  inputs,
+  config,
+  pkgsUnstable,
+  lib,
+  ...
+}:
 {
   imports = [
     ./hardware-configuration.nix

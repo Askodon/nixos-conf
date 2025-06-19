@@ -14,7 +14,7 @@ in
 
 {
   home.packages = [
-    # Scripts 
+    # Scripts
     screenshotArtemis
     powerMenuArtemis
     breakTime
